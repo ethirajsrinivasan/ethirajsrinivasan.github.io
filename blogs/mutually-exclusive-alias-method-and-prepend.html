@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mutually Exclusive Alias Method And Prepend</title>
+		<link rel="stylesheet" media="screen" href="https://ethirajsrinivasan.github.io/assets/application-cd55b5afcf7cf2ba834d4b1bfd2ef5d23001a5e0d8fbf5eaff3ba6ac552d39af.css" />
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+		<script src="https://ethirajsrinivasan.github.io/assets/application-337d0e6e712a8735a5ed9bea95ae71c783144ba9de419e0f4f8d02569fc18343.js" data-turbolinks-track="true"></script>
+		<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Ag+xWbsbkf7GcqZGg2dxyu+eDeUaMgbzssJXz0q1BkmNgwcnWdrwqgNBPL1nMG1CSTNQqFo9NECgnWrmiHWrzg==" />
+		<link rel="shortcut icon" type="image/x-icon" href="https://ethirajsrinivasan.github.io/assets/favicon-0e1ef7938758e94870e4c3b32d34c6842c3b5eb5a6a2899fe5628887fb518556.ico" />
+	</head>
+	<body class="blog_body" data-spy="scroll" data-target="#navbar-scrollspy" data-offset="200">
+		<section class="cover text-center" style="background-image: url(https://www.elevenasia.com/wp-content/uploads/YING-YANG-2.png)">
+			<nav id="navbar-scrollspy" class="navbar fixed-top navbar-expand-lg navbar-trans navbar-dark">
+				<a class="navbar-brand" href="../index.html"><strong>Ethigeek</strong></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="../resume" target="_blank">Resume</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../index.html#about">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../index.html#portfolio">Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../blogs.html">Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../index.html#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</section>
+		<br>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div id="file" class="md" data-path="Mutually Exclusive Alias Method And Prepend.md"><article class="markdown-body entry-content" itemprop="text"><h2>
+<a id="user-content-mutually-exclusive-alias-method-and-prepend" class="anchor" aria-hidden="true" href="mutually-exclusive-alias-method-and-prepend.html#mutually-exclusive-alias-method-and-prepend"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mutually Exclusive Alias Method And Prepend</h2>
+<p><code>Module#alias_method</code> was one of the earliest solution to overwrite a method in ruby.With an alias method in place you can redefine a method to anything you want and call the old method using the alias_method</p>
+<p>Let us consider the following example</p>
+<div class="highlight highlight-source-ruby"><pre><span class="pl-k">class</span> <span class="pl-en">Person</span>
+ <span class="pl-k">def</span> <span class="pl-en">greeting</span>
+  <span class="pl-c1">puts</span> <span class="pl-s"><span class="pl-pds">"</span>Hello<span class="pl-pds">"</span></span>
+ <span class="pl-k">end</span>
+<span class="pl-k">end</span>
+
+<span class="pl-k">class</span> <span class="pl-en">Person</span>
+  <span class="pl-k">def</span> <span class="pl-en">greeting_with_expression</span>
+    <span class="pl-c1">puts</span> <span class="pl-s"><span class="pl-pds">"</span>Hi,Hello<span class="pl-pds">"</span></span>
+    greeting_without_expression
+  <span class="pl-k">end</span>
+
+  <span class="pl-k">alias_method</span> <span class="pl-c1">:greeting_without_expression</span>, <span class="pl-c1">:greeting</span>
+  <span class="pl-k">alias_method</span> <span class="pl-c1">:greeting</span>, <span class="pl-c1">:greeting_with_expression</span>
+<span class="pl-k">end</span></pre></div>
+<p>In the example above <code>Person#greeting</code> is overridden using alias method.<code>greeting_without_expression</code> calls the actual greeting method.</p>
+<p>With the advent of <code>Module#prepend</code> in Ruby 2.0 It allows you override a method in a class with a method from a module, and still access the class’s implementation with super</p>
+<div class="highlight highlight-source-ruby"><pre><span class="pl-k">module</span> <span class="pl-en">Greeting</span>
+  <span class="pl-k">def</span> <span class="pl-en">greeting</span>
+    <span class="pl-c1">puts</span> <span class="pl-s"><span class="pl-pds">"</span>!!! Hello<span class="pl-pds">"</span></span>
+    <span class="pl-k">super</span>
+  <span class="pl-k">end</span>
+<span class="pl-k">end</span>
+
+<span class="pl-c1">Person</span>.<span class="pl-k">prepend</span>(<span class="pl-c1">Greeting</span>)</pre></div>
+<p>Greeting module is prepended to Person. And now when you call</p>
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c1">Person</span>.<span class="pl-k">new</span>.greeting</pre></div>
+<p>You will end up with</p>
+<div class="highlight highlight-source-shell"><pre>SystemStackError: stack level too deep</pre></div>
+<p>What happened on the background is that <code>Greeting#greeting</code> was called at first then it calls its super_method(<code>Person#greeting_with_expression</code>). At the end of execution of greeting_with_expression it calls the greeting_without_expression method which again calls <code>Greeting#greeting</code> due to method lookup.This creates a deadlock situation and results in stack level too deep error.</p>
+<p>Learning from the above example is that you will not be able to combine <code>Module#prepend</code> and <code>Module#alias_method</code>.You can follow only one of these method if you want to overwrite a method at multiple levels.</p>
+<p>Lookup for alias method and prepend when you come across stack level too deep error next time.Happy Coding !!!</p>
+</article></div></body></html>
+
+        <div class="text-center like_blog" data-href=/blogs/mutually-exclusive-alias-method-and-prepend/like ><img src="https://ethirajsrinivasan.github.io/assets/images/heart.png" width="25" height="25" /></div>
+        <div class="text-center like_count">1</div>
+        <div class="row">
+          <div class="col">
+            <div class="float-left">
+              <div class="project_nav_link">A Simple Tensorflow Classification Model In Ruby</div>
+              <a href="a-simple-tensorflow-classification-model-in-ruby.html">&larr; Previous Blog</a>
+            </div>
+          </div>
+        </div>
+        <div id="disqus_thread"></div>
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+var disqus_config = function () {
+  this.shortname = "ethigeek-com";
+  this.page.url = "http://ethigeek.com/blogs/mutually-exclusive-alias-method-and-prepend";
+  this.page.identifier = 'blog-2';
+  this.page.title = 'Mutually Exclusive Alias Method And Prepend'; 
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//ethigeek-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+    </div>
+  </div>
+
+		<div class="spacer"></div>
+		<footer class="footer fixed-bottom">
+				<div class="container">
+					<ul class="list-inline d-flex justify-content-center">
+				<li class="list-inline-item"><a target="_blank" class="fab fa-github" href="https://github.com/ethirajsrinivasan"></a></li>
+				<li class="list-inline-item"><a target="_blank" class="fab fa-twitter" href="https://twitter.com/iamethi"></a></li>
+				<li class="list-inline-item"><a target="_blank" class="fab fa-linkedin" href="https://in.linkedin.com/in/ethirajsrinivasan"></a></li>
+			</ul>
+				</div>
+			</footer>
+	</body>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-66415800-8', 'auto');
+	ga('send', 'pageview');
+	</script>
+	<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			offset: 200,
+			duration: 600,
+			easing: 'ease-in-sine',
+			delay: 100,
+		});
+	</script>
+</html>
