@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msvalidate.01" content="C05472F52FB3614FFD93C4AB9A379B92" />
+    <title>ethigeek</title>
+    <link rel="stylesheet" href="/assets/application.debug-2f72e77ded5104e0ee124dc3494e210f4c9a3b54cc006329cb16f48048b836ab.css" media="screen" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="/assets/application.debug-fb4e5ae36671edb07c8332dc0740913f55d1c710f990f752186c23542f246a39.js" data-turbolinks-track="true" cache="true"></script>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="te85z3C4iHduXxtqUzm2a9fcNm3Gr9bdhtXWSqgCNV9RhPg7N51PVYSc2TdKePzwDHLs0--m2lLuAiSPV-VphQ" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
+    crossorigin="anonymous"></script>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8HN948EZZ"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-S8HN948EZZ');
+  </script>
+  <body data-spy="scroll" data-target="#navbar-scrollspy" data-offset="200">
+    <section class="cover text-center img-fluid" style="background-image: url(/assets/ai-6782a7d586827e3fe87b3b5907209c7f3bbf9c809841f139aa0bae2b9c5c0dd8.jpg)">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-trans navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/"><strong>Ethiraj Srinivasan</strong></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="/resume" target="_blank">Resume</a>
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+              <a class="nav-link" href="/blogs">Blog</a>
+              <a class="nav-link" href="/about">About</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div data-aos="zoom-in" class="container">
+        <div class="row main-intro justify-content-center">
+          <div class="col-lg-2 col-md-2 col-sm-2 text-center">
+            <img class="img-fluid myphoto" src="/assets/my_photo.jpeg" alt="myphoto"/>
+          </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+          <div class="col">
+            <h5 class="text-white">I am Ethiraj Srinivasan</h5>
+            <h5 class="text-white">Data Engineer & Machine Learning Enthusiast</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="about" class="scroll-section">
+  <div class="container">
+    <div data-aos="fade-down" class="row justify-content-center">
+      <div data-aos="fade-right" class="col">
+        <h3 class="" >About</h3>
+        <p class="text-justify">I am Ethiraj Srinivasan, a Data Engineer and Machine Learing enthusiast. With about a decade of experience in software industry, fond of developing applications that includes Big data or Machine learning components. I did my Masters at National University of Singapore and extensively built my knowledge on Data Science and Machine Learning. I like to apply my knowledge of Software ,Big data engineering with Data Science to build products which are aesthetic, reliable and cherised by users.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div data-aos="fade-right" class="col">
+        <h4>Open Source</h4>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div data-aos="fade-right" class="col text-center">
+        <p><img class="img-fluid" src="http://ghchart.rshah.org/409ba5/ethirajsrinivasan" alt="ethiraj's Github Chart" /></p>
+      </div>
+    </div>
+    <div class="row">
+      <div data-aos="fade-right" class="col">
+        <h4>Skills</h4>
+      </div>
+    </div>
+    <div class="skills row">
+      <div data-aos="fade-right" class="col text-center">
+        <svg class="img-fluid" width="960" height="1600" viewBox="0 0 960 1500"></svg>
+      </div>
+    </div>
+    <div class="row">
+      <div data-aos="fade-right" class="col">
+        <h4>Online Courses</h4>
+        <p>Online courses is one way through which I keep updating my knowledge.The following is the list of courses that I have completed.</p>
+        <ul>
+          <li><a target="_blank" href="https://www.udemy.com/certificate/UC-W4MTQTD7/">Probability and Statistics for Business and Data Science</a></li>
+          <li><a target="_blank" href="https://www.coursera.org/account/accomplishments/specialization/certificate/BHLUFD4EKJQH">Data Engineering on Google Cloud Platform Specialization</a></li>
+          <li><a target="_blank" href="https://www.udemy.com/certificate/UC-I2KTO1UX/">Scala and Spark for Big Data and Machine Learning</a></li>
+          <li><a target="_blank" href="https://www.udemy.com/certificate/UC-43MUCDC1">The ultimate hands on hadoop tame your big data</a></li>
+          <li><a target="_blank" href="https://www.udemy.com/certificate/UC-8K2VH2H4/">Complete Guide to TensorFlow for Deep Learning with Python</a></li>
+          <li><a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/J8XQELPD6BRL">Machine Learning by Stanford University on Coursera</a></li>
+          <li><a target="_blank" href="http://course.fast.ai/">Practical Deep Learning for Coders</a></li>
+          <li><a href="https://www.udacity.com/course/new-android-fundamentals--ud851" target="_blank">Developing Android Apps</a></li>
+          <li><a target="_blank" href="https://www.udacity.com/course/android-development-for-beginners--ud837">Android Development for Beginners</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <div data-aos="fade-right" id="portfolio" class="scroll-section">
+	<div class="container">
+		<div  class="row justify-content-center">
+			<div class="col">
+				<h3 class="section_header">Portfolio</h3>
+			</div>
+		</div>
+		<div class="row align-self-center justify-content-center">
+			<div class="col-md-6 col-sm-12 text-center">
+				<h4>Machine Learning</h4>
+				<img height="250" src="https://assets-ethi.appspot.com/images/ml.png" />
+			</div>
+			<div class="col-md-6 my-auto col-sm-12">
+				<p class="text-justify"> I extensively built my knowledge on Machine learning through academic and professional work. Some of my machine learning projects are listed below</p>
+				<ul class="text-left">
+				  		<li><a target="_blank" href="/portfolios/Development%20Of%20Deep%20Learning%20Models%20For%20Medical%20Image%20Diagnostics">Development Of Deep Learning Models For Medical Image Diagnostics</a></li>
+				  		<li><a target="_blank" href="/portfolios/Relay%20Activation%20Using%20Facial%20Recognition%20System">Relay Activation Using Facial Recognition System</a></li>
+				  		<li><a target="_blank" href="/portfolios/Social%20Community%20Expansion">Social Community Expansion</a></li>
+				  		<li><a target="_blank" href="/portfolios/Smart%20Interactive%20Wall">Smart Interactive Wall</a></li>
+				  		<li><a target="_blank" href="/portfolios/Spatio%20Temporal%20Analysis%20Of%20Students%E2%80%99%20Travel">Spatio Temporal Analysis Of Students’ Travel</a></li>
+				  		<li><a target="_blank" href="/portfolios/Dna%20Capitals%20Hackathon">Dna Capitals Hackathon</a></li>
+				</ul>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="row align-self-center flex-row-reverse justify-content-center">
+			<div class="col-md-6 col-sm-12 text-center">
+				<h4>Android</h4>
+				<img height="250" src="https://assets-ethi.appspot.com/images/android.png" />
+			</div>
+			<div  class="col-md-6 my-auto col-sm-12">
+				<p class="text-justify">I developed few utility applications for my personal use. These small applications helped me to develop applications for a specific purpose. These applications are as follows</p>
+				<ul class="text-left">
+				  		<li><a target="_blank" href="/portfolios/Medtracker">Medtracker</a></li>
+				  		<li><a target="_blank" href="/portfolios/U%20Ask">U Ask</a></li>
+				</ul>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="row align-self-center justify-content-center">
+			<div  class="col-md-6  col-sm-12 text-center">
+				<h4>Web Applications</h4>
+				<img height="150" src="https://assets-ethi.appspot.com/images/web.png" />
+			</div>
+			<div class="col-md-6 my-auto col-sm-12">
+				<p class="text-justify"> I built knowledge on web technologies & frameworks and implemented state of the art technologies to improve the performance of web applications. As a hobby, I developed some of my own projects which can be seen in the links below</p>
+			    <ul class="text-left">
+			    	<li><a target="_blank" href="/portfolios/Tablizer">Tablizer</a></li>
+			    	<li><a target="_blank" href="/portfolios/Css%20To%20Inliner">Css To Inliner</a></li>
+			    	<li><a target="_blank" href="/portfolios/Url%20Shortner">Url Shortner</a></li>
+			    </ul>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="row align-self-center flex-row-reverse justify-content-center">
+			<div class="col-md-6 col-sm-12 text-center">
+				<h4>Ruby Gems</h4>
+				<img height="150" src="https://assets-ethi.appspot.com/images/rubygems.png" />
+			</div>
+			<div  class="col-md-6 my-auto col-sm-12">
+				<p class="text-justify">Good quality gems/libraries are sources to utilise our time effectively. I began my journey of open source contribution through these gems. I am the owner and collabarator for few gems. These gems are listed below</p>
+				<ul class="text-left">
+				  		<li><a target="_blank" href="/portfolios/Table2%20Csv">Table2 Csv</a></li>
+				  		<li><a target="_blank" href="/portfolios/Rails%20Protip">Rails Protip</a></li>
+				  		<li><a target="_blank" href="/portfolios/Rails%20Fort">Rails Fort</a></li>
+				  		<li><a target="_blank" href="/portfolios/Technology%20Icons">Technology Icons</a></li>
+				  		<li><a target="_blank" href="/portfolios/Supercache">Supercache</a></li>
+				  		<li><a target="_blank" href="/portfolios/Sunspot">Sunspot</a></li>
+				  		<li><a target="_blank" href="/portfolios/Devise%20Foundation%20Views">Devise Foundation Views</a></li>
+				  		<li><a target="_blank" href="/portfolios/Collection2%20Csv">Collection2 Csv</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+    <div data-aos="fade-right" id="blogs" class="scroll-section">
+	<div class="container">
+		<div  class="row justify-content-between">
+			<div class="col-md-6 col-sm-12 my-auto">
+				<h3 class="section_header ">From the Blog</h3>
+			</div>
+			<div class="col-md-6 col-sm-12 my-auto">
+				<div class="float-md-end"><a class="float-end" href="/blogs">View All &#x2192</a></div>
+			</div>
+		</div>
+		<br>
+		<div class="row text-center">
+			<div class="col-lg-4 col-md-10 col-sm-10">
+				<div class="row justify-content-center">
+					<div class="col-12">
+						<img class="img-tile" src="https://images.unsplash.com/photo-1667372459510-55b5e2087cd0" />
+						<br>
+						<br>
+						<div class="fs-6">Apr 04, 2023</div>
+						<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/how-to-generate-kubernetes-deploy-manifests-for-rails-application-in-simple-steps">How to generate Kubernetes Deploy Manifests For Rails Application In Simple Steps</a></div>
+						<div class="fs-6 fw-light blog_short_content">A very simple and easy way to generate kubernetes deployment manifests for a rails application is through the Helm chart. Helm is simply a package manager for Kubernetes. Helm Chart is a collection of ... </div>
+						<a class="float-end" href="/blogs/how-to-generate-kubernetes-deploy-manifests-for-rails-application-in-simple-steps">Read More &#x2192</a>
+						<br>
+						<br>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-10 col-sm-10">
+				<div class="row justify-content-center">
+					<div class="col-12">
+						<img class="img-tile" src="https://images.unsplash.com/photo-1678995632928-298d05d41671" />
+						<br>
+						<br>
+						<div class="fs-6">Mar 26, 2023</div>
+						<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/can-ai-provide-any-new-job-opportunities">Can AI provide any new job opportunities?</a></div>
+						<div class="fs-6 fw-light blog_short_content">Quite a few days we are talking about how AI is revolutionising the world and how it can optimise and automate our day to day job. Few even talk about how AI can replace job opportunities like Graphic ... </div>
+						<a class="float-end" href="/blogs/can-ai-provide-any-new-job-opportunities">Read More &#x2192</a>
+						<br>
+						<br>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-10 col-sm-10">
+				<div class="row justify-content-center">
+					<div class="col-12">
+						<img class="img-tile" src="https://images.unsplash.com/photo-1676299081847-824916de030a" />
+						<br>
+						<br>
+						<div class="fs-6">Mar 25, 2023</div>
+						<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/exploring-visual-chatgpt-in-gpu-cpu">Exploring Visual ChatGPT In GPU &amp; CPU</a></div>
+						<div class="fs-6 fw-light blog_short_content">Recently ChatGPT is the hot trending topic in the world of Artificial Intelligence. When the world is trying to digest it and exploring its capabilities Microsoft has come up with yet an another surpr ... </div>
+						<a class="float-end" href="/blogs/exploring-visual-chatgpt-in-gpu-cpu">Read More &#x2192</a>
+						<br>
+						<br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+    <div data-aos="fade-right" id="contact" class="scroll-section">
+	<div class="container">
+		<div class="row justify-content-center">
+			<h3 class="section_header">Contact</h3>
+		</div>
+		<div class="row justify-content-center contact">
+			<div class="text-center">
+				Follow Me on:
+				<a href="https://medium.com/@ethi"><i class="fab fa-medium"></i> Medium </a>
+				<a href="https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1"><i class="fab fa-youtube"></i> Youtube </a>
+				<a href="https://www.instagram.com/ethirajchandru/"><i class="fab fa-instagram"></i> Instagram </a>
+				<a href="https://www.linkedin.com/in/ethirajsrinivasan/"><i class="fab fa-linkedin"></i>
+					LinkedIn </a>
+				<a href="https://github.com/ethirajsrinivasan/"><i class="fab fa-github"></i><span> Github </a>
+				<a href="https://twitter.com/iamethi"><i class="fab fa-twitter"></i> Twitter </a>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <footer class="footer fixed-bottom">
+      <div class="container ">
+        <ul class="list-inline d-flex justify-content-center">
+          <li class="list-inline-item"><a target="_blank" class="fab fa-medium" href="https://medium.com/@ethi"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-youtube" href="https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-instagram" href="https://www.instagram.com/ethirajchandru/"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-linkedin" href="https://in.linkedin.com/in/ethirajsrinivasan"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-github" href="https://github.com/
+          ethirajsrinivasan"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-twitter" href="https://twitter.com/iamethi"></a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-66415800-8', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <script>
+  AOS.init({
+  offset: 200,
+  duration: 600,
+  easing: 'ease-in-sine',
+  delay: 100,
+  });
+  </script>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ethigeek</title>
+		<link rel="stylesheet" href="/assets/application.debug-2f72e77ded5104e0ee124dc3494e210f4c9a3b54cc006329cb16f48048b836ab.css" media="screen" />
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+		<script src="/assets/application.debug-fb4e5ae36671edb07c8332dc0740913f55d1c710f990f752186c23542f246a39.js" data-turbolinks-track="true"></script>
+		<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="L4PWqM8oGLnQdXul3vshFM1XO_VPyWNu-2Sy-zpJRJLL6BdciA3fmzq2ufjHumuPFvnhS2bAb-GTs0A-xa4YSA" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
+     crossorigin="anonymous"></script>
+	</head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8HN948EZZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S8HN948EZZ');
+</script>
+	<body class="blog_body" data-spy="scroll" data-target="#navbar-scrollspy" data-offset="200">
+		<section class="cover text-center" style="background-image: url(/assets/blogs-0020dfff94e6226e29a9ca89b01908cc19991bf0437b75007f2fc29ea8fcd182.jpg)">
+			<nav class="navbar navbar-expand-lg navbar-trans navbar-light">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="/"><strong>Ethiraj Srinivasan</strong></a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav ms-auto">
+							<a class="nav-link" href="/resume" target="_blank">Resume</a>
+							<a class="nav-link" href="/#portfolio">Portfolio</a>
+							<a class="nav-link" href="/blogs">Blog</a>
+							<a class="nav-link" href="/about">About</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</section>
+		<div class="container">
+	<div class="spacer"></div>
+	<div id="blogs" class="row justify-content-center">
+		<div class="col-lg-4 col-md-10 col-sm-10">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<img class="img-tile" src="https://images.unsplash.com/photo-1667372459510-55b5e2087cd0" />
+					<br>
+					<br>
+					<div class="fs-6">Apr 04, 2023</div>
+					<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/how-to-generate-kubernetes-deploy-manifests-for-rails-application-in-simple-steps">How to generate Kubernetes Deploy Manifests For Rails Application In Simple Steps</a></div>
+					<div class="fs-6 fw-light blog_short_content">A very simple and easy way to generate kubernetes deployment manifests for a rails application is through the Helm chart. Helm is simply a package manager for Kubernetes. Helm Chart is a collection of ... </div>
+					<a class="float-end" href="/blogs/how-to-generate-kubernetes-deploy-manifests-for-rails-application-in-simple-steps">Read More &#x2192</a>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
+		<div class="col-lg-4 col-md-10 col-sm-10">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<img class="img-tile" src="https://images.unsplash.com/photo-1678995632928-298d05d41671" />
+					<br>
+					<br>
+					<div class="fs-6">Mar 26, 2023</div>
+					<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/can-ai-provide-any-new-job-opportunities">Can AI provide any new job opportunities?</a></div>
+					<div class="fs-6 fw-light blog_short_content">Quite a few days we are talking about how AI is revolutionising the world and how it can optimise and automate our day to day job. Few even talk about how AI can replace job opportunities like Graphic ... </div>
+					<a class="float-end" href="/blogs/can-ai-provide-any-new-job-opportunities">Read More &#x2192</a>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
+		<div class="col-lg-4 col-md-10 col-sm-10">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<img class="img-tile" src="https://images.unsplash.com/photo-1676299081847-824916de030a" />
+					<br>
+					<br>
+					<div class="fs-6">Mar 25, 2023</div>
+					<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/exploring-visual-chatgpt-in-gpu-cpu">Exploring Visual ChatGPT In GPU &amp; CPU</a></div>
+					<div class="fs-6 fw-light blog_short_content">Recently ChatGPT is the hot trending topic in the world of Artificial Intelligence. When the world is trying to digest it and exploring its capabilities Microsoft has come up with yet an another surpr ... </div>
+					<a class="float-end" href="/blogs/exploring-visual-chatgpt-in-gpu-cpu">Read More &#x2192</a>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
+		<div class="col-lg-4 col-md-10 col-sm-10">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<img class="img-tile" src="https://images.unsplash.com/photo-1517697063925-d82f8da41135" />
+					<br>
+					<br>
+					<div class="fs-6">Mar 24, 2023</div>
+					<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/the-world-of-rate-limit-algorithms">The world of Rate Limit Algorithms</a></div>
+					<div class="fs-6 fw-light blog_short_content">Rate limit algorithm is a mechanism used to control the rate of requests or messages being sent or received by a system or service. It is used to prevent overloading a system or service with too many  ... </div>
+					<a class="float-end" href="/blogs/the-world-of-rate-limit-algorithms">Read More &#x2192</a>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
+		<div class="col-lg-4 col-md-10 col-sm-10">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<img class="img-tile" src="https://images.unsplash.com/photo-1656170120688-2a23fe65c586" />
+					<br>
+					<br>
+					<div class="fs-6">Mar 23, 2023</div>
+					<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/fault-tolerance-design-patterns-in-distributed-systems">Fault Tolerance Design Patterns in Distributed Systems</a></div>
+					<div class="fs-6 fw-light blog_short_content">Distributed systems are made up of multiple interconnected components that work together to provide a service. These components are often geographically dispersed and run on different hardware and sof ... </div>
+					<a class="float-end" href="/blogs/fault-tolerance-design-patterns-in-distributed-systems">Read More &#x2192</a>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
+		<div class="col-lg-4 col-md-10 col-sm-10">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<img class="img-tile" src="https://images.unsplash.com/photo-1603899122634-f086ca5f5ddd" />
+					<br>
+					<br>
+					<div class="fs-6">Mar 22, 2023</div>
+					<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/encryption-vs-encoding-vs-serialisation-vs-hashing">Encryption vs encoding vs serialisation vs hashing</a></div>
+					<div class="fs-6 fw-light blog_short_content">Encryption, encoding, serialisation, and hashing are all techniques used to transform data, but they serve different purposes and have different properties. Here are the differences: ... </div>
+					<a class="float-end" href="/blogs/encryption-vs-encoding-vs-serialisation-vs-hashing">Read More &#x2192</a>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
+		<div class="col-lg-4 col-md-10 col-sm-10">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<img class="img-tile" src="https://images.unsplash.com/photo-1675865254433-6ba341f0f00b" />
+					<br>
+					<br>
+					<div class="fs-6">Mar 21, 2023</div>
+					<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/crazy-chat-with-chatgpt">Crazy Chat with ChatGPT</a></div>
+					<div class="fs-6 fw-light blog_short_content">Recently I was overwhelmed by the responses of chatGPT and thought why not share it with my fellow mates. So here are the few questions that I asked and responses give by ChatGPT. ... </div>
+					<a class="float-end" href="/blogs/crazy-chat-with-chatgpt">Read More &#x2192</a>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
+		<div class="col-lg-4 col-md-10 col-sm-10">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<img class="img-tile" src="https://images.unsplash.com/photo-1637769270420-e02b7419a721" />
+					<br>
+					<br>
+					<div class="fs-6">Mar 20, 2023</div>
+					<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/looking-back-at-2022">Looking Back at 2022</a></div>
+					<div class="fs-6 fw-light blog_short_content">21 days since the new year 2023 began and I am going to review my goals for 2022. I know it&#39;s late but it better be late than never and this review will help me in my upcoming years. ... </div>
+					<a class="float-end" href="/blogs/looking-back-at-2022">Read More &#x2192</a>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
+		<div class="col-lg-4 col-md-10 col-sm-10">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<img class="img-tile" src="https://images.unsplash.com/photo-1476789668825-c16c51c46ac3" />
+					<br>
+					<br>
+					<div class="fs-6">Jul 24, 2018</div>
+					<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/a-simple-tensorflow-classification-model-in-ruby">A Simple Tensorflow Classification Model in Ruby</a></div>
+					<div class="fs-6 fw-light blog_short_content">The main objective of this blog is to build a simple linear classification model in ruby using Tensorflow architecture. The main tensorflow compenents required to build and test the model  are Operati ... </div>
+					<a class="float-end" href="/blogs/a-simple-tensorflow-classification-model-in-ruby">Read More &#x2192</a>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col text-center">
+			<div class="flickr_pagination">
+				<div role="navigation" aria-label="Pagination" class="pagination"><span class="previous_page disabled" aria-disabled="true">&#8592; Previous</span> <em class="current" aria-label="Page 1" aria-current="page">1</em> <a rel="next" aria-label="Page 2" href="/blogs?page=2">2</a> <a class="next_page" rel="next" href="/blogs?page=2">Next &#8594;</a></div>
+			</div>
+		</div>
+	</div>
+</div>
+		<div class="spacer"></div>
+		<footer class="footer fixed-bottom">
+			<div class="container">
+				<ul class="list-inline d-flex justify-content-center">
+					<li class="list-inline-item"><a target="_blank" class="fab fa-medium" href="https://medium.com/@ethi"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-youtube" href="https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-instagram" href="https://www.instagram.com/ethirajchandru/"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-linkedin" href="https://in.linkedin.com/in/ethirajsrinivasan"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-github" href="https://github.com/
+          ethirajsrinivasan"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-twitter" href="https://twitter.com/iamethi"></a></li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-66415800-8', 'auto');
+	ga('send', 'pageview');
+	</script>
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			offset: 200,
+			duration: 600,
+			easing: 'ease-in-sine',
+			delay: 100,
+		});
+	</script>
+</html>

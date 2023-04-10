@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Development Of Deep Learning Models For Medical Image Diagnostics</title>
+		<link rel="stylesheet" href="../assets/application.debug-2f72e77ded5104e0ee124dc3494e210f4c9a3b54cc006329cb16f48048b836ab.css" media="screen" />
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+		<script src="../assets/application.debug-fb4e5ae36671edb07c8332dc0740913f55d1c710f990f752186c23542f246a39.js" data-turbolinks-track="true"></script>
+		<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="BadPWfkRDkQd35z6zYVv3ya1MKsGleREixCfdKv9prjhzI6tvjTJZvccXqfUxCVE_RvqFS-c6Mvjx22xVBr6Yg" />
+		<link rel="icon" type="image/x-icon" href="../assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
+     crossorigin="anonymous"></script>
+	</head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8HN948EZZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S8HN948EZZ');
+</script>
+	<body class="blog_body" data-spy="scroll" data-target="#navbar-scrollspy" data-offset="200">
+		<section class="cover text-center" style="background-image: url(../assets/ai-6782a7d586827e3fe87b3b5907209c7f3bbf9c809841f139aa0bae2b9c5c0dd8.jpg)">
+			<nav class="navbar navbar-expand-lg navbar-trans navbar-light">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="../index.html"><strong>Ethiraj Srinivasan</strong></a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav ms-auto">
+							<a class="nav-link" href="../resume" target="_blank">Resume</a>
+							<a class="nav-link" href="../index.html#portfolio">Portfolio</a>
+							<a class="nav-link" href="../blogs.html">Blog</a>
+							<a class="nav-link" href="../about.html">About</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<div class="container">
+				<div class="row intro justify-content-center">
+					<div class="col">
+						<h3>Development Of Deep Learning Models For Medical Image Diagnostics</h3>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<br>
+<div class="container project">
+  <div class="row">
+    <div class="col">
+        <section  data-aos="fade-right">
+          <h3>Summary</h3>
+          <div class="section-content"><div class="col"><p class="text-justify">With the deep learning techniques, medical diagnostics could be totally revolutionized. The project aims to develop a deep learning model for reporting mammograms. The project aimes to</p>
+<ul>
+<li>To develop a diagnostic capability with medical images on mammogram screening</li>
+<li>Identification of computer vision techniques that can preprocess Radiological images (X Ray, Ultrasound, MRI, CT)</li>
+<li>Development of deep learning techniques that can identify lesions suspicious of malignancy</li>
+<li>Development of mammogram screening as a proof of concept</li>
+</ul></div></div>
+        </section>
+        <section  data-aos="fade-right">
+          <h3>Project Links</h3>
+          <div class="section-content"><ul>
+        <li><a target="_blank" href="https://github.com/ethirajsrinivasan/mammogram_deep_learning">Source Code</a></li>
+      </ul></div>
+        </section>
+        <section  data-aos="fade-right">
+          <h3>Data Source</h3>
+          <div class="section-content"><div class="section-content"><div class="row"><div class="col">
+            <p class="text-justify">Mammogram images are obtained from the following sources</p>
+            <ul>
+              <li><a target="_blank" href="http://www.mammoimage.org/databases/">MIAS</a></li>
+              <li><a target="_blank" href="http://marathon.csee.usf.edu/Mammography/Database.html">DDSM</a></li>
+            </ul>
+          </div></div></div></div>
+        </section>
+        <section  data-aos="fade-right">
+          <h3>Pre Processing</h3>
+          <div class="section-content"><div class="col">
+    <p class="text-justify">In order to remove the noise from the image the biggest contour(largest blob) is found from the image. Mask of the biggest contour is used to clean the images</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col text-center">
+    <img class="img-fluid img-thumbnail" src="https://ethirajsrinivasan.github.io/assets/images/before_preprocess.png" alt="Before preprocess">
+    <h4 class="text-center">
+      <small>Original Image</small>
+    </h4>
+  </div>
+  <div class="col-md-6 col text-center">
+    <img class="img-fluid img-thumbnail" src="https://ethirajsrinivasan.github.io/assets/images/contour_detection.png" alt="Contour detection">
+    <h4 class="text-center">
+      <small>Contours</small>
+    </h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col text-center">
+    <img class="img-fluid img-thumbnail" src="https://ethirajsrinivasan.github.io/assets/images/largest_contour.png" alt="Largest contour">
+    <h4 class="text-center">
+      <small>Largest Contour</small>
+    </h4>
+  </div>
+  <div class="col-md-6 col text-center">
+    <img class="img-fluid img-thumbnail" src="https://ethirajsrinivasan.github.io/assets/images/after_preprocess.png" alt="After preprocess">
+    <h4 class="text-center">
+      <small>Proprocessed Image</small>
+    </h4>
+  </div>
+</div>
+        </section>
+        <section  data-aos="fade-right">
+          <h3>Experimental Setup</h3>
+          <div class="section-content"><div class="section-content"><div class="row">
+<div class="col">
+<p class="text-justify"> From the two publicly available datasets three more datasets are formed by combining the images in both the datasets (ALL), images with only CC views (CC) from DDSM datasets and images with only MLO views from the DDSM and MIAS datasets (MLO). These three newly formed datasets along with the two publicly available datasets form the five basic raw image datasets. These five raw image datasets are then semi-processed and completely processed to generate five semi-processed datasets and five completely processed datasets respectively. These 15 datasets from raw, semi- processed and completely processed datasets are then used in two class and three class classification models on VGG16 and ResNet34. Categorial Cross Entropy is chosen as the loss function and Adam optimizer is picked. Keras is used with Theano as the backend in an Ubuntu 16.04 Operating System with 32 GB RAM, 2 GTX 1080 Ti. Only one GPU was used for training the models. The last layer of the CNN networks were finetuned by replacing the thousand class output with a two class output for two class classification of normal vs abnormal and with a three class outputs for three class classification of normal vs benign vs malignant. The data is split into training(60%), test(20%) and validation(20%) set and classification is done for each image.
+</p>
+</div>
+</div></div></div>
+        </section>
+        <section  data-aos="fade-right">
+          <h3>Results</h3>
+          <div class="section-content"><div class="row">
+<div class="col-md-6 col-sm-12 text-center">
+<img src="https://ethirajsrinivasan.github.io/assets/images/two_class_mammogram.png" alt="two class classification result" class="img-fluid">
+<p class="text-justify">Two class Classification</p>
+</div>
+<div class="col-md-6 col-sm-12 text-center">
+<img src="https://ethirajsrinivasan.github.io/assets/images/three_class_mammogram.png" alt="two class classification result" class="img-fluid">
+<p class="text-justify">Three class Classification</p>
+</div>
+</div></div>
+        </section>
+        <div class="float-end mt-4">
+          <div class="project_nav_link">Relay Activation Using Facial Recognition System</div>
+          <a href="Relay&#32;Activation&#32;Using&#32;Facial&#32;Recognition&#32;System.html">Next project &rarr; </a>
+        </div>
+    </div>
+  </div>
+</div>
+		<div class="spacer"></div>
+		<footer class="footer fixed-bottom">
+			<div class="container">
+				<ul class="list-inline d-flex justify-content-center">
+					<li class="list-inline-item"><a target="_blank" class="fab fa-medium" href="https://medium.com/@ethi"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-youtube" href="https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-instagram" href="https://www.instagram.com/ethirajchandru/"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-linkedin" href="https://in.linkedin.com/in/ethirajsrinivasan"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-github" href="https://github.com/
+          ethirajsrinivasan"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-twitter" href="https://twitter.com/iamethi"></a></li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-66415800-8', 'auto');
+	ga('send', 'pageview');
+	</script>
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			offset: 200,
+			duration: 600,
+			easing: 'ease-in-sine',
+			delay: 100,
+		});
+	</script>
+</html>

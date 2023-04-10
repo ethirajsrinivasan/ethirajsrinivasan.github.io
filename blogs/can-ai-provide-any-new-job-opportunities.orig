@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Can AI provide any new job opportunities?</title>
+		<link rel="stylesheet" href="/assets/application.debug-2f72e77ded5104e0ee124dc3494e210f4c9a3b54cc006329cb16f48048b836ab.css" media="screen" />
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+		<script src="/assets/application.debug-fb4e5ae36671edb07c8332dc0740913f55d1c710f990f752186c23542f246a39.js" data-turbolinks-track="true"></script>
+		<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="l2UAwa7utAKbMTpQR91ti_We8O6YWF_gZUoEXBFzXT1zDsE16ctzIHHy-A1enCcQLjAqULFRU28NnfaZ7pQB5w" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
+     crossorigin="anonymous"></script>
+	</head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8HN948EZZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S8HN948EZZ');
+</script>
+	<body class="blog_body" data-spy="scroll" data-target="#navbar-scrollspy" data-offset="200">
+		<section class="cover text-center" style="background-image: url(https://images.unsplash.com/photo-1678995632928-298d05d41671)">
+			<nav class="navbar navbar-expand-lg navbar-trans navbar-light">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="/"><strong>Ethiraj Srinivasan</strong></a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav ms-auto">
+							<a class="nav-link" href="/resume" target="_blank">Resume</a>
+							<a class="nav-link" href="/#portfolio">Portfolio</a>
+							<a class="nav-link" href="/blogs">Blog</a>
+							<a class="nav-link" href="/about">About</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</section>
+		<br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div id="file" class="md" data-path="Can AI provide any new job opportunities.md"><article class="markdown-body entry-content container-lg" itemprop="text"><h2 dir="auto">
+<a id="user-content-can-ai-provide-any-new-job-opportunities" class="anchor" aria-hidden="true" href="#can-ai-provide-any-new-job-opportunities"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a>Can AI provide any new job opportunities?</h2>
+<p dir="auto">Quite a few days we are talking about how AI is revolutionising the world and how it can optimise and automate our day to day job. Few even talk about how AI can replace job opportunities like Graphic Designers, Content Creators , Customer Service Agents etc. But today I am going to talk about a job opportunity provided by AI called the prompt engineering.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/7569031/228196121-af16f5bd-b3e3-4141-8ea8-4e0fe9ae73c2.png"><div class="text-center"><img src="https://user-images.githubusercontent.com/7569031/228196121-af16f5bd-b3e3-4141-8ea8-4e0fe9ae73c2.png" alt="image" style="max-width: 100%;"></div></a></p>
+<blockquote>
+<p dir="auto">Photo by Steve Johnson on Unsplash</p>
+</blockquote>
+<p dir="auto">Prompt engineering is a technique used in language model to create specific inputs or prompts to get desired output from it. The objective of prompt engineering is to provide the models with the prompt that can help in the generation of text and improve its performance</p>
+<p dir="auto">The future of prompt engineering looks promising, as it has shown to improve the performance of language model to generate specific output. As more time passes by many scientists and developers will explore the possibilities of prompt engineering. We can see more advancement to streamline the process of prompt engineering and it will help many common people to access it. With the advancement of language models we can also expect complex prompts that helps us to generate more advanced and desired output.</p>
+<p dir="auto">Prompt engineering can be based on various techniques like the following:</p>
+<h2 dir="auto">
+<a id="user-content-template-based-prompts" class="anchor" aria-hidden="true" href="#template-based-prompts"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a>Template-based prompts:</h2>
+<p dir="auto">Template based prompt is a type of prompt engineering in which predefined templates are used to get desired output from the model. The templates can help the model by providing specific information or to get a specific structured output.</p>
+<p dir="auto">Some examples as follows:</p>
+<ul dir="auto">
+<li>
+<strong>Social media post</strong>: “[statement/question] What is your opinion”. eg “I did shopping at this new place and it was so much affordable. What is your opinion about it.”</li>
+<li>
+<strong>Product description</strong>: “This product is good for {target audience} because {benefits}”. eg “This face wash is good for people with oily skin because it clears the oiliness and keeps the face fresh throughout the day.”</li>
+<li>
+<strong>Recommendation</strong>: “If you liked [item], you will love [item]. eg “If you liked Inception, you will like tenet.”</li>
+<li>
+<strong>Job description</strong>: “We are hiring for [job title] who can [job responsibilities] with [qualifications]. eg “We are hiring for data scientist who can build accurate ML models with a degree in computer science / statistics / mathematics and experience with pytorch etc.”
+Template based prompts are helpful because it helps to provide a proper structure to the output and helps to generate output that is informative and relevant. It can be customised for specific use cases and can be used with models like BERT or GPT.</li>
+</ul>
+<h2 dir="auto">
+<a id="user-content-controlled-text-generation" class="anchor" aria-hidden="true" href="#controlled-text-generation"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a>Controlled text generation:</h2>
+<p dir="auto">Controlled text generation based prompts is helpful in guiding the language model to generate output based on certain criteria or constraint. It behaves like given a set of constraints it generates the output that is based on specific tone, style or topic.</p>
+<p dir="auto">Some examples as follows:</p>
+<ul dir="auto">
+<li>
+<strong>Tone specific generation</strong>: Text generation based on specific tone like formal or informal. It is helpful to generate text which is consistent with a specific audience or context.</li>
+<li>
+<strong>Topic specific generation</strong>: Text generation based on specific topic. eg to generate news article for sports or politics.</li>
+<li>
+<strong>Style specific generation</strong>: Text generation based on styles like academic or creative writing. Helps to generate text with consistent genre or writing style.</li>
+<li>
+<strong>Question-answering</strong>: Text generation for question like FAQ or Customer Support response.</li>
+<li>
+<strong>Story Completion</strong>: Text generation to complete a story or narrative. It is used to generate creative writing prompts or to generate climax for stories.
+Controlled text generation is used in a variety of applications like chatbot, text translation etc. By guiding the language model to generate output based on specific constraints it is possible to generate more accurate and useful output for a task.</li>
+</ul>
+<h2 dir="auto">
+<a id="user-content-multi-step-prompts" class="anchor" aria-hidden="true" href="#multi-step-prompts"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a>Multi-step prompts:</h2>
+<p dir="auto">Multi step prompts is a type of prompt engineering in which a complex task is split into smaller steps. Each step is used to generate output which is used as input for the next step in the task. It is helpful in tasks that involves complex decision making or multiple steps.</p>
+<p dir="auto">Some examples as follows:</p>
+<ul dir="auto">
+<li>
+<strong>Decision Making</strong>: Generates text that helps user in a complex decision making process with a series of questions and providing feedback based on the response. eg a financial advisor chatbot uses a series of prompts to decide on financial planning process.</li>
+<li>
+<strong>Customer Support</strong>: Generates text that helps user through a troubleshooting process by asking a series of questions and giving feedback based on the response. eg a customer support chatbot might use a series of prompts to diagnose a problem and resolve a technical issue</li>
+<li>
+<strong>Resume Generation</strong>: Generates a resume using multiple prompts for different sections of the resume like work experience, education, skills , awards and honours.</li>
+<li>
+<strong>Story Generation</strong>: Generates a outline of a story and then using a serious of prompts to generate content for each chapter of the story. The prompts can be based on different elements of the story like character , plot and genre.
+Multi steps prompts helps to solve a complex decision making process or process multiple stages of information. By splitting a complex problem into smaller step it is possible to generate more accurate content for the user which is specifically desired for.</li>
+</ul>
+<p dir="auto">Hope prompt engineering brings many more opportunities for the human race!!!</p>
+<p dir="auto">Imported from my articel <a href="https://medium.com/gitconnected/prompt-engineering-a-job-opportunity-given-by-ai-43ceb1fed38" rel="nofollow">Medium: Can AI provide any new job opportunities?</a></p>
+</article></div></body></html>
+
+    </div>
+  </div>
+    <div class="row justify-content-center">
+      . . .
+    </div>
+  <div class="row justify-content-center contact">
+    <div class="text-center">
+      Follow Me on:
+      <a href="https://medium.com/@ethi"><i class="fab fa-medium"></i> Medium </a>
+      <a href="https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1"><i class="fab fa-youtube"></i> Youtube </a>
+      <a href="https://www.instagram.com/ethirajchandru/"><i class="fab fa-instagram"></i> Instagram </a>
+      <a href="https://www.linkedin.com/in/ethirajsrinivasan/"><i class="fab fa-linkedin"></i>
+      LinkedIn </a>
+      <a href="https://github.com/ethirajsrinivasan/"><i class="fab fa-github"></i><span> Github </a>
+      <a href="https://twitter.com/iamethi"><i class="fab fa-twitter"></i> Twitter </a>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col">
+      <div class="float-start mt-4">
+        <div class="project_nav_link">How to generate Kubernetes Deploy Manifests For Rails Application In Simple Steps</div>
+        <a href="/blogs/how-to-generate-kubernetes-deploy-manifests-for-rails-application-in-simple-steps">&larr; Previous Blog</a>
+      </div>
+      <div class="float-end mt-4">
+        <div class="project_nav_link">Exploring Visual ChatGPT In GPU &amp; CPU</div>
+        <a href="/blogs/exploring-visual-chatgpt-in-gpu-cpu">Next Blog &rarr; </a>
+      </div>
+    </div>
+  </div>
+  <div id="disqus_thread"></div>
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+var disqus_config = function () {
+  this.shortname = "ethigeek-com";
+  this.page.url = "http://ethigeek.com:3000/blogs/can-ai-provide-any-new-job-opportunities";
+  this.page.identifier = 'blog-16';
+  this.page.title = 'Can AI provide any new job opportunities?'; 
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//ethigeek-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+</div>
+
+		<div class="spacer"></div>
+		<footer class="footer fixed-bottom">
+			<div class="container">
+				<ul class="list-inline d-flex justify-content-center">
+					<li class="list-inline-item"><a target="_blank" class="fab fa-medium" href="https://medium.com/@ethi"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-youtube" href="https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-instagram" href="https://www.instagram.com/ethirajchandru/"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-linkedin" href="https://in.linkedin.com/in/ethirajsrinivasan"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-github" href="https://github.com/
+          ethirajsrinivasan"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-twitter" href="https://twitter.com/iamethi"></a></li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-66415800-8', 'auto');
+	ga('send', 'pageview');
+	</script>
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			offset: 200,
+			duration: 600,
+			easing: 'ease-in-sine',
+			delay: 100,
+		});
+	</script>
+</html>
