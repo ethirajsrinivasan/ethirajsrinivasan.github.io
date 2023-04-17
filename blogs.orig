@@ -4,14 +4,14 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>ethigeek</title>
-		<link rel="stylesheet" href="/assets/application.debug-3fd5bde369510d43e703b7e37b01029cd8d068cdb1ab10f0ddc5af9846e86b3c.css" media="screen" />
+		<link rel="stylesheet" href="/assets/application.debug-7f26cc101c007b45ea0365772ccd96e2afa58f1bf809c778c75cdab3dd06b9ab.css" media="screen" />
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-		<script src="/assets/application.debug-fb4e5ae36671edb07c8332dc0740913f55d1c710f990f752186c23542f246a39.js" data-turbolinks-track="true"></script>
+		<script src="/assets/application.debug-f375c201c7cc25c6f2e09974c53329a01f815f7268cf158a50d5845b31df8306.js" data-turbolinks-track="true"></script>
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="afL3ZVzicQvT3PG8Zymb8oehS_BsaHa1p5sKWdu-avkbRwcI0FLvHhv1lf6APHV7mugHgP0vgoqtJs-GDfbCww" />
+<meta name="csrf-token" content="Ys26qO9lzDC53bTf4TJXFCP32y39BQ-p3ONe1_8bBxy1qsB1tFey-FNY_MDOD4MrAfP6D7KhNHk1HhmP4uFLaA" />
 		<link rel="icon" type="image/x-icon" href="/assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
      crossorigin="anonymous"></script>
@@ -47,6 +47,21 @@
 		<div class="container">
 	<div class="spacer"></div>
 	<div id="blogs" class="row justify-content-center">
+		<div class="col-lg-4 col-md-10 col-sm-10">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<img class="img-tile" src="https://images.unsplash.com/photo-1618422168181-177d9d0a1fca" />
+					<br>
+					<br>
+					<div class="fs-6">Apr 17, 2023</div>
+					<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/jdk-variants-from-sun-microsystems-to-oracle-and-beyond">JDK variants: From Sun MicroSystems to Oracle and Beyond</a></div>
+					<div class="fs-6 fw-light blog_short_content">Java was originally developed by Sun Microsystems, a technology company that was founded in 1982. Sun Microsystems released the first version of Java in 1995, and it quickly gained popularity as a ver ... </div>
+					<a class="float-end" href="/blogs/jdk-variants-from-sun-microsystems-to-oracle-and-beyond">Read More &#x2192</a>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
 		<div class="col-lg-4 col-md-10 col-sm-10">
 			<div class="row justify-content-center">
 				<div class="col-12">
@@ -167,21 +182,6 @@
 			<br>
 			<br>
 		</div>
-		<div class="col-lg-4 col-md-10 col-sm-10">
-			<div class="row justify-content-center">
-				<div class="col-12">
-					<img class="img-tile" src="https://images.unsplash.com/photo-1476789668825-c16c51c46ac3" />
-					<br>
-					<br>
-					<div class="fs-6">Jul 24, 2018</div>
-					<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/a-simple-tensorflow-classification-model-in-ruby">A Simple Tensorflow Classification Model in Ruby</a></div>
-					<div class="fs-6 fw-light blog_short_content">The main objective of this blog is to build a simple linear classification model in ruby using Tensorflow architecture. The main tensorflow compenents required to build and test the model  are Operati ... </div>
-					<a class="float-end" href="/blogs/a-simple-tensorflow-classification-model-in-ruby">Read More &#x2192</a>
-				</div>
-			</div>
-			<br>
-			<br>
-		</div>
 	</div>
 	<div class="row justify-content-center">
 		<div class="col text-center">
@@ -199,8 +199,7 @@
           <li class="list-inline-item"><a target="_blank" class="fab fa-youtube" href="https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1"></a></li>
           <li class="list-inline-item"><a target="_blank" class="fab fa-instagram" href="https://www.instagram.com/ethirajchandru/"></a></li>
           <li class="list-inline-item"><a target="_blank" class="fab fa-linkedin" href="https://in.linkedin.com/in/ethirajsrinivasan"></a></li>
-          <li class="list-inline-item"><a target="_blank" class="fab fa-github" href="https://github.com/
-          ethirajsrinivasan"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-github" href="https://github.com/ethirajsrinivasan"></a></li>
           <li class="list-inline-item"><a target="_blank" class="fab fa-twitter" href="https://twitter.com/iamethi"></a></li>
 				</ul>
 			</div>

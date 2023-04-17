@@ -4,14 +4,14 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>The world of Rate Limit Algorithms</title>
-		<link rel="stylesheet" href="/assets/application.debug-3fd5bde369510d43e703b7e37b01029cd8d068cdb1ab10f0ddc5af9846e86b3c.css" media="screen" />
+		<link rel="stylesheet" href="/assets/application.debug-7f26cc101c007b45ea0365772ccd96e2afa58f1bf809c778c75cdab3dd06b9ab.css" media="screen" />
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-		<script src="/assets/application.debug-fb4e5ae36671edb07c8332dc0740913f55d1c710f990f752186c23542f246a39.js" data-turbolinks-track="true"></script>
+		<script src="/assets/application.debug-f375c201c7cc25c6f2e09974c53329a01f815f7268cf158a50d5845b31df8306.js" data-turbolinks-track="true"></script>
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="9SBT6V49uR--9uf8LhP7vDerubErKnj8lt_x6kPr3QWHlaOE0o0nCnbfg77JBhU1KuL1wbptjMOcYjQ1laN1Pw" />
+<meta name="csrf-token" content="5ugfPRMC0XbdkR47LkeZXhjG4a21rmg8Yz1-ARFfOksxj2XgSDCvvjcUViQBek1hOsLAj_oKU-yKwDlZDKV2Pw" />
 		<link rel="icon" type="image/x-icon" href="/assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
      crossorigin="anonymous"></script>
@@ -871,8 +871,8 @@ else:
   <div class="row">
     <div class="col">
       <div class="float-start mt-4">
-        <div class="project_nav_link">How to generate Kubernetes Deploy Manifests For Rails Application</div>
-        <a href="/blogs/how-to-generate-kubernetes-deploy-manifests-for-rails-application-in-simple-steps">&larr; Previous Blog</a>
+        <div class="project_nav_link">Exploring Visual ChatGPT In GPU &amp; CPU</div>
+        <a href="/blogs/exploring-visual-chatgpt-in-gpu-cpu">&larr; Previous Blog</a>
       </div>
       <div class="float-end mt-4">
         <div class="project_nav_link">Fault Tolerance Design Patterns in Distributed Systems</div>
@@ -912,8 +912,7 @@ s.setAttribute('data-timestamp', +new Date());
           <li class="list-inline-item"><a target="_blank" class="fab fa-youtube" href="https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1"></a></li>
           <li class="list-inline-item"><a target="_blank" class="fab fa-instagram" href="https://www.instagram.com/ethirajchandru/"></a></li>
           <li class="list-inline-item"><a target="_blank" class="fab fa-linkedin" href="https://in.linkedin.com/in/ethirajsrinivasan"></a></li>
-          <li class="list-inline-item"><a target="_blank" class="fab fa-github" href="https://github.com/
-          ethirajsrinivasan"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-github" href="https://github.com/ethirajsrinivasan"></a></li>
           <li class="list-inline-item"><a target="_blank" class="fab fa-twitter" href="https://twitter.com/iamethi"></a></li>
 				</ul>
 			</div>
