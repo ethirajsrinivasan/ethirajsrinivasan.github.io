@@ -4,14 +4,14 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>ethigeek</title>
-		<link rel="stylesheet" href="/assets/application.debug-7f26cc101c007b45ea0365772ccd96e2afa58f1bf809c778c75cdab3dd06b9ab.css" media="screen" />
+		<link rel="stylesheet" href="/assets/application.debug-c217a4c8bd850a23e56cc665f02eb606654dcf2aaeaffb1b7ee104f9b597a45d.css" media="screen" />
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 		<script src="/assets/application.debug-f375c201c7cc25c6f2e09974c53329a01f815f7268cf158a50d5845b31df8306.js" data-turbolinks-track="true"></script>
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="BaPINy6TvgSIM8AYYZheJx26c45nIdbNhUkO0-kTDVH-7yP9P4DF5Q7eKm-2N-YnqvN_ZWez0YJ9kAdDh92jlQ" />
+<meta name="csrf-token" content="ILR5riv-g8r9pV1Y-XybO0vOKhIU2WgjP4Nt7pDPtuHCdGzsfc4VvgY1SYvNhbDlbHV3rOOR--S47LiOrV5SVg" />
 		<link rel="icon" type="image/x-icon" href="/assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
      crossorigin="anonymous"></script>
@@ -47,6 +47,21 @@
 		<div class="container">
 	<div class="spacer"></div>
 	<div id="blogs" class="row justify-content-center">
+		<div class="col-lg-4 col-md-10 col-sm-10">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<img class="img-tile" src="https://images.unsplash.com/photo-1637769270420-e02b7419a721" />
+					<br>
+					<br>
+					<div class="fs-6">Mar 20, 2023</div>
+					<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/looking-back-at-2022">Looking Back at 2022</a></div>
+					<div class="fs-6 fw-light blog_short_content">21 days since the new year 2023 began and I am going to review my goals for 2022. I know it&#39;s late but it better be late than never and this review will help me in my upcoming years. ... </div>
+					<a class="float-end" href="/blogs/looking-back-at-2022">Read More &#x2192</a>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
 		<div class="col-lg-4 col-md-10 col-sm-10">
 			<div class="row justify-content-center">
 				<div class="col-12">
