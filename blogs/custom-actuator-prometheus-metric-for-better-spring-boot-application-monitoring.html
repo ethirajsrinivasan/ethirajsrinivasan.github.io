@@ -11,7 +11,7 @@
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 		<script src="../assets/application.debug-f375c201c7cc25c6f2e09974c53329a01f815f7268cf158a50d5845b31df8306.js" data-turbolinks-track="true"></script>
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="nhD-dRXZ9O5OIjWuw7zLKbG6LQRYwBAgD8yzpWmIfiR80Os3Q-limrWyIX33ReD3lgFwuq-Ig-eIo2bFVBmakw" />
+<meta name="csrf-token" content="RpjZ_uwC_ukSvUODxGTb1S-C2xnvUpUFBLRNz46cXtw6nMC9otCiqVCCU6vWqV84VntQY_-Bz4rt9yyqygdGdA" />
 		<link rel="icon" type="image/x-icon" href="../assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
      crossorigin="anonymous"></script>
@@ -74,16 +74,15 @@
 &lt;/<span class="pl-s1">dependency</span>&gt;</pre></div>
 <p dir="auto">Run your spring application using</p>
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="mvn spring-boot:run"><pre>mvn spring-boot:run</pre></div>
-<p dir="auto">The application will run on port 8080. Go to <a href="../actuator" rel="nofollow">http://localhost:8080/actuator</a> to view the actuator end points.</p>
+<p dir="auto">The application will run on port 8080. Go to <a href="http://localhost:8080/actuator" rel="nofollow">http://localhost:8080/actuator</a> to view the actuator end points.</p>
 <p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/7569031/233104414-32731ea3-a848-4b41-bf13-671fd3a73931.png"><div class="text-center"><img src="https://user-images.githubusercontent.com/7569031/233104414-32731ea3-a848-4b41-bf13-671fd3a73931.png" alt="Actuator End Point" style="max-width: 100%;"></div></a></p>
 <p dir="auto">The actuator provides a health check endpoint which shows the status of the application. The status is "UP" if the application is healthy and "DOWN" if there are any issues</p>
 <p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/7569031/233108139-1bd8bb24-e095-4a07-a5e5-0ba972e79eea.png"><div class="text-center"><img src="https://user-images.githubusercontent.com/7569031/233108139-1bd8bb24-e095-4a07-a5e5-0ba972e79eea.png" alt="Health EndPoint" style="max-width: 100%;"></div></a></p>
 <p dir="auto">Actuator does provide more than just the health information. To unlock its true potential expose its endpoint to the outside world. To do this include the following in application.properties</p>
-<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="management.endpoint.info.enabled=true
-management.endpoints.web.exposure.include=*"><pre lang="file" class="notranslate"><code>management.endpoint.info.enabled=true
-management.endpoints.web.exposure.include=*
-</code></pre></div>
-<p dir="auto">Now go to <a href="../actuator" rel="nofollow">http://localhost:8080/actuator</a> to see more actuator end points exposed like below</p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="management.endpoint.info.enabled=true
+management.endpoints.web.exposure.include=*"><pre>management.endpoint.info.enabled=true
+management.endpoints.web.exposure.include=<span class="pl-k">*</span></pre></div>
+<p dir="auto">Now go to <a href="http://localhost:8080/actuator" rel="nofollow">http://localhost:8080/actuator</a> to see more actuator end points exposed like below</p>
 <div class="highlight highlight-source-json notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content='{"_links":{"self":{"href":"http://localhost:8080/actuator","templated":false},
 "beans":{"href":"http://localhost:8080/actuator/beans","templated":false},
 "caches-cache":{"href":"http://localhost:8080/actuator/caches/{cache}","templated":true},

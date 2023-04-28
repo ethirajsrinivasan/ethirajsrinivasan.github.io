@@ -6,10 +6,10 @@ jvm_gc_memory_promoted_bytes_total 1.1162624E7
 system_cpu_count 8.0
 # HELP process_cpu_usage The "recent cpu usage" for the Java Virtual Machine process
 # TYPE process_cpu_usage gauge
-process_cpu_usage 1.1350403373498155E-4
+process_cpu_usage 1.3234759337118866E-4
 # HELP jvm_compilation_time_ms_total The approximate accumulated elapsed time spent in compilation
 # TYPE jvm_compilation_time_ms_total counter
-jvm_compilation_time_ms_total{compiler="HotSpot 64-Bit Tiered Compilers",} 698.0
+jvm_compilation_time_ms_total{compiler="HotSpot 64-Bit Tiered Compilers",} 723.0
 # HELP custom_timer_metric_seconds_max  
 # TYPE custom_timer_metric_seconds_max gauge
 custom_timer_metric_seconds_max 0.0
@@ -24,10 +24,10 @@ jvm_classes_unloaded_classes_total 0.0
 # TYPE jvm_buffer_total_capacity_bytes gauge
 jvm_buffer_total_capacity_bytes{id="mapped - 'non-volatile memory'",} 0.0
 jvm_buffer_total_capacity_bytes{id="mapped",} 0.0
-jvm_buffer_total_capacity_bytes{id="direct",} 65536.0
+jvm_buffer_total_capacity_bytes{id="direct",} 81920.0
 # HELP disk_free_bytes Usable space for path
 # TYPE disk_free_bytes gauge
-disk_free_bytes{path="/Users/ethi/myspace/jav/demo/.",} 4.50079911936E11
+disk_free_bytes{path="/Users/ethi/myspace/jav/demo/.",} 4.50047062016E11
 # HELP tomcat_sessions_active_max_sessions  
 # TYPE tomcat_sessions_active_max_sessions gauge
 tomcat_sessions_active_max_sessions 0.0
@@ -45,7 +45,7 @@ jvm_info{runtime="OpenJDK Runtime Environment",vendor="Homebrew",version="20",} 
 tomcat_sessions_created_sessions_total 0.0
 # HELP jvm_classes_loaded_classes The number of classes that are currently loaded in the Java virtual machine
 # TYPE jvm_classes_loaded_classes gauge
-jvm_classes_loaded_classes 8119.0
+jvm_classes_loaded_classes 8122.0
 # HELP executor_completed_tasks_total The approximate total number of tasks that have completed execution
 # TYPE executor_completed_tasks_total counter
 executor_completed_tasks_total{name="applicationTaskExecutor",} 0.0
@@ -64,7 +64,7 @@ jvm_gc_overhead_percent 0.0
 application_ready_time_seconds{main_application_class="com.example.demo.DemoApplication",} 0.779
 # HELP process_uptime_seconds The uptime of the Java virtual machine
 # TYPE process_uptime_seconds gauge
-process_uptime_seconds 5320.913
+process_uptime_seconds 5849.082
 # HELP application_started_time_seconds Time taken (ms) to start the application
 # TYPE application_started_time_seconds gauge
 application_started_time_seconds{main_application_class="com.example.demo.DemoApplication",} 0.746
@@ -73,11 +73,11 @@ application_started_time_seconds{main_application_class="com.example.demo.DemoAp
 executor_pool_core_threads{name="applicationTaskExecutor",} 8.0
 # HELP http_server_requests_active_seconds_max  
 # TYPE http_server_requests_active_seconds_max gauge
-http_server_requests_active_seconds_max{exception="none",method="GET",outcome="SUCCESS",status="200",uri="UNKNOWN",} 0.001264167
+http_server_requests_active_seconds_max{exception="none",method="GET",outcome="SUCCESS",status="200",uri="UNKNOWN",} 0.001501625
 # HELP http_server_requests_active_seconds  
 # TYPE http_server_requests_active_seconds summary
 http_server_requests_active_seconds_active_count{exception="none",method="GET",outcome="SUCCESS",status="200",uri="UNKNOWN",} 1.0
-http_server_requests_active_seconds_duration_sum{exception="none",method="GET",outcome="SUCCESS",status="200",uri="UNKNOWN",} 0.00125725
+http_server_requests_active_seconds_duration_sum{exception="none",method="GET",outcome="SUCCESS",status="200",uri="UNKNOWN",} 0.001496083
 # HELP custom_gauge_metric  
 # TYPE custom_gauge_metric gauge
 custom_gauge_metric 1.0
@@ -88,7 +88,7 @@ process_start_time_seconds 1.682696028521E9
 # TYPE jvm_buffer_memory_used_bytes gauge
 jvm_buffer_memory_used_bytes{id="mapped - 'non-volatile memory'",} 0.0
 jvm_buffer_memory_used_bytes{id="mapped",} 0.0
-jvm_buffer_memory_used_bytes{id="direct",} 65536.0
+jvm_buffer_memory_used_bytes{id="direct",} 81920.0
 # HELP jvm_threads_peak_threads The peak live thread count since the Java virtual machine started or peak was reset
 # TYPE jvm_threads_peak_threads gauge
 jvm_threads_peak_threads 21.0
@@ -105,10 +105,10 @@ jvm_memory_usage_after_gc_percent{area="heap",pool="long-lived",} 0.002973159154
 # TYPE jvm_memory_used_bytes gauge
 jvm_memory_used_bytes{area="heap",id="G1 Survivor Space",} 1921280.0
 jvm_memory_used_bytes{area="heap",id="G1 Old Gen",} 1.9154432E7
-jvm_memory_used_bytes{area="nonheap",id="Metaspace",} 3.2832248E7
-jvm_memory_used_bytes{area="nonheap",id="CodeCache",} 8930816.0
+jvm_memory_used_bytes{area="nonheap",id="Metaspace",} 3.2849536E7
+jvm_memory_used_bytes{area="nonheap",id="CodeCache",} 8501632.0
 jvm_memory_used_bytes{area="heap",id="G1 Eden Space",} 1.6777216E7
-jvm_memory_used_bytes{area="nonheap",id="Compressed Class Space",} 4547752.0
+jvm_memory_used_bytes{area="nonheap",id="Compressed Class Space",} 4550752.0
 # HELP jvm_gc_memory_allocated_bytes_total Incremented for an increase in the size of the (young) heap memory pool after one GC to before the next
 # TYPE jvm_gc_memory_allocated_bytes_total counter
 jvm_gc_memory_allocated_bytes_total 7.1303168E7
@@ -124,12 +124,12 @@ jvm_gc_pause_seconds_max{action="end of minor GC",cause="Metadata GC Threshold",
 jvm_gc_pause_seconds_max{action="end of minor GC",cause="G1 Evacuation Pause",} 0.0
 # HELP system_cpu_usage The "recent cpu usage" of the system the application is running in
 # TYPE system_cpu_usage gauge
-system_cpu_usage 0.10671435007119685
+system_cpu_usage 0.15545835351779558
 # HELP jvm_buffer_count_buffers An estimate of the number of buffers in the pool
 # TYPE jvm_buffer_count_buffers gauge
 jvm_buffer_count_buffers{id="mapped - 'non-volatile memory'",} 0.0
 jvm_buffer_count_buffers{id="mapped",} 0.0
-jvm_buffer_count_buffers{id="direct",} 8.0
+jvm_buffer_count_buffers{id="direct",} 10.0
 # HELP custom_counter_metric_total  
 # TYPE custom_counter_metric_total counter
 custom_counter_metric_total 6.0
@@ -150,7 +150,7 @@ jvm_gc_max_data_size_bytes 6.442450944E9
 jvm_threads_live_threads 21.0
 # HELP system_load_average_1m The sum of the number of runnable entities queued to available processors and the number of runnable entities running on the available processors averaged over a period of time
 # TYPE system_load_average_1m gauge
-system_load_average_1m 3.23876953125
+system_load_average_1m 2.1630859375
 # HELP disk_total_bytes Total space for path
 # TYPE disk_total_bytes gauge
 disk_total_bytes{path="/Users/ethi/myspace/jav/demo/.",} 9.9466258432E11
@@ -168,7 +168,7 @@ jvm_gc_concurrent_phase_time_seconds_max{action="end of concurrent GC pause",cau
 # TYPE jvm_memory_committed_bytes gauge
 jvm_memory_committed_bytes{area="heap",id="G1 Survivor Space",} 4194304.0
 jvm_memory_committed_bytes{area="heap",id="G1 Old Gen",} 3.7748736E7
-jvm_memory_committed_bytes{area="nonheap",id="Metaspace",} 3.3488896E7
+jvm_memory_committed_bytes{area="nonheap",id="Metaspace",} 3.3554432E7
 jvm_memory_committed_bytes{area="nonheap",id="CodeCache",} 9371648.0
 jvm_memory_committed_bytes{area="heap",id="G1 Eden Space",} 5.4525952E7
 jvm_memory_committed_bytes{area="nonheap",id="Compressed Class Space",} 4849664.0
@@ -206,25 +206,25 @@ http_server_requests_seconds_count{error="none",exception="none",method="GET",ou
 http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/processGauge",} 0.017409792
 http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/incrementCounter",} 1.0
 http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/incrementCounter",} 0.004194875
-http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/prometheus",} 2.0
-http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/prometheus",} 0.051010625
-http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/threaddump",} 1.0
-http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/threaddump",} 0.029206791
+http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/prometheus",} 3.0
+http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/prometheus",} 0.055003708
+http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/threaddump",} 2.0
+http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/threaddump",} 0.047187499
 http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/recordTime",} 1.0
 http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/recordTime",} 0.003981375
-http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator",} 1.0
-http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator",} 0.013499083
-http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="CLIENT_ERROR",status="404",uri="/**",} 2.0
-http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="CLIENT_ERROR",status="404",uri="/**",} 0.017815292
+http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator",} 2.0
+http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator",} 0.016634916
+http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="CLIENT_ERROR",status="404",uri="/**",} 4.0
+http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="CLIENT_ERROR",status="404",uri="/**",} 0.024663417
 # HELP http_server_requests_seconds_max  
 # TYPE http_server_requests_seconds_max gauge
 http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/processGauge",} 0.0
 http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/incrementCounter",} 0.0
 http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/prometheus",} 0.0
-http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/threaddump",} 0.029206791
+http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/threaddump",} 0.017980708
 http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/recordTime",} 0.0
-http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator",} 0.013499083
-http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="CLIENT_ERROR",status="404",uri="/**",} 0.007471792
+http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator",} 0.003135833
+http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="CLIENT_ERROR",status="404",uri="/**",} 0.005914167
 # HELP tomcat_sessions_alive_max_seconds  
 # TYPE tomcat_sessions_alive_max_seconds gauge
 tomcat_sessions_alive_max_seconds 0.0
