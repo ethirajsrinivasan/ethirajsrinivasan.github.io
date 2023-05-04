@@ -6,10 +6,10 @@ jvm_gc_memory_promoted_bytes_total 1.1162624E7
 system_cpu_count 8.0
 # HELP process_cpu_usage The "recent cpu usage" for the Java Virtual Machine process
 # TYPE process_cpu_usage gauge
-process_cpu_usage 1.2141878542143073E-5
+process_cpu_usage 2.038151131333779E-4
 # HELP jvm_compilation_time_ms_total The approximate accumulated elapsed time spent in compilation
 # TYPE jvm_compilation_time_ms_total counter
-jvm_compilation_time_ms_total{compiler="HotSpot 64-Bit Tiered Compilers",} 828.0
+jvm_compilation_time_ms_total{compiler="HotSpot 64-Bit Tiered Compilers",} 838.0
 # HELP custom_timer_metric_seconds_max  
 # TYPE custom_timer_metric_seconds_max gauge
 custom_timer_metric_seconds_max 0.0
@@ -27,7 +27,7 @@ jvm_buffer_total_capacity_bytes{id="mapped",} 0.0
 jvm_buffer_total_capacity_bytes{id="direct",} 81920.0
 # HELP disk_free_bytes Usable space for path
 # TYPE disk_free_bytes gauge
-disk_free_bytes{path="/Users/ethi/myspace/jav/demo/.",} 4.44865634304E11
+disk_free_bytes{path="/Users/ethi/myspace/jav/demo/.",} 4.44858933248E11
 # HELP tomcat_sessions_active_max_sessions  
 # TYPE tomcat_sessions_active_max_sessions gauge
 tomcat_sessions_active_max_sessions 0.0
@@ -64,7 +64,7 @@ jvm_gc_overhead_percent 0.0
 application_ready_time_seconds{main_application_class="com.example.demo.DemoApplication",} 0.779
 # HELP process_uptime_seconds The uptime of the Java virtual machine
 # TYPE process_uptime_seconds gauge
-process_uptime_seconds 94572.713
+process_uptime_seconds 95218.852
 # HELP application_started_time_seconds Time taken (ms) to start the application
 # TYPE application_started_time_seconds gauge
 application_started_time_seconds{main_application_class="com.example.demo.DemoApplication",} 0.746
@@ -73,12 +73,12 @@ application_started_time_seconds{main_application_class="com.example.demo.DemoAp
 executor_pool_core_threads{name="applicationTaskExecutor",} 8.0
 # HELP http_server_requests_active_seconds_max  
 # TYPE http_server_requests_active_seconds_max gauge
-http_server_requests_active_seconds_max{exception="none",method="GET",outcome="SUCCESS",status="200",uri="UNKNOWN",} 0.002474167
+http_server_requests_active_seconds_max{exception="none",method="GET",outcome="SUCCESS",status="200",uri="UNKNOWN",} 0.00124
 http_server_requests_active_seconds_max{exception="none",method="OPTIONS",outcome="SUCCESS",status="200",uri="UNKNOWN",} 0.0
 # HELP http_server_requests_active_seconds  
 # TYPE http_server_requests_active_seconds summary
 http_server_requests_active_seconds_active_count{exception="none",method="GET",outcome="SUCCESS",status="200",uri="UNKNOWN",} 1.0
-http_server_requests_active_seconds_duration_sum{exception="none",method="GET",outcome="SUCCESS",status="200",uri="UNKNOWN",} 0.002464833
+http_server_requests_active_seconds_duration_sum{exception="none",method="GET",outcome="SUCCESS",status="200",uri="UNKNOWN",} 0.001231958
 http_server_requests_active_seconds_active_count{exception="none",method="OPTIONS",outcome="SUCCESS",status="200",uri="UNKNOWN",} 0.0
 http_server_requests_active_seconds_duration_sum{exception="none",method="OPTIONS",outcome="SUCCESS",status="200",uri="UNKNOWN",} 0.0
 # HELP custom_gauge_metric  
@@ -109,8 +109,8 @@ jvm_memory_usage_after_gc_percent{area="heap",pool="long-lived",} 0.002973159154
 jvm_memory_used_bytes{area="heap",id="G1 Survivor Space",} 2223632.0
 jvm_memory_used_bytes{area="heap",id="G1 Old Gen",} 1.9154432E7
 jvm_memory_used_bytes{area="nonheap",id="Metaspace",} 3.295564E7
-jvm_memory_used_bytes{area="nonheap",id="CodeCache",} 8777216.0
-jvm_memory_used_bytes{area="heap",id="G1 Eden Space",} 0.0
+jvm_memory_used_bytes{area="nonheap",id="CodeCache",} 8828288.0
+jvm_memory_used_bytes{area="heap",id="G1 Eden Space",} 4194304.0
 jvm_memory_used_bytes{area="nonheap",id="Compressed Class Space",} 4564512.0
 # HELP jvm_gc_memory_allocated_bytes_total Incremented for an increase in the size of the (young) heap memory pool after one GC to before the next
 # TYPE jvm_gc_memory_allocated_bytes_total counter
@@ -127,7 +127,7 @@ jvm_gc_pause_seconds_max{action="end of minor GC",cause="Metadata GC Threshold",
 jvm_gc_pause_seconds_max{action="end of minor GC",cause="G1 Evacuation Pause",} 0.0
 # HELP system_cpu_usage The "recent cpu usage" of the system the application is running in
 # TYPE system_cpu_usage gauge
-system_cpu_usage 0.13309510785465106
+system_cpu_usage 0.1754972740003535
 # HELP jvm_buffer_count_buffers An estimate of the number of buffers in the pool
 # TYPE jvm_buffer_count_buffers gauge
 jvm_buffer_count_buffers{id="mapped - 'non-volatile memory'",} 0.0
@@ -153,7 +153,7 @@ jvm_gc_max_data_size_bytes 6.442450944E9
 jvm_threads_live_threads 21.0
 # HELP system_load_average_1m The sum of the number of runnable entities queued to available processors and the number of runnable entities running on the available processors averaged over a period of time
 # TYPE system_load_average_1m gauge
-system_load_average_1m 2.06005859375
+system_load_average_1m 2.42626953125
 # HELP disk_total_bytes Total space for path
 # TYPE disk_total_bytes gauge
 disk_total_bytes{path="/Users/ethi/myspace/jav/demo/.",} 9.9466258432E11
@@ -209,28 +209,28 @@ http_server_requests_seconds_count{error="none",exception="none",method="GET",ou
 http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/processGauge",} 0.017409792
 http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/incrementCounter",} 1.0
 http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/incrementCounter",} 0.004194875
-http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/prometheus",} 5.0
-http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/prometheus",} 0.060746916
-http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/threaddump",} 4.0
-http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/threaddump",} 0.09247879
+http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/prometheus",} 6.0
+http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/prometheus",} 0.066600082
+http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/threaddump",} 5.0
+http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/threaddump",} 0.107508998
 http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/recordTime",} 1.0
 http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/recordTime",} 0.003981375
-http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator",} 4.0
-http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator",} 0.021586499
+http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator",} 5.0
+http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator",} 0.024250957
 http_server_requests_seconds_count{error="none",exception="none",method="OPTIONS",outcome="CLIENT_ERROR",status="403",uri="/**",} 1.0
 http_server_requests_seconds_sum{error="none",exception="none",method="OPTIONS",outcome="CLIENT_ERROR",status="403",uri="/**",} 0.025491084
-http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="CLIENT_ERROR",status="404",uri="/**",} 8.0
-http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="CLIENT_ERROR",status="404",uri="/**",} 0.036482208
+http_server_requests_seconds_count{error="none",exception="none",method="GET",outcome="CLIENT_ERROR",status="404",uri="/**",} 10.0
+http_server_requests_seconds_sum{error="none",exception="none",method="GET",outcome="CLIENT_ERROR",status="404",uri="/**",} 0.040930541
 # HELP http_server_requests_seconds_max  
 # TYPE http_server_requests_seconds_max gauge
 http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/processGauge",} 0.0
 http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/incrementCounter",} 0.0
 http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/prometheus",} 0.0
-http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/threaddump",} 0.013931833
+http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator/threaddump",} 0.015030208
 http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/recordTime",} 0.0
-http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator",} 0.00221175
+http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="SUCCESS",status="200",uri="/actuator",} 0.002664458
 http_server_requests_seconds_max{error="none",exception="none",method="OPTIONS",outcome="CLIENT_ERROR",status="403",uri="/**",} 0.0
-http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="CLIENT_ERROR",status="404",uri="/**",} 0.003555667
+http_server_requests_seconds_max{error="none",exception="none",method="GET",outcome="CLIENT_ERROR",status="404",uri="/**",} 0.003482875
 # HELP tomcat_sessions_alive_max_seconds  
 # TYPE tomcat_sessions_alive_max_seconds gauge
 tomcat_sessions_alive_max_seconds 0.0
