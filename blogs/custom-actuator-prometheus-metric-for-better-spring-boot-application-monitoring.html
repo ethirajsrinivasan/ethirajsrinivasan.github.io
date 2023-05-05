@@ -4,14 +4,14 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Custom Actuator Prometheus Metric For Better Spring Boot Application Monitoring</title>
-		<link rel="stylesheet" href="../assets/application.debug-c217a4c8bd850a23e56cc665f02eb606654dcf2aaeaffb1b7ee104f9b597a45d.css" media="screen" />
+		<link rel="stylesheet" href="../assets/application-ca48d8c7e3e20d279b442eafa381d192497d07a330af08f971db1e38101e8ef3.css" media="screen" />
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-		<script src="../assets/application.debug-f375c201c7cc25c6f2e09974c53329a01f815f7268cf158a50d5845b31df8306.js" data-turbolinks-track="true"></script>
+		<script src="../assets/application-bc06611d5641a6213bbce9fbcf85d8fd55c52ef17ed7d0c66c11016d020c0c3a.js" data-turbolinks-track="true"></script>
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="TWY9aZcBwMJYRJXAIn5kb-ALBfO4XoyyQLF2oSuuO_zu2UlPMZR4BosQ2xRyWXh7byS64AV-ii6g18SSPhYnEA" />
+<meta name="csrf-token" content="25VsXltQGc-MDva1pZ0DaHyhr5vOgPTG8OUgHK3ioI3AgGnrQVZ9Uwmolgw62y86Q69ieCOeG0e8ybKS0r4yeA" />
 		<link rel="icon" type="image/x-icon" href="../assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
      crossorigin="anonymous"></script>
@@ -35,7 +35,7 @@
 					</button>
 					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 						<div class="navbar-nav ms-auto">
-							<a class="nav-link" href="../resume" target="_blank">Resume</a>
+							<a class="nav-link" href="../resume.pdf" target="_blank">Resume</a>
 							<a class="nav-link" href="../index.html#portfolio">Portfolio</a>
 							<a class="nav-link" href="../blogs.html">Blog</a>
 							<a class="nav-link" href="../about.html">About</a>
@@ -122,7 +122,7 @@ management.endpoints.web.exposure.include=<span class="pl-k">*</span></pre></div
 <span class="pl-ent">"metrics-requiredMetricName"</span>:{<span class="pl-ent">"href"</span>:<span class="pl-s"><span class="pl-pds">"</span>http://localhost:8080/actuator/metrics/{requiredMetricName}<span class="pl-pds">"</span></span>,<span class="pl-ent">"templated"</span>:<span class="pl-c1">true</span>},
 <span class="pl-ent">"scheduledtasks"</span>:{<span class="pl-ent">"href"</span>:<span class="pl-s"><span class="pl-pds">"</span>http://localhost:8080/actuator/scheduledtasks<span class="pl-pds">"</span></span>,<span class="pl-ent">"templated"</span>:<span class="pl-c1">false</span>},
 <span class="pl-ent">"mappings"</span>:{<span class="pl-ent">"href"</span>:<span class="pl-s"><span class="pl-pds">"</span>http://localhost:8080/actuator/mappings<span class="pl-pds">"</span></span>,<span class="pl-ent">"templated"</span>:<span class="pl-c1">false</span>}}}</pre></div>
-<p dir="auto">As seen above the actuator provides information about beans, env, heapdump, threaddump, metrics etc. In order to get any detailed information click on the link. In case of threaddump click: <a href="../actuator/threaddump" rel="nofollow">http://localhost:8080/actuator/threaddump</a></p>
+<p dir="auto">As seen above the actuator provides information about beans, env, heapdump, threaddump, metrics etc. In order to get any detailed information click on the link. In case of threaddump click: <a href="http://localhost:8080/actuator/threaddump" rel="nofollow">http://localhost:8080/actuator/threaddump</a></p>
 <p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/7569031/233135743-6ba4d395-574b-49a1-880e-f1a52a5d896e.png"><div class="text-center"><img src="https://user-images.githubusercontent.com/7569031/233135743-6ba4d395-574b-49a1-880e-f1a52a5d896e.png" alt="Thread Dump Info" style="max-width: 100%;"></div></a></p>
 <br>
 <h6 align="center" dir="auto">
@@ -142,7 +142,7 @@ management.endpoints.web.exposure.include=<span class="pl-k">*</span></pre></div
 	&lt;<span class="pl-s1">artifactId</span>&gt;<span class="pl-s1">micrometer</span>-<span class="pl-s1">registry</span>-<span class="pl-s1">prometheus</span>&lt;/<span class="pl-s1">artifactId</span>&gt;
 	&lt;<span class="pl-s1">scope</span>&gt;<span class="pl-s1">runtime</span>&lt;/<span class="pl-s1">scope</span>&gt;
 &lt;/<span class="pl-s1">dependency</span>&gt;</pre></div>
-<p dir="auto">Now run the application again to see the new actuator point - <a href="../actuator/prometheus" rel="nofollow">http://localhost:8080/actuator/prometheus</a>.</p>
+<p dir="auto">Now run the application again to see the new actuator point - <a href="http://localhost:8080/actuator/prometheus" rel="nofollow">http://localhost:8080/actuator/prometheus</a>.</p>
 <p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/7569031/233418124-8155ef76-19e3-4644-b8bd-7e1e062409e2.png"><div class="text-center"><img src="https://user-images.githubusercontent.com/7569031/233418124-8155ef76-19e3-4644-b8bd-7e1e062409e2.png" alt="Acutuator Prometheus Metrics" style="max-width: 100%;"></div></a></p>
 <br>
 <h6 align="center" dir="auto">

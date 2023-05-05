@@ -37923,5 +37923,3 @@ $( document ).ready(function() {
 
 
 ;
-
-//# sourceMappingURL=application.js-253b0f5f309502147a47d610963c686725174a1839cb5e25ff3182fda8ff67bc.map
