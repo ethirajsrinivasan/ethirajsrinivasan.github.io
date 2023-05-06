@@ -11,7 +11,7 @@
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 		<script src="/assets/application-bc06611d5641a6213bbce9fbcf85d8fd55c52ef17ed7d0c66c11016d020c0c3a.js" data-turbolinks-track="true"></script>
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="Gm0NoEoXM3tdFQH30Pq61Xm_U-sTKaNY-XF7UQbMye28CeVaXW7VyguyRzEvZlS3A_h7FkztYWmQFR4t5gFl4A" />
+<meta name="csrf-token" content="MTAy7GNmaDJ-vHYF2L2VAmzhfTJcCNlNttLOCU1BuqcsO8f3dHGfPDjgmF2Xx9Ty0ORWGDyBm7zb7jv72iaIgw" />
 		<link rel="icon" type="image/x-icon" href="/assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
 		<script src="https://cdn.rvlqplr.com/engine/engine-entry.js?pid=0a33716f-efb9-4dac-a8ed-8fae94f49289" async></script>
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
@@ -59,7 +59,7 @@
     <div class="col">
         <section  data-aos="fade-right">
           <h3>Summary</h3>
-          <div class="section-content"><div class="row"><div class="col"><p class="text-justify">rails-fort is a wrapper on javascript plugin that comes with modern progress bar for form completion. This gem comes with a configurable file to set properties for the gem. Working on this gem also allowed me to contribute to <a href="https://github.com/idriskhenchil/Fort.js">this  plugin</a>. Stylesheets and Scripts are shared through the asset pipeline.</p></div></div></div>
+          <div class="section-content"><div class="row"><div class="col"><p class="text-justify">rails-fort is a wrapper on javascript plugin that comes with modern progress bar for form completion. This gem comes with a configurable file to set properties for the gem. Working on this gem also allowed me to contribute to <a href="https://github.com/idriskhenchil/Fort.js">this  plugin</a>. Stylesheets and Scripts are shared through the asset pipeline.</p></div></div><br><p><div class='rvlqplr-placement-046628aa-40bc-4b18-bb04-e20223f91c38'></div></p><br></div>
         </section>
         <section  data-aos="fade-right">
           <h3>Project Links</h3>
