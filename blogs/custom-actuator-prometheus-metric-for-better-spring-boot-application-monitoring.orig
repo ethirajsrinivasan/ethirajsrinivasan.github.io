@@ -6,14 +6,14 @@
 		<meta name="description" content="This article describes a elegant way to add custom actuator prometheus metric to spring boot applications. Spring boot, a powerful java based framework to develop micro services web application provides many easy to configure solutions for developers need. Developing a microservices application is complete only when we can monitor these microservices. Spring boot provides Actuator to help monitor these microservices. Actuator uses HTTP endpoints to provide information about the application. Actuator provides lot of metrics like the database connections , thread information, memory information, HTTP client and server requests etc. Below are the 3 steps to add custom actuator prometheus metrics in spring boot"/>
 		<meta property="og:image" content="https://images.unsplash.com/photo-1589935447067-5531094415d1"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="/assets/application-9ca92581c92939803e5b6b308379a4908b9755117f3d6301a4325e599411515a.css" media="screen" />
+		<link rel="stylesheet" href="/assets/application-ec816bccda848783beb46c6fccbb0faa297eddc1e2f7355c14dd909bf8165745.css" media="screen" />
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 		<script src="/assets/application-bc06611d5641a6213bbce9fbcf85d8fd55c52ef17ed7d0c66c11016d020c0c3a.js" data-turbolinks-track="true"></script>
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="XZPj7p16I8D7rLEHKrvMz8olKP_eMSPJTMin56GKQ7mw3CXlAq3pYfzMDAO939qDZddq0m-XQc6oRY335HdOag" />
+<meta name="csrf-token" content="GTQMLG0DMaSQJJiCaIt2y5Vi2qjSxQTIfvBjBZfStaWaUY-0qK-fxLgCuWrUlr8U1H1MgqI7uuo2AIsFC0nK_w" />
 		<link rel="icon" type="image/x-icon" href="/assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
 		<script src="https://cdn.rvlqplr.com/engine/engine-entry.js?pid=0a33716f-efb9-4dac-a8ed-8fae94f49289" async></script>
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
