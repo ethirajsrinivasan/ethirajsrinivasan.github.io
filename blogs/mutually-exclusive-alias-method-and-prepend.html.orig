@@ -13,7 +13,7 @@
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 		<script src="/assets/application-bc06611d5641a6213bbce9fbcf85d8fd55c52ef17ed7d0c66c11016d020c0c3a.js" data-turbolinks-track="true"></script>
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="nrusQZU2C1qlVCj6XNnXlj4yGt0zeB-fJY3hivTdaw1cIPlEbHQeo0TqPioktZTuWbtOofElVihXuHbpKPd5jQ" />
+<meta name="csrf-token" content="E5wmL13Zmklxmw5NJ84mxfu2qeQi_7Q_7h30y2KngsUcjgSTeDsk-BzwZsssRwZZDSaIjojxLP22FJF715ps1Q" />
 		<link rel="icon" type="image/x-icon" href="/assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
 		<script src="https://cdn.rvlqplr.com/engine/engine-entry.js?pid=0a33716f-efb9-4dac-a8ed-8fae94f49289" async></script>
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
@@ -57,7 +57,6 @@
 <p dir="auto"><code>Module#alias_method</code> was one of the earliest solution to overwrite a method in ruby.With an alias method in place you can redefine a method to anything you want and call the old method using the alias_method</p>
 <p></p>
 <div class="rvlqplr-placement-046628aa-40bc-4b18-bb04-e20223f91c38"></div>
-<br>
 <p dir="auto">Let us consider the following example</p>
 <div class="highlight highlight-source-ruby notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content='class Person
  def greeting

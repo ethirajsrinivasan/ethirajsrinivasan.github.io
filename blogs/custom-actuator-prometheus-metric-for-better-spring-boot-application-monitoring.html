@@ -13,7 +13,7 @@
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 		<script src="../assets/application-bc06611d5641a6213bbce9fbcf85d8fd55c52ef17ed7d0c66c11016d020c0c3a.js" data-turbolinks-track="true"></script>
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="oqjKWTneqa22yfxzd_-n3PDSDbBfkDzgi3asx5ESe1VgM59cwJy8VFd36qMPk-Skl1tZzJ3NdVf5QzukTThp1Q" />
+<meta name="csrf-token" content="8f697Kw3zLy7GRUR2Tt7E3k_l8OfyNPKhq7LrvaSDeL-7J9QidVyDdZyfZfSsluPj6-2qTXGSwjep64eQ6_j8g" />
 		<link rel="icon" type="image/x-icon" href="../assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
 		<script src="https://cdn.rvlqplr.com/engine/engine-entry.js?pid=0a33716f-efb9-4dac-a8ed-8fae94f49289" async></script>
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
@@ -57,7 +57,6 @@
 <p dir="auto">This article describes a elegant way to add custom actuator prometheus metric to spring boot applications. Spring boot, a powerful java based framework to develop micro services web application provides many easy to configure solutions for developers need. Developing a microservices application is complete only when we can monitor these microservices. Spring boot provides Actuator to help monitor these microservices. Actuator uses HTTP endpoints to provide information about the application. Actuator provides lot of metrics like the database connections , thread information, memory information, HTTP client and server requests etc. Below are the 3 steps to add custom actuator prometheus metrics in spring boot</p>
 <p></p>
 <div class="rvlqplr-placement-046628aa-40bc-4b18-bb04-e20223f91c38"></div>
-<br>
 <ol dir="auto">
 <li>Enable actuator in spring boot application</li>
 <li>Add prometheus micrometer to the application</li>
@@ -177,9 +176,9 @@ public void initialize(){
 	timer = Timer.builder("custom_timer_metric").register(registry);
 }'><pre><span class="pl-c1">@</span><span class="pl-c1">PostConstruct</span>
 <span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-s1">initialize</span>(){
-	<span class="pl-s1">counter</span> = <span class="pl-s1">Counter</span>.<span class="pl-en">builder</span>(<span class="pl-s">"custom_counter_metric"</span>).<span class="pl-en">register</span>(<span class="pl-s1">registry</span>);
-	<span class="pl-s1">Gauge</span>.<span class="pl-en">builder</span>(<span class="pl-s">"custom_gauge_metric"</span>,<span class="pl-s1">numbersList</span>,<span class="pl-s1">Collection</span>::<span class="pl-s1">size</span>).<span class="pl-en">register</span>(<span class="pl-s1">registry</span>);
-	<span class="pl-s1">timer</span> = <span class="pl-s1">Timer</span>.<span class="pl-en">builder</span>(<span class="pl-s">"custom_timer_metric"</span>).<span class="pl-en">register</span>(<span class="pl-s1">registry</span>);
+	<span class="pl-s1">counter</span> = <span class="pl-smi">Counter</span>.<span class="pl-en">builder</span>(<span class="pl-s">"custom_counter_metric"</span>).<span class="pl-en">register</span>(<span class="pl-s1">registry</span>);
+	<span class="pl-smi">Gauge</span>.<span class="pl-en">builder</span>(<span class="pl-s">"custom_gauge_metric"</span>,<span class="pl-s1">numbersList</span>,<span class="pl-smi">Collection</span>::<span class="pl-s1">size</span>).<span class="pl-en">register</span>(<span class="pl-s1">registry</span>);
+	<span class="pl-s1">timer</span> = <span class="pl-smi">Timer</span>.<span class="pl-en">builder</span>(<span class="pl-s">"custom_timer_metric"</span>).<span class="pl-en">register</span>(<span class="pl-s1">registry</span>);
 }</pre></div>
 <ul dir="auto">
 <li>Record the metrics in methods as follows</li>
@@ -191,7 +190,7 @@ counter.increment(5);"><pre><span class="pl-c">//custom logic</span>
 <span class="pl-s1">counter</span>.<span class="pl-en">increment</span>(<span class="pl-c1">5</span>);</pre></div>
 <div class="highlight highlight-source-java notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="//custom logic
 timer.record(Duration.between(tenMinuteBefore,LocalDateTime.now()).getSeconds(), TimeUnit.SECONDS);"><pre><span class="pl-c">//custom logic</span>
-<span class="pl-s1">timer</span>.<span class="pl-en">record</span>(<span class="pl-s1">Duration</span>.<span class="pl-en">between</span>(<span class="pl-s1">tenMinuteBefore</span>,<span class="pl-s1">LocalDateTime</span>.<span class="pl-en">now</span>()).<span class="pl-en">getSeconds</span>(), <span class="pl-smi">TimeUnit</span>.<span class="pl-c1">SECONDS</span>);</pre></div>
+<span class="pl-s1">timer</span>.<span class="pl-en">record</span>(<span class="pl-smi">Duration</span>.<span class="pl-en">between</span>(<span class="pl-s1">tenMinuteBefore</span>,<span class="pl-smi">LocalDateTime</span>.<span class="pl-en">now</span>()).<span class="pl-en">getSeconds</span>(), <span class="pl-smi">TimeUnit</span>.<span class="pl-c1">SECONDS</span>);</pre></div>
 <p dir="auto">A sample service class is as follows</p>
 <div class="highlight highlight-source-java notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content='@Service
 public class DemoService {
@@ -243,9 +242,9 @@ public class DemoService {
 
     <span class="pl-c1">@</span><span class="pl-c1">PostConstruct</span>
     <span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-en">initialize</span>(){
-	<span class="pl-s1">counter</span> = <span class="pl-s1">Counter</span>.<span class="pl-en">builder</span>(<span class="pl-s">"custom_counter_metric"</span>).<span class="pl-en">register</span>(<span class="pl-s1">registry</span>);
-	<span class="pl-s1">Gauge</span>.<span class="pl-en">builder</span>(<span class="pl-s">"custom_gauge_metric"</span>,<span class="pl-s1">numbersList</span>,<span class="pl-s1">Collection</span>::<span class="pl-s1">size</span>).<span class="pl-en">register</span>(<span class="pl-s1">registry</span>);
-	<span class="pl-s1">timer</span> = <span class="pl-s1">Timer</span>.<span class="pl-en">builder</span>(<span class="pl-s">"custom_timer_metric"</span>).<span class="pl-en">register</span>(<span class="pl-s1">registry</span>);
+	<span class="pl-s1">counter</span> = <span class="pl-smi">Counter</span>.<span class="pl-en">builder</span>(<span class="pl-s">"custom_counter_metric"</span>).<span class="pl-en">register</span>(<span class="pl-s1">registry</span>);
+	<span class="pl-smi">Gauge</span>.<span class="pl-en">builder</span>(<span class="pl-s">"custom_gauge_metric"</span>,<span class="pl-s1">numbersList</span>,<span class="pl-smi">Collection</span>::<span class="pl-s1">size</span>).<span class="pl-en">register</span>(<span class="pl-s1">registry</span>);
+	<span class="pl-s1">timer</span> = <span class="pl-smi">Timer</span>.<span class="pl-en">builder</span>(<span class="pl-s">"custom_timer_metric"</span>).<span class="pl-en">register</span>(<span class="pl-s1">registry</span>);
      }
 
     <span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-en">incrementCounter</span>() {
@@ -259,9 +258,9 @@ public class DemoService {
     }
 
     <span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-en">recordTime</span>() {
-        <span class="pl-smi">LocalDateTime</span> <span class="pl-s1">tenMinuteBefore</span> = <span class="pl-s1">LocalDateTime</span>.<span class="pl-en">now</span>().<span class="pl-en">minusMinutes</span>(<span class="pl-c1">10</span>);
+        <span class="pl-smi">LocalDateTime</span> <span class="pl-s1">tenMinuteBefore</span> = <span class="pl-smi">LocalDateTime</span>.<span class="pl-en">now</span>().<span class="pl-en">minusMinutes</span>(<span class="pl-c1">10</span>);
         <span class="pl-c">//custom logic</span>
-        <span class="pl-s1">timer</span>.<span class="pl-en">record</span>(<span class="pl-s1">Duration</span>.<span class="pl-en">between</span>(<span class="pl-s1">tenMinuteBefore</span>,<span class="pl-s1">LocalDateTime</span>.<span class="pl-en">now</span>()).<span class="pl-en">getSeconds</span>(), <span class="pl-smi">TimeUnit</span>.<span class="pl-c1">SECONDS</span>);
+        <span class="pl-s1">timer</span>.<span class="pl-en">record</span>(<span class="pl-smi">Duration</span>.<span class="pl-en">between</span>(<span class="pl-s1">tenMinuteBefore</span>,<span class="pl-smi">LocalDateTime</span>.<span class="pl-en">now</span>()).<span class="pl-en">getSeconds</span>(), <span class="pl-smi">TimeUnit</span>.<span class="pl-c1">SECONDS</span>);
     }
 }</pre></div>
 <p dir="auto">Once these methods are called navigate to <a href="http://localhost:8080/actuator/prometheus/" rel="nofollow">http://localhost:8080/actuator/prometheus/</a> to see the custom metrics</p>
@@ -314,6 +313,10 @@ custom_timer_metric_seconds_sum 600.0"><pre># <span class="pl-smi">HELP</span> <
   <br>
   <div class="row">
     <div class="col">
+      <div class="float-start mt-4">
+        <div class="project_nav_link">6 Valuable Life Lessons I Learned in My Early 30s</div>
+        <a href="6-valuable-life-lessons-i-learned-in-my-early-30s.html">&larr; Previous Blog</a>
+      </div>
       <div class="float-end mt-4">
         <div class="project_nav_link">JDK variants: From Sun MicroSystems to Oracle and Beyond</div>
         <a href="jdk-variants-from-sun-microsystems-to-oracle-and-beyond.html">Next Blog &rarr; </a>
