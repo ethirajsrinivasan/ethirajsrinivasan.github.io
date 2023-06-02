@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Demystifying Creational Patterns: A Roadmap to Effective Object Creation</title>
+		<meta name="description" content="In my previous article, I spoke about fault tolerance design patterns in distributed systems. In this article, I will talk about the design patterns used for object creation."/>
+		<meta property="og:image" content="https://images.unsplash.com/photo-1594585098652-21c58491eb0e"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../assets/application-ec816bccda848783beb46c6fccbb0faa297eddc1e2f7355c14dd909bf8165745.css" media="screen" />
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+		<script src="../assets/application-802f9fc6b464e394ae64db61e6b0de8cf5f1e9f73e6e5675b06d076f0e16d3c6.js" data-turbolinks-track="true"></script>
+		<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="2fwD2ERmPg9Fcfl2H42sFJEn9PSk4GNCkm1ynF5ZKu5b3JARy4ZoKH4xJAutiWbMnhZUhF5S9agi849U7ycYvg" />
+		<link rel="icon" type="image/x-icon" href="../assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
+		<script src="https://cdn.rvlqplr.com/engine/engine-entry.js?pid=0a33716f-efb9-4dac-a8ed-8fae94f49289" async></script>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
+     crossorigin="anonymous"></script>
+	</head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8HN948EZZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S8HN948EZZ');
+</script>
+	<body class="blog_body" data-spy="scroll" data-target="#navbar-scrollspy" data-offset="200">
+		<section class="cover text-center" style="background-image: url(https://images.unsplash.com/photo-1594585098652-21c58491eb0e)">
+			<nav class="navbar navbar-expand-lg navbar-trans navbar-light">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="../index.html"><strong>Ethiraj Srinivasan</strong></a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav ms-auto">
+							<a class="nav-link" href="../resume.pdf" target="_blank">Resume</a>
+							<a class="nav-link" href="../index.html#portfolio">Portfolio</a>
+							<a class="nav-link" href="../blogs.html">Blog</a>
+							<a class="nav-link" href="../about.html">About</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</section>
+		<br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div id="file" class="md" data-path="Demystifying Creational Patterns.md"><article class="markdown-body entry-content container-lg" itemprop="text"><h1 dir="auto">
+<a id="user-content-demystifying-creational-patterns-a-roadmap-to-effective-objectcreation" class="anchor" aria-hidden="true" href="demystifying-creational-patterns-a-roadmap-to-effective-object-creation.html#demystifying-creational-patterns-a-roadmap-to-effective-objectcreation"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a>Demystifying Creational Patterns: A Roadmap to Effective Object Creation</h1>
+<h2 dir="auto">
+<a id="user-content-harnessing-the-power-of-design-patterns-for-streamlined-and-scalable-object-instantiation" class="anchor" aria-hidden="true" href="demystifying-creational-patterns-a-roadmap-to-effective-object-creation.html#harnessing-the-power-of-design-patterns-for-streamlined-and-scalable-object-instantiation"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a>Harnessing the Power of Design Patterns for Streamlined and Scalable Object Instantiation</h2>
+<p dir="auto">In <a href="https://medium.com/r/?url=https%3A%2F%2Fbootcamp.uxdesign.cc%2Ffault-tolerance-design-patterns-in-distributed-systems-49853ad237b4" rel="nofollow">my previous article</a>, I spoke about fault tolerance design patterns in distributed systems. In this article, I will talk about the design patterns used for object creation.</p>
+<p></p>
+<div class="rvlqplr-placement-046628aa-40bc-4b18-bb04-e20223f91c38"></div>
+<blockquote>
+<p dir="auto"></p>
+<a href="https://bootcamp.uxdesign.cc/fault-tolerance-design-patterns-in-distributed-systems-49853ad237b4">
+        <div id="blogs" class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="border">
+                    <img class="img-tile" src="https://miro.medium.com/v2/resize:fit:1200/1*ZXkG9JZZIbvyo8K7QLYgoA.png">
+                    <br>
+                    <div class="px-3 pt-1">Fault Tolerance Design Patterns in Distributed Systems | by Ethiraj Srinivasan | Bootcamp</div>
+                    <div class="fw-light px-3 py-1"><small>Distributed systems are made up of multiple interconnected components that work together to provide ...</small></div>
+                </div>
+            </div>
+        </div>
+    </a><br>
+</blockquote>
+<p dir="auto">Creational patterns are a subset of design patterns that describes the object creation mechanisms. It helps to create objects in a flexible and efficient way and provides loose coupling between classes. These design patterns provide abstraction in the object creation process, hiding the specific details during object instantiation.</p>
+<p dir="auto">Creational patterns are useful when the object creation is complex, has multiple steps, or requires creating different types of objects based on certain constraints. Creational Patterns aim to make the code maintainable, easier, and extensible.</p>
+<p dir="auto">Some of the creational patterns are</p>
+<ul dir="auto">
+<li>Factory method pattern</li>
+<li>Builder pattern</li>
+<li>Singleton pattern</li>
+<li>Abstract factory pattern</li>
+<li>Prototype pattern</li>
+</ul>
+<p dir="auto">Each creational pattern has its own requirement and scenarios. We will look at the Factory method pattern and Builder pattern in detail.</p>
+<h3 dir="auto">
+<a id="user-content-factory-methodpattern" class="anchor" aria-hidden="true" href="demystifying-creational-patterns-a-roadmap-to-effective-object-creation.html#factory-methodpattern"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a>Factory Method Pattern</h3>
+<p dir="auto">Factory Method Pattern provides an interface for object creation and allows subclasses to alter the object instantiated. The object creation logic is encapsulated in a separate method called the factory method.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/da839c10e35d67a7927f015e09c78b7c510e14c274b2fa1ac97ca1c261f7f88b/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313537383737363334393039302d6465363164613030666631613f69786c69623d72622d342e302e3326697869643d4d3377784d6a4133664442384d48787761473930627931775957646c664878386647567566444238664878386641253344253344266175746f3d666f726d6174266669743d63726f7026773d3135383726713d3830"><div class="text-center"><img src="https://camo.githubusercontent.com/da839c10e35d67a7927f015e09c78b7c510e14c274b2fa1ac97ca1c261f7f88b/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313537383737363334393039302d6465363164613030666631613f69786c69623d72622d342e302e3326697869643d4d3377784d6a4133664442384d48787761473930627931775957646c664878386647567566444238664878386641253344253344266175746f3d666f726d6174266669743d63726f7026773d3135383726713d3830" alt="Factory" data-canonical-src="https://images.unsplash.com/photo-1578776349090-de61da00ff1a?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1587&amp;q=80" style="max-width: 100%;"></div></a></p>
+<blockquote>
+<p dir="auto">Photo by Alex Simpson on Unsplash</p>
+</blockquote>
+<p dir="auto">The factory method provides loose coupling as the client code depends only on the interface of the factory rather than any specific class. Thus new subclasses can be added without modifying any of the client code as long as it follows the factory method's interface.</p>
+<div class="highlight highlight-source-java notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content='// Fruit interface
+interface Fruit {
+    void display();
+}
+
+// Orange class implementing Fruit
+class Orange implements Fruit {
+    @Override
+    public void display() {
+        System.out.println("This is an orange.");
+    }
+}
+
+// Apple class implementing Fruit
+class Apple implements Fruit {
+    @Override
+    public void display() {
+        System.out.println("This is a apple.");
+    }
+}
+
+// Factory class for creating fruits
+class FruitFactory {
+    public Fruit createFruit(String fruitType) {
+        if (fruitType.equalsIgnoreCase("orange")) {
+            return new Orange();
+        } else if (fruitType.equalsIgnoreCase("apple")) {
+            return new Apple();
+        }
+        // Handle additional fruit types here
+        
+        return null; // Return null if the requested fruit type is not supported
+    }
+}
+
+// Game class
+class Game {
+    private FruitFactory fruitFactory;
+    
+    public Game() {
+        fruitFactory = new FruitFactory();
+    }
+    
+    public void collectFruit(String fruitType) {
+        Fruit fruit = fruitFactory.createFruit(fruitType);
+        if (fruit != null) {
+            System.out.println("Collected a fruit!");
+            fruit.display();
+        } else {
+            System.out.println("Sorry, the requested fruit is not available.");
+        }
+    }
+}
+
+// Usage
+public class Main {
+    public static void main(String[] args) {
+        Game game = new Game();
+        
+        game.collectFruit("apple"); // Output: Collected a fruit! This is an apple.
+        game.collectFruit("orange"); // Output: Collected a fruit! This is a orange.
+        game.collectFruit("banana"); // Output: Sorry, the requested fruit is not available.
+    }
+}'><pre><span class="pl-c">// Fruit interface</span>
+<span class="pl-k">interface</span> <span class="pl-smi">Fruit</span> {
+    <span class="pl-smi">void</span> <span class="pl-en">display</span>();
+}
+
+<span class="pl-c">// Orange class implementing Fruit</span>
+<span class="pl-k">class</span> <span class="pl-smi">Orange</span> <span class="pl-k">implements</span> <span class="pl-smi">Fruit</span> {
+    <span class="pl-c1">@</span><span class="pl-c1">Override</span>
+    <span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-en">display</span>() {
+        <span class="pl-smi">System</span>.<span class="pl-s1">out</span>.<span class="pl-en">println</span>(<span class="pl-s">"This is an orange."</span>);
+    }
+}
+
+<span class="pl-c">// Apple class implementing Fruit</span>
+<span class="pl-k">class</span> <span class="pl-smi">Apple</span> <span class="pl-k">implements</span> <span class="pl-smi">Fruit</span> {
+    <span class="pl-c1">@</span><span class="pl-c1">Override</span>
+    <span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-en">display</span>() {
+        <span class="pl-smi">System</span>.<span class="pl-s1">out</span>.<span class="pl-en">println</span>(<span class="pl-s">"This is a apple."</span>);
+    }
+}
+
+<span class="pl-c">// Factory class for creating fruits</span>
+<span class="pl-k">class</span> <span class="pl-smi">FruitFactory</span> {
+    <span class="pl-k">public</span> <span class="pl-smi">Fruit</span> <span class="pl-en">createFruit</span>(<span class="pl-smi">String</span> <span class="pl-s1">fruitType</span>) {
+        <span class="pl-k">if</span> (<span class="pl-s1">fruitType</span>.<span class="pl-en">equalsIgnoreCase</span>(<span class="pl-s">"orange"</span>)) {
+            <span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-smi">Orange</span>();
+        } <span class="pl-k">else</span> <span class="pl-k">if</span> (<span class="pl-s1">fruitType</span>.<span class="pl-en">equalsIgnoreCase</span>(<span class="pl-s">"apple"</span>)) {
+            <span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-smi">Apple</span>();
+        }
+        <span class="pl-c">// Handle additional fruit types here</span>
+        
+        <span class="pl-k">return</span> <span class="pl-c1">null</span>; <span class="pl-c">// Return null if the requested fruit type is not supported</span>
+    }
+}
+
+<span class="pl-c">// Game class</span>
+<span class="pl-k">class</span> <span class="pl-smi">Game</span> {
+    <span class="pl-k">private</span> <span class="pl-smi">FruitFactory</span> <span class="pl-s1">fruitFactory</span>;
+    
+    <span class="pl-k">public</span> <span class="pl-smi">Game</span>() {
+        <span class="pl-s1">fruitFactory</span> = <span class="pl-k">new</span> <span class="pl-smi">FruitFactory</span>();
+    }
+    
+    <span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-en">collectFruit</span>(<span class="pl-smi">String</span> <span class="pl-s1">fruitType</span>) {
+        <span class="pl-smi">Fruit</span> <span class="pl-s1">fruit</span> = <span class="pl-s1">fruitFactory</span>.<span class="pl-en">createFruit</span>(<span class="pl-s1">fruitType</span>);
+        <span class="pl-k">if</span> (<span class="pl-s1">fruit</span> != <span class="pl-c1">null</span>) {
+            <span class="pl-smi">System</span>.<span class="pl-s1">out</span>.<span class="pl-en">println</span>(<span class="pl-s">"Collected a fruit!"</span>);
+            <span class="pl-s1">fruit</span>.<span class="pl-en">display</span>();
+        } <span class="pl-k">else</span> {
+            <span class="pl-smi">System</span>.<span class="pl-s1">out</span>.<span class="pl-en">println</span>(<span class="pl-s">"Sorry, the requested fruit is not available."</span>);
+        }
+    }
+}
+
+<span class="pl-c">// Usage</span>
+<span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-smi">Main</span> {
+    <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-smi">void</span> <span class="pl-en">main</span>(<span class="pl-smi">String</span>[] <span class="pl-s1">args</span>) {
+        <span class="pl-smi">Game</span> <span class="pl-s1">game</span> = <span class="pl-k">new</span> <span class="pl-smi">Game</span>();
+        
+        <span class="pl-s1">game</span>.<span class="pl-en">collectFruit</span>(<span class="pl-s">"apple"</span>); <span class="pl-c">// Output: Collected a fruit! This is an apple.</span>
+        <span class="pl-s1">game</span>.<span class="pl-en">collectFruit</span>(<span class="pl-s">"orange"</span>); <span class="pl-c">// Output: Collected a fruit! This is a orange.</span>
+        <span class="pl-s1">game</span>.<span class="pl-en">collectFruit</span>(<span class="pl-s">"banana"</span>); <span class="pl-c">// Output: Sorry, the requested fruit is not available.</span>
+    }
+}</pre></div>
+<p dir="auto">In the example above the Fruit interface describes the common behaviour of fruits. <code>Apple</code> and <code>Orange</code> are implementations of the Fruit interface.</p>
+<p dir="auto"><code>FruitFactory</code> class is the factory and <code>createFruit()</code> is the factory method that takes fruit type as the parameter. It instantiates specific fruit class based on the parameter.</p>
+<p dir="auto">The <code>Game</code> class uses the fruit factory to create and collect fruits. The <code>collectFruit()</code> method with the specific fruit type as a parameter is responsible for creating and collecting fruits.</p>
+<p dir="auto">In the <code>main()</code> method, we create an instance of the Game class and call the <code>collectFruit()</code> method. The FruitFactory creates the fruits and displays the fruit.</p>
+<p dir="auto">Thus a Factory Method Pattern helps to instantiate different fruits with the flexibility to add new fruits to the game without modifying the Game class ( client code).</p>
+<h3 dir="auto">
+<a id="user-content-builder-pattern" class="anchor" aria-hidden="true" href="demystifying-creational-patterns-a-roadmap-to-effective-object-creation.html#builder-pattern"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a>Builder Pattern</h3>
+<p dir="auto">The builder pattern helps to build a complex object step by step. The construction and representation of the object is separated using this pattern and allows to the same process to create different object representations.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/8b53dbffefba290af8f60feafc91de40b40d0a241aa8d9a18c588e80c1e05942/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313633313437353031323039372d6430373465386139323539373f69786c69623d72622d342e302e3326697869643d4d3377784d6a4133664442384d48787761473930627931775957646c664878386647567566444238664878386641253344253344266175746f3d666f726d6174266669743d63726f7026773d3230373026713d3830"><div class="text-center"><img src="https://camo.githubusercontent.com/8b53dbffefba290af8f60feafc91de40b40d0a241aa8d9a18c588e80c1e05942/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313633313437353031323039372d6430373465386139323539373f69786c69623d72622d342e302e3326697869643d4d3377784d6a4133664442384d48787761473930627931775957646c664878386647567566444238664878386641253344253344266175746f3d666f726d6174266669743d63726f7026773d3230373026713d3830" alt="Car factory" data-canonical-src="https://images.unsplash.com/photo-1631475012097-d074e8a92597?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80" style="max-width: 100%;"></div></a></p>
+<blockquote>
+<p dir="auto">Photo by Baron on Unsplash</p>
+</blockquote>
+<p dir="auto">It helps in readabity and maintenance of the code by providing a clear way to get the required properties of the object during instantiation.</p>
+<div class="highlight highlight-source-java notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content='// Car class
+class Car {
+    private String engine;
+    private boolean hasSunroof;
+    private String transmission;
+    private int numWheels;
+    private String color;
+
+    
+    private Car(Builder builder) {
+        this.color = builder.color;
+        this.numWheels = builder.numWheels;
+        this.hasSunroof = builder.hasSunroof;
+        this.engine = builder.engine;
+        this.transmission = builder.transmission;
+    }
+    
+    // Getters for the car properties
+    public String getTransmission() {
+        return transmission;
+    }
+    
+    public boolean hasSunroof() {
+        return hasSunroof;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public int getNumWheels() {
+        return numWheels;
+    }
+    
+    public String getEngine() {
+        return engine;
+    }
+    
+    // Builder class
+    static class Builder {
+        private String color;
+        private boolean hasSunroof;
+        private String transmission;
+        private int numWheels;
+        private String engine;
+        
+        public Builder setColor(String color) {
+            this.color = color;
+            return this;
+        }
+
+        public Builder setNumWheels(int numWheels) {
+            this.numWheels = numWheels;
+            return this;
+        }
+
+        public Builder setTransmission(String transmission) {
+            this.transmission = transmission;
+            return this;
+        }
+        
+        public Builder setHasSunroof(boolean hasSunroof) {
+            this.hasSunroof = hasSunroof;
+            return this;
+        }
+
+        public Builder setEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+        
+        public Car build() {
+            return new Car(this);
+        }
+    }
+}
+
+// Usage
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car.Builder()
+                    .setColor("Black")
+                    .setEngine("V8")
+                    .setTransmission("Manual")
+                    .setNumWheels(4)
+                    .setHasSunroof(true)
+                    .build();
+                    
+        System.out.println("Color: " + car.getColor());
+        System.out.println("Engine: " + car.getEngine());
+        System.out.println("Transmission: " + car.getTransmission());
+        System.out.println("Number of Wheels: " + car.getNumWheels());
+        System.out.println("Has Sunroof: " + car.hasSunroof());
+    }
+}'><pre><span class="pl-c">// Car class</span>
+<span class="pl-k">class</span> <span class="pl-smi">Car</span> {
+    <span class="pl-k">private</span> <span class="pl-smi">String</span> <span class="pl-s1">engine</span>;
+    <span class="pl-k">private</span> <span class="pl-smi">boolean</span> <span class="pl-s1">hasSunroof</span>;
+    <span class="pl-k">private</span> <span class="pl-smi">String</span> <span class="pl-s1">transmission</span>;
+    <span class="pl-k">private</span> <span class="pl-smi">int</span> <span class="pl-s1">numWheels</span>;
+    <span class="pl-k">private</span> <span class="pl-smi">String</span> <span class="pl-s1">color</span>;
+
+    
+    <span class="pl-k">private</span> <span class="pl-smi">Car</span>(<span class="pl-smi">Builder</span> <span class="pl-s1">builder</span>) {
+        <span class="pl-smi">this</span>.<span class="pl-s1">color</span> = <span class="pl-s1">builder</span>.<span class="pl-s1">color</span>;
+        <span class="pl-smi">this</span>.<span class="pl-s1">numWheels</span> = <span class="pl-s1">builder</span>.<span class="pl-s1">numWheels</span>;
+        <span class="pl-smi">this</span>.<span class="pl-s1">hasSunroof</span> = <span class="pl-s1">builder</span>.<span class="pl-s1">hasSunroof</span>;
+        <span class="pl-smi">this</span>.<span class="pl-s1">engine</span> = <span class="pl-s1">builder</span>.<span class="pl-s1">engine</span>;
+        <span class="pl-smi">this</span>.<span class="pl-s1">transmission</span> = <span class="pl-s1">builder</span>.<span class="pl-s1">transmission</span>;
+    }
+    
+    <span class="pl-c">// Getters for the car properties</span>
+    <span class="pl-k">public</span> <span class="pl-smi">String</span> <span class="pl-en">getTransmission</span>() {
+        <span class="pl-k">return</span> <span class="pl-s1">transmission</span>;
+    }
+    
+    <span class="pl-k">public</span> <span class="pl-smi">boolean</span> <span class="pl-en">hasSunroof</span>() {
+        <span class="pl-k">return</span> <span class="pl-s1">hasSunroof</span>;
+    }
+
+    <span class="pl-k">public</span> <span class="pl-smi">String</span> <span class="pl-en">getColor</span>() {
+        <span class="pl-k">return</span> <span class="pl-s1">color</span>;
+    }
+
+    <span class="pl-k">public</span> <span class="pl-smi">int</span> <span class="pl-en">getNumWheels</span>() {
+        <span class="pl-k">return</span> <span class="pl-s1">numWheels</span>;
+    }
+    
+    <span class="pl-k">public</span> <span class="pl-smi">String</span> <span class="pl-en">getEngine</span>() {
+        <span class="pl-k">return</span> <span class="pl-s1">engine</span>;
+    }
+    
+    <span class="pl-c">// Builder class</span>
+    <span class="pl-k">static</span> <span class="pl-k">class</span> <span class="pl-smi">Builder</span> {
+        <span class="pl-k">private</span> <span class="pl-smi">String</span> <span class="pl-s1">color</span>;
+        <span class="pl-k">private</span> <span class="pl-smi">boolean</span> <span class="pl-s1">hasSunroof</span>;
+        <span class="pl-k">private</span> <span class="pl-smi">String</span> <span class="pl-s1">transmission</span>;
+        <span class="pl-k">private</span> <span class="pl-smi">int</span> <span class="pl-s1">numWheels</span>;
+        <span class="pl-k">private</span> <span class="pl-smi">String</span> <span class="pl-s1">engine</span>;
+        
+        <span class="pl-k">public</span> <span class="pl-smi">Builder</span> <span class="pl-en">setColor</span>(<span class="pl-smi">String</span> <span class="pl-s1">color</span>) {
+            <span class="pl-smi">this</span>.<span class="pl-s1">color</span> = <span class="pl-s1">color</span>;
+            <span class="pl-k">return</span> <span class="pl-smi">this</span>;
+        }
+
+        <span class="pl-k">public</span> <span class="pl-smi">Builder</span> <span class="pl-en">setNumWheels</span>(<span class="pl-smi">int</span> <span class="pl-s1">numWheels</span>) {
+            <span class="pl-smi">this</span>.<span class="pl-s1">numWheels</span> = <span class="pl-s1">numWheels</span>;
+            <span class="pl-k">return</span> <span class="pl-smi">this</span>;
+        }
+
+        <span class="pl-k">public</span> <span class="pl-smi">Builder</span> <span class="pl-en">setTransmission</span>(<span class="pl-smi">String</span> <span class="pl-s1">transmission</span>) {
+            <span class="pl-smi">this</span>.<span class="pl-s1">transmission</span> = <span class="pl-s1">transmission</span>;
+            <span class="pl-k">return</span> <span class="pl-smi">this</span>;
+        }
+        
+        <span class="pl-k">public</span> <span class="pl-smi">Builder</span> <span class="pl-en">setHasSunroof</span>(<span class="pl-smi">boolean</span> <span class="pl-s1">hasSunroof</span>) {
+            <span class="pl-smi">this</span>.<span class="pl-s1">hasSunroof</span> = <span class="pl-s1">hasSunroof</span>;
+            <span class="pl-k">return</span> <span class="pl-smi">this</span>;
+        }
+
+        <span class="pl-k">public</span> <span class="pl-smi">Builder</span> <span class="pl-en">setEngine</span>(<span class="pl-smi">String</span> <span class="pl-s1">engine</span>) {
+            <span class="pl-smi">this</span>.<span class="pl-s1">engine</span> = <span class="pl-s1">engine</span>;
+            <span class="pl-k">return</span> <span class="pl-smi">this</span>;
+        }
+        
+        <span class="pl-k">public</span> <span class="pl-smi">Car</span> <span class="pl-en">build</span>() {
+            <span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-smi">Car</span>(<span class="pl-smi">this</span>);
+        }
+    }
+}
+
+<span class="pl-c">// Usage</span>
+<span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-smi">Main</span> {
+    <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-smi">void</span> <span class="pl-en">main</span>(<span class="pl-smi">String</span>[] <span class="pl-s1">args</span>) {
+        <span class="pl-smi">Car</span> <span class="pl-s1">car</span> = <span class="pl-k">new</span> <span class="pl-smi">Car</span>.<span class="pl-smi">Builder</span>()
+                    .<span class="pl-en">setColor</span>(<span class="pl-s">"Black"</span>)
+                    .<span class="pl-en">setEngine</span>(<span class="pl-s">"V8"</span>)
+                    .<span class="pl-en">setTransmission</span>(<span class="pl-s">"Manual"</span>)
+                    .<span class="pl-en">setNumWheels</span>(<span class="pl-c1">4</span>)
+                    .<span class="pl-en">setHasSunroof</span>(<span class="pl-c1">true</span>)
+                    .<span class="pl-en">build</span>();
+                    
+        <span class="pl-smi">System</span>.<span class="pl-s1">out</span>.<span class="pl-en">println</span>(<span class="pl-s">"Color: "</span> + <span class="pl-s1">car</span>.<span class="pl-en">getColor</span>());
+        <span class="pl-smi">System</span>.<span class="pl-s1">out</span>.<span class="pl-en">println</span>(<span class="pl-s">"Engine: "</span> + <span class="pl-s1">car</span>.<span class="pl-en">getEngine</span>());
+        <span class="pl-smi">System</span>.<span class="pl-s1">out</span>.<span class="pl-en">println</span>(<span class="pl-s">"Transmission: "</span> + <span class="pl-s1">car</span>.<span class="pl-en">getTransmission</span>());
+        <span class="pl-smi">System</span>.<span class="pl-s1">out</span>.<span class="pl-en">println</span>(<span class="pl-s">"Number of Wheels: "</span> + <span class="pl-s1">car</span>.<span class="pl-en">getNumWheels</span>());
+        <span class="pl-smi">System</span>.<span class="pl-s1">out</span>.<span class="pl-en">println</span>(<span class="pl-s">"Has Sunroof: "</span> + <span class="pl-s1">car</span>.<span class="pl-en">hasSunroof</span>());
+    }
+}</pre></div>
+<p dir="auto">In the example above the <code>Car.Builder</code> class acts as the builder for the car construction. The car has different properties like color, engine, transmission, number of wheels and sunroof.</p>
+<p dir="auto">The <code>Car</code> class has a private constructor with the builder object as it parameter. It then constructs the car based on the builder values.</p>
+<p dir="auto">The builder class providers the setter methods for the desired car properties and these methods return the builder object to support method chaining.</p>
+<p dir="auto">In the <code>main()</code> method, an instance of the car is created with the desired properties using the builder and <code>build()</code> method is called to get the constructed car object.</p>
+<p dir="auto">This example shows how builder pattern can be used to construct a object with the desired properties using a flexible and readable manner. It allows the client code to configure the desired properties while ignoring other properties. </p>
+<p dir="auto">Hope the above explanations and implementation examples gives you a clarity on the creational designer pattern. Do note that each creational design pattern has its own set of requirements and constraints. Happy creating objects !!!</p>
+</article></div></body></html>
+
+    </div>
+  </div>
+  <br>
+  <div class="row justify-content-center">
+    <h6 class="text-center">&#x2022;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x2022;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x2022;</h6>
+  </div>
+  <br>
+  <div class="row justify-content-center contact">
+    <div class="text-center">
+      Follow Me on:
+      <a href="https://medium.com/@ethi"><i class="fab fa-medium"></i> Medium </a>
+      <a href="https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1"><i class="fab fa-youtube"></i> Youtube </a>
+      <a href="https://www.instagram.com/ethirajchandru/"><i class="fab fa-instagram"></i> Instagram </a>
+      <a href="https://www.linkedin.com/in/ethirajsrinivasan/"><i class="fab fa-linkedin"></i>
+      LinkedIn </a>
+      <a href="https://github.com/ethirajsrinivasan/"><i class="fab fa-github"></i><span> Github </a>
+      <a href="https://twitter.com/iamethi"><i class="fab fa-twitter"></i> Twitter </a>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col">
+      <div class="float-end mt-4">
+        <div class="project_nav_link">6 Valuable Life Lessons I Learned in My Early 30s</div>
+        <a href="6-valuable-life-lessons-i-learned-in-my-early-30s.html">Next Blog &rarr; </a>
+      </div>
+    </div>
+  </div>
+  <div id="disqus_thread"></div>
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+var disqus_config = function () {
+  this.shortname = "ethigeek-com";
+  this.page.url = "http://ethigeek.com:3000/blogs/demystifying-creational-patterns-a-roadmap-to-effective-object-creation";
+  this.page.identifier = 'blog-21';
+  this.page.title = 'Demystifying Creational Patterns: A Roadmap to Effective Object Creation'; 
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//ethigeek-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+</div>
+
+		<div class="spacer"></div>
+		<footer class="footer fixed-bottom">
+			<div class="container">
+				<ul class="list-inline d-flex justify-content-center">
+					<li class="list-inline-item"><a target="_blank" class="fab fa-medium" href="https://medium.com/@ethi"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-youtube" href="https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-instagram" href="https://www.instagram.com/ethirajchandru/"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-linkedin" href="https://in.linkedin.com/in/ethirajsrinivasan"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-github" href="https://github.com/ethirajsrinivasan"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-twitter" href="https://twitter.com/iamethi"></a></li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-66415800-8', 'auto');
+	ga('send', 'pageview');
+	</script>
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			offset: 200,
+			duration: 600,
+			easing: 'ease-in-sine',
+			delay: 100,
+		});
+	</script>
+</html>
