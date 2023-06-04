@@ -13,7 +13,7 @@
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 		<script src="/assets/application-802f9fc6b464e394ae64db61e6b0de8cf5f1e9f73e6e5675b06d076f0e16d3c6.js" data-turbolinks-track="true"></script>
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="tT373mwIx79AF7aK7JU0L9rRldAHIqFiu_WfvStyKgA2sst-KAGVUs65X7ImGOMCpQFxLKP8yKo9ytdtKRTSAA" />
+<meta name="csrf-token" content="b-z00Y4qz0LR4f9Hb54j1WN0q_VGu0sT8Tnv84LebGZZV4eaAsvhsVZBWoF7TpDzcX1LU6CUwV_sLHTaVO3p1Q" />
 		<link rel="icon" type="image/x-icon" href="/assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
 		<script src="https://cdn.rvlqplr.com/engine/engine-entry.js?pid=0a33716f-efb9-4dac-a8ed-8fae94f49289" async></script>
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
@@ -57,7 +57,7 @@
 <p dir="auto">A very simple and easy way to generate kubernetes deployment manifests for a rails application is through the Helm chart. Helm is simply a package manager for Kubernetes. Helm Chart is a collection of kubernetes resource files like deployments, services and ingress rules also the values that is used to configure these resources.</p>
 <p></p>
 <div class="rvlqplr-placement-046628aa-40bc-4b18-bb04-e20223f91c38"></div>
-<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/7569031/229564025-15d0e5d4-2d15-406e-ba81-4867a917751f.png"><div class="text-center"><img src="https://user-images.githubusercontent.com/7569031/229564025-15d0e5d4-2d15-406e-ba81-4867a917751f.png" alt="image" style="max-width: 100%;"></div></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/7569031/229564025-15d0e5d4-2d15-406e-ba81-4867a917751f.png"><div class="text-center"><img src="https://user-images.githubusercontent.com/7569031/229564025-15d0e5d4-2d15-406e-ba81-4867a917751f.png" alt="Helm Package Manager" style="max-width: 100%;"></div></a></p>
 <p dir="auto">Follow the steps below to generate the deploy manifest files:</p>
 <ol dir="auto">
 <li>Install Helm on your local</li>
