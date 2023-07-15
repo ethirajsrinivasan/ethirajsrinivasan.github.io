@@ -13,7 +13,7 @@
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 		<script src="/assets/application-802f9fc6b464e394ae64db61e6b0de8cf5f1e9f73e6e5675b06d076f0e16d3c6.js" data-turbolinks-track="true"></script>
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="U7el7ojvxhhEkhz04hJyRLV1IMGb4JsTMhmP9djTUnllexNY2yNk7o6ZptuDn5mrEbs6y94Trz-SGmOCqZ75Bw" />
+<meta name="csrf-token" content="ufZLqxbGzEAwBl_cs_tBmjg2M5ED0xUceOGF3VRfuLTpfQNgmn-wcuoS1QByZXR7vkyHK-BspGxL2rKQnNJ00w" />
 		<link rel="icon" type="image/x-icon" href="/assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
      crossorigin="anonymous"></script>
@@ -49,6 +49,21 @@
 		<div class="container">
 	<div class="spacer"></div>
 	<div id="blogs" class="row justify-content-center">
+		<div class="col-lg-4 col-md-10 col-sm-10">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<img class="img-tile" alt="How Google tracks your online activities" src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?fm=avif" />
+					<br>
+					<br>
+					<div class="fs-6">Jul 09, 2018</div>
+					<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/know-about-yourself-from-google">Know About Yourself from Google</a></div>
+					<div class="fs-6 fw-light blog_short_content">It all started with this website - https://camelcamelcamel.com. This website is a free Amazon price tracker. I was looking at the price of a product from Amazon. I was annoyed by one particular ad in  ... </div>
+					<a class="float-end" href="/blogs/know-about-yourself-from-google">Read More &#x2192</a>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
 		<div class="col-lg-4 col-md-10 col-sm-10">
 			<div class="row justify-content-center">
 				<div class="col-12">
