@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Medtracker</title>
-		<meta name="description" content="Medtracker"/>
-		<meta property="og:image" content="http://localhost:3000/assets/ai-6782a7d586827e3fe87b3b5907209c7f3bbf9c809841f139aa0bae2b9c5c0dd8.jpg"/>
+		<title>ethigeek</title>
+		<meta name="description" content=""/>
+		<meta property="og:image" content="http://localhost:3000/assets/blogs-0020dfff94e6226e29a9ca89b01908cc19991bf0437b75007f2fc29ea8fcd182.jpg"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="/assets/application-ec816bccda848783beb46c6fccbb0faa297eddc1e2f7355c14dd909bf8165745.css" media="screen" />
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -13,7 +13,7 @@
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 		<script src="/assets/application-802f9fc6b464e394ae64db61e6b0de8cf5f1e9f73e6e5675b06d076f0e16d3c6.js" data-turbolinks-track="true"></script>
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="L3_vhk3XyzXp-lkMfjxFadQRrlRwXMSQeegFrpMpsTq4PlXxhYncfQfDIP-NKsm5n2-yQ6qfyZDlQUlyVl9v_g" />
+<meta name="csrf-token" content="d24H0Oyf_Ya0_5geRA3yucYQcAZ8WZW2bw3Xp6LpmwjgL72nJMHqzlrG4e23G35pjW5sEaaamLbzpJt7Z59FzA" />
 		<link rel="icon" type="image/x-icon" href="/assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
      crossorigin="anonymous"></script>
@@ -28,7 +28,7 @@
   gtag('config', 'G-S8HN948EZZ');
 </script>
 	<body class="blog_body" data-spy="scroll" data-target="#navbar-scrollspy" data-offset="200">
-		<section class="cover text-center" style="background-image: url(http://localhost:3000/assets/ai-6782a7d586827e3fe87b3b5907209c7f3bbf9c809841f139aa0bae2b9c5c0dd8.jpg)">
+		<section class="cover text-center" style="background-image: url(http://localhost:3000/assets/blogs-0020dfff94e6226e29a9ca89b01908cc19991bf0437b75007f2fc29ea8fcd182.jpg)">
 			<nav class="navbar navbar-expand-lg navbar-trans navbar-light">
 				<div class="container-fluid">
 					<a class="navbar-brand" href="/"><strong>Ethiraj Srinivasan</strong></a>
@@ -45,76 +45,34 @@
 					</div>
 				</div>
 			</nav>
-			<div class="container">
-				<div class="row intro justify-content-center">
-					<div class="col">
-						<h3>Medtracker</h3>
-
-					</div>
+		</section>
+		<div class="container">
+	<div class="spacer"></div>
+	<div id="blogs" class="row justify-content-center">
+		<div class="col-lg-4 col-md-10 col-sm-10">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<img class="img-tile" alt="Ruby alias_method and prepend" src="https://images.unsplash.com/photo-1611090285001-86450e05822e" />
+					<br>
+					<br>
+					<div class="fs-6">Dec 01, 2016</div>
+					<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/mutually-exclusive-alias-method-and-prepend">Mutually Exclusive Alias Method And Prepend</a></div>
+					<div class="fs-6 fw-light blog_short_content">Module#alias_method was one of the earliest solution to overwrite a method in ruby.With an alias method in place you can redefine a method to anything you want and call the old method using the alias_ ... </div>
+					<a class="float-end" href="/blogs/mutually-exclusive-alias-method-and-prepend">Read More &#x2192</a>
 				</div>
 			</div>
-		</section>
-		<br>
-<div class="container project">
-  <div class="row">
-    <div class="col">
-        <section  data-aos="fade-right">
-          <h3>Summary</h3>
-          <div class="section-content"><div class="row"><div class="col"><p class="text-justify">The MedTracker Application helps you track and record your health statistics and manage medications. It includes modules such as measurement, medicines, appointment, consumptions etc. A notification reminder is triggered to consume medicines, replace replenished medicines and for appointments with doctors. In case of emergency it helps to make SOS calls. </p></div></div><div class='rvlqplr-placement-046628aa-40bc-4b18-bb04-e20223f91c38'></div></div>
-        </section>
-        <section  data-aos="fade-right">
-          <h3>Project Links</h3>
-          <div class="section-content"><div class="row">
-    <div class="col">
-      <ul>
-        <li><a target="_blank" href="https://play.google.com/store/apps/details?id=com.ethigeek.medtracker">Project</a></li>
-        <li><a target="_blank" href="https://github.com/ethirajnus/Medtracker">Source Code</a></li>
-      </ul>
-    </div>
-  </div></div>
-        </section>
-        <section  data-aos="fade-right">
-          <h3>Learnings</h3>
-          <div class="section-content"><div class="row"><div class="col"><ol><li>Core Android Development</li><li>Job services to run background services</li><li>Job Scheduler to create specific jobs with constraints</li></ol> </div></div></div>
-        </section>
-        <section  data-aos="fade-right">
-          <h3>Screenshots</h3>
-          <div class="section-content"><div class="row">
-  <div class="col-md-4  col">
-    <img class="img-fluid img-thumbnail img-screenshot" src="https://ethirajsrinivasan.github.io/assets/images/appointment_screenshot.png" alt="Appointment screenshot">
-  </div>
-  <div class="col-md-4 col">
-    <img class="img-fluid img-thumbnail img-screenshot" src="https://ethirajsrinivasan.github.io/assets/images/category_screenshot.png" alt="Category screenshot">
-  </div>
-  <div class="col-md-4 col">
-    <img class="img-fluid img-thumbnail img-screenshot" src="https://ethirajsrinivasan.github.io/assets/images/healthbio_screenshot.png" alt="Healthbio screenshot">
-  </div>
+			<br>
+			<br>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col text-center">
+			<div class="flickr_pagination">
+				<div role="navigation" aria-label="Pagination" class="pagination"><a class="previous_page" rel="prev" href="/blogs?page=2">&#8592; Previous</a> <a aria-label="Page 1" href="/blogs?page=1">1</a> <a rel="prev" aria-label="Page 2" href="/blogs?page=2">2</a> <em class="current" aria-label="Page 3" aria-current="page">3</em> <span class="next_page disabled" aria-disabled="true">Next &#8594;</span></div>
+			</div>
+		</div>
+	</div>
 </div>
-<div class="row">
-  <div class="col-md-4 col">
-    <img class="img-fluid img-thumbnail img-screenshot" src="https://ethirajsrinivasan.github.io/assets/images/ice_screenshot.png" alt="Ice screenshot">
-  </div>
-  <div class="col-md-4 col">
-    <img class="img-fluid img-thumbnail img-screenshot" src="https://ethirajsrinivasan.github.io/assets/images/measurement_screenshot.png" alt="Measurement screenshot">
-  </div>
-  <div class="col-md-4 col">
-    <img class="img-fluid img-thumbnail img-screenshot" src="https://ethirajsrinivasan.github.io/assets/images/medicine_screenshot.png" alt="Medicine screenshot">
-  </div>
-</div></div>
-        </section>
-        <div class="float-start mt-4">
-          <div class="project_nav_link">Dna Capitals Hackathon</div>
-          <a href="/portfolios/Dna%20Capitals%20Hackathon">&larr; Previous project</a>
-        </div>
-        <div class="float-end mt-4">
-          <div class="project_nav_link">U Ask</div>
-          <a href="/portfolios/U%20Ask">Next project &rarr; </a>
-        </div>
-    </div>
-  </div>
-</div>
-<br>
-
 		<div class="spacer"></div>
 		<footer class="footer fixed-bottom">
 			<div class="container">
