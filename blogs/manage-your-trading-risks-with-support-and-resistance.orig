@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Manage Your Trading Risks with Support and Resistance</title>
+		<meta name="description" content="In stock market analysis, Support and Resistance levels are fundamental concepts that help traders determine the price points that change market behavior. In this story, we will discover support and resistance, their significance, and how to find them using Python."/>
+		<meta property="og:image" content="https://images.unsplash.com/photo-1642543348745-03b1219733d9?auto=format&amp;fit=crop&amp;q=80&amp;w=2940&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/assets/application-ec816bccda848783beb46c6fccbb0faa297eddc1e2f7355c14dd909bf8165745.css" media="screen" />
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+		<script src="/assets/application-802f9fc6b464e394ae64db61e6b0de8cf5f1e9f73e6e5675b06d076f0e16d3c6.js" data-turbolinks-track="true"></script>
+		<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="OECowzxxp3aZhcMj5RIVzNptcNymm_XvA4D9D5ijGkJjn7vYErVD2mxLUOhHgk_C_pojJ5-B_3_H3hkAZ_wNWQ" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
+     crossorigin="anonymous"></script>
+	</head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8HN948EZZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S8HN948EZZ');
+</script>
+	<body class="blog_body" data-spy="scroll" data-target="#navbar-scrollspy" data-offset="200">
+		<section class="cover text-center" style="background-image: url(https://images.unsplash.com/photo-1642543348745-03b1219733d9?auto=format&amp;fit=crop&amp;q=80&amp;w=2940&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+			<nav class="navbar navbar-expand-lg navbar-trans navbar-light">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="/"><strong>Ethiraj Srinivasan</strong></a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav ms-auto">
+							<a class="nav-link" href="/resume.pdf" target="_blank">Resume</a>
+							<a class="nav-link" href="/#portfolio">Portfolio</a>
+							<a class="nav-link" href="/blogs">Blog</a>
+							<a class="nav-link" href="/about">About</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</section>
+		<br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><div id="file" class="md" data-path="support and resistance.md"><article class="markdown-body entry-content container-lg" itemprop="text"><h3 id="user-content-manage-your-trading-risks-with-support-and-resistance" dir="auto"><a class="heading-link" href="#manage-your-trading-risks-with-support-and-resistance" target="_blank">Manage Your Trading Risks with Support and Resistance<svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></h3>
+<p dir="auto">In stock market analysis, Support and Resistance levels are fundamental concepts that help traders determine the price points that change market behavior. In this story, we will discover support and resistance, their significance, and how to find them using Python.</p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/0515b13a7e1e030998ec9b899c138f2c0f69096bff612f57179dbaec64132ebc/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313631313937343738393835352d396332613061373233366133"><div class="text-center"><img src="https://camo.githubusercontent.com/0515b13a7e1e030998ec9b899c138f2c0f69096bff612f57179dbaec64132ebc/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313631313937343738393835352d396332613061373233366133" alt="Stock Market" data-canonical-src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3" style="max-width: 100%;"></div></a></p>
+<blockquote>
+<p dir="auto">Photo by Maxim Hopman on Unsplash</p>
+</blockquote>
+<h4 id="user-content-what-are-support-and-resistance-levels" dir="auto"><a class="heading-link" href="#what-are-support-and-resistance-levels" target="_blank">What are Support and Resistance Levels:<svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></h4>
+<p dir="auto">Support levels are prices at which a stock has more interest in buying preventing it from falling further down. In contrast, resistance levels are prices at which a stock starts to face the selling pressure preventing it from growing further up. </p>
+<h4 id="user-content-significance-of-support-and-resistance-levels" dir="auto"><a class="heading-link" href="#significance-of-support-and-resistance-levels" target="_blank">Significance of Support and Resistance Levels:<svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></h4>
+<ul dir="auto">
+<li>
+<strong>Entry and Exit Points</strong>: Traders use these levels to determine their entry and exit points. Support levels are good to buy and resistance levels are good to sell to increase the reward for traders.</li>
+<li>
+<strong>Risk Management</strong>: A stop-loss order near the support price and a take-profit order near resistance levels help to manage the risk</li>
+<li>
+<strong>Trend Analysis</strong>: Support and Resistance helps to determine the strength of the trends. If the price goes below the support levels it may indicate a downtrend and if the price goes above the resistance levels it may indicate an uptrend.</li>
+<li>
+<strong>Historical Reference</strong>: These levels provide historical context and help predict future predictions</li>
+</ul>
+<h4 id="user-content-support-and-resistance-levels-usingpython" dir="auto"><a class="heading-link" href="#support-and-resistance-levels-usingpython" target="_blank">Support and Resistance Levels Using Python<svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></h4>
+<p dir="auto">In the example, we will use Python with pandas library for data manipulation and matplotlibfor data visualization. We will use Yahoo finance data for the price. I have used Apple stock in this example please free to use it against the stock of your choice.
+<strong>1. Data Collection:</strong>
+Install the libraries required and fetch historical stock price data:</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="import pandas as pd
+import yfinance as yf
+
+
+# Replace 'AAPL' with your stock symbol and adjust the date range as needed
+df = yf.download('AAPL', start='2022-10-22', end='2023-10-22')"><pre class="notranslate"><code>import pandas as pd
+import yfinance as yf
+
+
+# Replace 'AAPL' with your stock symbol and adjust the date range as needed
+df = yf.download('AAPL', start='2022-10-22', end='2023-10-22')
+</code></pre></div>
+<p dir="auto"><strong>2. Plot the Stock Price Data:</strong>
+Visualize the stock price data to get a sense of price movement:</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="import matplotlib.pyplot as plt
+
+plt.figure(figsize=(12, 6))
+plt.plot(df['Close'], label='Stock Price')
+plt.title('Stock Price Chart')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.legend()
+plt.show()"><pre class="notranslate"><code>import matplotlib.pyplot as plt
+
+plt.figure(figsize=(12, 6))
+plt.plot(df['Close'], label='Stock Price')
+plt.title('Stock Price Chart')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.legend()
+plt.show()
+</code></pre></div>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/7569031/277398701-9c1004be-2b06-4c1a-b46e-377209c5f7e4.png"><div class="text-center"><img src="https://user-images.githubusercontent.com/7569031/277398701-9c1004be-2b06-4c1a-b46e-377209c5f7e4.png" alt="image" style="max-width: 100%;"></div></a>
+Apple Stock Price</p>
+<p dir="auto"><strong>3. Find Support and Resistance Levels:</strong></p>
+<p dir="auto">To find these levels, calculate rolling highs and lows over a specific period (e.g., 30 days):</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="window = 30  # Adjust the window size as needed
+df['Support'] = df['Low'].rolling(window=window).min()
+df['Resistance'] = df['High'].rolling(window=window).max()"><pre class="notranslate"><code>window = 30  # Adjust the window size as needed
+df['Support'] = df['Low'].rolling(window=window).min()
+df['Resistance'] = df['High'].rolling(window=window).max()
+</code></pre></div>
+<p dir="auto"><strong>4. Plot Support and Resistance Levels:</strong>
+Visualize the support and resistance levels on the stock price chart:</p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="plt.figure(figsize=(12, 6))
+plt.plot(df['Close'], label='Stock Price')
+plt.plot(df['Support'], label='Support Level', linestyle='--')
+plt.plot(df['Resistance'], label='Resistance Level', linestyle='--')
+plt.title('Support and Resistance Levels')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.legend()
+plt.show()"><pre class="notranslate"><code>plt.figure(figsize=(12, 6))
+plt.plot(df['Close'], label='Stock Price')
+plt.plot(df['Support'], label='Support Level', linestyle='--')
+plt.plot(df['Resistance'], label='Resistance Level', linestyle='--')
+plt.title('Support and Resistance Levels')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.legend()
+plt.show()
+</code></pre></div>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/7569031/277398770-5144fd10-77a4-4a91-b914-da7ef34c6f28.png"><div class="text-center"><img src="https://user-images.githubusercontent.com/7569031/277398770-5144fd10-77a4-4a91-b914-da7ef34c6f28.png" alt="image" style="max-width: 100%;"></div></a>
+Apple Support and Resistance Levels</p>
+<h4 id="user-content-bottom-line" dir="auto"><a class="heading-link" href="#bottom-line" target="_blank">Bottom Line<svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></h4>
+<p dir="auto">Understanding support and Resistance Levels helps us to make important decisions in the stock market. With Python, we can easily visualize these levels and determine our trading strategies and risk management. 
+Disclaimer: Please be aware that the above content is for educational purposes only, and it does not constitute financial advice. This article serves as an exploration of the terms, their significance, and their practical application using Python.</p>
+</article></div></body></html>
+
+    </div>
+  </div>
+  <br>
+  <div class="row justify-content-center">
+    <h6 class="text-center">&#x2022;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x2022;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x2022;</h6>
+  </div>
+  <br>
+  <div class="row justify-content-center contact">
+    <div class="text-center">
+      Follow Me on:
+      <a href="https://medium.com/@ethi"><i class="fab fa-medium"></i> Medium </a>
+      <a href="https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1"><i class="fab fa-youtube"></i> Youtube </a>
+      <a href="https://www.instagram.com/ethirajchandru/"><i class="fab fa-instagram"></i> Instagram </a>
+      <a href="https://www.linkedin.com/in/ethirajsrinivasan/"><i class="fab fa-linkedin"></i>
+      LinkedIn </a>
+      <a href="https://github.com/ethirajsrinivasan/"><i class="fab fa-github"></i><span> Github </a>
+      <a href="https://twitter.com/iamethi"><i class="fab fa-twitter"></i> Twitter </a>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col">
+      <div class="float-start mt-4">
+        <div class="project_nav_link">Penny Wise, Pound Foolish: The Costly Consequence</div>
+        <a href="/blogs/penny-wise-pound-foolish-the-costly-consequence">&larr; Previous Blog</a>
+      </div>
+    </div>
+  </div>
+  <div id="disqus_thread"></div>
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+var disqus_config = function () {
+  this.shortname = "ethigeek-com";
+  this.page.url = "http://ethigeek.com:3000/blogs/manage-your-trading-risks-with-support-and-resistance";
+  this.page.identifier = 'blog-40';
+  this.page.title = 'Manage Your Trading Risks with Support and Resistance'; 
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//ethigeek-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+</div>
+
+		<div class="spacer"></div>
+		<footer class="footer fixed-bottom">
+			<div class="container">
+				<ul class="list-inline d-flex justify-content-center">
+					<li class="list-inline-item"><a target="_blank" class="fab fa-medium" href="https://medium.com/@ethi"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-youtube" href="https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-instagram" href="https://www.instagram.com/ethirajchandru/"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-linkedin" href="https://in.linkedin.com/in/ethirajsrinivasan"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-github" href="https://github.com/ethirajsrinivasan"></a></li>
+          <li class="list-inline-item"><a target="_blank" class="fab fa-twitter" href="https://twitter.com/iamethi"></a></li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-66415800-8', 'auto');
+	ga('send', 'pageview');
+	</script>
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			offset: 200,
+			duration: 600,
+			easing: 'ease-in-sine',
+			delay: 100,
+		});
+	</script>
+</html>
