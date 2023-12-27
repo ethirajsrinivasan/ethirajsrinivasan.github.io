@@ -14,7 +14,7 @@
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="/assets/application-802f9fc6b464e394ae64db61e6b0de8cf5f1e9f73e6e5675b06d076f0e16d3c6.js" data-turbolinks-track="true"></script>
     <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="9zrnDk0QHs3MACFrv_pclNLuwb1FxYn25NWVZqhg0PRFb-lmiNRAej_3LULwhr7Xa8bkQgBYNJZQDn4OTQdfxQ" />
+<meta name="csrf-token" content="XVlwD2Fg-RjwbIheL-oo_m6vwuvo9OXf01afPbhOgpzNyusj8kBXHFg5-OyzEBt5Bt0rnGkU9EPXH_Nz-DQE_A" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
     crossorigin="anonymous"></script>
@@ -200,28 +200,13 @@
 			<div class="col-lg-4 col-md-10 col-sm-10">
 				<div class="row justify-content-center">
 					<div class="col-12">
-						<img class="img-tile" src="https://images.unsplash.com/photo-1642543348745-03b1219733d9?auto=format&amp;fit=crop&amp;q=80&amp;w=2940&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+						<img class="img-tile" src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2920&amp;q=80" />
 						<br>
 						<br>
-						<div class="fs-6">Oct 24, 2023</div>
-						<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/manage-your-trading-risks-with-support-and-resistance">Manage Your Trading Risks with Support and Resistance</a></div>
-						<div class="fs-6 fw-light blog_short_content">In stock market analysis, Support and Resistance levels are fundamental concepts that help traders determine the price points that change market behavior. In this story, we will discover support and r ... </div>
-						<a class="float-end" href="/blogs/manage-your-trading-risks-with-support-and-resistance">Read More &#x2192</a>
-						<br>
-						<br>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-10 col-sm-10">
-				<div class="row justify-content-center">
-					<div class="col-12">
-						<img class="img-tile" src="https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf" />
-						<br>
-						<br>
-						<div class="fs-6">Sep 26, 2023</div>
-						<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/penny-wise-pound-foolish-the-costly-consequence">Penny Wise, Pound Foolish: The Costly Consequence</a></div>
-						<div class="fs-6 fw-light blog_short_content">&quot;Penny Wise, pound foolish&quot;-An essential reminder that prioritizing small savings in the short term can lead to a significant loss in the long run. In this blog post, we will look into the concept of  ... </div>
-						<a class="float-end" href="/blogs/penny-wise-pound-foolish-the-costly-consequence">Read More &#x2192</a>
+						<div class="fs-6">Aug 28, 2023</div>
+						<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/demystifying-sitemaps-your-pathway-to-seamless-website-exploration">Demystifying Sitemaps: Your Pathway to Seamless Website Exploration</a></div>
+						<div class="fs-6 fw-light blog_short_content">In the vast world of the internet, navigating a website can sometimes be hard. That&#39;s where the sitemap comes into the picture. Sitemap is an essential tool to help visitors navigate your website easi ... </div>
+						<a class="float-end" href="/blogs/demystifying-sitemaps-your-pathway-to-seamless-website-exploration">Read More &#x2192</a>
 						<br>
 						<br>
 					</div>
@@ -230,13 +215,28 @@
 			<div class="col-lg-4 col-md-10 col-sm-10">
 				<div class="row justify-content-center">
 					<div class="col-12">
-						<img class="img-tile" src="https://images.unsplash.com/photo-1559067096-49ebca3406aa?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2831&amp;q=80" />
+						<img class="img-tile" src="https://images.unsplash.com/photo-1529690840038-f38da8894ff6" />
 						<br>
 						<br>
-						<div class="fs-6">Sep 19, 2023</div>
-						<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/what-type-of-investor-are-you">What Type of Investor Are You?</a></div>
-						<div class="fs-6 fw-light blog_short_content">Many of us invest in different types of assets. Everyone has their own preferences and personalities and hence a different approach to their investing technique. Financial goals, risk tolerance, time  ... </div>
-						<a class="float-end" href="/blogs/what-type-of-investor-are-you">Read More &#x2192</a>
+						<div class="fs-6">Jun 27, 2023</div>
+						<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/from-blueprint-to-reality-unleashing-the-potential-of-creational-patterns">From Blueprint to Reality: Unleashing the Potential of Creational Patterns</a></div>
+						<div class="fs-6 fw-light blog_short_content">A Comprehensive Exploration of Design Patterns for Crafting Objects with Precision and Elegance ... </div>
+						<a class="float-end" href="/blogs/from-blueprint-to-reality-unleashing-the-potential-of-creational-patterns">Read More &#x2192</a>
+						<br>
+						<br>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-10 col-sm-10">
+				<div class="row justify-content-center">
+					<div class="col-12">
+						<img class="img-tile" alt="Design patterns for object creation" src="https://images.unsplash.com/photo-1594585098652-21c58491eb0e" />
+						<br>
+						<br>
+						<div class="fs-6">Jun 02, 2023</div>
+						<div class="fs-5 blog_title"><a class="blog_post_header" href="/blogs/demystifying-creational-patterns-a-roadmap-to-effective-object-creation">Demystifying Creational Patterns: A Roadmap to Effective Object Creation</a></div>
+						<div class="fs-6 fw-light blog_short_content">In my previous article, I spoke about fault tolerance design patterns in distributed systems. In this article, I will talk about the design patterns used for object creation. ... </div>
+						<a class="float-end" href="/blogs/demystifying-creational-patterns-a-roadmap-to-effective-object-creation">Read More &#x2192</a>
 						<br>
 						<br>
 					</div>
