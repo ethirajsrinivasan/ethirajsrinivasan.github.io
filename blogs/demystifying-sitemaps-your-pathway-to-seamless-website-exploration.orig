@@ -13,7 +13,7 @@
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 		<script src="/assets/application-802f9fc6b464e394ae64db61e6b0de8cf5f1e9f73e6e5675b06d076f0e16d3c6.js" data-turbolinks-track="true"></script>
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="Xk7C0I0BGmtlCJv3_svXNb85aKeOKkyb9sefZYUBXocS4puO-7w3vQyWSh4x6q1jw3JNFwWRpoisyKm7blimtg" />
+<meta name="csrf-token" content="r598JbL4Wte2hDbFi1QOBoM0khAnF1eDdbzhaGmx5WAq2nSZAWugYgd0yIMD-salGw1b-AzvFSSDCbR9I7WB6Q" />
 		<link rel="icon" type="image/x-icon" href="/assets/favicon-bfc8f965e9c5b25ff8620b94c33011eeaa4a222a73aef252f51d06ee90009e75.ico" />
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
      crossorigin="anonymous"></script>
@@ -72,7 +72,7 @@
 <ul dir="auto">
 <li>XML Sitemap: This is the most common format of sitemps. It is an XML structured format with the URL of the website pages along with metadata like priority, last modified time, and frequency change. This format is used by search engines like Google, Bing, and Yahoo to index the website's pages. Each URL can also include optional information like images, videos, and mobile-specific.</li>
 </ul>
-<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content='&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<div class="highlight highlight-text-xml notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content='&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
   &lt;url&gt;
     &lt;loc&gt;https://www.example.com/page1&lt;/loc&gt;
@@ -87,27 +87,26 @@
     &lt;priority&gt;0.6&lt;/priority&gt;
   &lt;/url&gt;
   &lt;!-- More URLs here --&gt;
-&lt;/urlset&gt;'><pre lang="code" class="notranslate"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
-  &lt;url&gt;
-    &lt;loc&gt;https://www.example.com/page1&lt;/loc&gt;
-    &lt;lastmod&gt;2023-08-25&lt;/lastmod&gt;
-    &lt;changefreq&gt;weekly&lt;/changefreq&gt;
-    &lt;priority&gt;0.8&lt;/priority&gt;
-  &lt;/url&gt;
-  &lt;url&gt;
-    &lt;loc&gt;https://www.example.com/page2&lt;/loc&gt;
-    &lt;lastmod&gt;2023-08-20&lt;/lastmod&gt;
-    &lt;changefreq&gt;monthly&lt;/changefreq&gt;
-    &lt;priority&gt;0.6&lt;/priority&gt;
-  &lt;/url&gt;
-  &lt;!-- More URLs here --&gt;
-&lt;/urlset&gt;
-</code></pre></div>
+&lt;/urlset&gt;'><pre>&lt;?<span class="pl-ent">xml</span><span class="pl-e"> version</span>=<span class="pl-s"><span class="pl-pds">"</span>1.0<span class="pl-pds">"</span></span><span class="pl-e"> encoding</span>=<span class="pl-s"><span class="pl-pds">"</span>UTF-8<span class="pl-pds">"</span></span>?&gt;
+&lt;<span class="pl-ent">urlset</span> <span class="pl-e">xmlns</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.sitemaps.org/schemas/sitemap/0.9<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">url</span>&gt;
+    &lt;<span class="pl-ent">loc</span>&gt;https://www.example.com/page1&lt;/<span class="pl-ent">loc</span>&gt;
+    &lt;<span class="pl-ent">lastmod</span>&gt;2023-08-25&lt;/<span class="pl-ent">lastmod</span>&gt;
+    &lt;<span class="pl-ent">changefreq</span>&gt;weekly&lt;/<span class="pl-ent">changefreq</span>&gt;
+    &lt;<span class="pl-ent">priority</span>&gt;0.8&lt;/<span class="pl-ent">priority</span>&gt;
+  &lt;/<span class="pl-ent">url</span>&gt;
+  &lt;<span class="pl-ent">url</span>&gt;
+    &lt;<span class="pl-ent">loc</span>&gt;https://www.example.com/page2&lt;/<span class="pl-ent">loc</span>&gt;
+    &lt;<span class="pl-ent">lastmod</span>&gt;2023-08-20&lt;/<span class="pl-ent">lastmod</span>&gt;
+    &lt;<span class="pl-ent">changefreq</span>&gt;monthly&lt;/<span class="pl-ent">changefreq</span>&gt;
+    &lt;<span class="pl-ent">priority</span>&gt;0.6&lt;/<span class="pl-ent">priority</span>&gt;
+  &lt;/<span class="pl-ent">url</span>&gt;
+  <span class="pl-c"><span class="pl-c">&lt;!--</span> More URLs here <span class="pl-c">--&gt;</span></span>
+&lt;/<span class="pl-ent">urlset</span>&gt;</pre></div>
 <ul dir="auto">
 <li>HTML Sitemap: HTML sitemaps are mainly generated for human use. An HTML Sitemap is a webpage containing links to all the pages of the website. These links are organized hierarchically or categorically for easy navigation to the human user.</li>
 </ul>
-<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content='&lt;!DOCTYPE html&gt;
+<div class="highlight highlight-text-xml notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content='&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;HTML Sitemap&lt;/title&gt;
@@ -120,32 +119,30 @@
     &lt;!-- More list items for other pages --&gt;
   &lt;/ul&gt;
 &lt;/body&gt;
-&lt;/html&gt;'><pre lang="code" class="notranslate"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;HTML Sitemap&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Website Navigation&lt;/h1&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href="/page1"&gt;Page 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="/page2"&gt;Page 2&lt;/a&gt;&lt;/li&gt;
-    &lt;!-- More list items for other pages --&gt;
-  &lt;/ul&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre></div>
+&lt;/html&gt;'><pre>&lt;!<span class="pl-ent">DOCTYPE</span> <span class="pl-e">html</span>&gt;
+&lt;<span class="pl-ent">html</span>&gt;
+&lt;<span class="pl-ent">head</span>&gt;
+  &lt;<span class="pl-ent">title</span>&gt;HTML Sitemap&lt;/<span class="pl-ent">title</span>&gt;
+&lt;/<span class="pl-ent">head</span>&gt;
+&lt;<span class="pl-ent">body</span>&gt;
+  &lt;<span class="pl-ent">h1</span>&gt;Website Navigation&lt;/<span class="pl-ent">h1</span>&gt;
+  &lt;<span class="pl-ent">ul</span>&gt;
+    &lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>/page1<span class="pl-pds">"</span></span>&gt;Page 1&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
+    &lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>/page2<span class="pl-pds">"</span></span>&gt;Page 2&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
+    <span class="pl-c"><span class="pl-c">&lt;!--</span> More list items for other pages <span class="pl-c">--&gt;</span></span>
+  &lt;/<span class="pl-ent">ul</span>&gt;
+&lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
 <ul dir="auto">
 <li>Text Sitemap: A text sitemap is a text file containing the list of URLs of the website. It assists search engines to discover the content of the website. It is a simpler version of the XML type which smaller websites can use.</li>
 </ul>
-<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="https://www.example.com/page1
-https://www.example.com/page2"><pre lang="code" class="notranslate"><code>https://www.example.com/page1
-https://www.example.com/page2
-</code></pre></div>
+<div class="highlight highlight-text-xml notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="https://www.example.com/page1
+https://www.example.com/page2"><pre>https://www.example.com/page1
+https://www.example.com/page2</pre></div>
 <ul dir="auto">
 <li>Image Sitemap: An image sitemap is an extension of the XML sitemap focusing on images. It provides specific information about the images on the website like location, title, caption, license, and other relevant data. It helps search engines index and display images in image search results.</li>
 </ul>
-<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content='&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<div class="highlight highlight-text-xml notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content='&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"&gt;
   &lt;url&gt;
@@ -161,28 +158,27 @@ https://www.example.com/page2
     &lt;/image:image&gt;
   &lt;/url&gt;
   &lt;!-- More URLs with images --&gt;
-&lt;/urlset&gt;'><pre lang="code" class="notranslate"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"&gt;
-  &lt;url&gt;
-    &lt;loc&gt;https://www.example.com/image1&lt;/loc&gt;
-    &lt;image:image&gt;
-      &lt;image:loc&gt;https://www.example.com/image1.jpg&lt;/image:loc&gt;
-    &lt;/image:image&gt;
-  &lt;/url&gt;
-  &lt;url&gt;
-    &lt;loc&gt;https://www.example.com/image2&lt;/loc&gt;
-    &lt;image:image&gt;
-      &lt;image:loc&gt;https://www.example.com/image2.jpg&lt;/image:loc&gt;
-    &lt;/image:image&gt;
-  &lt;/url&gt;
-  &lt;!-- More URLs with images --&gt;
-&lt;/urlset&gt;
-</code></pre></div>
+&lt;/urlset&gt;'><pre>&lt;?<span class="pl-ent">xml</span><span class="pl-e"> version</span>=<span class="pl-s"><span class="pl-pds">"</span>1.0<span class="pl-pds">"</span></span><span class="pl-e"> encoding</span>=<span class="pl-s"><span class="pl-pds">"</span>UTF-8<span class="pl-pds">"</span></span>?&gt;
+&lt;<span class="pl-ent">urlset</span> <span class="pl-e">xmlns</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.sitemaps.org/schemas/sitemap/0.9<span class="pl-pds">"</span></span>
+        <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">image</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.google.com/schemas/sitemap-image/1.1<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">url</span>&gt;
+    &lt;<span class="pl-ent">loc</span>&gt;https://www.example.com/image1&lt;/<span class="pl-ent">loc</span>&gt;
+    &lt;<span class="pl-ent">image</span><span class="pl-ent">:</span><span class="pl-ent">image</span>&gt;
+      &lt;<span class="pl-ent">image</span><span class="pl-ent">:</span><span class="pl-ent">loc</span>&gt;https://www.example.com/image1.jpg&lt;/<span class="pl-ent">image</span><span class="pl-ent">:</span><span class="pl-ent">loc</span>&gt;
+    &lt;/<span class="pl-ent">image</span><span class="pl-ent">:</span><span class="pl-ent">image</span>&gt;
+  &lt;/<span class="pl-ent">url</span>&gt;
+  &lt;<span class="pl-ent">url</span>&gt;
+    &lt;<span class="pl-ent">loc</span>&gt;https://www.example.com/image2&lt;/<span class="pl-ent">loc</span>&gt;
+    &lt;<span class="pl-ent">image</span><span class="pl-ent">:</span><span class="pl-ent">image</span>&gt;
+      &lt;<span class="pl-ent">image</span><span class="pl-ent">:</span><span class="pl-ent">loc</span>&gt;https://www.example.com/image2.jpg&lt;/<span class="pl-ent">image</span><span class="pl-ent">:</span><span class="pl-ent">loc</span>&gt;
+    &lt;/<span class="pl-ent">image</span><span class="pl-ent">:</span><span class="pl-ent">image</span>&gt;
+  &lt;/<span class="pl-ent">url</span>&gt;
+  <span class="pl-c"><span class="pl-c">&lt;!--</span> More URLs with images <span class="pl-c">--&gt;</span></span>
+&lt;/<span class="pl-ent">urlset</span>&gt;</pre></div>
 <ul dir="auto">
 <li>Video Sitemap: Similar to image sitemap, video sitemap focuses on videos. It provides information like title, description, play page URL, and thumbnail images. It helps in better search engine results of your videos.</li>
 </ul>
-<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content='&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<div class="highlight highlight-text-xml notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content='&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"&gt;
   &lt;url&gt;
@@ -201,27 +197,26 @@ https://www.example.com/page2
     &lt;/video:video&gt;
   &lt;/url&gt;
   &lt;!-- More URLs with videos --&gt;
-&lt;/urlset&gt;'><pre lang="code" class="notranslate"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"&gt;
-  &lt;url&gt;
-    &lt;loc&gt;https://www.example.com/video1&lt;/loc&gt;
-    &lt;video:video&gt;
-      &lt;video:thumbnail_loc&gt;https://www.example.com/video1-thumbnail.jpg&lt;/video:thumbnail_loc&gt;
-      &lt;video:title&gt;Video 1 Title&lt;/video:title&gt;
-      &lt;video:description&gt;This is the description for Video 1.&lt;/video:description&gt;
-      &lt;video:content_loc&gt;https://www.example.com/video1.mp4&lt;/video:content_loc&gt;
-    &lt;/video:video&gt;
-  &lt;/url&gt;
-  &lt;url&gt;
-    &lt;loc&gt;https://www.example.com/video2&lt;/loc&gt;
-    &lt;video:video&gt;
-      &lt;!-- Video 2 details here --&gt;
-    &lt;/video:video&gt;
-  &lt;/url&gt;
-  &lt;!-- More URLs with videos --&gt;
-&lt;/urlset&gt;
-</code></pre></div>
+&lt;/urlset&gt;'><pre>&lt;?<span class="pl-ent">xml</span><span class="pl-e"> version</span>=<span class="pl-s"><span class="pl-pds">"</span>1.0<span class="pl-pds">"</span></span><span class="pl-e"> encoding</span>=<span class="pl-s"><span class="pl-pds">"</span>UTF-8<span class="pl-pds">"</span></span>?&gt;
+&lt;<span class="pl-ent">urlset</span> <span class="pl-e">xmlns</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.sitemaps.org/schemas/sitemap/0.9<span class="pl-pds">"</span></span>
+        <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">video</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.google.com/schemas/sitemap-video/1.1<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">url</span>&gt;
+    &lt;<span class="pl-ent">loc</span>&gt;https://www.example.com/video1&lt;/<span class="pl-ent">loc</span>&gt;
+    &lt;<span class="pl-ent">video</span><span class="pl-ent">:</span><span class="pl-ent">video</span>&gt;
+      &lt;<span class="pl-ent">video</span><span class="pl-ent">:</span><span class="pl-ent">thumbnail_loc</span>&gt;https://www.example.com/video1-thumbnail.jpg&lt;/<span class="pl-ent">video</span><span class="pl-ent">:</span><span class="pl-ent">thumbnail_loc</span>&gt;
+      &lt;<span class="pl-ent">video</span><span class="pl-ent">:</span><span class="pl-ent">title</span>&gt;Video 1 Title&lt;/<span class="pl-ent">video</span><span class="pl-ent">:</span><span class="pl-ent">title</span>&gt;
+      &lt;<span class="pl-ent">video</span><span class="pl-ent">:</span><span class="pl-ent">description</span>&gt;This is the description for Video 1.&lt;/<span class="pl-ent">video</span><span class="pl-ent">:</span><span class="pl-ent">description</span>&gt;
+      &lt;<span class="pl-ent">video</span><span class="pl-ent">:</span><span class="pl-ent">content_loc</span>&gt;https://www.example.com/video1.mp4&lt;/<span class="pl-ent">video</span><span class="pl-ent">:</span><span class="pl-ent">content_loc</span>&gt;
+    &lt;/<span class="pl-ent">video</span><span class="pl-ent">:</span><span class="pl-ent">video</span>&gt;
+  &lt;/<span class="pl-ent">url</span>&gt;
+  &lt;<span class="pl-ent">url</span>&gt;
+    &lt;<span class="pl-ent">loc</span>&gt;https://www.example.com/video2&lt;/<span class="pl-ent">loc</span>&gt;
+    &lt;<span class="pl-ent">video</span><span class="pl-ent">:</span><span class="pl-ent">video</span>&gt;
+      <span class="pl-c"><span class="pl-c">&lt;!--</span> Video 2 details here <span class="pl-c">--&gt;</span></span>
+    &lt;/<span class="pl-ent">video</span><span class="pl-ent">:</span><span class="pl-ent">video</span>&gt;
+  &lt;/<span class="pl-ent">url</span>&gt;
+  <span class="pl-c"><span class="pl-c">&lt;!--</span> More URLs with videos <span class="pl-c">--&gt;</span></span>
+&lt;/<span class="pl-ent">urlset</span>&gt;</pre></div>
 <p dir="auto">Now that we have seen the benefits and formats we shall look into an example.</p>
 <h4 dir="auto">
 <a id="user-content-creating-a-sitemap-in-ruby-onrails" class="anchor" aria-hidden="true" tabindex="-1" href="#creating-a-sitemap-in-ruby-onrails" target="_blank"><svg class="octicon octicon-link" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a>Creating a Sitemap in Ruby on Rails</h4>
@@ -230,38 +225,34 @@ https://www.example.com/page2
 <li>Install:
 Add the <code>sitemap_generator</code> gem to your Gemfile:</li>
 </ul>
-<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="gem 'sitemap_generator'"><pre lang="code" class="notranslate"><code>gem 'sitemap_generator'
-</code></pre></div>
+<div class="highlight highlight-source-ruby notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="gem 'sitemap_generator'"><pre><span class="pl-en">gem</span> <span class="pl-s">'sitemap_generator'</span></pre></div>
 <p dir="auto">bundle install to install the gem.</p>
 <ul dir="auto">
 <li>Generate Configuration</li>
 </ul>
-<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="rails generate sitemap:install"><pre lang="code" class="notranslate"><code>rails generate sitemap:install
-</code></pre></div>
+<div class="highlight highlight-source-ruby notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="rails generate sitemap:install"><pre><span class="pl-en">rails</span> <span class="pl-en">generate</span> <span class="pl-pds">sitemap</span>:<span class="pl-en">install</span></pre></div>
 <p dir="auto">This will generate a ruby file  <code>config/sitemap.rb</code> which you can use to configure sitemap settings.</p>
 <ul dir="auto">
 <li>Configure Sitemap</li>
 </ul>
 <p dir="auto">Modify the sitemap.rb as per your application. You can define URLs, set priority, update frequency, and add the last modified time.</p>
-<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="SitemapGenerator::Sitemap.create do
+<div class="highlight highlight-source-ruby notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="SitemapGenerator::Sitemap.create do
   add root_path, priority: 1.0, changefreq: 'daily'
 
   Post.find_each do |post|
     add post_path(post), lastmod: post.updated_at
   end
-end"><pre lang="code" class="notranslate"><code>SitemapGenerator::Sitemap.create do
-  add root_path, priority: 1.0, changefreq: 'daily'
+end"><pre><span class="pl-v">SitemapGenerator</span>::<span class="pl-v">Sitemap</span><span class="pl-kos">.</span><span class="pl-en">create</span> <span class="pl-k">do</span>
+  <span class="pl-en">add</span> <span class="pl-en">root_path</span><span class="pl-kos">,</span> <span class="pl-pds">priority</span>: <span class="pl-c1">1.0</span><span class="pl-kos">,</span> <span class="pl-pds">changefreq</span>: <span class="pl-s">'daily'</span>
 
-  Post.find_each do |post|
-    add post_path(post), lastmod: post.updated_at
-  end
-end
-</code></pre></div>
+  <span class="pl-v">Post</span><span class="pl-kos">.</span><span class="pl-en">find_each</span> <span class="pl-k">do</span> |<span class="pl-s1">post</span>|
+    <span class="pl-en">add</span> <span class="pl-en">post_path</span><span class="pl-kos">(</span><span class="pl-s1">post</span><span class="pl-kos">)</span><span class="pl-kos">,</span> <span class="pl-pds">lastmod</span>: <span class="pl-s1">post</span><span class="pl-kos">.</span><span class="pl-en">updated_at</span>
+  <span class="pl-k">end</span>
+<span class="pl-k">end</span></pre></div>
 <ul dir="auto">
 <li>Generate Sitemap:</li>
 </ul>
-<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="rake sitemap:refresh"><pre lang="code" class="notranslate"><code>rake sitemap:refresh
-</code></pre></div>
+<div class="highlight highlight-source-ruby notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="rake sitemap:refresh"><pre><span class="pl-en">rake</span> <span class="pl-pds">sitemap</span>:<span class="pl-en">refresh</span></pre></div>
 <p dir="auto">XML Sitemap will be created in the <code>/public</code> directory and it will also ping the Google search engine to inform about the sitemap availability.
 Do check the sitemap of my personal website at <code>https://ethigeek.com/sitemap.xml.gz</code></p>
 <h4 dir="auto">
@@ -305,7 +296,7 @@ Do check the sitemap of my personal website at <code>https://ethigeek.com/sitema
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
 var disqus_config = function () {
   this.shortname = "ethigeek-com";
-  this.page.url = "http://ethigeek.com:3000/blogs/demystifying-sitemaps-your-pathway-to-seamless-website-exploration";
+  this.page.url = "http://ethigeek.com/blogs/demystifying-sitemaps-your-pathway-to-seamless-website-exploration";
   this.page.identifier = 'blog-36';
   this.page.title = 'Demystifying Sitemaps: Your Pathway to Seamless Website Exploration'; 
 };
