@@ -1,0 +1,188 @@
+import type { BlogPost } from '@/types/blog'
+import BlogShell from '@/components/blog/shell'
+import MarkdownBody from '@/components/blog/MarkdownBody'
+
+const post: BlogPost = {
+  slug: "a-simple-tensorflow-classification-model-in-ruby",
+  title: "A Simple Tensorflow Classification Model In Ruby",
+  date: "Unknown",
+  image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80",
+  excerpt: "The main objective of this blog is to build a simple linear classification model in ruby using Tensorflow architecture. The main tensorflow compenents...",
+  readTime: "5 min read",
+  content: `[](a-simple-tensorflow-classification-model-in-ruby.html#a-simple-tensorflow-classification-model-in-ruby)A Simple Tensorflow Classification Model in Ruby
+
+The main objective of this blog is to build a simple linear classification model in ruby using Tensorflow architecture. The main tensorflow compenents required to build and test the model  are Operation, Placeholder, Variable and Session. These components are written as ruby classes. Lets start with the Operation class.
+
+\`\`\`
+class Operation
+  attr_accessor  :input_nodes, :output, :input
+
+  def initialize(*input_nodes)
+    @input_nodes = input_nodes
+  end
+
+  def compute
+    raise "Should be implemented"
+  end
+
+end
+\`\`\`
+
+The \`Operation\` class forms the basis of all the computation in tensorflow. The \`compute\` method carries out the computation required. Let us create few classes which inherit the \`Operation\` class and we will use sigmoid as the activation function for the model
+
+\`\`\`
+require Matrix
+class Add < Operation
+  def initialize(*nodes)
+    @input_nodes=nodes
+  end
+
+  def compute(x,y)
+    return x.element(0,0) + y
+  end
+end
+
+class Matmul < Operation
+  def initialize(*nodes)
+    @input_nodes=nodes
+  end
+
+  def compute(x,y)
+    return Matrix[x] * Matrix[y].transpose
+  end
+end
+
+class Sigmoid < Operation
+  def initialize(*nodes)
+    @input_nodes=nodes
+  end
+
+  def compute(z)
+    1/(1+Math.exp(-z))
+  end
+end
+\`\`\`
+
+Load the Matrix library at the begining for matrix computation. Now that we have created basic operation classes we will proceed to other components.
+
+\`\`\`
+class Placeholder
+  attr_accessor  :value, :output
+end
+
+class Variable
+  attr_accessor  :value, :output
+
+  def initialize(value)
+    @value = value
+  end
+end
+\`\`\`
+
+The \`Placeholder\` class holds objects which are input or output of the model. These object act as constant and their values dont change during the session. The \`Variable\` holds objects whose values are either weights or bias given to the model. In the actual tensorflow model these values are updated using the optimizer(eg AdamOptimizer, Stocastic Gradient Descent etc). We wont be updating any value in our approach. We are fixing the value for weight and bias as [1,1] and -5 respectively. Now we will define the session class.
+
+\`\`\`
+class Session
+
+  def run(operation,feed_dict={})
+    nodes = traverse_postorder(operation)
+    nodes.each do |node|
+      if node.is_a? Placeholder
+        node.output = feed_dict[node.object_id]
+      elsif node.is_a? Variable
+        node.output = node.value
+      else
+        node.input = node.input_nodes.map { |input| input.output }
+        node.output = node.compute(*node.input)
+      end
+    end
+    operation.output
+  end
+  
+  def traverse_postorder(operation)
+    node_operators = []
+    recurse(operation,node_operators)
+  end
+
+  def recurse(node,node_operators)
+    if node.is_a?(Operation)
+      node.input_nodes.each do |input_node|
+        recurse(input_node,node_operators)
+      end
+    end
+    node_operators << node
+  end
+  
+end
+\`\`\`
+
+The \`Session\` class takes care of all the executions. It first converts the set of operations to postfix order. The operations are then executed one by one. Since we have created all the components required, lets jump into action.
+
+\`\`\`
+W = Variable.new([1,1]) #Weight
+b = Variable.new(-5) #bias
+x = Placeholder.new() #input
+y = Matmul.new(W,x)
+z = Add.new(y,b) 
+a = Sigmoid.new(z) #activation function
+sess = Session.new()
+\`\`\`
+
+[![](https://raw.githubusercontent.com/ethirajsrinivasan/blogs/master/ruby_tensorflow/linear_classifier.png)](https://raw.githubusercontent.com/ethirajsrinivasan/blogs/master/ruby_tensorflow/linear_classifier.png)
+
+Lets see the prediction for two extreme points
+
+\`\`\`
+result = sess.run(a,feed_dict={x.object_id=>[0,-10]})
+puts(result)%
+\`\`\`
+
+\`\`\`
+3.059022269256247e-07
+\`\`\`
+
+The point \`(0,-10)\` lies towards the lower left corner of the graph hence the sigmoid value is closer to 0
+
+\`\`\`
+result = sess.run(a,feed_dict={x.object_id=>[8,10]})
+puts(result)%
+\`\`\`
+
+\`\`\`
+0.999997739675702
+\`\`\`
+
+For the point \`(8,10)\` which lies near the upper right corner of the graph the sigmoid value is closer to 1.
+
+Hope this example gives a good understanding of basic components of tensorflow in ruby. Happy learning !!!
+
+    &#x2022;     &#x2022;     &#x2022;
+
+      Follow Me on:
+      [ Medium ](https://medium.com/@ethi)
+      [ Youtube ](https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1)
+      [ Instagram ](https://www.instagram.com/ethirajchandru/)
+      
+      LinkedIn 
+      [ Github ](https://github.com/ethirajsrinivasan/)
+      [ Twitter ](https://twitter.com/iamethi)
+
+        How to generate Kubernetes Deploy Manifests For Rails Application
+
+        Know About Yourself from Google`,
+}
+
+export default function ASimpleTensorflowClassificationModelInRubyPage() {
+  return (
+    <BlogShell
+      slug={post.slug}
+      title={post.title}
+      excerpt={post.excerpt}
+      image={post.image}
+      date={post.date}
+      readTime={post.readTime}
+    >
+      <MarkdownBody content={post.content} />
+    </BlogShell>
+  )
+}

@@ -1,0 +1,22 @@
+/** Portfolio order matches the home page listing (category order, then projects). */
+export const portfolioIndex = [
+  { slug: 'medical-image-diagnostics', title: 'Deep Learning Models For Medical Image Diagnostics' },
+  { slug: 'facial-recognition-system', title: 'Facial Recognition System' },
+  { slug: 'social-community-expansion', title: 'Social Community Expansion' },
+  { slug: 'smart-interactive-wall', title: 'Smart Interactive Wall' },
+  { slug: 'spatio-temporal-analysis', title: 'Spatio Temporal Analysis Of Students’ Travel' },
+  { slug: 'dna-capitals-hackathon', title: 'Dna Capitals Hackathon' },
+  { slug: 'medtracker', title: 'Medtracker' },
+  { slug: 'u-ask', title: 'U Ask' },
+  { slug: 'tablizer', title: 'Tablizer' },
+  { slug: 'css-to-inliner', title: 'CSS To Inliner' },
+  { slug: 'url-shortener', title: 'URL Shortener' },
+  { slug: 'table2-csv', title: 'Table2 CSV' },
+  { slug: 'rails-protip', title: 'Rails Protip' },
+  { slug: 'rails-fort', title: 'Rails Fort' },
+  { slug: 'technology-icons', title: 'Technology Icons' },
+  { slug: 'supercache', title: 'Supercache' },
+  { slug: 'sunspot', title: 'Sunspot' },
+  { slug: 'devise-foundation-views', title: 'Devise Foundation Views' },
+  { slug: 'collection2-csv', title: 'Collection2 CSV' },
+] as const
