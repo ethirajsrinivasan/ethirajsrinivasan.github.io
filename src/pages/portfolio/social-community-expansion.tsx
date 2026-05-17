@@ -1,6 +1,31 @@
 import PortfolioShell from '@/components/portfolio/shell'
 import { pc, externalLink } from '@/components/portfolio/classes'
 
+function GalleryFigure({
+  src,
+  alt,
+  caption,
+  imgClass,
+  wide,
+  expand,
+}: {
+  src: string
+  alt: string
+  caption: string
+  imgClass: string
+  wide?: boolean
+  expand?: boolean
+}) {
+  return (
+    <figure className={`${pc.figureBox} ${wide ? pc.figureWide : ''}`}>
+      <div className={expand ? pc.figureMediaExpansion : pc.figureMedia}>
+        <img src={src} alt={alt} className={imgClass} loading="lazy" />
+      </div>
+      <figcaption className={pc.caption}>{caption}</figcaption>
+    </figure>
+  )
+}
+
 export default function SocialCommunityExpansionPage() {
   return (
     <PortfolioShell
@@ -59,39 +84,31 @@ export default function SocialCommunityExpansionPage() {
             </a>
             .
           </p>
-          <div className={pc.grid2}>
-            <div className={pc.figure}>
-              <img
-                src="/assets/images/lost_circle_visualization.jpg"
-                alt="Lost circle social network visualization"
-                className={pc.img}
-              />
-              <p className={pc.caption}>Social Network Visulaization in lost circle</p>
-            </div>
-            <div className={pc.figure}>
-              <img
-                src="/assets/images/lost_circle_visualization1.png"
-                alt="Lost circle expanded view"
-                className={pc.img}
-              />
-              <p className={pc.caption}>Expanded View</p>
-            </div>
-            <div className={pc.figure}>
-              <img
-                src="/assets/images/gephi_visualisation.jpg"
-                alt="Gephi Fruchterman Reingold view"
-                className={pc.img}
-              />
-              <p className={pc.caption}>Fruchterman Reingold View in Gephi</p>
-            </div>
-            <div className={pc.figure}>
-              <img
-                src="/assets/images/gephi_visualisation1.png"
-                alt="Gephi MultiGravity ForceAtlas2 view"
-                className={pc.img}
-              />
-              <p className={pc.caption}>MultiGravity ForceAtlas2 View in Gephi</p>
-            </div>
+          <div className={pc.gallery}>
+            <GalleryFigure
+              src="/assets/images/lost_circle_visualization.jpg"
+              alt="Lost circle social network visualization"
+              caption="Social Network Visulaization in lost circle"
+              imgClass={pc.imgGraph}
+            />
+            <GalleryFigure
+              src="/assets/images/lost_circle_visualization1.png"
+              alt="Lost circle expanded view"
+              caption="Expanded View"
+              imgClass={pc.imgGraph}
+            />
+            <GalleryFigure
+              src="/assets/images/gephi_visualisation.jpg"
+              alt="Gephi Fruchterman Reingold view"
+              caption="Fruchterman Reingold View in Gephi"
+              imgClass={pc.imgGraph}
+            />
+            <GalleryFigure
+              src="/assets/images/gephi_visualisation1.png"
+              alt="Gephi MultiGravity ForceAtlas2 view"
+              caption="MultiGravity ForceAtlas2 View in Gephi"
+              imgClass={pc.imgGraph}
+            />
           </div>
         </div>
       </section>
@@ -103,27 +120,26 @@ export default function SocialCommunityExpansionPage() {
             Communities were detected using modularity class in Gephi. Communities visualized manually, in
             lost circle was in correspondence with the communities obtained from gephi.
           </p>
-          <div className={pc.grid2}>
-            <div className={pc.figure}>
-              <img src="/assets/images/gephi_visualisation1.png" alt="Communities in Gephi" className={pc.img} />
-              <p className={pc.caption}>Communties identified in Gephi</p>
-            </div>
-            <div className={pc.figure}>
-              <img
-                src="/assets/images/modularity_class.png"
-                alt="Community distribution in Gephi"
-                className={pc.img}
-              />
-              <p className={pc.caption}>Distribution of community in Gephi</p>
-            </div>
-            <div className={pc.figure}>
-              <img
-                src="/assets/images/lost_circle_community.jpg"
-                alt="Communities in Lost Circle"
-                className={pc.img}
-              />
-              <p className={pc.caption}>Communities identified in Lost Circle</p>
-            </div>
+          <div className={pc.gallery}>
+            <GalleryFigure
+              src="/assets/images/gephi_visualisation1.png"
+              alt="Communities in Gephi"
+              caption="Communties identified in Gephi"
+              imgClass={pc.imgGraph}
+            />
+            <GalleryFigure
+              src="/assets/images/modularity_class.png"
+              alt="Community distribution in Gephi"
+              caption="Distribution of community in Gephi"
+              imgClass={pc.imgPanel}
+            />
+            <GalleryFigure
+              src="/assets/images/lost_circle_community.jpg"
+              alt="Communities in Lost Circle"
+              caption="Communities identified in Lost Circle"
+              imgClass={pc.imgGraph}
+              wide
+            />
           </div>
         </div>
       </section>
@@ -136,51 +152,49 @@ export default function SocialCommunityExpansionPage() {
             Players were identified for each of the communities. Key Players were also visualised in lost circle
             Network.
           </p>
-          <div className={pc.grid2}>
-            <div className={pc.figure}>
-              <img
-                src="/assets/images/community_statistics.png"
-                alt="Community statistics in Gephi"
-                className={pc.img}
-              />
-              <p className={pc.caption}>Community Statistics in Gephi</p>
-            </div>
-            <div className={pc.figure}>
-              <img
-                src="/assets/images/community_statistics_graph.jpg"
-                alt="Key player identification in Gephi"
-                className={pc.img}
-              />
-              <p className={pc.caption}>Key Player Identification in Gephi</p>
-            </div>
-            <div className={pc.figure}>
-              <img src="/assets/images/key_player.jpg" alt="Key player in Lost Circle" className={pc.img} />
-              <p className={pc.caption}>Key Player visualised in Lost Circle</p>
-            </div>
-            <div className={pc.figure}>
-              <img
-                src="/assets/images/community_statistics1.png"
-                alt="Community statistics for second community"
-                className={pc.img}
-              />
-              <p className={pc.caption}>Community Statistics in Gephi</p>
-            </div>
-            <div className={pc.figure}>
-              <img
-                src="/assets/images/community_statistics_graph1.jpg"
-                alt="Key player identification for second community"
-                className={pc.img}
-              />
-              <p className={pc.caption}>Key Player Identification in Gephi</p>
-            </div>
-            <div className={pc.figure}>
-              <img
-                src="/assets/images/key_player_1.jpg"
-                alt="Key player for second community in Lost Circle"
-                className={pc.img}
-              />
-              <p className={pc.caption}>Key Player visualised in Lost Circle</p>
-            </div>
+          <p className={pc.caption}>Community 1</p>
+          <div className={pc.gallery}>
+            <GalleryFigure
+              src="/assets/images/community_statistics.png"
+              alt="Community statistics in Gephi"
+              caption="Community Statistics in Gephi"
+              imgClass={pc.imgPanel}
+            />
+            <GalleryFigure
+              src="/assets/images/community_statistics_graph.jpg"
+              alt="Key player identification in Gephi"
+              caption="Key Player Identification in Gephi"
+              imgClass={pc.imgPanel}
+            />
+            <GalleryFigure
+              src="/assets/images/key_player.jpg"
+              alt="Key player in Lost Circle"
+              caption="Key Player visualised in Lost Circle"
+              imgClass={pc.imgGraph}
+              wide
+            />
+          </div>
+          <p className={`${pc.caption} mt-8`}>Community 2</p>
+          <div className={pc.gallery}>
+            <GalleryFigure
+              src="/assets/images/community_statistics1.png"
+              alt="Community statistics for second community"
+              caption="Community Statistics in Gephi"
+              imgClass={pc.imgPanel}
+            />
+            <GalleryFigure
+              src="/assets/images/community_statistics_graph1.jpg"
+              alt="Key player identification for second community"
+              caption="Key Player Identification in Gephi"
+              imgClass={pc.imgPanel}
+            />
+            <GalleryFigure
+              src="/assets/images/key_player_1.jpg"
+              alt="Key player for second community in Lost Circle"
+              caption="Key Player visualised in Lost Circle"
+              imgClass={pc.imgGraph}
+              wide
+            />
           </div>
         </div>
       </section>
@@ -204,23 +218,21 @@ export default function SocialCommunityExpansionPage() {
             algorithm achieved the state of the art. The two communities studied above were expanded using this
             algorithm. The expanded communities are shown in the images below.
           </p>
-          <div className={pc.grid2}>
-            <div className={pc.figure}>
-              <img
-                src="/assets/images/iss_lemon.png"
-                alt="LEMON seed expansion for community 1"
-                className={pc.img}
-              />
-              <p className={pc.caption}>Seed Expansion for Community 1</p>
-            </div>
-            <div className={pc.figure}>
-              <img
-                src="/assets/images/friend_lemon.png"
-                alt="LEMON seed expansion for community 2"
-                className={pc.img}
-              />
-              <p className={pc.caption}>Seed Expansion for Community 2</p>
-            </div>
+          <div className={pc.galleryStack}>
+            <GalleryFigure
+              src="/assets/images/iss_lemon.png"
+              alt="LEMON seed expansion for community 1"
+              caption="Seed Expansion for Community 1"
+              imgClass={pc.imgExpansion}
+              expand
+            />
+            <GalleryFigure
+              src="/assets/images/friend_lemon.png"
+              alt="LEMON seed expansion for community 2"
+              caption="Seed Expansion for Community 2"
+              imgClass={pc.imgExpansion}
+              expand
+            />
           </div>
         </div>
       </section>

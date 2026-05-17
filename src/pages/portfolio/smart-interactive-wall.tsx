@@ -49,23 +49,29 @@ export default function SmartInteractiveWallPage() {
             users. The response are shown visually using an avatar which renders itself in the Unity
             framework.
           </p>
-          <div className={pc.grid2}>
-            <div className={pc.figure}>
-              <img
-                src="/assets/images/smart_wall_architecture1.png"
-                alt="Two modes of Smart Wall"
-                className={pc.img}
-              />
-              <p className={pc.caption}>Two modes of Smart Wall</p>
-            </div>
-            <div className={pc.figure}>
-              <img
-                src="/assets/images/smart_wall_architecture2.png"
-                alt="Flow of information in Smart Wall"
-                className={pc.img}
-              />
-              <p className={pc.caption}>Flow of information</p>
-            </div>
+          <div className={pc.galleryStack}>
+            <figure className={pc.figureBox}>
+              <div className={pc.figureMediaExpansion}>
+                <img
+                  src="/assets/images/smart_wall_architecture1.png"
+                  alt="Two modes of Smart Wall"
+                  className={pc.imgExpansion}
+                  loading="lazy"
+                />
+              </div>
+              <figcaption className={pc.caption}>Two modes of Smart Wall</figcaption>
+            </figure>
+            <figure className={pc.figureBox}>
+              <div className={pc.figureMediaExpansion}>
+                <img
+                  src="/assets/images/smart_wall_architecture2.png"
+                  alt="Flow of information in Smart Wall"
+                  className={pc.imgExpansion}
+                  loading="lazy"
+                />
+              </div>
+              <figcaption className={pc.caption}>Flow of information</figcaption>
+            </figure>
           </div>
         </div>
       </section>

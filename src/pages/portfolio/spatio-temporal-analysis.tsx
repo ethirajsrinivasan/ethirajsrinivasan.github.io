@@ -49,9 +49,9 @@ export default function SpatioTemporalAnalysisPage() {
             Heatmaps, cluster maps and Anselin’s Local Moran’s I for Local Spatial Autocorrelation were used
             to analyze the students&apos; behaviour with their movement data.
           </p>
-          <ul className={pc.topicList}>
-            <li>
-              <p className={pc.caption}>HeatMap</p>
+          <div className={pc.topicStack}>
+            <div>
+              <h3 className={pc.topicTitle}>HeatMap</h3>
               <p className={pc.justify}>
                 The heatmap shows the frequently travelled paths of the students. One very visible hotspot is
                 the area around NUS, at the southwest part of Singapore.
@@ -59,18 +59,18 @@ export default function SpatioTemporalAnalysisPage() {
               <div className={pc.figure}>
                 <img src="/assets/images/heat.png" alt="Heat map of student travel paths" className={pc.img} />
               </div>
-            </li>
-            <li>
-              <p className={pc.caption}>Cluster Maps</p>
+            </div>
+            <div>
+              <h3 className={pc.topicTitle}>Cluster Maps</h3>
               <p className={pc.justify}>
                 This cluster map shows all the clusters formed and also serves as heatmap. Visit the interactive Shiny application to view the distribution within the clusters by clicking on each cluster.
               </p>
               <div className={pc.figure}>
                 <img src="/assets/images/cluster.png" alt="Cluster map" className={pc.img} />
               </div>
-            </li>
-            <li>
-              <p className={pc.caption}>Anselin’s Local Moran’s I</p>
+            </div>
+            <div>
+              <h3 className={pc.topicTitle}>Anselin’s Local Moran’s I</h3>
               <p className={pc.justify}>
                 With Anselin’s Local Moran’s I Index we can tell the time spent by the students at each
                 location, as compared to their neighbours. Red points are high-high points, which tell us that
@@ -81,8 +81,8 @@ export default function SpatioTemporalAnalysisPage() {
               <div className={pc.figure}>
                 <img src="/assets/images/moran_i.png" alt="Anselin's Local Moran's I" className={pc.img} />
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -94,9 +94,9 @@ export default function SpatioTemporalAnalysisPage() {
             objectives, by examining the impact of train faults on students’ travel plans and also to propose
             useful information on nearby amenities.
           </p>
-          <ul className={pc.topicList}>
-            <li>
-              <p className={pc.caption}>Train Faults</p>
+          <div className={pc.topicStack}>
+            <div>
+              <h3 className={pc.topicTitle}>Train Faults</h3>
               <p className={pc.justify}>
                 By plotting the lines where the disruptions have occurred, we can see which line is the most
                 prone to train faults (in the past 2 years). We have also identified that train disruptions
@@ -107,9 +107,9 @@ export default function SpatioTemporalAnalysisPage() {
               <div className={pc.figure}>
                 <img src="/assets/images/train.png" alt="Train fault disruption map" className={pc.img} />
               </div>
-            </li>
-            <li>
-              <p className={pc.caption}>Shopping Malls</p>
+            </div>
+            <div>
+              <h3 className={pc.topicTitle}>Shopping Malls</h3>
               <p className={pc.justify}>
                 Using medoid clustering to determine the centres of the clusters of students’ movements, we
                 created a geofence with 3 km radius from the centre to highlight which shopping malls are
@@ -125,9 +125,9 @@ export default function SpatioTemporalAnalysisPage() {
                   className={pc.img}
                 />
               </div>
-            </li>
-            <li>
-              <p className={pc.caption}>Hawker Centres</p>
+            </div>
+            <div>
+              <h3 className={pc.topicTitle}>Hawker Centres</h3>
               <p className={pc.justify}>
                 Hawker centres, on the other hand, tell a different story. There are an abundance and
                 relatively equal distribution of hawker centres within the clusters. The government has made a
@@ -138,9 +138,9 @@ export default function SpatioTemporalAnalysisPage() {
               <div className={pc.figure}>
                 <img src="/assets/images/hawker.png" alt="Hawker centres near student clusters" className={pc.img} />
               </div>
-            </li>
-            <li>
-              <p className={pc.caption}>Proposal of Alternative Travelling Route</p>
+            </div>
+            <div>
+              <h3 className={pc.topicTitle}>Proposal of Alternative Travelling Route</h3>
               <p className={pc.justify}>
                 We have attempted to propose an alternate route in the event of a train disruption, from
                 Raffles Place to NUS ISS. As this route planning algorithm is in its infancy, we have only
@@ -149,8 +149,8 @@ export default function SpatioTemporalAnalysisPage() {
               <div className={pc.figure}>
                 <img src="/assets/images/alternative.png" alt="Alternative travel route" className={pc.img} />
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </section>
 

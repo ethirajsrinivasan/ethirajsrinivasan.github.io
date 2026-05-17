@@ -14,7 +14,32 @@ export const pc = {
   link: 'text-primary-600 hover:text-primary-700 underline',
   figure: 'text-center my-4',
   img: 'rounded-lg shadow-md w-full h-auto mx-auto',
-  caption: 'text-center text-sm font-medium text-slate-600 mt-2',
+  /** Bordered card for gallery figures — keeps mixed image sizes aligned */
+  figureBox:
+    'rounded-xl border border-slate-200 bg-slate-50/50 p-4 shadow-sm flex flex-col h-full',
+  figureMedia: 'flex flex-1 items-center justify-center w-full min-h-[12rem] sm:min-h-[14rem]',
+  caption: 'text-center text-sm font-medium text-slate-600 mt-3 shrink-0',
+  /** 2-col gallery; use figureWide on a figure for full-width row */
+  /** 2 cols when content area is wide enough (sidebar layout is narrower than viewport) */
+  gallery: 'grid grid-cols-2 max-[520px]:grid-cols-1 gap-6 my-6 items-stretch',
+  figureWide: 'sm:col-span-2 max-w-4xl mx-auto w-full',
+  /** Large network / graph screenshots */
+  imgGraph: 'w-full max-h-64 sm:max-h-72 md:max-h-80 object-contain mx-auto rounded-md',
+  /** Gephi panels, stats, modularity charts */
+  imgPanel: 'w-full max-h-52 sm:max-h-56 object-contain mx-auto rounded-md',
+  /** Wide expansion / timeline images */
+  imgWide: 'w-full max-h-44 sm:max-h-52 object-contain mx-auto rounded-md',
+  /** Portrait mobile app screenshots (1080×1920, etc.) */
+  imgScreenshot:
+    'w-auto max-w-full max-h-[min(28rem,65vh)] object-contain mx-auto rounded-md shadow-sm',
+  /** Full-width LEMON / seed expansion diagrams (wide panoramas) */
+  imgExpansion: 'w-full h-auto object-contain rounded-md',
+  galleryStack: 'flex flex-col gap-6 my-6',
+  figureMediaExpansion: 'w-full',
+  /** Stacked analysis subsections (no bullets — avoids body [&_ul] list-disc override) */
+  topicStack: 'space-y-10',
+  topicTitle: 'text-lg font-semibold text-slate-900 mb-2 text-left',
+  /** @deprecated Use topicStack — list-none was overridden by body [&_ul]:list-disc */
   topicList: 'space-y-8 text-left list-none pl-0',
   video: 'aspect-video w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-lg my-6',
   iframe: 'w-full h-full min-h-[280px]',

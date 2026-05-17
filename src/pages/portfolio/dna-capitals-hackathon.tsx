@@ -72,7 +72,7 @@ export default function DnaCapitalsHackathonPage() {
             a query is returned using context similarity (LSI, Carrot Clustering). Latent Dirichlet allocation
             is used to extract the topics from the content indexed based on the query.
           </p>
-          <div className={pc.grid2}>
+          <div className={pc.galleryStack}>
             <div className={pc.figure}>
               <img
                 src="/assets/images/grab_metadata.png"

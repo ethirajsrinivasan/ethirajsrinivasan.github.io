@@ -1,5 +1,18 @@
 import PortfolioShell from '@/components/portfolio/shell'
-import { pc, externalLink } from '@/components/portfolio/classes'
+import { pc } from '@/components/portfolio/classes'
+
+const screenshots = [
+  { src: '/assets/images/appointment_screenshot.png', alt: 'Appointment screen', caption: 'Appointments' },
+  { src: '/assets/images/category_screenshot.png', alt: 'Category screen', caption: 'Categories' },
+  { src: '/assets/images/healthbio_screenshot.png', alt: 'Health bio screen', caption: 'Health bio' },
+  { src: '/assets/images/ice_screenshot.png', alt: 'ICE emergency screen', caption: 'ICE emergency' },
+  {
+    src: '/assets/images/measurement_screenshot.png',
+    alt: 'Measurement screen',
+    caption: 'Measurements',
+  },
+  { src: '/assets/images/medicine_screenshot.png', alt: 'Medicine screen', caption: 'Medicines' },
+] as const
 
 export default function MedtrackerPage() {
   return (
@@ -42,29 +55,15 @@ export default function MedtrackerPage() {
       <section className={pc.section}>
         <h2 className={pc.heading}>Screenshots</h2>
         <div className={pc.body}>
-          <div className={pc.grid2}>
-            <div className={pc.figure}>
-              <img src="/assets/images/appointment_screenshot.png" alt="Appointment screen" className={pc.img} />
-            </div>
-            <div className={pc.figure}>
-              <img src="/assets/images/category_screenshot.png" alt="Category screen" className={pc.img} />
-            </div>
-            <div className={pc.figure}>
-              <img src="/assets/images/healthbio_screenshot.png" alt="Health bio screen" className={pc.img} />
-            </div>
-            <div className={pc.figure}>
-              <img src="/assets/images/ice_screenshot.png" alt="ICE emergency screen" className={pc.img} />
-            </div>
-            <div className={pc.figure}>
-              <img
-                src="/assets/images/measurement_screenshot.png"
-                alt="Measurement screen"
-                className={pc.img}
-              />
-            </div>
-            <div className={pc.figure}>
-              <img src="/assets/images/medicine_screenshot.png" alt="Medicine screen" className={pc.img} />
-            </div>
+          <div className={pc.gallery}>
+            {screenshots.map(({ src, alt, caption }) => (
+              <figure key={src} className={pc.figureBox}>
+                <div className={pc.figureMedia}>
+                  <img src={src} alt={alt} className={pc.imgScreenshot} loading="lazy" />
+                </div>
+                <figcaption className={pc.caption}>{caption}</figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
