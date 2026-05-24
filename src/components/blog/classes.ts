@@ -62,8 +62,8 @@ export const bl = {
   back: 'mb-8',
   backLink: 'inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 transition-colors',
   header: 'mb-12',
-  title: 'text-4xl md:text-5xl font-bold text-slate-900 mb-4',
-  subtitle: 'text-xl text-slate-600 mb-6 leading-relaxed',
+  title: 'font-display font-light tracking-tightest text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-slate-900 mb-5 text-balance',
+  subtitle: 'text-lg md:text-xl text-slate-600 mb-6 leading-relaxed text-pretty',
   meta: 'flex flex-wrap items-center gap-6 text-slate-600',
   metaItem: 'flex items-center gap-2',
 } as const

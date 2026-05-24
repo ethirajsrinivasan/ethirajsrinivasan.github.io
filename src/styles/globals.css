@@ -3,25 +3,194 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --paper: 250 250 249;
+    --ink: 12 10 9;
+    --accent: 13 148 136;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
   html {
     scroll-behavior: smooth;
+    font-feature-settings: 'cv11', 'ss01', 'ss03';
   }
-  
+
   body {
-    @apply bg-gradient-to-br from-slate-50 via-white to-slate-100 text-slate-900;
+    @apply bg-paper text-ink-900 font-sans;
+    background-color: rgb(var(--paper));
+  }
+
+  ::selection {
+    background-color: rgb(var(--ink));
+    color: rgb(var(--paper));
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(12, 10, 9, 0.15);
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(12, 10, 9, 0.32);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  h1, h2, h3, h4 {
+    @apply tracking-tighter2;
   }
 }
 
 @layer components {
+  /* Editorial display heading utility */
+  .h-display {
+    @apply font-display font-light tracking-tightest text-ink-900;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  /* Eyebrow label (above large headings) */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-500;
+  }
+  .eyebrow::before {
+    content: '';
+    @apply inline-block w-6 h-px bg-ink-300;
+  }
+
+  /* Status pill (e.g. "Available for opportunities") */
+  .status-pill {
+    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-ink-200/70 bg-paper/60 text-xs font-medium text-ink-700 backdrop-blur;
+  }
+  .status-dot {
+    @apply relative inline-flex w-1.5 h-1.5 rounded-full bg-emerald-500;
+  }
+  .status-dot::after {
+    content: '';
+    @apply absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-75;
+  }
+
+  /* Hover-grow underline link */
+  .link-underline {
+    @apply relative inline-block;
+  }
+  .link-underline::after {
+    content: '';
+    @apply absolute left-0 -bottom-0.5 h-px w-full bg-current origin-left scale-x-0 transition-transform duration-500 ease-smooth;
+  }
+  .link-underline:hover::after {
+    @apply scale-x-100;
+  }
+
+  /* Soft card */
+  .card-soft {
+    @apply rounded-2xl border border-ink-100 bg-paper shadow-soft transition-all duration-300 ease-smooth;
+  }
+  .card-soft:hover {
+    @apply shadow-elev -translate-y-0.5 border-ink-200;
+  }
+
+  /* Bento card with subtle gradient border on hover */
+  .bento-card {
+    @apply relative rounded-3xl border border-ink-100 bg-paper p-7 sm:p-8 transition-all duration-500 ease-smooth overflow-hidden;
+  }
+  .bento-card::before {
+    content: '';
+    @apply absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-500 pointer-events-none;
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.08), rgba(14, 165, 233, 0.06), transparent 70%);
+  }
+  .bento-card:hover {
+    @apply -translate-y-1 border-ink-200 shadow-elev;
+  }
+  .bento-card:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Section padding */
+  .section-y {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+  .section-y-sm {
+    @apply py-14 md:py-20;
+  }
+
+  /* Container */
+  .container-narrow {
+    @apply max-w-5xl mx-auto px-5 sm:px-6 lg:px-8;
+  }
+  .container-wide {
+    @apply max-w-7xl mx-auto px-5 sm:px-6 lg:px-8;
+  }
+
+  /* Decorative noise overlay */
+  .noise-overlay {
+    position: relative;
+  }
+  .noise-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+  }
+
+  /* Gradient text */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 via-blue-500 to-purple-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-accent-600 via-primary-600 to-accent-600 bg-clip-text text-transparent;
+    background-size: 200% auto;
   }
-  
+  .gradient-text-warm {
+    @apply bg-gradient-to-r from-ink-900 via-ink-700 to-ink-900 bg-clip-text text-transparent;
+    background-size: 200% auto;
+  }
+
+  /* Legacy: kept for any pages still using these classes */
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-elev hover:-translate-y-1;
   }
-  
   .glass-effect {
-    @apply bg-white/80 backdrop-blur-lg border border-white/20 shadow-lg;
+    @apply bg-paper/70 backdrop-blur-lg border border-ink-100 shadow-soft;
+  }
+
+  /* Marquee wrapper */
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(to right, transparent 0, black 8%, black 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, black 8%, black 92%, transparent 100%);
+  }
+
+  /* Quiet badge */
+  .badge-quiet {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-ink-200 bg-paper text-[11px] font-medium text-ink-600 transition-colors hover:border-ink-300 hover:text-ink-900;
+  }
+
+  /* Stat block */
+  .stat-num {
+    @apply font-display text-4xl md:text-5xl font-light tracking-tightest text-ink-900;
+  }
+  .stat-label {
+    @apply font-mono text-[11px] uppercase tracking-[0.16em] text-ink-500;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
   }
 }
