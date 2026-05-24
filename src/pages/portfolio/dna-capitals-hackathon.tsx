@@ -8,8 +8,8 @@ export default function DnaCapitalsHackathonPage() {
       title="Dna Capitals Hackathon"
       category="Machine Learning"
       description="Hackathon project to extract structured company information from web sources"
-      image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=85&auto=format&fit=crop"
-      date="2016"
+      image="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1920&q=85&auto=format&fit=crop"
+      date="2018"
       technologies={['Ruby on Rails', 'Python', 'BeautifulSoup', 'Web Scraping']}
       links={[
         { href: 'https://github.com/ethirajsrinivasan/DNA-capitals-hackathon', label: 'Source code on GitHub' },

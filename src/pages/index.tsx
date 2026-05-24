@@ -5,6 +5,8 @@ import { motion } from 'framer-motion'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { ArrowRight, Code, Database, Brain, Smartphone, Globe, Package } from 'lucide-react'
+import { blogIndex } from '@/data/blogIndex'
+import { resolveImageSrc } from '@/lib/resolve-image-src'
 
 export default function Home() {
   const fadeIn = {
@@ -72,26 +74,7 @@ export default function Home() {
     }
   ]
 
-  const recentBlogs = [
-    {
-      title: 'Demystifying Sitemaps: Your Pathway to Seamless Website Exploration',
-      date: 'Aug 28, 2023',
-      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80',
-      slug: 'demystifying-sitemaps-your-pathway-to-seamless-website-exploration'
-    },
-    {
-      title: 'From Blueprint to Reality: Unleashing the Potential of Creational Patterns',
-      date: 'Jun 27, 2023',
-      image: 'https://images.unsplash.com/photo-1529690840038-f38da8894ff6?w=800&q=80',
-      slug: 'from-blueprint-to-reality-unleashing-the-potential-of-creational-patterns'
-    },
-    {
-      title: 'Demystifying Creational Patterns: A Roadmap to Effective Object Creation',
-      date: 'Jun 02, 2023',
-      image: 'https://images.unsplash.com/photo-1594585098652-21c58491eb0e?w=800&q=80',
-      slug: 'demystifying-creational-patterns-a-roadmap-to-effective-object-creation'
-    }
-  ]
+  const recentBlogs = blogIndex.slice(0, 3)
 
   return (
     <>
@@ -258,13 +241,14 @@ export default function Home() {
                     <div className="glass-effect rounded-2xl overflow-hidden card-hover">
                       <div className="relative h-48 overflow-hidden">
                         <img
-                          src={blog.image}
-                          alt={blog.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                          src={resolveImageSrc(blog.image)}
+                          alt={blog.imageAlt || blog.title}
+                          className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-300"
+                          loading="lazy"
+                          decoding="async"
                         />
                       </div>
                       <div className="p-6">
-                        <p className="text-sm text-slate-500 mb-2">{blog.date}</p>
                         <h3 className="text-lg font-semibold text-slate-900 group-hover:text-primary-600 transition-colors line-clamp-2">
                           {blog.title}
                         </h3>

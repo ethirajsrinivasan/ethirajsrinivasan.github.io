@@ -9,10 +9,9 @@ export default function TablizerPage() {
       category="Web Application"
       description="Web tool for converting data tables between different formats"
       image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=85&auto=format&fit=crop"
-      date="2020"
+      date="2016"
       technologies={["Ruby on Rails", "JavaScript", "PostgreSQL", "Bootstrap"]}
       links={[
-        { href: 'http://delabs-tablizer.herokuapp.com/', label: 'Tablizer live application' },
         { href: 'https://github.com/ethirajsrinivasan/tablizer', label: 'Source code on GitHub' },
       ]}
     >

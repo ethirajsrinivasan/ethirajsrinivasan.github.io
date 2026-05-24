@@ -9,7 +9,7 @@ export default function SunspotPage() {
       category="Ruby Gem"
       description="Collaboration on the Ruby Solr search library with expressive indexing and query DSL"
       image="/assets/images/sunspot.svg"
-      date="2015"
+      date="2016"
       technologies={["Ruby", "Solr", "RSolr", "Search"]}
       links={[
         { href: 'http://sunspot.github.io/', label: 'Sunspot documentation' },

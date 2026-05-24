@@ -8,14 +8,14 @@ export default function CssToInlinerPage() {
       title="Css To Inliner"
       category="Web Application"
       description="Rails app to benchmark and analyze converting external stylesheets to inline CSS for email"
-      image="/assets/images/css2inliner.svg"
-      date="2018"
+      image="/assets/images/code-banner.svg"
+      imageFit="cover"
+      date="2016"
       technologies={["Ruby on Rails", "Premailer", "Nokogiri", "JavaScript"]}
       links={[
         { href: 'http://css2inliner.ethigeek.com/', label: 'CSS2Inliner application' },
         { href: 'https://github.com/ethirajsrinivasan/css-to-inliner', label: 'Source code on GitHub' },
       ]}
-      imageFit="contain"
     >
       <section className={pc.section}>
         <h2 className={pc.heading}>Summary</h2>

@@ -9,7 +9,7 @@ export default function RailsProtipPage() {
       category="Ruby Gem"
       description="Configurable Rails tooltip gem built on a modern jQuery tooltip plugin"
       image="/assets/images/rails-protip.svg"
-      date="2016"
+      date="2015"
       technologies={["Ruby", "Rails", "JavaScript", "Asset Pipeline"]}
       links={[
         { href: 'https://rubygems.org/gems/rails-protip', label: 'RubyGems package' },

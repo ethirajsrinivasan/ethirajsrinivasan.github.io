@@ -8,14 +8,13 @@ export default function UrlShortenerPage() {
       title="Url Shortner"
       category="Web Application"
       description="URL shortening service with usage stats and browser analytics"
-      image="/assets/images/url_shortner.svg"
+      image="/assets/images/code-banner.svg"
+      imageFit="cover"
       date="2017"
       technologies={["Ruby on Rails", "PostgreSQL", "REST API"]}
       links={[
-        { href: 'http://urlshortner-ethigeek.herokuapp.com/', label: 'URL shortener live application' },
         { href: 'https://github.com/ethirajsrinivasan/UrlShortner', label: 'Source code on GitHub' },
       ]}
-      imageFit="contain"
     >
       <section className={pc.section}>
         <h2 className={pc.heading}>Summary</h2>

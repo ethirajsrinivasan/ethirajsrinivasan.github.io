@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-label="uAsk client-server architecture">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0,0 10,4 0,8" fill="#475569"/>
+    </marker>
+    <linearGradient id="androidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14532d"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+    <linearGradient id="serverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="920" height="440" fill="#f8fafc" rx="12"/>
+  <text x="460" y="36" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#0f172a">uAsk - system architecture</text>
+  <text x="460" y="58" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#64748b">Navi-nk/uAsk (Android client) + UaskServiceProvider (REST backend)</text>
+
+  <rect x="40" y="96" width="100" height="52" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="90" y="120" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#312e81">NUS</text>
+  <text x="90" y="138" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#4338ca">Student</text>
+
+  <rect x="180" y="80" width="320" height="280" rx="12" fill="url(#androidGrad)" stroke="#15803d" stroke-width="2"/>
+  <text x="340" y="108" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#f0fdf4">Android app</text>
+  <text x="340" y="126" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#bbf7d0">com.ideascontest.navi.uask</text>
+
+  <rect x="200" y="140" width="280" height="44" rx="6" fill="#22c55e" stroke="#86efac" stroke-width="1.5"/>
+  <text x="340" y="158" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#052e16">LoginActivity / SignupActivity</text>
+  <text x="340" y="174" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#dcfce7">SessionManager (SharedPreferences)</text>
+
+  <rect x="200" y="192" width="280" height="52" rx="6" fill="#16a34a" stroke="#86efac" stroke-width="1.5"/>
+  <text x="340" y="212" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#ffffff">MainCanvas + RecyclerView</text>
+  <text x="340" y="228" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#dcfce7">Feed, search, categories, navigation drawer</text>
+
+  <rect x="200" y="252" width="135" height="48" rx="6" fill="#15803d" stroke="#4ade80"/>
+  <text x="267" y="272" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#f0fdf4">AskQuestion</text>
+  <text x="267" y="288" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#bbf7d0">AnswerActivity</text>
+
+  <rect x="345" y="252" width="135" height="48" rx="6" fill="#15803d" stroke="#4ade80"/>
+  <text x="412" y="272" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#f0fdf4">MapActivity</text>
+  <text x="412" y="288" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#bbf7d0">Campus maps</text>
+
+  <rect x="200" y="308" width="280" height="36" rx="6" fill="#14532d" stroke="#4ade80"/>
+  <text x="340" y="330" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#bbf7d0">AsyncHttpClient + HttpURLConnection / JSON</text>
+
+  <rect x="560" y="96" width="320" height="264" rx="12" fill="url(#serverGrad)" stroke="#2563eb" stroke-width="2"/>
+  <text x="720" y="124" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#ffffff">UaskServiceProvider</text>
+  <text x="720" y="142" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#bfdbfe">REST API (separate deployment)</text>
+
+  <rect x="580" y="156" width="280" height="88" rx="6" fill="#1d4ed8" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="720" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#ffffff">/login/dologin</text>
+  <text x="720" y="194" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#dbeafe">Authentication</text>
+  <text x="720" y="212" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#93c5fd">/qfeed/askques, getfeed, getcatfeed</text>
+  <text x="720" y="228" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#93c5fd">getsearchfeed, getans, ansques</text>
+
+  <rect x="580" y="252" width="280" height="88" rx="6" fill="#1e40af" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="720" y="274" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#ffffff">User and faculty feeds</text>
+  <text x="720" y="292" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#bfdbfe">getuserques, getuserqa</text>
+  <text x="720" y="308" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#bfdbfe">getprivatefeed (faculty-exclusive)</text>
+  <text x="720" y="328" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#93c5fd">JSON request / response</text>
+
+  <line x1="140" y1="122" x2="178" y2="122" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="500" y1="200" x2="558" y2="200" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="529" y="192" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#475569">HTTP</text>
+
+  <rect x="40" y="372" width="840" height="52" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="60" y="396" font-family="system-ui,sans-serif" font-size="11" fill="#334155">Ask flow: Student -&gt; Android -&gt; POST/GET qfeed endpoints -&gt; JSON feed -&gt; RecyclerView</text>
+  <text x="60" y="414" font-family="system-ui,sans-serif" font-size="11" fill="#334155">Categories: Getting Around, Food, Faculties, Sports, Residences, General; optional private questions per faculty</text>
+</svg>

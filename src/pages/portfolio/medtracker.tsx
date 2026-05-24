@@ -21,13 +21,9 @@ export default function MedtrackerPage() {
       title="Medtracker"
       category="Android"
       description="Android app for medication tracking and reminders"
-      image="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1920&q=85&auto=format&fit=crop"
-      date="2021"
+      image="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=1920&q=85&auto=format&fit=crop"
+      date="2017"
       technologies={['Android', 'Java', 'SQLite', 'Material Design']}
-      links={[
-        { href: 'https://play.google.com/store/apps/details?id=com.ethigeek.medtracker', label: 'MedTracker on Google Play' },
-        { href: 'https://github.com/ethirajnus/Medtracker', label: 'Source code on GitHub' },
-      ]}
     >
       <section className={pc.section}>
         <h2 className={pc.heading}>Summary</h2>

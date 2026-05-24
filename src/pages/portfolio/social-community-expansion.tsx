@@ -34,7 +34,7 @@ export default function SocialCommunityExpansionPage() {
       category="Machine Learning"
       description="Graph-based analysis for social network community detection and expansion"
       image="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=85&auto=format&fit=crop"
-      date="2022"
+      date="2018"
       technologies={['Python', 'NetworkX', 'Gephi', 'Scikit-learn', 'Pandas']}
       links={[
         { href: 'https://prezi.com/view/sT1tLt2YNfpOTrr6F7cd/', label: 'Project presentation (Prezi)' },

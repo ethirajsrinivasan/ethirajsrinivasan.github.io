@@ -8,4 +8,9 @@ export interface BlogPost {
   readTime: string
 }
 
-export type BlogIndexEntry = Pick<BlogPost, 'slug' | 'title' | 'date' | 'image' | 'excerpt' | 'readTime'>
+export type BlogIndexEntry = Pick<
+  BlogPost,
+  'slug' | 'title' | 'date' | 'image' | 'excerpt' | 'readTime'
+> & {
+  imageAlt?: string
+}

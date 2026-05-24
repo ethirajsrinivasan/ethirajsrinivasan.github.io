@@ -5,15 +5,12 @@ import MarkdownBody from '@/components/blog/MarkdownBody'
 const post: BlogPost = {
   slug: "configure-solr-for-rspec-and-travis-ci",
   title: "Configure Solr For Rspec And Travis Ci",
-  date: "Unknown",
-  image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80",
-  excerpt: "Configuring solr for your local Rspec suite and in travis CI can sometimes be tedious task.In most of the projects i have come across methods using so...",
+  date: 'Dec 15, 2016',
+  image: 'https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?w=1200&q=80',
+  excerpt:
+    'Configuring solr for your local Rspec suite and in travis CI can sometimes be tedious task. In most of the projects i have come across methods using solr was tested by stubing the solr result. However i wanted to test my methods based on the actual solr session and i did not want my solr session to run always. So here is how i configured solr for Rspec and travis',
   readTime: "5 min read",
-  content: `[](configure-solr-for-rspec-and-travis-ci.html#configure-solr-for-rspec-and-travis-ci)Configure Solr for Rspec And Travis CI
-
-Configuring solr for your local Rspec suite and in travis CI can sometimes be tedious task.In most of the projects i have come across methods using solr was tested by stubing  the solr result.However i wanted to test my methods based on the actual solr session and i did not want my solr session to run always.So here is how i configured solr for Rspec and travis
-
-[](configure-solr-for-rspec-and-travis-ci.html#rspec)RSpec
+  content: `## RSpec
 
 I was surfing through the internet to find a way to start my solr and run it only when tests are running.I came across this particular gem
 
@@ -55,7 +52,7 @@ describe 'search page' do
 end
 \`\`\`
 
-[](configure-solr-for-rspec-and-travis-ci.html#travis)Travis
+## Travis
 
 The complexity comes when you have to configure solr for travis.By default solr is not installed in travis boxes.So solr has to be downloaded and installed.This [link](https://github.com/moliware/travis-solr) will be of great help to install solr in your travis boxes.One thing to notice here is your configuration. Test is the default collection name created by Sunspot solr so the same name has to be used in your travis boxes,Otherwise your tests may file in CI environment.You are also required to specify the path of solrconfig.xml folder which should include schema.xml file as well.
 
@@ -66,21 +63,7 @@ curl -sSL https://raw.githubusercontent.com/moliware/travis-solr/master/travis-s
 Once you have configured the above steps will be able to run your specs successfully in both your local environment and Travis CI.Happy Coding !!!
 
 Thanks to [moliware](https://github.com/moliware) for shell script.
-
-    &#x2022;     &#x2022;     &#x2022;
-
-      Follow Me on:
-      [ Medium ](https://medium.com/@ethi)
-      [ Youtube ](https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1)
-      [ Instagram ](https://www.instagram.com/ethirajchandru/)
-      
-      LinkedIn 
-      [ Github ](https://github.com/ethirajsrinivasan/)
-      [ Twitter ](https://twitter.com/iamethi)
-
-        Normalize Emails For Devise
-
-        How to use Includes in Rails`,
+`,
 }
 
 export default function ConfigureSolrForRspecAndTravisCiPage() {
@@ -90,8 +73,6 @@ export default function ConfigureSolrForRspecAndTravisCiPage() {
       title={post.title}
       excerpt={post.excerpt}
       image={post.image}
-      date={post.date}
-      readTime={post.readTime}
     >
       <MarkdownBody content={post.content} />
     </BlogShell>

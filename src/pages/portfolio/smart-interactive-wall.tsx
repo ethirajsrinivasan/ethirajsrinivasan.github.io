@@ -8,8 +8,8 @@ export default function SmartInteractiveWallPage() {
       title="Smart Interactive Wall"
       category="Machine Learning"
       description="Avatar-based conversational smart wall for NUS visitors using computer vision and NLP"
-      image="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1920&q=85&auto=format&fit=crop"
-      date="2018"
+      image="https://images.unsplash.com/photo-1778757752168-aee9ae57b336?w=1920&q=85&auto=format&fit=crop"
+      date="2017"
       technologies={['Python', 'TensorFlow', 'Dialogflow', 'Unity', 'Kinect', '.NET']}
       links={[
         { href: 'https://www.youtube.com/watch?v=lv5bLhFmaWs', label: 'Demo video on YouTube' },

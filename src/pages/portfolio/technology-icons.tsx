@@ -9,7 +9,7 @@ export default function TechnologyIconsPage() {
       category="Ruby Gem"
       description="Rails web font gem with a broad set of technology icons"
       image="/assets/images/technology-icons.svg"
-      date="2016"
+      date="2015"
       technologies={["Ruby", "Rails", "Sass", "Web Fonts"]}
       links={[
         { href: 'https://rubygems.org/gems/technology-icons', label: 'RubyGems package' },

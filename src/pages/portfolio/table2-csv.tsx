@@ -8,14 +8,14 @@ export default function Table2CsvPage() {
       title="Table2 Csv"
       category="Ruby Gem"
       description="Ruby gem for converting HTML tables to CSV format"
-      image="/assets/images/table2csv.svg"
-      date="2019"
+      image="/assets/images/code-banner.svg"
+      imageFit="cover"
+      date="2015"
       technologies={["Ruby", "Nokogiri", "RSpec"]}
       links={[
         { href: 'https://rubygems.org/gems/table2csv', label: 'RubyGems package' },
         { href: 'https://github.com/ethirajsrinivasan/table2csv', label: 'Source code on GitHub' },
       ]}
-      imageFit="contain"
     >
       <section className={pc.section}>
         <h2 className={pc.heading}>Summary</h2>

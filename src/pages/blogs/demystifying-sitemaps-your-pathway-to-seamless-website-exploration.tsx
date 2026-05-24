@@ -5,21 +5,16 @@ import MarkdownBody from '@/components/blog/MarkdownBody'
 const post: BlogPost = {
   slug: "demystifying-sitemaps-your-pathway-to-seamless-website-exploration",
   title: "Demystifying Sitemaps Your Pathway To Seamless Website Exploration",
-  date: "Unknown",
-  image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80",
-  excerpt: "In the vast world of the internet, navigating a website can sometimes be hard. That's where the sitemap comes into the picture. Sitemap is an essentia...",
+  date: 'Aug 28, 2023',
+  image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&q=80',
+  excerpt:
+    "In the vast world of the internet, navigating a website can sometimes be hard. That's where the sitemap comes into the picture. Sitemap is an essential tool to help visitors navigate your website easily. It also helps search engines to help index your websites efficiently. In this blog post, we will look in detail at sitemaps, their benefits, formats, and a practical example of how to generate them.",
   readTime: "5 min read",
-  content: `[](demystifying-sitemaps-your-pathway-to-seamless-website-exploration.html#demystifying-sitemaps-your-pathway-to-seamless-website-exploration)Demystifying Sitemaps: Your Pathway to Seamless Website Exploration
-
-In the vast world of the internet, navigating a website can sometimes be hard. That's where the sitemap comes into the picture. Sitemap is an essential tool to help visitors navigate your website easily. It also helps search engines to help index your websites efficiently. In this blog post, we will look in detail at sitemaps, their benefits, formats, and a practical example of how to generate them.
-
-[![path](https://camo.githubusercontent.com/16af2d1cc05ba3d58a2fc54a57c84e1a7ebd8b85fc329d73dd2a0b837ff13b0a/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313437323734303337383836352d3830616162386537333235313f69786c69623d72622d342e302e3326697869643d4d3377784d6a4133664442384d48787761473930627931775957646c664878386647567566444238664878386641253344253344266175746f3d666f726d6174266669743d63726f7026773d3239343026713d3830)](https://camo.githubusercontent.com/16af2d1cc05ba3d58a2fc54a57c84e1a7ebd8b85fc329d73dd2a0b837ff13b0a/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313437323734303337383836352d3830616162386537333235313f69786c69623d72622d342e302e3326697869643d4d3377784d6a4133664442384d48787761473930627931775957646c664878386647567566444238664878386641253344253344266175746f3d666f726d6174266669743d63726f7026773d3239343026713d3830)
-
-[](demystifying-sitemaps-your-pathway-to-seamless-website-exploration.html#what-is-asitemap)What is a Sitemap?
+  content: `## What is a Sitemap?
 
 A sitemap contains a list of all the pages of a website organized in a hierarchical manner. It helps visitors and search engine crawling robots understand a website's layout and structure. A sitemap not only contains the content pages but also includes metadata like priority, last modified, and change frequency of the page.
 
-[](demystifying-sitemaps-your-pathway-to-seamless-website-exploration.html#benefits-of-usingsitemaps)Benefits of Using Sitemaps
+## Benefits of Using Sitemaps
 
 - Improved Indexing: Search engines like Google use sitemap to efficiently index the content on the website. Once the content on the web is indexed it can appear in search results.
 
@@ -29,7 +24,7 @@ A sitemap contains a list of all the pages of a website organized in a hierarchi
 
 - SEO Boost: Sitemap boosts SEO performance and helps in higher ranking in search engine results.
 
-[](demystifying-sitemaps-your-pathway-to-seamless-website-exploration.html#formats-ofsitemap)Formats of Sitemap
+## Formats of Sitemap
 
 Sitemap is supported in different formats with each format for a specific purpose. The most commonly used formats are as follows:
 
@@ -129,7 +124,7 @@ https://www.example.com/page2
 
 Now that we have seen the benefits and formats we shall look into an example.
 
-[](demystifying-sitemaps-your-pathway-to-seamless-website-exploration.html#creating-a-sitemap-in-ruby-onrails)Creating a Sitemap in Ruby on Rails
+## Creating a Sitemap in Ruby on Rails
 
 In this example, we will use \`sitemap_generator\` to create a sitemap in ruby on rails
 
@@ -173,22 +168,10 @@ rake sitemap:refresh
 XML Sitemap will be created in the \`/public\` directory and it will also ping the Google search engine to inform about the sitemap availability.
 Do check the sitemap of my personal website at \`https://ethigeek.com/sitemap.xml.gz\`
 
-[](demystifying-sitemaps-your-pathway-to-seamless-website-exploration.html#conclusion)Conclusion
+## Conclusion
 
 Sitemaps are tools that help to solve the digital maze of the website. There are numerous sitemap tools available that support different languages and frameworks. So don't miss this important step in your website development process. Give visitors and search engines the clarity that is required.
-
-    &#x2022;     &#x2022;     &#x2022;
-
-      Follow Me on:
-      [ Medium ](https://medium.com/@ethi)
-      [ Youtube ](https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1)
-      [ Instagram ](https://www.instagram.com/ethirajchandru/)
-      
-      LinkedIn 
-      [ Github ](https://github.com/ethirajsrinivasan/)
-      [ Twitter ](https://twitter.com/iamethi)
-
-        From Blueprint to Reality: Unleashing the Potential of Creational Patterns`,
+`,
 }
 
 export default function DemystifyingSitemapsYourPathwayToSeamlessWebsiteExplorationPage() {
@@ -198,8 +181,6 @@ export default function DemystifyingSitemapsYourPathwayToSeamlessWebsiteExplorat
       title={post.title}
       excerpt={post.excerpt}
       image={post.image}
-      date={post.date}
-      readTime={post.readTime}
     >
       <MarkdownBody content={post.content} />
     </BlogShell>

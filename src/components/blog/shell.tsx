@@ -1,21 +1,24 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import PostNav from '@/components/PostNav'
-import { ArrowLeft, Calendar, Clock } from 'lucide-react'
 import type { ReactNode } from 'react'
-import { blogIndex } from '@/data/blogIndex'
+import { blogIndex, getBlogIndexEntry } from '@/data/blogIndex'
 import { getContentNeighbors } from '@/lib/contentNeighbors'
+import { resolveImageSrc } from '@/lib/resolve-image-src'
+import { BlogArticleProvider } from './context'
+import BlogExcerpt from './BlogExcerpt'
+import { plainTextMarkdown } from '@/lib/plain-text-markdown'
 import { bl } from './classes'
+
+const DEFAULT_HERO = '/assets/images/blogs.jpg'
 
 export type BlogShellProps = {
   slug: string
   title: string
   excerpt: string
   image: string
-  date: string
-  readTime: string
+  imageAlt?: string
   children: ReactNode
 }
 
@@ -24,52 +27,49 @@ export default function BlogShell({
   title,
   excerpt,
   image,
-  date,
-  readTime,
+  imageAlt,
   children,
 }: BlogShellProps) {
   const { previous, next } = getContentNeighbors(slug, blogIndex)
+  const indexEntry = getBlogIndexEntry(slug)
+  const heroSrc = resolveImageSrc(indexEntry?.image ?? image) || DEFAULT_HERO
+  const heroAlt = imageAlt ?? indexEntry?.imageAlt ?? title
 
   return (
     <>
       <Head>
         <title>{title} - Ethiraj Srinivasan</title>
-        <meta name="description" content={excerpt} />
+        <meta name="description" content={plainTextMarkdown(excerpt)} />
         <meta property="og:title" content={title} />
-        <meta property="og:image" content={image} />
+        <meta property="og:image" content={heroSrc} />
       </Head>
 
       <Navbar />
 
       <main className={bl.main}>
         <header className={bl.hero}>
-          <img src={image} alt={title} className={bl.heroImg} />
+          <img
+            src={heroSrc}
+            alt={heroAlt}
+            className={bl.heroImg}
+            loading="eager"
+            decoding="async"
+            onError={(e) => {
+              e.currentTarget.src = DEFAULT_HERO
+            }}
+          />
           <div className={bl.heroOverlay} aria-hidden="true" />
         </header>
 
         <article className={bl.article}>
-          <div className={bl.back}>
-            <Link href="/blogs" className={bl.backLink}>
-              <ArrowLeft size={20} aria-hidden="true" />
-              Back to Blog
-            </Link>
-          </div>
-
           <header className={bl.header}>
             <h1 className={bl.title}>{title}</h1>
-            <div className={bl.meta}>
-              <div className={bl.metaItem}>
-                <Calendar size={18} aria-hidden="true" />
-                <span>{date}</span>
-              </div>
-              <div className={bl.metaItem}>
-                <Clock size={18} aria-hidden="true" />
-                <span>{readTime}</span>
-              </div>
-            </div>
+            {excerpt ? <BlogExcerpt markdown={excerpt} /> : null}
           </header>
 
-          {children}
+          <BlogArticleProvider title={title} excerpt={excerpt}>
+            {children}
+          </BlogArticleProvider>
 
           <PostNav
             basePath="/blogs"
@@ -79,11 +79,6 @@ export default function BlogShell({
             nextLabel="Next article"
           />
 
-          <div className={bl.footer}>
-            <Link href="/blogs" className={bl.footerLink}>
-              ← More Articles
-            </Link>
-          </div>
         </article>
       </main>
 

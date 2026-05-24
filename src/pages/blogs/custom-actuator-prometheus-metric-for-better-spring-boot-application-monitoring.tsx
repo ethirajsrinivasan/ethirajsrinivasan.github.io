@@ -5,23 +5,20 @@ import MarkdownBody from '@/components/blog/MarkdownBody'
 const post: BlogPost = {
   slug: "custom-actuator-prometheus-metric-for-better-spring-boot-application-monitoring",
   title: "Custom Actuator Prometheus Metric For Better Spring Boot Application Monitoring",
-  date: "Unknown",
-  image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80",
-  excerpt: "This article describes a elegant way to add custom actuator prometheus metric to spring boot applications. Spring boot, a powerful java based framewor...",
+  date: 'Apr 28, 2023',
+  image: 'https://images.unsplash.com/photo-1589935447067-5531094415d1?w=1200&q=80',
+  excerpt:
+    'This article describes a elegant way to add custom actuator prometheus metric to spring boot applications. Spring boot, a powerful java based framework to develop micro services web application provides many easy to configure solutions for developers need. Developing a microservices application is complete only when we can monitor these microservices. Spring boot provides Actuator to help monitor these microservices. Actuator uses HTTP endpoints to provide information about the application. Actuator provides lot of metrics like the database connections , thread information, memory information, HTTP client and server requests etc. Below are the 3 steps to add custom actuator prometheus metrics in spring boot',
   readTime: "5 min read",
-  content: `[](custom-actuator-prometheus-metric-for-better-spring-boot-application-monitoring.html#custom-actuator-prometheus-metric-for-better-spring-boot-application-monitoring)Custom Actuator Prometheus Metric For Better Spring Boot Application Monitoring
-
-This article describes a elegant way to add custom actuator prometheus metric to spring boot applications. Spring boot, a powerful java based framework to develop micro services web application provides many easy to configure solutions for developers need. Developing a microservices application is complete only when we can monitor these microservices. Spring boot provides Actuator to help monitor these microservices. Actuator uses HTTP endpoints to provide information about the application. Actuator provides lot of metrics like the database connections , thread information, memory information, HTTP client and server requests etc. Below are the 3 steps to add custom actuator prometheus metrics in spring boot
-
-- Enable actuator in spring boot application
+  content: `- Enable actuator in spring boot application
 
 - Add prometheus micrometer to the application
 
 - Add custom metrics to micrometer prometheus
 
-[](custom-actuator-prometheus-metric-for-better-spring-boot-application-monitoring.html#)•     •     •
+## •     •     •
 
-[](custom-actuator-prometheus-metric-for-better-spring-boot-application-monitoring.html#enable-actuator-in-spring-boot-application)Enable Actuator in Spring Boot Application
+## Enable Actuator in Spring Boot Application
 
 In order to add actuator to the spring boot application add the following to pom.xml
 
@@ -84,9 +81,9 @@ As seen above the actuator provides information about beans, env, heapdump, thre
 
 [![Thread Dump Info](https://user-images.githubusercontent.com/7569031/233135743-6ba4d395-574b-49a1-880e-f1a52a5d896e.png)](https://user-images.githubusercontent.com/7569031/233135743-6ba4d395-574b-49a1-880e-f1a52a5d896e.png)
 
-[](custom-actuator-prometheus-metric-for-better-spring-boot-application-monitoring.html#-1)•     •     •
+## •     •     •
 
-[](custom-actuator-prometheus-metric-for-better-spring-boot-application-monitoring.html#add-micrometer-prometheus-based-metric-to-the-application)Add Micrometer Prometheus based metric to the application
+## Add Micrometer Prometheus based metric to the application
 
 Next to publish the metrics to monitoring tools like Prometheus, Datadog or Dynatrace a standard format is required. Micrometer acts as that intermediate layer to easily interface with the monitoring tools. Prometheus is chosen for this example which is used to perform time series analysis and uses pull based approach. Simply add micrometer prometheus setup to the application by including the below dependency
 
@@ -104,9 +101,9 @@ Now run the application again to see the new actuator point - [http://localhost:
 
 [![Acutuator Prometheus Metrics](https://user-images.githubusercontent.com/7569031/233418124-8155ef76-19e3-4644-b8bd-7e1e062409e2.png)](https://user-images.githubusercontent.com/7569031/233418124-8155ef76-19e3-4644-b8bd-7e1e062409e2.png)
 
-[](custom-actuator-prometheus-metric-for-better-spring-boot-application-monitoring.html#-2)•     •     •
+## •     •     •
 
-[](custom-actuator-prometheus-metric-for-better-spring-boot-application-monitoring.html#add-custom-metrics-to-micrometer-prometheus)Add custom metrics to micrometer prometheus
+## Add custom metrics to micrometer prometheus
 
 Now that the default prometheus metrics are available time to add the custom metrics. Custom metrics can be added in service or business logic classes. Two objects are essential to build the custom metric
 
@@ -210,21 +207,7 @@ custom_timer_metric_seconds_sum 600.0
 \`\`\`
 
 Thus custom metrics are added to the spring boot application. Happy Monitoring !!!
-
-    &#x2022;     &#x2022;     &#x2022;
-
-      Follow Me on:
-      [ Medium ](https://medium.com/@ethi)
-      [ Youtube ](https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1)
-      [ Instagram ](https://www.instagram.com/ethirajchandru/)
-      
-      LinkedIn 
-      [ Github ](https://github.com/ethirajsrinivasan/)
-      [ Twitter ](https://twitter.com/iamethi)
-
-        Demystifying Creational Patterns: A Roadmap to Effective Object Creation
-
-        JDK variants: From Sun MicroSystems to Oracle and Beyond`,
+`,
 }
 
 export default function CustomActuatorPrometheusMetricForBetterSpringBootApplicationMonitoringPage() {
@@ -234,8 +217,6 @@ export default function CustomActuatorPrometheusMetricForBetterSpringBootApplica
       title={post.title}
       excerpt={post.excerpt}
       image={post.image}
-      date={post.date}
-      readTime={post.readTime}
     >
       <MarkdownBody content={post.content} />
     </BlogShell>

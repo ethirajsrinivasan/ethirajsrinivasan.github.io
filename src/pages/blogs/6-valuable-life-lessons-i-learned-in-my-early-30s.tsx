@@ -5,21 +5,18 @@ import MarkdownBody from '@/components/blog/MarkdownBody'
 const post: BlogPost = {
   slug: "6-valuable-life-lessons-i-learned-in-my-early-30s",
   title: "6 Valuable Life Lessons I Learned In My Early 30s",
-  date: "Unknown",
-  image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80",
-  excerpt: "[](6-valuable-life-lessons-i-learned-in-my-early-30s.html#insights-and-advice-on-finance-health-investing-digital-presence-and-growthskills)Insights a...",
+  date: 'May 09, 2023',
+  image: 'https://images.unsplash.com/photo-1610269373215-0b733db966f9?w=1200&q=80',
+  excerpt:
+    'Insights and Advice on Finance, Health, Investing, Digital Presence, and Growth Skills',
   readTime: "5 min read",
-  content: `[](6-valuable-life-lessons-i-learned-in-my-early-30s.html#6-valuable-life-lessons-i-learned-in-my-early30s)6 Valuable Life Lessons I Learned in My Early 30s 
+  content: `Life is a great teacher. Being in my early thirties, life has taught me valuable lessons that I should have been aware of in my young adult age. Nevertheless, I would like to share these valuable lessons with the current generation for their own future.
 
-[](6-valuable-life-lessons-i-learned-in-my-early-30s.html#insights-and-advice-on-finance-health-investing-digital-presence-and-growthskills)Insights and Advice on Finance, Health, Investing, Digital Presence, and Growth Skills 
+## •     •     •
 
-Life is a great teacher. Being in my early thirties, life has taught me valuable lessons that I should have been aware of in my young adult age. Nevertheless, I would like to share these valuable lessons with the current generation for their own future. 
+## 1. Insurance
 
-[](6-valuable-life-lessons-i-learned-in-my-early-30s.html#)•     •     •
-
-[](6-valuable-life-lessons-i-learned-in-my-early-30s.html#1-insurance)1. Insurance
-
-[](6-valuable-life-lessons-i-learned-in-my-early-30s.html#term-insurance)Term Insurance 
+## Term Insurance 
 
 The first and topmost priority of any person, once they start earning, should be to take term insurance. Term insurance is the financial security that we leave behind for our family and it tops the list of priorities. Earlier the term insurance is taken lesser is the premium amount to be paid. Decide on the insurance amount as per your needs and financial status. Never mix term insurance with other kinds of insurance like investment cum term insurance. Always remember term insurance is not an investment it is financial security.
 
@@ -27,7 +24,7 @@ The first and topmost priority of any person, once they start earning, should be
 
 Term Insurance Premium By Age.
 
-[](6-valuable-life-lessons-i-learned-in-my-early-30s.html#health-insurance)Health Insurance
+## Health Insurance
 
 After securing the family the next objective is to take care of the health of the family. Coming from a middle-class family, I was reluctant to take health insurance because it was expensive for the income that I earned, and if there were no claims in that financial year it was money that never comes back. But I didn't take the risk and took the basic health insurance policy. Believe me, it helped me at many critical times and I embraced myself for taking it.
 
@@ -39,18 +36,15 @@ Over the years I learned about top-up health insurance policy which acts as a co
 
 We don't often claim for top-up health insurance as it has a higher lower limit. Hence for the fact, top-up health insurance is much more affordable. Work out the combination of lower and upper limits of the basic and top-up health insurance policy as per your needs. Even if a basic health insurance policy is not affordable take a top-up health insurance policy it will definitely help in critical times.
 
-[](6-valuable-life-lessons-i-learned-in-my-early-30s.html#2-health)2. Health
+## 2. Health
 
-"The first wealth is health" by Ralph Waldo Emerson
+> "The first wealth is health" by Ralph Waldo Emerson
 
 Health is critical to enjoying our life. Being health-conscious for me was on and off. Few months, I would be so dedicated, and in other months I would be ignorant. My body could feel the difference between when I am dedicated and when I am not. So I have managed to put in a constant effort over the years.
 
-Check out my article on how I transformed myself in the year 2022
+Check out my article on how I transformed myself in the year 2022:
 
-                    ![](https://miro.medium.com/v2/resize:fit:1170/1*3720rNEyxgpvjfjstCPH9Q.png)
-                    
-                    Looking Back at 2022. My Review of 2022 Goals | by Ethiraj Srinivasan | ILLUMINATION | Medium
-                    21 days since the new year 2023 began and I am going to review my goals for 2022. I know it's late b...
+[![Looking Back at 2022 — My Review of 2022 Goals](https://miro.medium.com/v2/resize:fit:1170/1*3720rNEyxgpvjfjstCPH9Q.png)](https://medium.com/illumination/looking-back-at-2022-38f95c52ba4a)
 
 It was so surprising for me how I transformed myself from a person who hates vegetables to a person who loves vegetables. When I moved to a new country and was alone, I realized the importance of having healthy food and was much more aware of my health.
 
@@ -70,7 +64,7 @@ All these pay benefit only if we have proper sleep. Sleeping for 8 hours is very
 
 Photo by Brett Jordan on Unsplash
 
-[](6-valuable-life-lessons-i-learned-in-my-early-30s.html#3-investing)3. Investing
+## 3. Investing
 
 We all love to be wealthy but that is not possible without investing. So start investing at an early stage. The power of compounding is immense when we start investing at an early stage.
 
@@ -78,20 +72,17 @@ We all love to be wealthy but that is not possible without investing. So start i
 
 I follow a simple formula for my investing journey. From my income, I first pay the term insurance and health insurance premiums and then invest a portion of the remaining income and finally, use the remaining amount for the expenditure. I try to automate my investments to a certain level because it brings in disciplined constant investment. I invest in a diverse set of portfolios and use apps like [moomoo](https://j.moomoo.com/00xAOU) for equity, and [coinhako](https://www.coinhako.com/affiliations/sign_up/285810_54724814) for cryptocurrency. 
 
- Income - Insurance(Term+health) - Savings - Expenditure
+> **Income - Insurance(Term+health) - Savings - Expenditure**
 
-[](6-valuable-life-lessons-i-learned-in-my-early-30s.html#4-digitalpresence)4. Digital Presence
+## 4. Digital Presence
 
 World is now a huge competition in whatever field we take. Thus we need to be ahead of others. Having a digital presence in your field gives you an advantage over others and creates more visibility for us. It is also a great opportunity to showcase our skills. For a UI/UX professional it could be an account in Behance. For a photographer, it could be a professional Instagram profile. For a software professional like me it could be a [personal website](https://ethigeek.com). Create a digital presence and shine ahead in your field.
 
 Check out my personal website:
 
-                    ![](../assets/ai-6782a7d586827e3fe87b3b5907209c7f3bbf9c809841f139aa0bae2b9c5c0dd8.jpg)
-                    
-                    Ethiraj Srinivasan
-                    Hi, this is Ethiraj, I'm a software developer, amateur cook, avid traveler and bibliophile hailing f...
+> [![Ethiraj Srinivasan](/assets/ai-6782a7d586827e3fe87b3b5907209c7f3bbf9c809841f139aa0bae2b9c5c0dd8.jpg)](https://ethigeek.com)
 
-[](6-valuable-life-lessons-i-learned-in-my-early-30s.html#5-growthskills)5. Growth skills 
+## 5. Growth skills 
 
 Apart from the professional skills that we develop over the years developing skills other than work is also essential for our lifestyle. It could be cooking, photography, or dancing. I developed my reading skills and enjoyed reading some of great books like
 
@@ -103,22 +94,11 @@ Apart from the professional skills that we develop over the years developing ski
 
 - [Warren Buffett: The Business and Life Lessons](https://amzn.to/3nVa2Y5)
 
-Recently I also cultivated my writing skills and published some blogs at [https://ethigeek.com/blogs.html](https://ethigeek.com/blogs.html)
+Recently I also cultivated my writing skills and published some blogs at [https://ethirajsrinivasan.com/blogs/](https://ethirajsrinivasan.com/blogs/)
 
-                    ![](6-valuable-life-lessons-i-learned-in-my-early-30s.html)
-                    
-                    The page you were looking for doesn't exist (404)
-                    ...
+[![Custom Actuator Prometheus Metric For Better Spring Boot Application Monitoring](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80)](/blogs/custom-actuator-prometheus-metric-for-better-spring-boot-application-monitoring)
 
-                    ![](https://images.unsplash.com/photo-1589935447067-5531094415d1)
-                    
-                    Custom Actuator Prometheus Metric For Better Spring Boot Application Monitoring
-                    This article describes a elegant way to add custom actuator prometheus metric to spring boot applica...
-
-                    ![](https://images.unsplash.com/photo-1618422168181-177d9d0a1fca)
-                    
-                    JDK variants: From Sun MicroSystems to Oracle and Beyond
-                    Java was originally developed by Sun Microsystems, a technology company that was founded in 1982. Su...
+[![JDK variants: From Sun MicroSystems to Oracle and Beyond](https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80)](/blogs/jdk-variants-from-sun-microsystems-to-oracle-and-beyond)
 
 Developing non-professional skills can help us in a number of ways.
 
@@ -132,7 +112,7 @@ Developing non-professional skills can help us in a number of ways.
 
 - Developing transferable skills: The new skills that we learn outside of work can also helps in our professional works
 
-[](6-valuable-life-lessons-i-learned-in-my-early-30s.html#6-multiple-streams-ofincome)6. Multiple streams of income 
+## 6. Multiple streams of income 
 
 Relying on a single source of income can be very risky as unexpected events can happen. Having multiple sources of income can help diversify your income sources, reducing overall risk. It provides financial stability and security even during macroeconomic conditions. It can also help you to pursue your passions and interests. There are many multiple sources of income that you can try like 
 
@@ -150,24 +130,10 @@ Relying on a single source of income can be very risky as unexpected events can 
 
 - Passive income streams: monetizing a blog or YouTube channel through advertising, affiliate marketing, or sponsorships.
 
-[](6-valuable-life-lessons-i-learned-in-my-early-30s.html#-1)•     •     •
+## •     •     •
 
 Do try to make these as a checklist and strive them off as early as possible. I hope these can greatly change your lifestyle.
-
-    &#x2022;     &#x2022;     &#x2022;
-
-      Follow Me on:
-      [ Medium ](https://medium.com/@ethi)
-      [ Youtube ](https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1)
-      [ Instagram ](https://www.instagram.com/ethirajchandru/)
-      
-      LinkedIn 
-      [ Github ](https://github.com/ethirajsrinivasan/)
-      [ Twitter ](https://twitter.com/iamethi)
-
-        Demystifying Creational Patterns: A Roadmap to Effective Object Creation
-
-        Custom Actuator Prometheus Metric For Better Spring Boot Application Monitoring`,
+`,
 }
 
 export default function Blog6ValuableLifeLessonsILearnedInMyEarly30sPage() {
@@ -177,8 +143,6 @@ export default function Blog6ValuableLifeLessonsILearnedInMyEarly30sPage() {
       title={post.title}
       excerpt={post.excerpt}
       image={post.image}
-      date={post.date}
-      readTime={post.readTime}
     >
       <MarkdownBody content={post.content} />
     </BlogShell>

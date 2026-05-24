@@ -8,8 +8,8 @@ export default function FacialRecognitionSystemPage() {
       title="Relay Activation Using Facial Recognition System"
       category="Machine Learning"
       description="IoT-based facial recognition system for automated relay control"
-      image="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1920&q=85&auto=format&fit=crop"
-      date="2022"
+      image="https://images.unsplash.com/photo-1726017738581-9f22158a886a?w=1920&q=85&auto=format&fit=crop"
+      date="2018"
       technologies={["Python", "Django", "Flask", "face_recognition", "PostgreSQL", "Raspberry Pi", "GPIO"]}
       links={[
         { href: 'https://github.com/ethirajsrinivasan/relay_activation_face_recognition_system', label: 'Source code on GitHub' },

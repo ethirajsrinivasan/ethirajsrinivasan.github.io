@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 400" role="img" aria-label="Source code">
+  <defs>
+    <linearGradient id="code-bg" x1="0" y1="0" x2="1900" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.5" stop-color="#1e293b"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="code-glow" x1="950" y1="0" x2="1900" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#06b6d4" stop-opacity="0"/>
+      <stop offset="1" stop-color="#06b6d4" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1900" height="400" fill="url(#code-bg)"/>
+  <rect width="1900" height="400" fill="url(#code-glow)"/>
+
+  <g transform="translate(950 200)">
+    <rect x="-650" y="-168" width="1300" height="336" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <circle cx="-624" cy="-142" r="7" fill="#ef4444"/>
+    <circle cx="-600" cy="-142" r="7" fill="#eab308"/>
+    <circle cx="-576" cy="-142" r="7" fill="#22c55e"/>
+    <text x="-548" y="-137" fill="#64748b" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13">app.rb</text>
+
+    <text fill="#475569" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="15" text-anchor="end">
+      <tspan x="-598" y="-82">1</tspan>
+      <tspan x="-598" y="-54">2</tspan>
+      <tspan x="-598" y="-26">3</tspan>
+      <tspan x="-598" y="2">4</tspan>
+      <tspan x="-598" y="30">5</tspan>
+      <tspan x="-598" y="58">6</tspan>
+      <tspan x="-598" y="86">7</tspan>
+      <tspan x="-598" y="114">8</tspan>
+      <tspan x="-598" y="142">9</tspan>
+    </text>
+
+    <text font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="17" text-anchor="middle">
+      <tspan x="0" y="-82" fill="#64748b"># convert external CSS to inline styles for email</tspan>
+      <tspan x="0" y="-54">
+        <tspan fill="#c084fc">html</tspan><tspan fill="#94a3b8"> = </tspan><tspan fill="#f472b6">Nokogiri</tspan><tspan fill="#94a3b8">::HTML(</tspan><tspan fill="#86efac">body</tspan><tspan fill="#94a3b8">)</tspan>
+      </tspan>
+      <tspan x="0" y="-26">
+        <tspan fill="#c084fc">css</tspan><tspan fill="#94a3b8">  = </tspan><tspan fill="#38bdf8">File</tspan><tspan fill="#94a3b8">.read(</tspan><tspan fill="#86efac">'styles.css'</tspan><tspan fill="#94a3b8">)</tspan>
+      </tspan>
+      <tspan x="0" y="2">
+        <tspan fill="#c084fc">doc</tspan><tspan fill="#94a3b8">  = </tspan><tspan fill="#f472b6">Premailer</tspan><tspan fill="#94a3b8">.new(</tspan><tspan fill="#c084fc">html</tspan><tspan fill="#94a3b8">, </tspan><tspan fill="#c084fc">css_string</tspan><tspan fill="#94a3b8">: </tspan><tspan fill="#c084fc">css</tspan><tspan fill="#94a3b8">)</tspan>
+      </tspan>
+      <tspan x="0" y="30">
+        <tspan fill="#c084fc">inline</tspan><tspan fill="#94a3b8"> = </tspan><tspan fill="#c084fc">doc</tspan><tspan fill="#94a3b8">.to_inline_css</tspan>
+      </tspan>
+      <tspan x="0" y="58"/>
+      <tspan x="0" y="86">
+        <tspan fill="#c084fc">rows</tspan><tspan fill="#94a3b8"> = </tspan><tspan fill="#c084fc">html</tspan><tspan fill="#94a3b8">.css(</tspan><tspan fill="#86efac">'table tr'</tspan><tspan fill="#94a3b8">).map { |</tspan><tspan fill="#c084fc">tr</tspan><tspan fill="#94a3b8">| </tspan><tspan fill="#c084fc">tr</tspan><tspan fill="#94a3b8">.css(</tspan><tspan fill="#86efac">'td'</tspan><tspan fill="#94a3b8">).map(&amp;:text) }</tspan>
+      </tspan>
+      <tspan x="0" y="114">
+        <tspan fill="#f472b6">CSV</tspan><tspan fill="#94a3b8">.generate { |</tspan><tspan fill="#c084fc">csv</tspan><tspan fill="#94a3b8">| </tspan><tspan fill="#c084fc">rows</tspan><tspan fill="#94a3b8">.each { |</tspan><tspan fill="#c084fc">r</tspan><tspan fill="#94a3b8">| </tspan><tspan fill="#c084fc">csv</tspan><tspan fill="#94a3b8"> &lt;&lt; </tspan><tspan fill="#c084fc">r</tspan><tspan fill="#94a3b8"> } }</tspan>
+      </tspan>
+      <tspan x="0" y="142">
+        <tspan fill="#c084fc">slug</tspan><tspan fill="#94a3b8"> = </tspan><tspan fill="#f472b6">ShortUrl</tspan><tspan fill="#94a3b8">.create!(</tspan><tspan fill="#c084fc">url</tspan><tspan fill="#94a3b8">: </tspan><tspan fill="#c084fc">params</tspan><tspan fill="#94a3b8">[</tspan><tspan fill="#86efac">:url</tspan><tspan fill="#94a3b8">]).</tspan><tspan fill="#c084fc">slug</tspan>
+      </tspan>
+    </text>
+
+    <rect x="-650" y="-168" width="1300" height="336" rx="10" fill="none" stroke="#475569" stroke-width="1" opacity="0.3"/>
+  </g>
+</svg>

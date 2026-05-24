@@ -3,8 +3,10 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import { Calendar, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { blogIndex } from '@/data/blogIndex'
+import { plainTextMarkdown } from '@/lib/plain-text-markdown'
+import { resolveImageSrc } from '@/lib/resolve-image-src'
 
 export default function Blogs() {
   const blogs = blogIndex
@@ -54,21 +56,19 @@ export default function Blogs() {
                   <div className="glass-effect rounded-2xl overflow-hidden h-full flex flex-col card-hover">
                     <div className="relative h-48 overflow-hidden">
                       <img
-                        src={blog.image}
-                        alt={blog.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        src={resolveImageSrc(blog.image)}
+                        alt={blog.imageAlt || blog.title}
+                        className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-300"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <div className="p-6 flex-1 flex flex-col">
-                      <div className="flex items-center text-sm text-slate-500 mb-3">
-                        <Calendar size={16} className="mr-2" />
-                        {blog.date}
-                      </div>
                       <h2 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary-600 transition-colors line-clamp-2">
                         {blog.title}
                       </h2>
                       <p className="text-slate-600 mb-4 line-clamp-3 flex-1">
-                        {blog.excerpt}
+                        {plainTextMarkdown(blog.excerpt)}
                       </p>
                       <div className="flex items-center text-primary-600 font-medium">
                         Read More <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />

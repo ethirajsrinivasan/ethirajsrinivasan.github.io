@@ -4,25 +4,19 @@ import MarkdownBody from '@/components/blog/MarkdownBody'
 
 const post: BlogPost = {
   slug: "from-blueprint-to-reality-unleashing-the-potential-of-creational-patterns",
-  title: "From Blueprint To Reality Unleashing The Potential Of Creational Patterns",
-  date: "Unknown",
-  image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80",
-  excerpt: "A Comprehensive Exploration of Design Patterns for Crafting Objects with Precision and Elegance...",
+  title: "From Blueprint to Reality: Unleashing the Potential of Creational Patterns",
+  date: 'Jun 27, 2023',
+  image: 'https://images.unsplash.com/photo-1529690840038-f38da8894ff6?w=1200&q=80',
+  excerpt:
+    'A Comprehensive Exploration of Design Patterns for Crafting Objects with Precision and Elegance',
   readTime: "5 min read",
-  content: `[](from-blueprint-to-reality-unleashing-the-potential-of-creational-patterns.html#from-blueprint-to-reality-unleashing-the-potential-of-creational-patterns)From Blueprint to Reality: Unleashing the Potential of Creational Patterns
-
-A Comprehensive Exploration of Design Patterns for Crafting Objects with Precision and Elegance
-
-[![Factory](https://camo.githubusercontent.com/6510c01b0e105b0de9b8c146fde9888b9f46d8f1cddce0234a4e7491bfdb747b/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313538353235323135353236312d636666333139343464373831)](https://camo.githubusercontent.com/6510c01b0e105b0de9b8c146fde9888b9f46d8f1cddce0234a4e7491bfdb747b/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313538353235323135353236312d636666333139343464373831)
+  content: `![Factory](https://images.unsplash.com/photo-1585252155261-cff31944d781?w=1200&q=80)
 
 Photo by Andreas Felske on Unsplash
 
-In my previous article [Demystifying Creational Patterns: A Roadmap to Effective Object Creation](https://ethigeek.com/blogs/demystifying-creational-patterns-a-roadmap-to-effective-object-creation.html), I stated the need for creational patterns and illustrated them using two creational patterns: Factory Method Pattern and Builder Pattern. So in short creational patterns focus on creating objects in a way that promotes encapsulation, decoupling, and flexibility.
+In my previous article, I stated the need for creational patterns and illustrated them using two creational patterns: Factory Method Pattern and Builder Pattern. So in short creational patterns focus on creating objects in a way that promotes encapsulation, decoupling, and flexibility.
 
-                    ![](https://images.unsplash.com/photo-1594585098652-21c58491eb0e)
-                    
-                    Demystifying Creational Patterns: A Roadmap to Effective Object Creation
-                    In my previous article, I spoke about fault tolerance design patterns in distributed systems. In thi...
+[![Demystifying Creational Patterns: A Roadmap to Effective Object Creation](https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=1200&q=80)](/blogs/demystifying-creational-patterns-a-roadmap-to-effective-object-creation)
 
 In this article, we will look at the following two design patterns in detail
 
@@ -30,7 +24,7 @@ In this article, we will look at the following two design patterns in detail
 
 - Prototype pattern
 
-[](from-blueprint-to-reality-unleashing-the-potential-of-creational-patterns.html#singleton-pattern)Singleton Pattern
+## Singleton Pattern
 
 Singleton pattern are used to make sure that only one instance of a class is created and provides global access to it. It uses a private constructor to prevent direct object instantiation and the static method provides access to the single instance.
 
@@ -90,7 +84,7 @@ The singleton pattern ensures that all the components share the same logger inst
 
 Thus singleton pattern is used when one instance of an object needs to be created and has to be shared across other components.
 
-[](from-blueprint-to-reality-unleashing-the-potential-of-creational-patterns.html#prototype-pattern)Prototype pattern
+## Prototype pattern
 
 Prototype pattern allows the creation of objects by cloning existing instances thereby reducing the need to create new instances from scratch. It has a prototype object and uses that object to create new objects by cloning. It is used when new object creation is expensive and complex.
 
@@ -160,21 +154,7 @@ Do note that \`clone()\` in Java performs a shallow copy. If there are mutable f
 Thus prototype pattern is useful when creating complex objects and each object requires a variation. It makes use of the existing object to reduce the overhead of object creation.
 
 Do note that each creational design pattern has its own set of requirements and constraints.Hope the above explanations and implementation examples give you clarity on the creational designer pattern.Happy creating objects !!!
-
-    &#x2022;     &#x2022;     &#x2022;
-
-      Follow Me on:
-      [ Medium ](https://medium.com/@ethi)
-      [ Youtube ](https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1)
-      [ Instagram ](https://www.instagram.com/ethirajchandru/)
-      
-      LinkedIn 
-      [ Github ](https://github.com/ethirajsrinivasan/)
-      [ Twitter ](https://twitter.com/iamethi)
-
-        Demystifying Sitemaps: Your Pathway to Seamless Website Exploration
-
-        Demystifying Creational Patterns: A Roadmap to Effective Object Creation`,
+`,
 }
 
 export default function FromBlueprintToRealityUnleashingThePotentialOfCreationalPatternsPage() {
@@ -184,8 +164,6 @@ export default function FromBlueprintToRealityUnleashingThePotentialOfCreational
       title={post.title}
       excerpt={post.excerpt}
       image={post.image}
-      date={post.date}
-      readTime={post.readTime}
     >
       <MarkdownBody content={post.content} />
     </BlogShell>

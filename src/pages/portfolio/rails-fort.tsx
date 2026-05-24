@@ -9,7 +9,7 @@ export default function RailsFortPage() {
       category="Ruby Gem"
       description="Rails wrapper for a modern JavaScript progress bar for form completion"
       image="/assets/images/rails-fort.svg"
-      date="2016"
+      date="2015"
       technologies={["Ruby", "Rails", "JavaScript", "Asset Pipeline"]}
       links={[
         { href: 'https://rubygems.org/gems/rails-fort', label: 'RubyGems package' },

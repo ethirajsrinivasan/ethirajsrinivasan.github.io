@@ -5,15 +5,12 @@ import MarkdownBody from '@/components/blog/MarkdownBody'
 const post: BlogPost = {
   slug: "a-simple-tensorflow-classification-model-in-ruby",
   title: "A Simple Tensorflow Classification Model In Ruby",
-  date: "Unknown",
-  image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80",
-  excerpt: "The main objective of this blog is to build a simple linear classification model in ruby using Tensorflow architecture. The main tensorflow compenents...",
+  date: 'Jul 24, 2018',
+  image: 'https://images.unsplash.com/photo-1476789668825-c16c51c46ac3?w=1200&q=80',
+  excerpt:
+    'The main objective of this blog is to build a simple linear classification model in ruby using Tensorflow architecture. The main tensorflow compenents required to build and test the model are Operation, Placeholder, Variable and Session. These components are written as ruby classes. Lets start with the Operation class.',
   readTime: "5 min read",
-  content: `[](a-simple-tensorflow-classification-model-in-ruby.html#a-simple-tensorflow-classification-model-in-ruby)A Simple Tensorflow Classification Model in Ruby
-
-The main objective of this blog is to build a simple linear classification model in ruby using Tensorflow architecture. The main tensorflow compenents required to build and test the model  are Operation, Placeholder, Variable and Session. These components are written as ruby classes. Lets start with the Operation class.
-
-\`\`\`
+  content: `\`\`\`
 class Operation
   attr_accessor  :input_nodes, :output, :input
 
@@ -155,21 +152,7 @@ puts(result)%
 For the point \`(8,10)\` which lies near the upper right corner of the graph the sigmoid value is closer to 1.
 
 Hope this example gives a good understanding of basic components of tensorflow in ruby. Happy learning !!!
-
-    &#x2022;     &#x2022;     &#x2022;
-
-      Follow Me on:
-      [ Medium ](https://medium.com/@ethi)
-      [ Youtube ](https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1)
-      [ Instagram ](https://www.instagram.com/ethirajchandru/)
-      
-      LinkedIn 
-      [ Github ](https://github.com/ethirajsrinivasan/)
-      [ Twitter ](https://twitter.com/iamethi)
-
-        How to generate Kubernetes Deploy Manifests For Rails Application
-
-        Know About Yourself from Google`,
+`,
 }
 
 export default function ASimpleTensorflowClassificationModelInRubyPage() {
@@ -179,8 +162,6 @@ export default function ASimpleTensorflowClassificationModelInRubyPage() {
       title={post.title}
       excerpt={post.excerpt}
       image={post.image}
-      date={post.date}
-      readTime={post.readTime}
     >
       <MarkdownBody content={post.content} />
     </BlogShell>
