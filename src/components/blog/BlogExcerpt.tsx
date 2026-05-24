@@ -21,7 +21,7 @@ export default function BlogExcerpt({ markdown }: BlogExcerptProps) {
             <a
               {...props}
               href={resolvedHref}
-              className="text-primary-600 hover:text-primary-700 transition-colors"
+              className="text-ink-900 font-medium underline decoration-ink-300 underline-offset-4 decoration-1 hover:decoration-ink-900 transition-colors"
               {...(external ? { target: '_blank', rel: externalLink.rel } : {})}
             >
               {children}

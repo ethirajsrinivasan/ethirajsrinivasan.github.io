@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 import type { ContentNavItem } from '@/lib/contentNeighbors'
 
 type PostNavProps = {
@@ -29,20 +29,23 @@ export default function PostNav({
       className={
         isSidebar
           ? 'grid grid-cols-1 gap-3'
-          : 'mt-12 pt-8 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-4'
+          : 'grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5'
       }
       aria-label="Post navigation"
     >
       {previous ? (
         <Link
           href={`${basePath}/${previous.slug}`}
-          className="group flex flex-col gap-1 p-4 rounded-xl border border-slate-200 hover:border-primary-300 hover:bg-primary-50/50 transition-colors"
+          className="group relative flex flex-col gap-2 p-6 sm:p-7 rounded-2xl border border-ink-100 bg-paper transition-all duration-500 ease-smooth hover:border-ink-300 hover:-translate-y-0.5 hover:shadow-soft"
         >
-          <span className="inline-flex items-center gap-1 text-sm font-medium text-primary-600">
-            <ChevronLeft size={18} aria-hidden="true" />
+          <span className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-500 group-hover:text-ink-700 transition-colors">
+            <ArrowLeft
+              size={13}
+              className="transition-transform duration-500 ease-smooth group-hover:-translate-x-0.5"
+            />
             {previousLabel}
           </span>
-          <span className="text-slate-900 font-semibold group-hover:text-primary-700 line-clamp-2">
+          <span className="font-display text-lg md:text-xl leading-snug text-ink-900 line-clamp-2 text-balance">
             {previous.title}
           </span>
         </Link>
@@ -52,15 +55,22 @@ export default function PostNav({
       {next ? (
         <Link
           href={`${basePath}/${next.slug}`}
-          className={`group flex flex-col gap-1 p-4 rounded-xl border border-slate-200 hover:border-primary-300 hover:bg-primary-50/50 transition-colors${isSidebar ? '' : ' sm:text-right sm:items-end'}`}
+          className={`group relative flex flex-col gap-2 p-6 sm:p-7 rounded-2xl border border-ink-100 bg-paper transition-all duration-500 ease-smooth hover:border-ink-300 hover:-translate-y-0.5 hover:shadow-soft${
+            isSidebar ? '' : ' sm:items-end sm:text-right'
+          }`}
         >
           <span
-            className={`inline-flex items-center gap-1 text-sm font-medium text-primary-600${isSidebar ? '' : ' sm:flex-row-reverse'}`}
+            className={`inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-500 group-hover:text-ink-700 transition-colors${
+              isSidebar ? '' : ' sm:flex-row-reverse'
+            }`}
           >
+            <ArrowRight
+              size={13}
+              className="transition-transform duration-500 ease-smooth group-hover:translate-x-0.5"
+            />
             {nextLabel}
-            <ChevronRight size={18} aria-hidden="true" />
           </span>
-          <span className="text-slate-900 font-semibold group-hover:text-primary-700 line-clamp-2">
+          <span className="font-display text-lg md:text-xl leading-snug text-ink-900 line-clamp-2 text-balance">
             {next.title}
           </span>
         </Link>

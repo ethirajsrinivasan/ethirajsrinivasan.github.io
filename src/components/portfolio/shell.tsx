@@ -1,9 +1,10 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import PostNav from '@/components/PostNav'
-import { Github, ExternalLink, Calendar } from 'lucide-react'
+import { Github, ExternalLink, ArrowLeft, ArrowUpRight } from 'lucide-react'
 import type { ReactNode } from 'react'
 import { portfolioIndex } from '@/data/portfolioIndex'
 import { getContentNeighbors } from '@/lib/contentNeighbors'
@@ -29,7 +30,7 @@ export type PortfolioShellProps = {
   children: ReactNode
 }
 
-/** Shared portfolio page chrome — plain HTML + pl/pl.* classes only. */
+/** Shared portfolio page chrome — editorial ink palette. */
 export default function PortfolioShell({
   title,
   category,
@@ -51,7 +52,7 @@ export default function PortfolioShell({
   return (
     <>
       <Head>
-        <title>{title} - Ethiraj Srinivasan</title>
+        <title>{title} — Ethiraj Srinivasan</title>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:image" content={image} />
@@ -60,17 +61,45 @@ export default function PortfolioShell({
       <Navbar />
 
       <main className={pl.main}>
+        {/* ─── Cinematic banner hero ─── */}
         <header className={heroClass(image, imageFit)}>
-          <img src={image} alt={title} className={bannerImageClass(image, imageFit)} />
+          <img
+            src={image}
+            alt={title}
+            className={bannerImageClass(image, imageFit)}
+          />
           <div className={pl.heroOverlay} aria-hidden="true" />
+          <div className={pl.heroNoise} aria-hidden="true" />
+
+          {/* Back link rail */}
+          <div className={pl.backRail}>
+            <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+              <Link href="/#work" className={pl.backLink}>
+                <ArrowLeft
+                  size={14}
+                  className="transition-transform duration-300 ease-smooth group-hover:-translate-x-0.5"
+                />
+                <span className="link-underline">All work</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* Title block */}
           <div className={pl.heroInner}>
             <div className={pl.heroContainer}>
-              <span className={pl.category}>{category}</span>
+              <span className={pl.category}>
+                {category}
+                <span aria-hidden="true" className="mx-2 text-paper/35">
+                  /
+                </span>
+                <span className="text-paper/60">{date}</span>
+              </span>
               <h1 className={pl.title}>{title}</h1>
             </div>
           </div>
         </header>
 
+        {/* ─── Article body ─── */}
         <article className={pl.article}>
           <div className={pl.grid}>
             <div className={pl.content}>{children}</div>
@@ -82,7 +111,6 @@ export default function PortfolioShell({
                 <div className={pl.sidebarStack}>
                   <div>
                     <div className={pl.labelRow}>
-                      <Calendar size={18} aria-hidden="true" />
                       <span className={pl.label}>Year</span>
                     </div>
                     <p className={pl.value}>{date}</p>
@@ -112,12 +140,29 @@ export default function PortfolioShell({
                               className={pl.extLink}
                               {...externalLink}
                             >
-                              {isGitHub ? (
-                                <Github size={20} className={pl.extLinkIcon} aria-hidden="true" />
-                              ) : (
-                                <ExternalLink size={20} className={pl.extLinkIcon} aria-hidden="true" />
-                              )}
-                              <span className={pl.extLinkLabel}>{link.label}</span>
+                              <span className="flex items-center gap-2.5 min-w-0">
+                                {isGitHub ? (
+                                  <Github
+                                    size={15}
+                                    className="shrink-0 text-ink-500"
+                                    aria-hidden="true"
+                                  />
+                                ) : (
+                                  <ExternalLink
+                                    size={15}
+                                    className="shrink-0 text-ink-500"
+                                    aria-hidden="true"
+                                  />
+                                )}
+                                <span className={pl.extLinkLabel}>
+                                  {link.label}
+                                </span>
+                              </span>
+                              <ArrowUpRight
+                                size={14}
+                                className={pl.extLinkIcon}
+                                aria-hidden="true"
+                              />
                             </a>
                           )
                         })}
