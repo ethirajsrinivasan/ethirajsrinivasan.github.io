@@ -8,7 +8,7 @@ export default function MedicalImageDiagnosticsPage() {
       title="Development Of Deep Learning Models For Medical Image Diagnostics"
       category="Machine Learning"
       description="Deep learning models for automated medical image analysis and diagnostics"
-      image="https://images.unsplash.com/photo-1584515933487-779824d29309?w=1920&q=85&auto=format&fit=crop"
+      image="/assets/images/medical-image-diagnostics.svg"
       date="2018"
       technologies={['Python', 'TensorFlow', 'Keras', 'OpenCV', 'NumPy']}
       links={[

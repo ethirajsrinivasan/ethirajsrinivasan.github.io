@@ -8,7 +8,7 @@ export default function SupercachePage() {
       title="Supercache"
       category="Ruby Gem"
       description="Rails caching addon for ActiveRecord queries and HTTP requests in development"
-      image="/assets/images/supercache.svg"
+      image="/assets/images/code-banner.svg"
       date="2016"
       technologies={["Ruby", "Rails", "RSpec", "Caching"]}
       links={[

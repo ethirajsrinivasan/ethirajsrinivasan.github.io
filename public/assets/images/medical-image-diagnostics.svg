@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 400" role="img" aria-label="Medical image diagnostics deep learning for mammogram screening">
+  <defs>
+    <linearGradient id="med-bg" x1="0" y1="0" x2="1900" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="0.45" stop-color="#12243d"/>
+      <stop offset="1" stop-color="#0a1628"/>
+    </linearGradient>
+    <linearGradient id="med-glow" x1="280" y1="80" x2="720" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#14b8a6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="tissue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#cbd5e1"/>
+      <stop offset="0.45" stop-color="#94a3b8"/>
+      <stop offset="1" stop-color="#64748b"/>
+    </linearGradient>
+    <linearGradient id="cnn-box" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e293b"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="soft-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <pattern id="scanlines" width="6" height="6" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="6" y2="0" stroke="#ffffff" stroke-width="1" opacity="0.04"/>
+    </pattern>
+    <marker id="med-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0,0 10,4 0,8" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1900" height="400" fill="url(#med-bg)"/>
+  <rect width="1900" height="400" fill="url(#scanlines)"/>
+  <ellipse cx="340" cy="210" rx="280" ry="170" fill="url(#med-glow)" filter="url(#soft-blur)"/>
+
+  <g transform="translate(72 48)">
+    <rect width="420" height="304" rx="14" fill="#020617" stroke="#334155" stroke-width="1.5"/>
+    <rect x="14" y="14" width="392" height="276" rx="8" fill="#000000"/>
+    <path
+      d="M 48 248 C 48 120, 130 52, 220 52 C 310 52, 372 130, 372 248 C 372 268, 350 278, 310 278 L 110 278 C 70 278, 48 268, 48 248 Z"
+      fill="url(#tissue)"
+      opacity="0.92"
+    />
+    <ellipse cx="175" cy="145" rx="38" ry="52" fill="#e2e8f0" opacity="0.55"/>
+    <ellipse cx="248" cy="168" rx="52" ry="68" fill="#f1f5f9" opacity="0.35"/>
+    <ellipse cx="210" cy="210" rx="28" ry="22" fill="#ffffff" opacity="0.7"/>
+    <ellipse cx="285" cy="118" rx="14" ry="14" fill="#ffffff" opacity="0.85"/>
+    <path
+      d="M 58 238 C 62 150, 138 68, 222 68 C 302 68, 362 148, 362 238"
+      fill="none"
+      stroke="#22d3ee"
+      stroke-width="1.5"
+      stroke-dasharray="6 5"
+      opacity="0.55"
+    />
+    <text x="210" y="292" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" fill="#64748b">MIAS / DDSM mammogram</text>
+  </g>
+
+  <g transform="translate(560 118)">
+    <rect width="118" height="72" rx="10" fill="url(#cnn-box)" stroke="#475569"/>
+    <text x="59" y="34" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Preprocess</text>
+    <text x="59" y="54" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#94a3b8">OpenCV contours</text>
+
+    <line x1="118" y1="36" x2="148" y2="36" stroke="#64748b" stroke-width="2" marker-end="url(#med-arrow)"/>
+
+    <rect x="148" width="132" height="72" rx="10" fill="url(#cnn-box)" stroke="#475569"/>
+    <text x="214" y="34" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">CNN</text>
+    <text x="214" y="54" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#94a3b8">VGG16 + ResNet34</text>
+
+    <line x1="280" y1="36" x2="310" y2="36" stroke="#64748b" stroke-width="2" marker-end="url(#med-arrow)"/>
+
+    <rect x="310" width="150" height="72" rx="10" fill="url(#cnn-box)" stroke="#475569"/>
+    <text x="385" y="34" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Classify</text>
+    <text x="385" y="54" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#94a3b8">2-class / 3-class</text>
+  </g>
+
+  <g transform="translate(560 218)">
+    <rect width="88" height="34" rx="17" fill="#14532d" stroke="#22c55e" stroke-width="1.2"/>
+    <text x="44" y="22" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" fill="#bbf7d0">Normal</text>
+
+    <rect x="108" width="88" height="34" rx="17" fill="#713f12" stroke="#f59e0b" stroke-width="1.2"/>
+    <text x="152" y="22" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" fill="#fde68a">Benign</text>
+
+    <rect x="216" width="98" height="34" rx="17" fill="#7f1d1d" stroke="#ef4444" stroke-width="1.2"/>
+    <text x="265" y="22" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" fill="#fecaca">Malignant</text>
+  </g>
+
+  <g opacity="0.85" transform="translate(1180 72)">
+    <text x="0" y="0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="600" fill="#64748b" letter-spacing="0.08em">TENSORFLOW + KERAS</text>
+    <g transform="translate(0 36)" stroke="#334155" stroke-width="1.2">
+      <circle cx="20" cy="40" r="10" fill="#0ea5e9" opacity="0.85"/>
+      <circle cx="20" cy="80" r="10" fill="#0ea5e9" opacity="0.85"/>
+      <circle cx="20" cy="120" r="10" fill="#0ea5e9" opacity="0.85"/>
+      <circle cx="20" cy="160" r="10" fill="#0ea5e9" opacity="0.85"/>
+      <circle cx="110" cy="28" r="9" fill="#14b8a6" opacity="0.8"/>
+      <circle cx="110" cy="58" r="9" fill="#14b8a6" opacity="0.8"/>
+      <circle cx="110" cy="88" r="9" fill="#14b8a6" opacity="0.8"/>
+      <circle cx="110" cy="118" r="9" fill="#14b8a6" opacity="0.8"/>
+      <circle cx="110" cy="148" r="9" fill="#14b8a6" opacity="0.8"/>
+      <circle cx="110" cy="178" r="9" fill="#14b8a6" opacity="0.8"/>
+      <circle cx="200" cy="60" r="9" fill="#6366f1" opacity="0.8"/>
+      <circle cx="200" cy="100" r="9" fill="#6366f1" opacity="0.8"/>
+      <circle cx="200" cy="140" r="9" fill="#6366f1" opacity="0.8"/>
+      <circle cx="290" cy="100" r="12" fill="#f472b6" opacity="0.9"/>
+      <line x1="30" y1="40" x2="101" y2="28"/>
+      <line x1="30" y1="40" x2="101" y2="58"/>
+      <line x1="30" y1="80" x2="101" y2="88"/>
+      <line x1="30" y1="120" x2="101" y2="118"/>
+      <line x1="30" y1="160" x2="101" y2="178"/>
+      <line x1="119" y1="28" x2="191" y2="60"/>
+      <line x1="119" y1="88" x2="191" y2="100"/>
+      <line x1="119" y1="148" x2="191" y2="140"/>
+      <line x1="209" y1="60" x2="278" y2="100"/>
+      <line x1="209" y1="100" x2="278" y2="100"/>
+      <line x1="209" y1="140" x2="278" y2="100"/>
+    </g>
+  </g>
+
+  <g transform="translate(1180 286)">
+    <rect width="320" height="64" rx="12" fill="#1e293b" stroke="#334155"/>
+    <text x="24" y="28" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Normal vs Abnormal</text>
+    <text x="24" y="48" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">VGG16 up to 84% / ResNet34 up to 75%</text>
+  </g>
+
+  <circle cx="1760" cy="72" r="96" fill="#fff" opacity="0.04"/>
+  <circle cx="1680" cy="340" r="64" fill="#fff" opacity="0.03"/>
+</svg>

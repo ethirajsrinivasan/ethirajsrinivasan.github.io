@@ -8,6 +8,8 @@ type PostNavProps = {
   next?: ContentNavItem
   previousLabel?: string
   nextLabel?: string
+  /** Sidebar layout: stacked links for narrow column (portfolio). */
+  variant?: 'default' | 'sidebar'
 }
 
 export default function PostNav({
@@ -16,12 +18,19 @@ export default function PostNav({
   next,
   previousLabel = 'Previous',
   nextLabel = 'Next',
+  variant = 'default',
 }: PostNavProps) {
   if (!previous && !next) return null
 
+  const isSidebar = variant === 'sidebar'
+
   return (
     <nav
-      className="mt-12 pt-8 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-4"
+      className={
+        isSidebar
+          ? 'grid grid-cols-1 gap-3'
+          : 'mt-12 pt-8 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-4'
+      }
       aria-label="Post navigation"
     >
       {previous ? (
@@ -38,14 +47,16 @@ export default function PostNav({
           </span>
         </Link>
       ) : (
-        <div aria-hidden="true" className="hidden sm:block" />
+        !isSidebar && <div aria-hidden="true" className="hidden sm:block" />
       )}
       {next ? (
         <Link
           href={`${basePath}/${next.slug}`}
-          className="group flex flex-col gap-1 p-4 rounded-xl border border-slate-200 hover:border-primary-300 hover:bg-primary-50/50 transition-colors sm:text-right sm:items-end"
+          className={`group flex flex-col gap-1 p-4 rounded-xl border border-slate-200 hover:border-primary-300 hover:bg-primary-50/50 transition-colors${isSidebar ? '' : ' sm:text-right sm:items-end'}`}
         >
-          <span className="inline-flex items-center gap-1 text-sm font-medium text-primary-600 sm:flex-row-reverse">
+          <span
+            className={`inline-flex items-center gap-1 text-sm font-medium text-primary-600${isSidebar ? '' : ' sm:flex-row-reverse'}`}
+          >
             {nextLabel}
             <ChevronRight size={18} aria-hidden="true" />
           </span>

@@ -8,7 +8,7 @@ export default function SmartInteractiveWallPage() {
       title="Smart Interactive Wall"
       category="Machine Learning"
       description="Avatar-based conversational smart wall for NUS visitors using computer vision and NLP"
-      image="https://images.unsplash.com/photo-1778757752168-aee9ae57b336?w=1920&q=85&auto=format&fit=crop"
+      image="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       date="2017"
       technologies={['Python', 'TensorFlow', 'Dialogflow', 'Unity', 'Kinect', '.NET']}
       links={[

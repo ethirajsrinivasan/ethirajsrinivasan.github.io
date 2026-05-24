@@ -73,16 +73,7 @@ export default function PortfolioShell({
 
         <article className={pl.article}>
           <div className={pl.grid}>
-            <div className={pl.content}>
-              {children}
-              <PostNav
-                basePath="/portfolio"
-                previous={previous}
-                next={next}
-                previousLabel="Previous project"
-                nextLabel="Next project"
-              />
-            </div>
+            <div className={pl.content}>{children}</div>
 
             <aside className={pl.aside}>
               <div className={pl.sidebar}>
@@ -136,6 +127,16 @@ export default function PortfolioShell({
                 </div>
               </div>
             </aside>
+
+            <div className={pl.navRow}>
+              <PostNav
+                basePath="/portfolio"
+                previous={previous}
+                next={next}
+                previousLabel="Previous project"
+                nextLabel="Next project"
+              />
+            </div>
           </div>
         </article>
       </main>

@@ -8,7 +8,7 @@ export default function Collection2CsvPage() {
       title="Collection2 Csv"
       category="Ruby Gem"
       description="Export ActiveRecord collections to CSV with minimal syntax, including associations"
-      image="/assets/images/collection2csv.svg"
+      image="/assets/images/code-banner.svg"
       date="2015"
       technologies={["Ruby", "Rails", "ActiveRecord", "CSV"]}
       links={[

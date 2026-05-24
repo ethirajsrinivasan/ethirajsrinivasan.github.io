@@ -8,7 +8,7 @@ export default function RailsProtipPage() {
       title="Rails Protip"
       category="Ruby Gem"
       description="Configurable Rails tooltip gem built on a modern jQuery tooltip plugin"
-      image="/assets/images/rails-protip.svg"
+      image="/assets/images/code-banner.svg"
       date="2015"
       technologies={["Ruby", "Rails", "JavaScript", "Asset Pipeline"]}
       links={[

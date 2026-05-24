@@ -8,7 +8,7 @@ export default function FacialRecognitionSystemPage() {
       title="Relay Activation Using Facial Recognition System"
       category="Machine Learning"
       description="IoT-based facial recognition system for automated relay control"
-      image="https://images.unsplash.com/photo-1726017738581-9f22158a886a?w=1920&q=85&auto=format&fit=crop"
+      image="https://images.unsplash.com/photo-1517055729445-fa7d27394b48?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       date="2018"
       technologies={["Python", "Django", "Flask", "face_recognition", "PostgreSQL", "Raspberry Pi", "GPIO"]}
       links={[

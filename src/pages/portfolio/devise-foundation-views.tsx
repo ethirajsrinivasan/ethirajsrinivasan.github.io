@@ -8,7 +8,7 @@ export default function DeviseFoundationViewsPage() {
       title="Devise Foundation Views"
       category="Ruby Gem"
       description="Custom Devise authentication views built on the Foundation CSS framework"
-      image="/assets/images/devise-foundation-views.svg"
+      image="/assets/images/code-banner.svg"
       date="2015"
       technologies={["Ruby", "Rails", "Devise", "Foundation", "Slim", "Haml"]}
       links={[
