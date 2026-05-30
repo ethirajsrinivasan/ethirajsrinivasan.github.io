@@ -19,7 +19,7 @@ const objective =
   'Aspire to lead data-driven innovation by architecting scalable platforms, fostering engineering excellence, and aligning technology strategy with organizational growth and long-term vision.'
 
 const summary: string[] = [
-  'Strategic Data Engineering Leader with a decade of experience driving enterprise-scale data platforms, architecture, and analytics modernization across diverse industries. Possesses deep expertise in data pipeline design, distributed processing, ETL, and real-time and batch frameworks, with a proven ability to deliver scalable, high-performance, and reliable data ecosystems.',
+  'Co-Founder & CTO of InfiniTraq (Griffin AI Tech), building privacy-first Edge AI for senior care, alongside consulting as Head of Data Engineering at Zgrow Solutions. Strategic Data Engineering Leader with a decade of experience driving enterprise-scale data platforms, architecture, and analytics modernization across diverse industries.',
   'Leads and mentors cross-functional teams in building and managing data ingestion, ETL, and analytics platforms, ensuring strong data governance, data quality, observability, and operational excellence. Skilled in designing and maintaining data lakes, data warehouses, ML-ready datasets, and real-time analytics pipelines to support enterprise decision-making.',
   'Expert in implementing data quality frameworks, monitoring systems, and cost-optimized solutions to improve reliability, reduce latency, and enhance efficiency. Proficient in Spark, Hadoop, Kafka, Hudi, Hive, HBase, AWS (EMR, S3, Athena), Python, Spring Boot, Redis, and other modern data technologies. Recognized for combining technical depth with strategic vision to drive data-driven innovation and organizational growth.',
 ]
@@ -95,15 +95,29 @@ type Experience = {
 
 const experience: Experience[] = [
   {
+    period: "Nov '25 — Present",
+    company: 'InfiniTraq (Griffin AI Tech)',
+    location: 'Chennai, India',
+    role: 'Co-Founder & CTO',
+    stack: ['Edge AI', 'Computer Vision', 'Python'],
+    blocks: [
+      {
+        bullets: [
+          'Co-founded Griffin AI Tech; lead product engineering for InfiniTraq, an Edge AI platform for senior-care monitoring.',
+        ],
+      },
+    ],
+  },
+  {
     period: "Aug '25 — Present",
     company: 'Zgrow Solutions',
     location: 'Chennai, India',
-    role: 'Head of Data Engineering',
+    role: 'Consultant, Head of Data Engineering',
     stack: ['Spark', 'S3', 'Athena', 'EMR'],
     blocks: [
       {
         bullets: [
-          'Led Data Engineering, mentoring a high-performing team and implementing governance, best practices, and process optimizations to deliver scalable, reliable, and high-quality data platforms.',
+          'Consulting engagement leading Data Engineering — mentoring a high-performing team and implementing governance, best practices, and process optimizations to deliver scalable, reliable, and high-quality data platforms.',
           'Architected an end-to-end Spark-based ML pipeline on AWS EMR for logistics anomaly and weight prediction, integrating a distributed ML model and automated feature engineering, achieving 99.9% uptime.',
         ],
       },
@@ -255,7 +269,7 @@ export default function ResumePage() {
       <SEO
         title="Resume — Ethiraj Srinivasan"
         titleAsIs
-        description="Resume of Ethiraj Srinivasan — Data Engineering Leader, Co-Founder & CTO. Decade of experience scaling data platforms across Shopee, Lomotif, Knorex, Pramati, and TCS."
+        description="Resume of Ethiraj Srinivasan — Co-Founder & CTO at InfiniTraq, Consultant Head of Data Engineering at Zgrow Solutions. Decade of experience scaling data platforms across Shopee, Lomotif, Knorex, Pramati, and TCS."
         path="/resume/"
       />
 
@@ -283,7 +297,11 @@ export default function ResumePage() {
             <div>
               <p className="resume-eyebrow">Curriculum Vitae</p>
               <h1 className="resume-name">Ethiraj Srinivasan</h1>
-              <p className="resume-role">Data Engineering Leader · Co-Founder &amp; CTO</p>
+              <p className="resume-role">
+                Co-Founder &amp; CTO · InfiniTraq
+                <br />
+                Consultant, Head of Data Engineering · Zgrow
+              </p>
             </div>
             <ul className="resume-contact">
               <li>
