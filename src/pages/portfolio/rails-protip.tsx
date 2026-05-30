@@ -5,7 +5,6 @@ export default function RailsProtipPage() {
   return (
     <PortfolioShell
       slug="rails-protip"
-      title="Rails Protip"
       category="Ruby Gem"
       description="Configurable Rails tooltip gem built on a modern jQuery tooltip plugin"
       image="/assets/images/code-banner.svg"

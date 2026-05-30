@@ -5,7 +5,6 @@ export default function MedicalImageDiagnosticsPage() {
   return (
     <PortfolioShell
       slug="medical-image-diagnostics"
-      title="Development Of Deep Learning Models For Medical Image Diagnostics"
       category="Machine Learning"
       description="Deep learning models for automated medical image analysis and diagnostics"
       image="/assets/images/medical-image-diagnostics.svg"

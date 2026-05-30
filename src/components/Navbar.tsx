@@ -2,12 +2,15 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { trackCta } from '@/lib/analytics'
 
-const navItems = [
-  { href: '/#work', label: 'Work' },
+type NavItem = { href: string; label: string; external?: boolean }
+const navItems: NavItem[] = [
+  { href: '/#work', label: 'Projects' },
+  { href: '/work-with-me', label: 'Work with me' },
   { href: '/blogs', label: 'Writing' },
   { href: '/about', label: 'About' },
-  { href: '/resume.pdf', label: 'Resume', external: true },
+  { href: '/resume', label: 'Resume' },
 ]
 
 export default function Navbar() {
@@ -30,17 +33,23 @@ export default function Navbar() {
     if (href.startsWith('/#')) return router.pathname === '/'
     if (href === '/blogs') return router.pathname.startsWith('/blogs')
     if (href === '/about') return router.pathname === '/about'
+    if (href === '/work-with-me') return router.pathname === '/work-with-me'
+    if (href === '/resume') return router.pathname === '/resume'
     return false
   }
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-smooth ${
-        scrolled
-          ? 'bg-paper/80 backdrop-blur-xl border-b border-ink-100 shadow-soft'
-          : 'bg-transparent border-b border-transparent'
-      }`}
-    >
+    <>
+      <a href="#main" className="skip-to-content">
+        Skip to content
+      </a>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-smooth ${
+          scrolled
+            ? 'bg-paper/80 backdrop-blur-xl border-b border-ink-100 shadow-soft'
+            : 'bg-transparent border-b border-transparent'
+        }`}
+      >
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="group inline-flex items-center gap-3" aria-label="Ethiraj Srinivasan — Home">
@@ -62,6 +71,7 @@ export default function Navbar() {
                 active ? 'text-ink-900' : 'text-ink-500 hover:text-ink-900'
               }`
               if (item.external) {
+                const isResume = item.href === '/resume.pdf'
                 return (
                   <a
                     key={item.href}
@@ -69,13 +79,23 @@ export default function Navbar() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={linkClass}
+                    onClick={isResume ? trackCta('cta_resume_download', 'navbar') : undefined}
                   >
                     <span className="link-underline">{item.label}</span>
                   </a>
                 )
               }
+              const onInternalClick =
+                item.href === '/resume'
+                  ? trackCta('cta_resume_download', 'navbar')
+                  : undefined
               return (
-                <Link key={item.href} href={item.href} className={linkClass}>
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={linkClass}
+                  onClick={onInternalClick}
+                >
                   {active && (
                     <span
                       aria-hidden="true"
@@ -89,6 +109,7 @@ export default function Navbar() {
 
             <a
               href="mailto:ethirajsrinivasan@gmail.com"
+              onClick={trackCta('cta_email', 'navbar')}
               className="ml-3 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ink-900 text-paper text-[13px] font-medium transition-all duration-300 ease-smooth hover:bg-ink-800 hover:shadow-elev hover:-translate-y-px"
             >
               Get in touch
@@ -106,7 +127,7 @@ export default function Navbar() {
         </div>
 
         {isOpen && (
-          <div className="md:hidden pb-6 pt-2 space-y-1 border-t border-ink-100 mt-1">
+          <div id="mobile-menu" className="md:hidden pb-6 pt-2 space-y-1 border-t border-ink-100 mt-1">
             {navItems.map((item) =>
               item.external ? (
                 <a
@@ -123,6 +144,11 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   className="block px-3 py-2.5 text-sm text-ink-700 hover:bg-ink-100 rounded-lg transition-colors"
+                  onClick={
+                    item.href === '/resume'
+                      ? trackCta('cta_resume_download', 'navbar_mobile')
+                      : undefined
+                  }
                 >
                   {item.label}
                 </Link>
@@ -130,6 +156,7 @@ export default function Navbar() {
             )}
             <a
               href="mailto:ethirajsrinivasan@gmail.com"
+              onClick={trackCta('cta_email', 'navbar_mobile')}
               className="block mt-2 px-3 py-2.5 text-sm text-paper bg-ink-900 rounded-lg text-center font-medium"
             >
               Get in touch
@@ -137,6 +164,7 @@ export default function Navbar() {
           </div>
         )}
       </div>
-    </nav>
+      </nav>
+    </>
   )
 }

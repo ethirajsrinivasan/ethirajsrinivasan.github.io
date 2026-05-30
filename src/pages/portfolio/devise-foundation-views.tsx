@@ -5,7 +5,6 @@ export default function DeviseFoundationViewsPage() {
   return (
     <PortfolioShell
       slug="devise-foundation-views"
-      title="Devise Foundation Views"
       category="Ruby Gem"
       description="Custom Devise authentication views built on the Foundation CSS framework"
       image="/assets/images/code-banner.svg"

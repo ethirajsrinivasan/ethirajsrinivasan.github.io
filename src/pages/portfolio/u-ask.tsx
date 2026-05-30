@@ -5,7 +5,6 @@ export default function UAskPage() {
   return (
     <PortfolioShell
       slug="u-ask"
-      title="U Ask"
       category="Android"
       description="Social Q&A mobile app for NUS students to get answers about university life"
       image="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1920&q=85&auto=format&fit=crop"
@@ -71,7 +70,7 @@ export default function UAskPage() {
             <iframe
               className={pc.iframe}
               src="https://www.youtube.com/embed/poZ0JIMNDbY"
-              title="uAsk demo"
+              title="U Ask demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />

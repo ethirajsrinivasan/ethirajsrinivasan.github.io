@@ -1,6 +1,7 @@
 import type { BlogIndexEntry } from '@/types/blog'
 import { formatBlogDate } from '@/lib/format-blog-date'
 import { normalizeBlogBannerUrl } from '@/lib/blog-image'
+import readingTimes from './readingTimes.json'
 
 type BlogDbRow = {
   slug: string
@@ -9,6 +10,8 @@ type BlogDbRow = {
   picture: string
   pictureAlt?: string
   excerpt: string
+  /** Unlist from /blogs, homepage Writing, and prev/next nav. Individual URL still works. */
+  hidden?: boolean
 }
 
 /** Slugs, dates, banners from ethigeek_development.blogs */
@@ -31,6 +34,7 @@ const blogDbRows: BlogDbRow[] = [
       'https://images.unsplash.com/photo-1642543348745-03b1219733d9?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     excerpt:
       'In stock market analysis, Support and Resistance levels are fundamental concepts that help traders determine the price points that change market behavior. In this story, we will discover support and resistance, their significance, and how to find them using Python.',
+    hidden: true,
   },
   {
     slug: 'penny-wise-pound-foolish-the-costly-consequence',
@@ -39,6 +43,7 @@ const blogDbRows: BlogDbRow[] = [
     picture: 'https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf',
     excerpt:
       '"Penny Wise, pound foolish"-An essential reminder that prioritizing small savings in the short term can lead to a significant loss in the long run. In this blog post, we will look into the concept of penny wise pound foolish, embrace its importance and how it can help in our financial journey.',
+    hidden: true,
   },
   {
     slug: 'demystifying-sitemaps-your-pathway-to-seamless-website-exploration',
@@ -57,6 +62,7 @@ const blogDbRows: BlogDbRow[] = [
       'https://images.unsplash.com/photo-1691858439160-26dce126ad1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     excerpt:
       'In my previous [stories](/blogs/east-java-wonders-the-water-md/), I have shared my experiences of visiting the mighty volcanoes and majestic waterfall of East Java island. In this story, I will share my financial plans and some pro tips that will be useful if you are planning to visit East Java Island.',
+    hidden: true,
   },
   {
     slug: 'a-journey-through-fire-and-water-immersed-in-java-s-nature-wonders-the-fire',
@@ -66,6 +72,7 @@ const blogDbRows: BlogDbRow[] = [
       'https://images.unsplash.com/photo-1691510420384-33956404ac03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     excerpt:
       'As shared in my [previous story](/blogs/east-java-wonders-the-water-md/) visiting a volcano is my childhood dream. My journey to the volcanoes had begun and I was filled with so much excitement and anticipation. Before reaching the volcanoes, I explored the beautiful Madakaripura waterfall on my way. My first day at the Madakaripura waterfall went so well. I was so much satisfied. The cascading waters amidst the green surroundings were awe-inspiring. A perfect beginning to my volcanic adventure.',
+    hidden: true,
   },
   {
     slug: 'east-java-wonders-the-water-md',
@@ -74,6 +81,7 @@ const blogDbRows: BlogDbRow[] = [
     picture: 'https://images.unsplash.com/photo-1497436072909-60f360e1d4b1',
     excerpt:
       "A Journey of Awe and Wonder Through the Majestic Beauty of Java's Highest Waterfall",
+    hidden: true,
   },
   {
     slug: 'from-blueprint-to-reality-unleashing-the-potential-of-creational-patterns',
@@ -100,6 +108,7 @@ const blogDbRows: BlogDbRow[] = [
     pictureAlt: 'Life lessons in 30s , Personal development and self-improvement',
     excerpt:
       'Insights and Advice on Finance, Health, Investing, Digital Presence, and Growth Skills',
+    hidden: true,
   },
   {
     slug: 'custom-actuator-prometheus-metric-for-better-spring-boot-application-monitoring',
@@ -147,6 +156,7 @@ const blogDbRows: BlogDbRow[] = [
     pictureAlt: 'How Google tracks your online activities',
     excerpt:
       'It all started with this website - [https://camelcamelcamel.com](https://camelcamelcamel.com/). This website is a free Amazon price tracker. I was looking at the price of a product from Amazon. I was annoyed by one particular ad in this website since it was following me wherever I go on the internet. So I closed that ad and it appeared as below',
+    hidden: true,
   },
   {
     slug: 'set-up-google-pub-sub-in-vert-x3',
@@ -165,6 +175,7 @@ const blogDbRows: BlogDbRow[] = [
     pictureAlt: 'Devise authentication failure with email normalization',
     excerpt:
       'Devise - a flexible authentication solution for Rails based on Warden says [plataformatec](https://github.com/plataformatec/devise). Yes it is and is my favorite authentication gem. Due to its flexible nature it does have some issues pouring down. I got a chance to view this [issue](https://github.com/plataformatec/devise/issues/4309). The issue as stated by the author',
+    hidden: true,
   },
   {
     slug: 'configure-solr-for-rspec-and-travis-ci',
@@ -174,6 +185,7 @@ const blogDbRows: BlogDbRow[] = [
     pictureAlt: 'Configuring Solr for RSpec , Travis CI Solr configuration',
     excerpt:
       'Configuring solr for your local Rspec suite and in travis CI can sometimes be tedious task. In most of the projects i have come across methods using solr was tested by stubing the solr result. However i wanted to test my methods based on the actual solr session and i did not want my solr session to run always. So here is how i configured solr for Rspec and travis',
+    hidden: true,
   },
   {
     slug: 'how-to-use-includes-in-rails',
@@ -183,6 +195,7 @@ const blogDbRows: BlogDbRow[] = [
     pictureAlt: 'Rails associations and includes, Rails eager loading associations',
     excerpt:
       'Includes is a handy method to do eager loading on your associations as stated in the rails documentation — "With includes, Active Record ensures that all of the specified associations are loaded using the minimum possible number of queries."',
+    hidden: true,
   },
   {
     slug: 'mutually-exclusive-alias-method-and-prepend',
@@ -195,6 +208,8 @@ const blogDbRows: BlogDbRow[] = [
   },
 ]
 
+const readingTimeMap = readingTimes as Record<string, string>
+
 export const blogIndex: BlogIndexEntry[] = blogDbRows.map((row) => ({
   slug: row.slug,
   title: row.title,
@@ -202,8 +217,19 @@ export const blogIndex: BlogIndexEntry[] = blogDbRows.map((row) => ({
   image: normalizeBlogBannerUrl(row.picture),
   imageAlt: row.pictureAlt,
   excerpt: row.excerpt,
-  readTime: '5 min read',
+  readTime: readingTimeMap[row.slug] ?? '5 min read',
+  publishedAt: row.publishedAt,
+  hidden: row.hidden,
 }))
+
+/**
+ * Index used for all display surfaces (blog index, homepage Writing block, prev/next).
+ * Hidden posts are unlisted: their individual /blogs/<slug> URLs continue to work,
+ * but they no longer appear in any feed or navigation.
+ */
+export const visibleBlogIndex: BlogIndexEntry[] = blogIndex.filter(
+  (post) => !post.hidden
+)
 
 export function getBlogIndexEntry(slug: string): BlogIndexEntry | undefined {
   return blogIndex.find((post) => post.slug === slug)

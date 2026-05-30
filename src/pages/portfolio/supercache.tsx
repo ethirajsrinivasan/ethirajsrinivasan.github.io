@@ -5,17 +5,16 @@ export default function SupercachePage() {
   return (
     <PortfolioShell
       slug="supercache"
-      title="Supercache"
       category="Ruby Gem"
       description="Rails caching addon for ActiveRecord queries and HTTP requests in development"
-      image="/assets/images/code-banner.svg"
+      image="https://images.unsplash.com/photo-1776801475781-b0797398b145?q=80&w=2070&auto=format&fit=crop"
       date="2016"
       technologies={["Ruby", "Rails", "RSpec", "Caching"]}
       links={[
         { href: 'https://rubygems.org/gems/supercache', label: 'RubyGems package' },
         { href: 'https://github.com/bragboy/supercache', label: 'Supercache on GitHub' },
       ]}
-      imageFit="contain"
+      imageFit="cover"
     >
       <section className={pc.section}>
         <h2 className={pc.heading}>Summary</h2>

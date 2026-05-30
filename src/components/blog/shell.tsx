@@ -1,12 +1,12 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import PostNav from '@/components/PostNav'
+import SEO from '@/components/SEO'
 import type { ReactNode } from 'react'
 import { ArrowLeft, ArrowUpRight, Linkedin, Twitter } from 'lucide-react'
-import { blogIndex, getBlogIndexEntry } from '@/data/blogIndex'
+import { visibleBlogIndex, getBlogIndexEntry } from '@/data/blogIndex'
 import { getContentNeighbors } from '@/lib/contentNeighbors'
 import { resolveImageSrc } from '@/lib/resolve-image-src'
 import { BlogArticleProvider } from './context'
@@ -33,7 +33,7 @@ export default function BlogShell({
   imageAlt,
   children,
 }: BlogShellProps) {
-  const { previous, next } = getContentNeighbors(slug, blogIndex)
+  const { previous, next } = getContentNeighbors(slug, visibleBlogIndex)
   const indexEntry = getBlogIndexEntry(slug)
   const heroSrc = resolveImageSrc(indexEntry?.image ?? image) || DEFAULT_HERO
   const heroAlt = imageAlt ?? indexEntry?.imageAlt ?? title
@@ -47,18 +47,48 @@ export default function BlogShell({
     shareUrl
   )}`
 
+  const description = plainTextMarkdown(excerpt)
+  const articleUrl = `https://ethirajsrinivasan.com/blogs/${slug}/`
+  const ogImage = heroSrc.startsWith('http') ? heroSrc : `https://ethirajsrinivasan.com${heroSrc}`
+
   return (
     <>
-      <Head>
-        <title>{title} — Ethiraj Srinivasan</title>
-        <meta name="description" content={plainTextMarkdown(excerpt)} />
-        <meta property="og:title" content={title} />
-        <meta property="og:image" content={heroSrc} />
-      </Head>
+      <SEO
+        title={title}
+        description={description}
+        path={`/blogs/${slug}/`}
+        image={heroSrc}
+        imageAlt={heroAlt}
+        type="article"
+        article={{
+          publishedTime: indexEntry?.publishedAt,
+          authors: ['Ethiraj Srinivasan'],
+        }}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: title,
+          description,
+          image: ogImage,
+          datePublished: indexEntry?.publishedAt,
+          url: articleUrl,
+          mainEntityOfPage: articleUrl,
+          author: {
+            '@type': 'Person',
+            name: 'Ethiraj Srinivasan',
+            url: 'https://ethirajsrinivasan.com',
+          },
+          publisher: {
+            '@type': 'Person',
+            name: 'Ethiraj Srinivasan',
+            url: 'https://ethirajsrinivasan.com',
+          },
+        }}
+      />
 
       <Navbar />
 
-      <main className={bl.main}>
+      <main id="main" className={bl.main}>
         {/* ─── Back link rail ─── */}
         <div className={bl.backRail}>
           <div className={bl.containerWide}>
@@ -90,11 +120,13 @@ export default function BlogShell({
           <div className={bl.container}>
             <div className={bl.headerMeta}>
               <h2 className="eyebrow">Article</h2>
-              {date && (
-                <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-500">
-                  {date}
-                </span>
-              )}
+              <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-500">
+                {date && <span>{date}</span>}
+                {date && indexEntry?.readTime && (
+                  <span aria-hidden="true" className="text-ink-300">/</span>
+                )}
+                {indexEntry?.readTime && <span>{indexEntry.readTime}</span>}
+              </div>
             </div>
 
             <h1 className={bl.title}>{title}</h1>

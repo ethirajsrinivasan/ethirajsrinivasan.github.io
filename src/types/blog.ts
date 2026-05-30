@@ -13,4 +13,8 @@ export type BlogIndexEntry = Pick<
   'slug' | 'title' | 'date' | 'image' | 'excerpt' | 'readTime'
 > & {
   imageAlt?: string
+  /** ISO date string for OG / JSON-LD article schema. */
+  publishedAt?: string
+  /** Unlisted: route still works but post is hidden from index, homepage, and prev/next nav. */
+  hidden?: boolean
 }

@@ -1,12 +1,12 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import PostNav from '@/components/PostNav'
+import SEO from '@/components/SEO'
 import { Github, ExternalLink, ArrowLeft, ArrowUpRight } from 'lucide-react'
 import type { ReactNode } from 'react'
-import { portfolioIndex } from '@/data/portfolioIndex'
+import { getPortfolioIndexEntry, visiblePortfolioIndex } from '@/data/portfolioIndex'
 import { getContentNeighbors } from '@/lib/contentNeighbors'
 import { slugFromPath } from '@/lib/slugFromPath'
 import { pl, externalLink, bannerImageClass, heroClass } from './classes'
@@ -17,7 +17,8 @@ export type ProjectLink = {
 }
 
 export type PortfolioShellProps = {
-  title: string
+  /** Optional override; defaults to `portfolioIndex` title for `slug`. */
+  title?: string
   category: string
   description: string
   image: string
@@ -47,25 +48,49 @@ export default function PortfolioShell({
   const slug =
     slugProp ||
     (router.isReady ? slugFromPath(router.asPath, '/portfolio') : '')
-  const { previous, next } = slug ? getContentNeighbors(slug, portfolioIndex) : {}
+  const { previous, next } = slug ? getContentNeighbors(slug, visiblePortfolioIndex) : {}
+  const indexEntry = slug ? getPortfolioIndexEntry(slug) : undefined
+  const displayTitle = indexEntry?.title ?? title ?? 'Project'
+
+  const projectPath = slug ? `/portfolio/${slug}/` : '/portfolio/'
+  const projectUrl = `https://ethirajsrinivasan.com${projectPath}`
+  const ogImage = image.startsWith('http') ? image : `https://ethirajsrinivasan.com${image}`
 
   return (
     <>
-      <Head>
-        <title>{title} — Ethiraj Srinivasan</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:image" content={image} />
-      </Head>
+      <SEO
+        title={displayTitle}
+        description={description}
+        path={projectPath}
+        image={image}
+        imageAlt={indexEntry?.imageAlt ?? displayTitle}
+        type="article"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'CreativeWork',
+          name: displayTitle,
+          description,
+          image: ogImage,
+          url: projectUrl,
+          dateCreated: date,
+          author: {
+            '@type': 'Person',
+            name: 'Ethiraj Srinivasan',
+            url: 'https://ethirajsrinivasan.com',
+          },
+          keywords: technologies.join(', '),
+          about: category,
+        }}
+      />
 
       <Navbar />
 
-      <main className={pl.main}>
+      <main id="main" className={pl.main}>
         {/* ─── Cinematic banner hero ─── */}
         <header className={heroClass(image, imageFit)}>
           <img
             src={image}
-            alt={title}
+            alt={indexEntry?.imageAlt ?? displayTitle}
             className={bannerImageClass(image, imageFit)}
           />
           <div className={pl.heroOverlay} aria-hidden="true" />
@@ -79,7 +104,7 @@ export default function PortfolioShell({
                   size={14}
                   className="transition-transform duration-300 ease-smooth group-hover:-translate-x-0.5"
                 />
-                <span className="link-underline">All work</span>
+                <span className="link-underline">All projects</span>
               </Link>
             </div>
           </div>
@@ -94,7 +119,7 @@ export default function PortfolioShell({
                 </span>
                 <span className="text-paper/60">{date}</span>
               </span>
-              <h1 className={pl.title}>{title}</h1>
+              <h1 className={pl.title}>{displayTitle}</h1>
             </div>
           </div>
         </header>

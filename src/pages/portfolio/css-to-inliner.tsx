@@ -5,7 +5,6 @@ export default function CssToInlinerPage() {
   return (
     <PortfolioShell
       slug="css-to-inliner"
-      title="Css To Inliner"
       category="Web Application"
       description="Rails app to benchmark and analyze converting external stylesheets to inline CSS for email"
       image="/assets/images/code-banner.svg"

@@ -5,17 +5,16 @@ export default function SunspotPage() {
   return (
     <PortfolioShell
       slug="sunspot"
-      title="Sunspot"
       category="Ruby Gem"
       description="Collaboration on the Ruby Solr search library with expressive indexing and query DSL"
-      image="/assets/images/sunspot.svg"
+      image="https://images.unsplash.com/photo-1614642264762-d0a3b8bf3700?q=80&w=2070&auto=format&fit=crop"
       date="2016"
       technologies={["Ruby", "Solr", "RSolr", "Search"]}
       links={[
         { href: 'http://sunspot.github.io/', label: 'Sunspot documentation' },
         { href: 'https://github.com/sunspot/sunspot', label: 'Sunspot on GitHub' },
       ]}
-      imageFit="contain"
+      imageFit="cover"
     >
       <section className={pc.section}>
         <h2 className={pc.heading}>Summary</h2>

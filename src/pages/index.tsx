@@ -1,11 +1,15 @@
-import Head from 'next/head'
+import SEO from '@/components/SEO'
+import { trackCta } from '@/lib/analytics'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import { ArrowUpRight, ArrowRight, Brain, Smartphone, Globe, Package, MapPin, ShieldCheck, Eye, Activity, Cpu } from 'lucide-react'
-import { blogIndex } from '@/data/blogIndex'
+import Testimonials from '@/components/Testimonials'
+import { ArrowUpRight, ArrowRight, MapPin, ShieldCheck, Eye, Activity, Cpu, Database, Sparkles, Compass, MessageCircle } from 'lucide-react'
+import { visibleBlogIndex } from '@/data/blogIndex'
+import { visiblePortfolioIndex } from '@/data/portfolioIndex'
+import { featuredTestimonials } from '@/data/testimonials'
 import { plainTextMarkdown } from '@/lib/plain-text-markdown'
 import { resolveImageSrc } from '@/lib/resolve-image-src'
 
@@ -15,65 +19,27 @@ const skills = [
   'Python', 'Scala', 'Java', 'Ruby', 'TypeScript',
   'Spring Boot', 'Ruby on Rails', 'Vert.x',
   'TensorFlow', 'PyTorch', 'Scikit-learn',
+  'LangChain', 'OpenAI', 'n8n', 'Supabase',
   'PostgreSQL', 'Redis', 'Elasticsearch', 'Solr',
   'Docker', 'Maxwell', 'DeltaStreamer',
 ]
 
-const stats = [
-  { value: '10+', label: 'Years engineering' },
-  { value: '8', label: 'Companies built at' },
-  { value: '23', label: 'Articles published' },
-  { value: '8', label: 'Open-source gems' },
-]
+type Stat = {
+  value: string
+  label: string
+  href?: string
+  external?: boolean
+}
 
-const portfolioCategories = [
+const stats: Stat[] = [
+  { value: '12+', label: 'Years engineering' },
+  { value: '7', label: 'Companies built at' },
+  { value: '10', label: 'Articles published', href: '/blogs' },
   {
-    icon: Brain,
-    title: 'Machine Learning',
-    description:
-      'Deep learning models for medical diagnostics, facial recognition, and social network analysis.',
-    projects: [
-      { name: 'Medical Image Diagnostics', slug: 'medical-image-diagnostics' },
-      { name: 'Facial Recognition System', slug: 'facial-recognition-system' },
-      { name: 'Social Community Expansion', slug: 'social-community-expansion' },
-      { name: 'Smart Interactive Wall', slug: 'smart-interactive-wall' },
-      { name: 'Spatio Temporal Analysis Of Students’ Travel', slug: 'spatio-temporal-analysis' },
-      { name: 'DNA Capitals Hackathon', slug: 'dna-capitals-hackathon' },
-    ],
-  },
-  {
-    icon: Smartphone,
-    title: 'Android',
-    description: 'Utility applications for personal productivity and health tracking.',
-    projects: [
-      { name: 'Medtracker', slug: 'medtracker' },
-      { name: 'U Ask', slug: 'u-ask' },
-    ],
-  },
-  {
-    icon: Globe,
-    title: 'Web Applications',
-    description: 'Modern web applications with state-of-the-art technologies.',
-    projects: [
-      { name: 'Tablizer', slug: 'tablizer' },
-      { name: 'CSS to Inliner', slug: 'css-to-inliner' },
-      { name: 'URL Shortener', slug: 'url-shortener' },
-    ],
-  },
-  {
-    icon: Package,
-    title: 'Ruby Gems',
-    description: 'Open-source contributions and library development.',
-    projects: [
-      { name: 'Table2 CSV', slug: 'table2-csv' },
-      { name: 'Rails Protip', slug: 'rails-protip' },
-      { name: 'Rails Fort', slug: 'rails-fort' },
-      { name: 'Technology Icons', slug: 'technology-icons' },
-      { name: 'Supercache', slug: 'supercache' },
-      { name: 'Sunspot', slug: 'sunspot' },
-      { name: 'Devise Foundation Views', slug: 'devise-foundation-views' },
-      { name: 'Collection2 CSV', slug: 'collection2-csv' },
-    ],
+    value: '6',
+    label: 'Open-source gems',
+    href: 'https://rubygems.org/profiles/ethi',
+    external: true,
   },
 ]
 
@@ -85,24 +51,72 @@ const fadeUp = {
 }
 
 export default function Home() {
-  const recentBlogs = blogIndex.slice(0, 4)
+  const recentBlogs = visibleBlogIndex.slice(0, 4)
   const featuredBlog = recentBlogs[0]
   const sideBlogs = recentBlogs.slice(1, 4)
 
   return (
     <>
-      <Head>
-        <title>Ethiraj Srinivasan — Co-Founder &amp; CTO, InfiniTraq</title>
-        <meta
-          name="description"
-          content="Software engineer and data leader. Co-Founder &amp; CTO at InfiniTraq (Griffin AI) and Consultant, Head of Data Engineering at Zgrow Solutions."
-        />
-        <meta property="og:image" content="/assets/ai-6782a7d586827e3fe87b3b5907209c7f3bbf9c809841f139aa0bae2b9c5c0dd8.jpg" />
-      </Head>
+      <SEO
+        title="Ethiraj Srinivasan — Co-Founder & CTO · Open for select engagements"
+        titleAsIs
+        description="Software engineer and data leader. Co-Founder & CTO at InfiniTraq (Griffin AI). Open for select freelance and advisory engagements — data platforms, AI / computer vision, and fractional CTO work."
+        path="/"
+        image="/og-default.png"
+        imageAlt="Ethiraj Srinivasan — Engineer by craft. Founder by choice."
+        type="profile"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Person',
+          name: 'Ethiraj Srinivasan',
+          alternateName: 'Ethi',
+          url: 'https://ethirajsrinivasan.com',
+          image: 'https://ethirajsrinivasan.com/assets/my_photo.jpeg',
+          jobTitle: 'Co-Founder & CTO',
+          worksFor: [
+            {
+              '@type': 'Organization',
+              name: 'InfiniTraq (Griffin AI Tech)',
+              url: 'https://griffinai.sh',
+            },
+            {
+              '@type': 'Organization',
+              name: 'Zgrow Solutions',
+              url: 'https://zgrow.solutions',
+            },
+          ],
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Chennai',
+            addressCountry: 'IN',
+          },
+          alumniOf: [
+            { '@type': 'CollegeOrUniversity', name: 'National University of Singapore' },
+            { '@type': 'CollegeOrUniversity', name: 'Anna University' },
+          ],
+          knowsAbout: [
+            'Data Engineering',
+            'Applied AI',
+            'Computer Vision',
+            'Edge AI',
+            'Ruby on Rails',
+            'Apache Spark',
+            'Distributed Systems',
+          ],
+          sameAs: [
+            'https://www.linkedin.com/in/ethirajsrinivasan',
+            'https://github.com/ethirajsrinivasan',
+            'https://topmate.io/ethirajsrinivasan',
+            'https://medium.com/@ethi',
+            'https://twitter.com/iamethi',
+            'https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA',
+          ],
+        }}
+      />
 
       <Navbar />
 
-      <main className="min-h-screen overflow-x-hidden">
+      <main id="main" className="min-h-screen overflow-x-hidden">
         {/* ───────────── HERO ───────────── */}
         <section className="relative pt-28 md:pt-36 pb-20 md:pb-28">
           <div className="absolute inset-0 bg-mesh-warm opacity-90 pointer-events-none" aria-hidden="true" />
@@ -119,10 +133,18 @@ export default function Home() {
               className="max-w-4xl"
             >
               <div className="flex flex-wrap items-center gap-3 mb-8">
-                <span className="status-pill">
+                <Link
+                  href="/work-with-me"
+                  onClick={trackCta('cta_work_with_me', 'hero_status_pill')}
+                  className="status-pill group hover:border-ink-400 transition-colors"
+                >
                   <span className="status-dot" />
-                  Co-Founder &amp; CTO @ InfiniTraq
-                </span>
+                  <span>Open for select engagements</span>
+                  <ArrowUpRight
+                    size={12}
+                    className="text-ink-400 transition-all duration-300 ease-smooth group-hover:text-ink-900 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  />
+                </Link>
                 <span className="inline-flex items-center gap-1.5 text-xs text-ink-500 font-mono">
                   <MapPin size={12} /> Chennai
                 </span>
@@ -156,15 +178,27 @@ export default function Home() {
                 >
                   Zgrow Solutions
                 </a>
-                . Over a decade building software, data platforms, and products.
+                . Over a decade building software, data platforms, and products — and taking on a
+                small number of engagements outside InfiniTraq.
               </p>
 
               <div className="mt-10 flex flex-wrap items-center gap-3">
+                <Link
+                  href="/work-with-me"
+                  onClick={trackCta('cta_work_with_me', 'hero_primary')}
+                  className="group inline-flex items-center gap-2 px-5 py-3 rounded-full bg-ink-900 text-paper text-sm font-medium transition-all duration-500 ease-smooth hover:bg-ink-800 hover:shadow-elev hover:-translate-y-0.5"
+                >
+                  Work with me
+                  <ArrowUpRight
+                    size={16}
+                    className="transition-all duration-500 ease-smooth group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  />
+                </Link>
                 <a
                   href="https://griffinai.sh"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 px-5 py-3 rounded-full bg-ink-900 text-paper text-sm font-medium transition-all duration-500 ease-smooth hover:bg-ink-800 hover:shadow-elev hover:-translate-y-0.5"
+                  className="group inline-flex items-center gap-2 px-5 py-3 rounded-full border border-ink-200 bg-paper text-ink-900 text-sm font-medium transition-all duration-500 ease-smooth hover:border-ink-400 hover:-translate-y-0.5"
                 >
                   See InfiniTraq
                   <ArrowUpRight
@@ -174,12 +208,12 @@ export default function Home() {
                 </a>
                 <Link
                   href="/#work"
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-ink-200 bg-paper text-ink-900 text-sm font-medium transition-all duration-500 ease-smooth hover:border-ink-400 hover:-translate-y-0.5"
+                  className="group inline-flex items-center gap-2 px-5 py-3 text-sm font-medium text-ink-700 hover:text-ink-900 transition-colors"
                 >
-                  Past work
+                  <span className="link-underline">Past work</span>
                   <ArrowRight
                     size={16}
-                    className="transition-transform duration-500 ease-smooth group-hover:translate-x-1"
+                    className="text-ink-400 transition-transform duration-500 ease-smooth group-hover:translate-x-1 group-hover:text-ink-900"
                   />
                 </Link>
               </div>
@@ -191,12 +225,41 @@ export default function Home() {
               transition={{ ...fadeUp.transition, delay: 0.15 }}
               className="mt-20 md:mt-28 grid grid-cols-2 md:grid-cols-4 gap-px bg-ink-100 border border-ink-100 rounded-2xl overflow-hidden"
             >
-              {stats.map((stat) => (
-                <div key={stat.label} className="bg-paper px-6 py-7 sm:p-8">
-                  <div className="stat-num mb-2">{stat.value}</div>
-                  <div className="stat-label">{stat.label}</div>
-                </div>
-              ))}
+              {stats.map((stat) => {
+                const inner = (
+                  <>
+                    <div className="stat-num mb-2 inline-flex items-baseline gap-1.5">
+                      {stat.value}
+                      {stat.href && (
+                        <ArrowUpRight
+                          size={14}
+                          className="text-ink-400 transition-all duration-300 ease-smooth group-hover:text-ink-900 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                          aria-hidden="true"
+                        />
+                      )}
+                    </div>
+                    <div className="stat-label">{stat.label}</div>
+                  </>
+                )
+                if (stat.href) {
+                  return (
+                    <a
+                      key={stat.label}
+                      href={stat.href}
+                      target={stat.external ? '_blank' : undefined}
+                      rel={stat.external ? 'noopener noreferrer' : undefined}
+                      className="group bg-paper px-6 py-7 sm:p-8 transition-colors hover:bg-paper-warm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink-300 focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
+                    >
+                      {inner}
+                    </a>
+                  )
+                }
+                return (
+                  <div key={stat.label} className="bg-paper px-6 py-7 sm:p-8">
+                    {inner}
+                  </div>
+                )
+              })}
             </motion.div>
           </div>
         </section>
@@ -382,68 +445,258 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ───────────── WORK ───────────── */}
+        {/* ───────────── SELECTED WORK ───────────── */}
         <section id="work" className="relative section-y">
           <div className="container-wide">
-            <motion.div {...fadeUp} className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+            <motion.div
+              {...fadeUp}
+              className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14"
+            >
               <div className="max-w-xl space-y-4">
-                <h2 className="eyebrow">Selected Work</h2>
+                <h2 className="eyebrow">Projects</h2>
                 <h3 className="h-display text-4xl md:text-5xl leading-[1.05] text-balance">
-                  Projects across <span className="italic">ML, mobile, web</span>, and open source.
+                  Case studies across <span className="italic">Applied AI</span> and open source.
                 </h3>
               </div>
               <p className="max-w-sm text-sm text-ink-500 leading-relaxed">
-                A curated cross-section of work — from production data pipelines to side-project
-                Ruby gems. Click any project to read the full case study.
+                A curated cross-section — from deep-learning systems and computer vision research
+                to widely-used Ruby gems. Click any card to read the full write-up.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-6 gap-5 md:gap-6 auto-rows-fr">
-              {portfolioCategories.map((category, idx) => {
-                const isWide = idx === 0 || idx === 3
-                return (
-                  <motion.div
-                    key={category.title}
-                    {...fadeUp}
-                    transition={{ ...fadeUp.transition, delay: idx * 0.08 }}
-                    className={`bento-card flex flex-col ${isWide ? 'md:col-span-4' : 'md:col-span-2'}`}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 auto-rows-fr">
+              {visiblePortfolioIndex.map((project, idx) => (
+                <motion.article
+                  key={project.slug}
+                  {...fadeUp}
+                  transition={{ ...fadeUp.transition, delay: (idx % 6) * 0.06 }}
+                  className="group"
+                >
+                  <Link
+                    href={`/portfolio/${project.slug}`}
+                    className="card-soft h-full flex flex-col overflow-hidden"
                   >
-                    <div className="relative z-10 flex flex-col h-full">
-                      <div className="flex items-start justify-between mb-5">
-                        <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-ink-900 text-paper">
-                          <category.icon size={18} strokeWidth={1.75} />
-                        </div>
-                        <span className="badge-quiet">{category.projects.length} projects</span>
+                    {/* Banner */}
+                    <div
+                      className={`relative aspect-[16/10] overflow-hidden ${
+                        project.imageFit === 'contain' ? 'bg-ink-950' : 'bg-paper-warm'
+                      }`}
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.imageAlt || project.title}
+                        className={`absolute inset-0 w-full h-full transition-transform duration-700 ease-smooth group-hover:scale-[1.04] ${
+                          project.imageFit === 'contain'
+                            ? 'object-contain p-10'
+                            : 'object-cover object-center'
+                        }`}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      {/* Subtle gradient for legibility of meta row */}
+                      <div
+                        className="absolute inset-0 bg-gradient-to-t from-ink-950/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                        aria-hidden="true"
+                      />
+                    </div>
+
+                    {/* Body */}
+                    <div className="p-6 flex-1 flex flex-col">
+                      <div className="flex items-center justify-between gap-3 mb-3">
+                        <span className="badge-quiet">{project.category}</span>
+                        <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-400">
+                          {project.year}
+                        </span>
                       </div>
 
-                      <h4 className="h-display text-2xl md:text-3xl mb-2 text-balance">
-                        {category.title}
+                      <h4 className="font-display text-xl md:text-[1.45rem] leading-[1.2] text-ink-900 mb-3 text-balance group-hover:text-accent-700 transition-colors duration-300">
+                        {project.title}
                       </h4>
-                      <p className="text-sm text-ink-600 leading-relaxed mb-6 text-pretty">
-                        {category.description}
+
+                      <p className="text-sm text-ink-600 leading-relaxed line-clamp-3 text-pretty flex-1">
+                        {project.tagline}
                       </p>
 
-                      <ul className="mt-auto space-y-1.5 divide-y divide-ink-100/70 border-t border-ink-100/70">
-                        {category.projects.slice(0, isWide ? 6 : 4).map((project) => (
-                          <li key={project.slug}>
-                            <Link
-                              href={`/portfolio/${project.slug}`}
-                              className="group flex items-center justify-between gap-3 py-2 text-sm text-ink-700 hover:text-ink-900 transition-colors"
-                            >
-                              <span className="link-underline truncate">{project.name}</span>
-                              <ArrowUpRight
-                                size={14}
-                                className="text-ink-400 transition-all duration-500 ease-smooth group-hover:text-ink-900 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 shrink-0"
-                              />
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
+                      <div className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-ink-900">
+                        <span className="link-underline">Read case study</span>
+                        <ArrowUpRight
+                          size={13}
+                          className="text-ink-400 transition-all duration-500 ease-smooth group-hover:text-ink-900 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                        />
+                      </div>
                     </div>
-                  </motion.div>
-                )
-              })}
+                  </Link>
+                </motion.article>
+              ))}
             </div>
+          </div>
+        </section>
+
+        {/* ───────────── WORK WITH ME ───────────── */}
+        <section className="relative section-y border-t border-ink-100 bg-paper-warm overflow-hidden">
+          <div className="container-wide">
+            <motion.div
+              {...fadeUp}
+              className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14"
+            >
+              <div className="max-w-xl space-y-4">
+                <h2 className="eyebrow">Work with me</h2>
+                <h3 className="h-display text-4xl md:text-5xl leading-[1.05] text-balance">
+                  Building <span className="italic">InfiniTraq.</span> Open to a few engagements
+                  alongside.
+                </h3>
+              </div>
+              <p className="max-w-sm text-sm text-ink-500 leading-relaxed">
+                Founder-led consulting. I take on a small number of part-time projects each year
+                where I can add the kind of leverage a senior team usually can't hire for.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-5 md:gap-6">
+              {[
+                {
+                  icon: Database,
+                  title: 'Data Platform & Lakehouse',
+                  desc:
+                    'Architect, audit, or scale your Spark / Iceberg / Hudi / Airflow / Trino stack. From green-field designs to PB-scale tuning.',
+                  tags: ['Spark', 'Iceberg', 'Hudi', 'Airflow', 'AWS EMR'],
+                },
+                {
+                  icon: Sparkles,
+                  title: 'Applied AI & Automation',
+                  desc:
+                    'Vision, language, and the glue between them. Edge AI for InfiniTraq, LangChain document intelligence, n8n + Supabase workflow automation.',
+                  tags: ['LangChain', 'n8n', 'OpenAI', 'NVIDIA Edge', 'PyTorch'],
+                },
+                {
+                  icon: Compass,
+                  title: 'Fractional CTO & Advisory',
+                  desc:
+                    'Architecture review, hiring help, technical due diligence, and engineering coaching for seed and Series-A teams.',
+                  tags: ['Strategy', 'Hiring', 'Architecture', 'Diligence'],
+                },
+              ].map((s, idx) => (
+                <motion.div
+                  key={s.title}
+                  {...fadeUp}
+                  transition={{ ...fadeUp.transition, delay: idx * 0.08 }}
+                  className="bento-card flex flex-col"
+                >
+                  <div className="relative z-10 flex flex-col h-full">
+                    <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-ink-900 text-paper mb-5">
+                      <s.icon size={18} strokeWidth={1.75} />
+                    </div>
+                    <h4 className="h-display text-2xl md:text-[1.65rem] leading-[1.15] mb-3 text-balance">
+                      {s.title}
+                    </h4>
+                    <p className="text-sm text-ink-600 leading-relaxed text-pretty mb-6">
+                      {s.desc}
+                    </p>
+                    <div className="mt-auto flex flex-wrap gap-1.5">
+                      {s.tags.map((t) => (
+                        <span key={t} className="badge-quiet">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Mentorship + Topmate lane */}
+            <motion.div
+              {...fadeUp}
+              transition={{ ...fadeUp.transition, delay: 0.24 }}
+              className="mt-6 md:mt-7 card-soft p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:!translate-y-0"
+            >
+              <div className="flex items-start gap-4 max-w-2xl">
+                <div className="shrink-0 inline-flex items-center justify-center w-11 h-11 rounded-xl bg-paper-warm border border-ink-100 text-ink-700">
+                  <MessageCircle size={18} strokeWidth={1.75} />
+                </div>
+                <div>
+                  <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-500 mb-1.5">
+                    Quick chat or mentorship
+                  </p>
+                  <p className="font-display text-xl md:text-2xl text-ink-900 leading-snug text-balance">
+                    Not a project? Book a 15–30 minute call.
+                  </p>
+                  <p className="mt-2 text-sm text-ink-600 leading-relaxed">
+                    Career guidance, mock interviews, architecture sanity-checks, and 1:1
+                    mentorship — all on Topmate.
+                  </p>
+                </div>
+              </div>
+              <a
+                href="https://topmate.io/ethirajsrinivasan"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={trackCta('cta_topmate', 'homepage_mentorship_callout')}
+                className="group inline-flex items-center gap-2 px-5 py-3 rounded-full border border-ink-200 bg-paper text-ink-900 text-sm font-medium transition-all duration-300 ease-smooth hover:border-ink-400 hover:-translate-y-0.5 hover:shadow-soft self-start md:self-center shrink-0"
+              >
+                Book on Topmate
+                <ArrowUpRight
+                  size={16}
+                  className="transition-all duration-300 ease-smooth group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                />
+              </a>
+            </motion.div>
+
+            <motion.div
+              {...fadeUp}
+              transition={{ ...fadeUp.transition, delay: 0.32 }}
+              className="mt-10 flex flex-wrap items-center gap-3"
+            >
+              <Link
+                href="/work-with-me"
+                onClick={trackCta('cta_work_with_me', 'homepage_work_with_me_section')}
+                className="group inline-flex items-center gap-2 px-5 py-3 rounded-full bg-ink-900 text-paper text-sm font-medium transition-all duration-500 ease-smooth hover:bg-ink-800 hover:shadow-elev hover:-translate-y-0.5"
+              >
+                Engagement details
+                <ArrowUpRight
+                  size={16}
+                  className="transition-all duration-500 ease-smooth group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                />
+              </Link>
+              <a
+                href="mailto:ethirajsrinivasan@gmail.com?subject=Project%20inquiry"
+                onClick={trackCta('cta_email', 'homepage_work_with_me_section')}
+                className="group inline-flex items-center gap-2 px-5 py-3 text-sm font-medium text-ink-700 hover:text-ink-900 transition-colors"
+              >
+                <span className="link-underline">Send a brief</span>
+                <ArrowUpRight
+                  size={16}
+                  className="text-ink-400 transition-all duration-500 ease-smooth group-hover:text-ink-900 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                />
+              </a>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* ───────────── TESTIMONIALS ───────────── */}
+        <section className="relative section-y-sm border-t border-ink-100">
+          <Testimonials
+            items={featuredTestimonials}
+            variant="featured"
+            eyebrow="In their words"
+            title={
+              <>
+                People I&rsquo;ve <span className="italic">shipped with.</span>
+              </>
+            }
+            description="Recommendations from managers, ex-colleagues, and clients — paraphrased verbatim from LinkedIn and Upwork."
+          />
+          <div className="container-wide mt-10 md:mt-12">
+            <Link
+              href="/work-with-me#testimonials"
+              className="group inline-flex items-center gap-2 text-sm font-medium text-ink-900"
+            >
+              <span className="link-underline">More on the work-with-me page</span>
+              <ArrowUpRight
+                size={14}
+                className="text-ink-500 transition-all duration-500 ease-smooth group-hover:text-ink-900 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              />
+            </Link>
           </div>
         </section>
 
@@ -545,6 +798,7 @@ export default function Home() {
               <div className="flex flex-wrap items-center gap-4">
                 <a
                   href="mailto:ethirajsrinivasan@gmail.com"
+                  onClick={trackCta('cta_email', 'homepage_contact')}
                   className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-ink-900 text-paper text-sm font-medium transition-all duration-500 ease-smooth hover:bg-ink-800 hover:shadow-elev hover:-translate-y-0.5"
                 >
                   ethirajsrinivasan@gmail.com
@@ -554,12 +808,25 @@ export default function Home() {
                   />
                 </a>
                 <a
-                  href="https://in.linkedin.com/in/ethirajsrinivasan"
+                  href="https://topmate.io/ethirajsrinivasan"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-ink-200 bg-paper text-ink-900 text-sm font-medium transition-all duration-500 ease-smooth hover:border-ink-400 hover:-translate-y-0.5"
+                  onClick={trackCta('cta_topmate', 'homepage_contact')}
+                  className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-ink-200 bg-paper text-ink-900 text-sm font-medium transition-all duration-500 ease-smooth hover:border-ink-400 hover:-translate-y-0.5"
                 >
-                  LinkedIn
+                  Book on Topmate
+                  <ArrowUpRight
+                    size={16}
+                    className="text-ink-400 transition-all duration-500 ease-smooth group-hover:text-ink-900 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/ethirajsrinivasan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-2 py-3.5 text-sm font-medium text-ink-700 hover:text-ink-900 transition-colors"
+                >
+                  <span className="link-underline">LinkedIn</span>
                 </a>
               </div>
             </motion.div>

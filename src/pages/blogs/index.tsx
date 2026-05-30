@@ -1,10 +1,10 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import SEO from '@/components/SEO'
 import { ArrowUpRight } from 'lucide-react'
-import { blogIndex } from '@/data/blogIndex'
+import { visibleBlogIndex } from '@/data/blogIndex'
 import { plainTextMarkdown } from '@/lib/plain-text-markdown'
 import { resolveImageSrc } from '@/lib/resolve-image-src'
 
@@ -16,21 +16,38 @@ const fadeUp = {
 }
 
 export default function Blogs() {
-  const [featured, ...rest] = blogIndex
+  const [featured, ...rest] = visibleBlogIndex
 
   return (
     <>
-      <Head>
-        <title>Writing — Ethiraj Srinivasan</title>
-        <meta
-          name="description"
-          content="Technical articles and notes on software engineering, machine learning, data engineering, and travel."
-        />
-      </Head>
+      <SEO
+        title="Writing"
+        description="Technical articles and notes on software engineering, machine learning, data engineering, and travel."
+        path="/blogs/"
+        image="/og-default.png"
+        imageAlt="Writing by Ethiraj Srinivasan"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Blog',
+          name: 'Ethiraj Srinivasan — Writing',
+          url: 'https://ethirajsrinivasan.com/blogs/',
+          author: {
+            '@type': 'Person',
+            name: 'Ethiraj Srinivasan',
+            url: 'https://ethirajsrinivasan.com',
+          },
+          blogPost: visibleBlogIndex.map((post) => ({
+            '@type': 'BlogPosting',
+            headline: post.title,
+            url: `https://ethirajsrinivasan.com/blogs/${post.slug}/`,
+            datePublished: post.publishedAt,
+          })),
+        }}
+      />
 
       <Navbar />
 
-      <main className="min-h-screen overflow-x-hidden">
+      <main id="main" className="min-h-screen overflow-x-hidden">
         {/* ───────────── Hero ───────────── */}
         <section className="relative pt-28 md:pt-36 pb-14 md:pb-20">
           <div
@@ -83,8 +100,10 @@ export default function Blogs() {
                       </div>
                     </div>
                     <div className="md:col-span-5 space-y-4">
-                      <p className="font-mono text-xs uppercase tracking-[0.16em] text-ink-500">
-                        {featured.date}
+                      <p className="font-mono text-xs uppercase tracking-[0.16em] text-ink-500 flex items-center gap-2">
+                        <span>{featured.date}</span>
+                        <span aria-hidden="true" className="text-ink-300">/</span>
+                        <span>{featured.readTime}</span>
                       </p>
                       <h2 className="h-display text-3xl md:text-4xl lg:text-5xl leading-[1.05] text-balance group-hover:text-accent-700 transition-colors duration-300">
                         {featured.title}
@@ -113,7 +132,7 @@ export default function Blogs() {
             <div className="flex items-center justify-between mb-10">
               <h3 className="eyebrow">All articles</h3>
               <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-500">
-                {blogIndex.length} articles
+                {visibleBlogIndex.length} articles
               </span>
             </div>
 
@@ -136,8 +155,10 @@ export default function Blogs() {
                         />
                       </div>
                       <div className="p-6 flex-1 flex flex-col">
-                        <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-500 mb-3">
-                          {blog.date}
+                        <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-500 mb-3 flex items-center gap-2">
+                          <span>{blog.date}</span>
+                          <span aria-hidden="true" className="text-ink-300">/</span>
+                          <span>{blog.readTime}</span>
                         </p>
                         <h4 className="font-display text-xl md:text-2xl leading-tight text-ink-900 group-hover:text-accent-700 transition-colors duration-300 line-clamp-2 mb-3 text-balance">
                           {blog.title}

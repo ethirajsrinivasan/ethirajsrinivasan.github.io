@@ -5,7 +5,6 @@ export default function Collection2CsvPage() {
   return (
     <PortfolioShell
       slug="collection2-csv"
-      title="Collection2 Csv"
       category="Ruby Gem"
       description="Export ActiveRecord collections to CSV with minimal syntax, including associations"
       image="/assets/images/code-banner.svg"

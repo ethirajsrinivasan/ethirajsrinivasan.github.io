@@ -1,20 +1,24 @@
 import Link from 'next/link'
-import { Github, Linkedin, Twitter, Instagram, Youtube, BookOpen, ArrowUpRight } from 'lucide-react'
+import { Github, Linkedin, Twitter, Instagram, Youtube, BookOpen, MessageCircle, ArrowUpRight } from 'lucide-react'
+import { trackCta } from '@/lib/analytics'
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/ethirajsrinivasan', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://in.linkedin.com/in/ethirajsrinivasan', label: 'LinkedIn' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/ethirajsrinivasan', label: 'LinkedIn' },
+  { icon: MessageCircle, href: 'https://topmate.io/ethirajsrinivasan', label: 'Topmate' },
   { icon: BookOpen, href: 'https://medium.com/@ethi', label: 'Medium' },
   { icon: Youtube, href: 'https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1', label: 'YouTube' },
   { icon: Instagram, href: 'https://www.instagram.com/ethirajchandru/', label: 'Instagram' },
   { icon: Twitter, href: 'https://twitter.com/iamethi', label: 'X / Twitter' },
 ]
 
-const siteLinks = [
-  { href: '/#work', label: 'Work' },
+type SiteLink = { href: string; label: string; external?: boolean }
+const siteLinks: SiteLink[] = [
+  { href: '/#work', label: 'Projects' },
+  { href: '/work-with-me', label: 'Work with me' },
   { href: '/blogs', label: 'Writing' },
   { href: '/about', label: 'About' },
-  { href: '/resume.pdf', label: 'Resume', external: true },
+  { href: '/resume', label: 'Resume' },
 ]
 
 export default function Footer() {
@@ -51,6 +55,7 @@ export default function Footer() {
             </p>
             <a
               href="mailto:ethirajsrinivasan@gmail.com"
+              onClick={trackCta('cta_email', 'footer')}
               className="group inline-flex items-center gap-2 font-display text-2xl md:text-3xl tracking-tightest text-ink-900"
             >
               <span className="link-underline">ethirajsrinivasan@gmail.com</span>
@@ -71,14 +76,22 @@ export default function Footer() {
                     {link.external && <ArrowUpRight size={13} className="text-ink-400" />}
                   </span>
                 )
+                const onClick =
+                  link.href === '/resume'
+                    ? trackCta('cta_resume_download', 'footer')
+                    : link.href === '/work-with-me'
+                      ? trackCta('cta_work_with_me', 'footer')
+                      : undefined
                 return (
                   <li key={link.href}>
                     {link.external ? (
-                      <a href={link.href} target="_blank" rel="noopener noreferrer">
+                      <a href={link.href} target="_blank" rel="noopener noreferrer" onClick={onClick}>
                         {inner}
                       </a>
                     ) : (
-                      <Link href={link.href}>{inner}</Link>
+                      <Link href={link.href} onClick={onClick}>
+                        {inner}
+                      </Link>
                     )}
                   </li>
                 )
@@ -95,6 +108,11 @@ export default function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={
+                      link.label === 'Topmate'
+                        ? trackCta('cta_topmate', 'footer')
+                        : undefined
+                    }
                     className="group inline-flex items-center gap-2 text-sm text-ink-700 hover:text-ink-900 transition-colors"
                   >
                     <link.icon size={15} className="text-ink-500 group-hover:text-ink-900 transition-colors" />
@@ -110,10 +128,16 @@ export default function Footer() {
           <p className="text-xs text-ink-500 font-mono">
             © {year} Ethiraj Srinivasan. Crafted with care.
           </p>
-          <p className="text-xs text-ink-500 font-mono inline-flex items-center gap-2">
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            All systems operational
-          </p>
+          <Link
+            href="/work-with-me"
+            onClick={trackCta('cta_work_with_me', 'footer_status_pill')}
+            className="group text-xs text-ink-500 font-mono inline-flex items-center gap-2 hover:text-ink-900 transition-colors"
+          >
+            <span className="relative inline-flex w-1.5 h-1.5 rounded-full bg-emerald-500">
+              <span aria-hidden="true" className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-70" />
+            </span>
+            <span className="link-underline">Open for select engagements</span>
+          </Link>
         </div>
       </div>
     </footer>

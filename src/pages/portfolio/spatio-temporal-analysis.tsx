@@ -5,7 +5,6 @@ export default function SpatioTemporalAnalysisPage() {
   return (
     <PortfolioShell
       slug="spatio-temporal-analysis"
-      title="Spatio Temporal Analysis Of Students’ Travel"
       category="Machine Learning"
       description="Geospatial analysis to optimize NUS student travel times and surface nearby amenities"
       image="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1920&q=85&auto=format&fit=crop"
@@ -57,7 +56,7 @@ export default function SpatioTemporalAnalysisPage() {
                 the area around NUS, at the southwest part of Singapore.
               </p>
               <div className={pc.figure}>
-                <img src="/assets/images/heat.png" alt="Heat map of student travel paths" className={pc.img} />
+                <img src="/assets/images/heat.png" alt="Heat map of student travel paths" width={712} height={438} loading="lazy" decoding="async" className={pc.img} />
               </div>
             </div>
             <div>
@@ -66,7 +65,7 @@ export default function SpatioTemporalAnalysisPage() {
                 This cluster map shows all the clusters formed and also serves as heatmap. Visit the interactive Shiny application to view the distribution within the clusters by clicking on each cluster.
               </p>
               <div className={pc.figure}>
-                <img src="/assets/images/cluster.png" alt="Cluster map" className={pc.img} />
+                <img src="/assets/images/cluster.png" alt="Cluster map" width={712} height={468} loading="lazy" decoding="async" className={pc.img} />
               </div>
             </div>
             <div>
@@ -79,7 +78,7 @@ export default function SpatioTemporalAnalysisPage() {
                 points and signify the contrary.
               </p>
               <div className={pc.figure}>
-                <img src="/assets/images/moran_i.png" alt="Anselin's Local Moran's I" className={pc.img} />
+                <img src="/assets/images/moran_i.png" alt="Anselin's Local Moran's I" width={712} height={450} loading="lazy" decoding="async" className={pc.img} />
               </div>
             </div>
           </div>
@@ -105,7 +104,7 @@ export default function SpatioTemporalAnalysisPage() {
                 chose an alternate route.
               </p>
               <div className={pc.figure}>
-                <img src="/assets/images/train.png" alt="Train fault disruption map" className={pc.img} />
+                <img src="/assets/images/train.png" alt="Train fault disruption map" width={712} height={451} loading="lazy" decoding="async" className={pc.img} />
               </div>
             </div>
             <div>
@@ -136,7 +135,7 @@ export default function SpatioTemporalAnalysisPage() {
                 available too.
               </p>
               <div className={pc.figure}>
-                <img src="/assets/images/hawker.png" alt="Hawker centres near student clusters" className={pc.img} />
+                <img src="/assets/images/hawker.png" alt="Hawker centres near student clusters" width={712} height={458} loading="lazy" decoding="async" className={pc.img} />
               </div>
             </div>
             <div>
@@ -147,7 +146,7 @@ export default function SpatioTemporalAnalysisPage() {
                 proposed this one alternative, which is only possible via car/taxi.
               </p>
               <div className={pc.figure}>
-                <img src="/assets/images/alternative.png" alt="Alternative travel route" className={pc.img} />
+                <img src="/assets/images/alternative.png" alt="Alternative travel route" width={712} height={401} loading="lazy" decoding="async" className={pc.img} />
               </div>
             </div>
           </div>

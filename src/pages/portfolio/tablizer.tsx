@@ -5,7 +5,6 @@ export default function TablizerPage() {
   return (
     <PortfolioShell
       slug="tablizer"
-      title="Tablizer"
       category="Web Application"
       description="Web tool for converting data tables between different formats"
       image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=85&auto=format&fit=crop"

@@ -5,17 +5,16 @@ export default function RailsFortPage() {
   return (
     <PortfolioShell
       slug="rails-fort"
-      title="Rails Fort"
       category="Ruby Gem"
       description="Rails wrapper for a modern JavaScript progress bar for form completion"
-      image="/assets/images/code-banner.svg"
+      image="https://images.unsplash.com/photo-1756225802434-69951a36d99b?q=80&w=2070&auto=format&fit=crop"
       date="2015"
       technologies={["Ruby", "Rails", "JavaScript", "Asset Pipeline"]}
       links={[
         { href: 'https://rubygems.org/gems/rails-fort', label: 'RubyGems package' },
         { href: 'https://github.com/ethirajsrinivasan/rails-fort', label: 'Source code on GitHub' },
       ]}
-      imageFit="contain"
+      imageFit="cover"
     >
       <section className={pc.section}>
         <h2 className={pc.heading}>Summary</h2>

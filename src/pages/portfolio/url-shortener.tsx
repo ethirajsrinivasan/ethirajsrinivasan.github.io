@@ -5,7 +5,6 @@ export default function UrlShortenerPage() {
   return (
     <PortfolioShell
       slug="url-shortener"
-      title="Url Shortner"
       category="Web Application"
       description="URL shortening service with usage stats and browser analytics"
       image="/assets/images/code-banner.svg"

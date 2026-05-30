@@ -1,6 +1,8 @@
-import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
+import SEO from '@/components/SEO'
+import { trackCta } from '@/lib/analytics'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import {
@@ -203,7 +205,7 @@ const socials = [
   { icon: BookOpen, platform: 'Medium', username: '@ethi', link: 'https://medium.com/@ethi' },
   { icon: Youtube, platform: 'YouTube', username: 'ethirajsrinivasan', link: 'https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1' },
   { icon: Instagram, platform: 'Instagram', username: 'ethirajchandru', link: 'https://www.instagram.com/ethirajchandru/' },
-  { icon: Linkedin, platform: 'LinkedIn', username: 'ethirajsrinivasan', link: 'https://www.linkedin.com/in/ethirajsrinivasan/' },
+  { icon: Linkedin, platform: 'LinkedIn', username: 'ethirajsrinivasan', link: 'https://www.linkedin.com/in/ethirajsrinivasan' },
   { icon: Github, platform: 'GitHub', username: 'ethirajsrinivasan', link: 'https://github.com/ethirajsrinivasan/' },
   { icon: Twitter, platform: 'X / Twitter', username: 'iamethi', link: 'https://twitter.com/iamethi' },
   { icon: MessageCircle, platform: 'Reddit', username: 'ethirajsrinivasan', link: 'https://www.reddit.com/user/ethirajsrinivasan' },
@@ -219,17 +221,18 @@ const fadeUp = {
 export default function About() {
   return (
     <>
-      <Head>
-        <title>About — Ethiraj Srinivasan</title>
-        <meta
-          name="description"
-          content="Software engineer and data leader with a decade of experience — from Rails at TCS and Pramati to big data at Shopee, and now InfiniTraq and Zgrow."
-        />
-      </Head>
+      <SEO
+        title="About"
+        description="Software engineer and data leader with a decade of experience — from Rails at TCS and Pramati to big data at Shopee, and now Co-Founder & CTO at InfiniTraq. Open for select freelance and advisory engagements."
+        path="/about/"
+        image="/assets/my_photo.jpeg"
+        imageAlt="Ethiraj Srinivasan"
+        type="profile"
+      />
 
       <Navbar />
 
-      <main className="min-h-screen overflow-x-hidden">
+      <main id="main" className="min-h-screen overflow-x-hidden">
         {/* ───────────── Hero ───────────── */}
         <section className="relative pt-28 md:pt-36 pb-16 md:pb-20">
           <div className="absolute inset-0 bg-mesh-warm opacity-80 pointer-events-none" aria-hidden="true" />
@@ -241,7 +244,21 @@ export default function About() {
               className="grid md:grid-cols-12 gap-12 items-end"
             >
               <div className="md:col-span-7 space-y-6">
-                <h2 className="eyebrow">About</h2>
+                <div className="flex flex-wrap items-center gap-3">
+                  <h2 className="eyebrow">About</h2>
+                  <Link
+                    href="/work-with-me"
+                    onClick={trackCta('cta_work_with_me', 'about_status_pill')}
+                    className="status-pill group hover:border-ink-400 transition-colors"
+                  >
+                    <span className="status-dot" />
+                    <span>Open for select engagements</span>
+                    <ArrowUpRight
+                      size={12}
+                      className="text-ink-400 transition-all duration-300 ease-smooth group-hover:text-ink-900 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                    />
+                  </Link>
+                </div>
                 <h1 className="h-display text-5xl sm:text-6xl md:text-7xl leading-[1.02] text-balance">
                   Hey, <span className="italic">reader.</span>
                 </h1>
@@ -575,16 +592,44 @@ export default function About() {
               <p className="h-display text-4xl sm:text-5xl md:text-6xl leading-[1.02] text-balance mb-10">
                 Have something <span className="italic">interesting</span> to share?
               </p>
-              <a
-                href="mailto:ethirajsrinivasan@gmail.com"
-                className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-ink-900 text-paper text-sm font-medium transition-all duration-500 ease-smooth hover:bg-ink-800 hover:shadow-elev hover:-translate-y-0.5"
-              >
-                ethirajsrinivasan@gmail.com
-                <ArrowUpRight
-                  size={16}
-                  className="transition-all duration-500 ease-smooth group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                />
-              </a>
+              <div className="flex flex-wrap items-center gap-4">
+                <a
+                  href="mailto:ethirajsrinivasan@gmail.com"
+                  onClick={trackCta('cta_email', 'about_cta')}
+                  className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-ink-900 text-paper text-sm font-medium transition-all duration-500 ease-smooth hover:bg-ink-800 hover:shadow-elev hover:-translate-y-0.5"
+                >
+                  ethirajsrinivasan@gmail.com
+                  <ArrowUpRight
+                    size={16}
+                    className="transition-all duration-500 ease-smooth group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  />
+                </a>
+                <a
+                  href="https://topmate.io/ethirajsrinivasan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={trackCta('cta_topmate', 'about_cta')}
+                  className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-ink-200 bg-paper text-ink-900 text-sm font-medium transition-all duration-500 ease-smooth hover:border-ink-400 hover:-translate-y-0.5"
+                >
+                  <MessageCircle size={15} />
+                  Book on Topmate
+                  <ArrowUpRight
+                    size={16}
+                    className="text-ink-400 transition-all duration-500 ease-smooth group-hover:text-ink-900 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  />
+                </a>
+                <Link
+                  href="/work-with-me"
+                  onClick={trackCta('cta_work_with_me', 'about_cta')}
+                  className="group inline-flex items-center gap-2 px-2 py-3.5 text-sm font-medium text-ink-700 hover:text-ink-900 transition-colors"
+                >
+                  <span className="link-underline">Work with me</span>
+                  <ArrowUpRight
+                    size={14}
+                    className="text-ink-400 transition-all duration-500 ease-smooth group-hover:text-ink-900 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  />
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>

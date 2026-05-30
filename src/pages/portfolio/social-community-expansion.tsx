@@ -6,6 +6,8 @@ function GalleryFigure({
   alt,
   caption,
   imgClass,
+  width,
+  height,
   wide,
   expand,
 }: {
@@ -13,13 +15,23 @@ function GalleryFigure({
   alt: string
   caption: string
   imgClass: string
+  width?: number
+  height?: number
   wide?: boolean
   expand?: boolean
 }) {
   return (
     <figure className={`${pc.figureBox} ${wide ? pc.figureWide : ''}`}>
       <div className={expand ? pc.figureMediaExpansion : pc.figureMedia}>
-        <img src={src} alt={alt} className={imgClass} loading="lazy" />
+        <img
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          className={imgClass}
+          loading="lazy"
+          decoding="async"
+        />
       </div>
       <figcaption className={pc.caption}>{caption}</figcaption>
     </figure>
@@ -30,7 +42,6 @@ export default function SocialCommunityExpansionPage() {
   return (
     <PortfolioShell
       slug="social-community-expansion"
-      title="Social Community Expansion"
       category="Machine Learning"
       description="Graph-based analysis for social network community detection and expansion"
       image="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=85&auto=format&fit=crop"

@@ -5,7 +5,6 @@ export default function TechnologyIconsPage() {
   return (
     <PortfolioShell
       slug="technology-icons"
-      title="Technology Icons"
       category="Ruby Gem"
       description="Rails web font gem with a broad set of technology icons"
       image="/assets/images/code-banner.svg"

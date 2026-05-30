@@ -5,7 +5,6 @@ export default function Table2CsvPage() {
   return (
     <PortfolioShell
       slug="table2-csv"
-      title="Table2 Csv"
       category="Ruby Gem"
       description="Ruby gem for converting HTML tables to CSV format"
       image="/assets/images/code-banner.svg"
