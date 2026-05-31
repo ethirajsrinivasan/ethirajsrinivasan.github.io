@@ -19,6 +19,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+        <meta
+          name="google-site-verification"
+          content="DQ5TvxLAxHkZpHkLAwlGSvEpdPyy18BcgnNUhwwaLko"
+        />
         <meta name="theme-color" content="#1a1d29" />
       </Head>
       
