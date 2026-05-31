@@ -18,7 +18,14 @@ import {
   Award,
   Mic,
   GraduationCap,
+  Laptop,
+  Tablet,
+  Smartphone,
+  Camera,
+  Watch,
+  Aperture,
 } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 
 type Experience = {
   period: string
@@ -183,22 +190,24 @@ const talks = [
   },
 ]
 
-const gadgets = [
-  { name: 'MacBook Pro M2', link: 'https://amzn.to/3Mo79sP', image: 'https://ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0B3B5BWCT&Format=_SL250_&ID=AsinImage&MarketPlace=IN&ServiceVersion=20070822&WS=1&tag=ethigeek-21&language=en_IN' },
-  { name: 'iPad Pro', link: 'https://amzn.to/41bpqxL', image: 'https://ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BJLFBYV1&Format=_SL160_&ID=AsinImage&MarketPlace=IN&ServiceVersion=20070822&WS=1&tag=ethigeek-21&language=en_IN' },
-  { name: 'iPhone 12', link: 'https://amzn.to/3nRxZzs', image: 'https://ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B08L5VJYV7&Format=_SL250_&ID=AsinImage&MarketPlace=IN&ServiceVersion=20070822&WS=1&tag=ethigeek-21&language=en_IN' },
-  { name: 'GoPro Hero 11', link: 'https://amzn.to/3GpmAwS', image: 'https://ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BVFKWNRK&Format=_SL250_&ID=AsinImage&MarketPlace=IN&ServiceVersion=20070822&WS=1&tag=ethigeek-21&language=en_IN' },
-  { name: 'Kindle', link: 'https://amzn.to/3Kg7aMU', image: 'https://ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B08N3RQZ51&Format=_SL250_&ID=AsinImage&MarketPlace=IN&ServiceVersion=20070822&WS=1&tag=ethigeek-21&language=en_IN' },
-  { name: 'Garmin Hybrid Watch', link: 'https://amzn.to/3UfuJK4', image: 'https://ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07VVLQPZL&Format=_SL250_&ID=AsinImage&MarketPlace=IN&ServiceVersion=20070822&WS=1&tag=ethigeek-21&language=en_IN' },
+const gadgets: { name: string; icon: LucideIcon }[] = [
+  { name: 'MacBook Pro M2', icon: Laptop },
+  { name: 'iPad Pro', icon: Tablet },
+  { name: 'iPhone 12', icon: Smartphone },
+  { name: 'GoPro Hero 11', icon: Camera },
+  { name: 'Kindle', icon: BookOpen },
+  { name: 'Apple Watch SE', icon: Watch },
+  { name: 'Sony α7 IV', icon: Camera },
+  { name: '200–600mm Lens', icon: Aperture },
 ]
 
 const books = [
-  { name: 'Peak: Secrets from the New Science of Expertise', link: 'https://amzn.to/3nV4pck' },
-  { name: 'How to Become a Straight-A Student', link: 'https://amzn.to/3ZP3CGX' },
-  { name: 'The Power of Your Subconscious Mind', link: 'https://amzn.to/3zDSbHx' },
-  { name: 'Metaprogramming Ruby 2', link: 'https://amzn.to/3UkWgd9' },
-  { name: 'Data Driven', link: 'https://amzn.to/43ewJq1' },
-  { name: 'Warren Buffett: The Business and Life Lessons', link: 'https://amzn.to/3nVa2Y5' },
+  'Peak: Secrets from the New Science of Expertise',
+  'How to Become a Straight-A Student',
+  'The Power of Your Subconscious Mind',
+  'Metaprogramming Ruby 2',
+  'Data Driven',
+  'Warren Buffett: The Business and Life Lessons',
 ]
 
 const socials = [
@@ -208,7 +217,6 @@ const socials = [
   { icon: Linkedin, platform: 'LinkedIn', username: 'ethirajsrinivasan', link: 'https://www.linkedin.com/in/ethirajsrinivasan' },
   { icon: Github, platform: 'GitHub', username: 'ethirajsrinivasan', link: 'https://github.com/ethirajsrinivasan/' },
   { icon: Twitter, platform: 'X / Twitter', username: 'iamethi', link: 'https://twitter.com/iamethi' },
-  { icon: MessageCircle, platform: 'Reddit', username: 'ethirajsrinivasan', link: 'https://www.reddit.com/user/ethirajsrinivasan' },
 ]
 
 const fadeUp = {
@@ -506,43 +514,40 @@ export default function About() {
         {/* ───────────── Gadgets ───────────── */}
         <section className="relative section-y-sm border-t border-ink-100 bg-paper-warm">
           <div className="container-wide">
-            <motion.div {...fadeUp} className="grid md:grid-cols-12 gap-10 mb-12">
-              <div className="md:col-span-4 space-y-3">
-                <h2 className="eyebrow">Daily Carry</h2>
-                <h3 className="h-display text-3xl md:text-4xl text-balance">
-                  Gadgets I <span className="italic">use</span>.
-                </h3>
+            <motion.div {...fadeUp} className="grid md:grid-cols-12 gap-10 items-start">
+              <div className="md:col-span-4 space-y-4">
+                <div className="space-y-3">
+                  <h2 className="eyebrow">Daily Carry</h2>
+                  <h3 className="h-display text-3xl md:text-4xl text-balance">
+                    Gadgets I <span className="italic">use</span>.
+                  </h3>
+                </div>
+                <p className="text-sm text-ink-500 max-w-sm">
+                  Tools that earn a place in my bag — no sponsored links, just what I actually reach for.
+                </p>
               </div>
-              <p className="md:col-span-8 text-sm text-ink-500 self-end max-w-lg">
-                Tools that earn a place in my bag. Affiliate links — buying through them helps
-                support this site.
-              </p>
-            </motion.div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
-              {gadgets.map((g, i) => (
-                <motion.a
-                  key={g.name}
-                  {...fadeUp}
-                  transition={{ ...fadeUp.transition, delay: i * 0.04 }}
-                  href={g.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative aspect-square bg-paper rounded-2xl border border-ink-100 p-4 flex flex-col items-center justify-between transition-all duration-500 ease-smooth hover:-translate-y-1 hover:border-ink-200 hover:shadow-elev"
-                >
-                  <div className="flex-1 flex items-center justify-center w-full">
-                    <img
-                      src={g.image}
-                      alt={g.name}
-                      className="max-h-24 w-auto object-contain transition-transform duration-500 ease-smooth group-hover:scale-105"
-                    />
-                  </div>
-                  <p className="text-xs font-medium text-ink-700 text-center mt-2 group-hover:text-ink-900 transition-colors">
-                    {g.name}
-                  </p>
-                </motion.a>
-              ))}
-            </div>
+              <div className="md:col-span-8">
+                <ul className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-ink-100 border border-ink-100 rounded-2xl overflow-hidden">
+                  {gadgets.map((g) => {
+                    const Icon = g.icon
+                    return (
+                      <li
+                        key={g.name}
+                        className="group flex flex-col items-center justify-center gap-2.5 bg-paper px-3 py-5 sm:py-6 text-center transition-colors hover:bg-paper-warm"
+                      >
+                        <span className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-ink-100 text-ink-600 transition-colors group-hover:bg-ink-900 group-hover:text-paper">
+                          <Icon size={18} strokeWidth={1.5} aria-hidden="true" />
+                        </span>
+                        <p className="text-xs font-medium text-ink-700 leading-snug group-hover:text-ink-900 transition-colors">
+                          {g.name}
+                        </p>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -560,21 +565,10 @@ export default function About() {
               <div className="md:col-span-8">
                 <ul className="divide-y divide-ink-100 border-y border-ink-100">
                   {books.map((book) => (
-                    <li key={book.name}>
-                      <a
-                        href={book.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group flex items-center justify-between gap-4 py-4 text-ink-700 hover:text-ink-900 transition-colors"
-                      >
-                        <span className="font-display text-lg md:text-xl leading-snug text-balance">
-                          {book.name}
-                        </span>
-                        <ArrowUpRight
-                          size={16}
-                          className="text-ink-400 transition-all duration-500 ease-smooth group-hover:text-ink-900 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 shrink-0"
-                        />
-                      </a>
+                    <li key={book}>
+                      <p className="py-4 font-display text-lg md:text-xl leading-snug text-balance text-ink-800">
+                        {book}
+                      </p>
                     </li>
                   ))}
                 </ul>

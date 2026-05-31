@@ -25,8 +25,6 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta name="theme-color" content="#1a1d29" />
       </Head>
-      
-      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704" crossOrigin="anonymous" />
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-S8HN948EZZ" />
       <Script id="google-analytics" strategy="afterInteractive">
         {`

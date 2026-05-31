@@ -10,7 +10,7 @@ import {
 import {
   getBlogBySlug,
   isEmbedImageLinkCard,
-  isEthigeekHomepage,
+  isOwnSiteHomepage,
   isPlainImageLink,
   isPreviewCardHost,
   isVerticalLinkCardHost,
@@ -124,7 +124,7 @@ function MarkdownLink({
     )
   }
 
-  if (imgEarly?.src && isEthigeekHomepage(href)) {
+  if (imgEarly?.src && isOwnSiteHomepage(href)) {
     const meta = lookupLinkCardMeta(href)
     return (
       <SiteEmbedFigure

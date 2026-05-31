@@ -40,28 +40,38 @@ export function isVerticalLinkCardHost(href: string): boolean {
   return isMediumHost(href) || isBootcampHost(href)
 }
 
-export function isEthigeekHomepage(href: string): boolean {
+const OWN_SITE_HOSTS = new Set(['ethirajsrinivasan.com', 'ethigeek.com'])
+
+function isOwnSiteHost(host: string): boolean {
+  return OWN_SITE_HOSTS.has(host.replace(/^www\./, ''))
+}
+
+/** Homepage links on this site (current or legacy domain). */
+export function isOwnSiteHomepage(href: string): boolean {
   try {
     const url = new URL(href)
     const host = url.hostname.replace(/^www\./, '')
-    if (host !== 'ethigeek.com') return false
+    if (!isOwnSiteHost(host)) return false
     const path = url.pathname.replace(/\/$/, '')
     return path === '' || path === '/'
   } catch {
-    return /^https?:\/\/(www\.)?ethigeek\.com\/?$/i.test(href)
+    return /^https?:\/\/(www\.)?(ethirajsrinivasan|ethigeek)\.com\/?$/i.test(href)
   }
 }
+
+/** @deprecated Use isOwnSiteHomepage */
+export const isEthigeekHomepage = isOwnSiteHomepage
 
 export function isPreviewCardHost(href: string): boolean {
   if (isVerticalLinkCardHost(href)) return true
   // Own blog cross-links stay inline; cards are for Medium/Bootcamp and external embeds.
   if (parseBlogSlug(href)) return false
-  if (isEthigeekHomepage(href)) return false
+  if (isOwnSiteHomepage(href)) return false
   try {
-    const host = new URL(href).hostname
-    return host === 'ethigeek.com' || host === 'www.ethigeek.com'
+    const host = new URL(href).hostname.replace(/^www\./, '')
+    return isOwnSiteHost(host)
   } catch {
-    return href.includes('ethigeek.com')
+    return /ethirajsrinivasan\.com|ethigeek\.com/i.test(href)
   }
 }
 
@@ -100,7 +110,7 @@ const EMBED_CARD_HOSTS = [
 export function isEmbedImageLinkCard(href: string, imgSrc: string): boolean {
   if (isPlainImageLink(href, imgSrc)) return false
   if (parseBlogSlug(href)) return true
-  if (isEthigeekHomepage(href)) return true
+  if (isOwnSiteHomepage(href)) return true
   if (isPreviewCardHost(href) || isVerticalLinkCardHost(href)) return true
   try {
     const host = new URL(href, 'https://ethirajsrinivasan.com').hostname.replace(/^www\./, '')

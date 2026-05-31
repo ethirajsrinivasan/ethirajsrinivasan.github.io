@@ -12,7 +12,6 @@ export default function CssToInlinerPage() {
       date="2016"
       technologies={["Ruby on Rails", "Premailer", "Nokogiri", "JavaScript"]}
       links={[
-        { href: 'http://css2inliner.ethigeek.com/', label: 'CSS2Inliner application' },
         { href: 'https://github.com/ethirajsrinivasan/css-to-inliner', label: 'Source code on GitHub' },
       ]}
     >

@@ -28,10 +28,10 @@ export const linkCardMeta: Record<string, LinkCardMeta> = {
     description:
       'Rate limit algorithm is a mechanism used to control the rate of requests or messages being sent or received by a system or service.',
   },
-  'ethigeek.com': {
+  'ethirajsrinivasan.com': {
     title: 'Ethiraj Srinivasan',
     description:
-      "Hi, this is Ethiraj, I'm a software developer, amateur cook, avid traveler and bibliophile hailing from Singapore.",
+      'Software engineer and data leader. Co-Founder & CTO at InfiniTraq. Portfolio, writing, and open-source work.',
   },
   'youtube.com/watch?v=hchtg-IPiJY': {
     title: 'The Madakaripura Waterfall | East Java | Indonesia - YouTube',

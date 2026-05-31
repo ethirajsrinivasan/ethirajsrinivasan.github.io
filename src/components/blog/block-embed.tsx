@@ -1,7 +1,7 @@
 import { Children, isValidElement, type ReactElement, type ReactNode } from 'react'
 import {
   isEmbedImageLinkCard,
-  isEthigeekHomepage,
+  isOwnSiteHomepage,
   isPreviewCardHost,
   isVerticalLinkCardHost,
 } from '@/lib/blog-links'
@@ -26,7 +26,7 @@ export function isEmbeddableLinkParagraph(children: ReactNode): boolean {
   const el = items[0] as ReactElement<{ href?: string; children?: ReactNode }>
   const href = el.props.href
   if (typeof href !== 'string') return false
-  if (isEthigeekHomepage(href) && hasImageChild(el.props.children)) return true
+  if (isOwnSiteHomepage(href) && hasImageChild(el.props.children)) return true
   if (isVerticalLinkCardHost(href) && hasImageChild(el.props.children)) return true
   if (isPreviewCardHost(href) && hasImageChild(el.props.children)) return true
   if (hasImageChild(el.props.children) && isEmbedImageLinkCard(href, findImageSrc(el.props.children) ?? '')) {

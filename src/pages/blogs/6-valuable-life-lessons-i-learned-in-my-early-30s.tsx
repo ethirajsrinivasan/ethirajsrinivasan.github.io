@@ -76,23 +76,23 @@ I follow a simple formula for my investing journey. From my income, I first pay 
 
 ## 4. Digital Presence
 
-World is now a huge competition in whatever field we take. Thus we need to be ahead of others. Having a digital presence in your field gives you an advantage over others and creates more visibility for us. It is also a great opportunity to showcase our skills. For a UI/UX professional it could be an account in Behance. For a photographer, it could be a professional Instagram profile. For a software professional like me it could be a [personal website](https://ethigeek.com). Create a digital presence and shine ahead in your field.
+World is now a huge competition in whatever field we take. Thus we need to be ahead of others. Having a digital presence in your field gives you an advantage over others and creates more visibility for us. It is also a great opportunity to showcase our skills. For a UI/UX professional it could be an account in Behance. For a photographer, it could be a professional Instagram profile. For a software professional like me it could be a [personal website](https://ethirajsrinivasan.com). Create a digital presence and shine ahead in your field.
 
 Check out my personal website:
 
-> [![Ethiraj Srinivasan](/assets/ai-6782a7d586827e3fe87b3b5907209c7f3bbf9c809841f139aa0bae2b9c5c0dd8.jpg)](https://ethigeek.com)
+> [![Ethiraj Srinivasan](/assets/ai-6782a7d586827e3fe87b3b5907209c7f3bbf9c809841f139aa0bae2b9c5c0dd8.jpg)](https://ethirajsrinivasan.com)
 
 ## 5. Growth skills 
 
 Apart from the professional skills that we develop over the years developing skills other than work is also essential for our lifestyle. It could be cooking, photography, or dancing. I developed my reading skills and enjoyed reading some of great books like
 
-- [Peak: Secrets from the New Science of Expertise](https://amzn.to/3nV4pck)
+- Peak: Secrets from the New Science of Expertise
 
-- [The Power of Your Subconscious Mind](https://amzn.to/3zDSbHx)
+- The Power of Your Subconscious Mind
 
-- [Sticky Habits](https://amzn.to/3Goxof1)
+- Sticky Habits
 
-- [Warren Buffett: The Business and Life Lessons](https://amzn.to/3nVa2Y5)
+- Warren Buffett: The Business and Life Lessons
 
 Recently I also cultivated my writing skills and published some blogs at [https://ethirajsrinivasan.com/blogs/](https://ethirajsrinivasan.com/blogs/)
 

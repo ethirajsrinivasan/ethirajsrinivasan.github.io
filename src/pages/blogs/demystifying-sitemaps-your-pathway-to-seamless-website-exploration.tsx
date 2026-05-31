@@ -166,7 +166,7 @@ rake sitemap:refresh
 \`\`\`
 
 XML Sitemap will be created in the \`/public\` directory and it will also ping the Google search engine to inform about the sitemap availability.
-Do check the sitemap of my personal website at \`https://ethigeek.com/sitemap.xml.gz\`
+Do check the sitemap of my personal website at \`https://ethirajsrinivasan.com/sitemap.xml\`
 
 ## Conclusion
 
