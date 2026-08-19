@@ -1,17 +1,19 @@
 import SEO from '@/components/SEO'
 import { trackCta } from '@/lib/analytics'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
 import FadeUp from '@/components/FadeUp'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import Testimonials from '@/components/Testimonials'
 import { ArrowUpRight, ArrowRight, MapPin, ShieldCheck, Eye, Activity, Cpu, Database, Sparkles, Compass, MessageCircle } from 'lucide-react'
 import { visibleBlogIndex } from '@/data/blogIndex'
 import { visiblePortfolioIndex } from '@/data/portfolioIndex'
 import { featuredTestimonials } from '@/data/testimonials'
 import { plainTextMarkdown } from '@/lib/plain-text-markdown'
 import { resolveImageSrc } from '@/lib/resolve-image-src'
+
+const Testimonials = dynamic(() => import('@/components/Testimonials'))
 
 const skills = [
   'Apache Spark', 'Hadoop', 'Hudi', 'Hive', 'HBase', 'Kafka',

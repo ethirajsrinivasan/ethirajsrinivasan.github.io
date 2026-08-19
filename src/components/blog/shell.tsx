@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import PostNav from '@/components/PostNav'
@@ -53,6 +54,9 @@ export default function BlogShell({
 
   return (
     <>
+      <Head>
+        <link rel="stylesheet" href="/blog-prose.css" />
+      </Head>
       <SEO
         title={title}
         description={description}

@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "predev": "node scripts/build-site-meta.mjs",
+    "predev": "node scripts/build-site-meta.mjs && node scripts/build-route-css.mjs",
     "dev": "next dev",
-    "prebuild": "node scripts/build-site-meta.mjs",
+    "prebuild": "node scripts/build-site-meta.mjs && node scripts/build-route-css.mjs",
     "build": "next build",
     "postbuild": "node scripts/generate-resume-pdf.mjs",
     "resume:pdf": "npm run build",

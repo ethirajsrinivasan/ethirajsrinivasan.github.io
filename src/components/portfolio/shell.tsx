@@ -9,6 +9,7 @@ import type { ReactNode } from 'react'
 import { getPortfolioIndexEntry, visiblePortfolioIndex } from '@/data/portfolioIndex'
 import { getContentNeighbors } from '@/lib/contentNeighbors'
 import { slugFromPath } from '@/lib/slugFromPath'
+import { resolveImageSrc } from '@/lib/resolve-image-src'
 import { pl, externalLink, bannerImageClass, heroClass } from './classes'
 
 export type ProjectLink = {
@@ -51,10 +52,13 @@ export default function PortfolioShell({
   const { previous, next } = slug ? getContentNeighbors(slug, visiblePortfolioIndex) : {}
   const indexEntry = slug ? getPortfolioIndexEntry(slug) : undefined
   const displayTitle = indexEntry?.title ?? title ?? 'Project'
+  const bannerSrc = resolveImageSrc(image)
 
   const projectPath = slug ? `/portfolio/${slug}/` : '/portfolio/'
   const projectUrl = `https://ethirajsrinivasan.com${projectPath}`
-  const ogImage = image.startsWith('http') ? image : `https://ethirajsrinivasan.com${image}`
+  const ogImage = bannerSrc.startsWith('http')
+    ? bannerSrc
+    : `https://ethirajsrinivasan.com${bannerSrc}`
 
   return (
     <>
@@ -62,7 +66,7 @@ export default function PortfolioShell({
         title={displayTitle}
         description={description}
         path={projectPath}
-        image={image}
+        image={bannerSrc}
         imageAlt={indexEntry?.imageAlt ?? displayTitle}
         type="article"
         jsonLd={{
@@ -87,11 +91,14 @@ export default function PortfolioShell({
 
       <main id="main" className={pl.main}>
         {/* ─── Cinematic banner hero ─── */}
-        <header className={heroClass(image, imageFit)}>
+        <header className={heroClass(bannerSrc, imageFit)}>
           <img
-            src={image}
+            src={bannerSrc}
             alt={indexEntry?.imageAlt ?? displayTitle}
-            className={bannerImageClass(image, imageFit)}
+            className={bannerImageClass(bannerSrc, imageFit)}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
           <div className={pl.heroOverlay} aria-hidden="true" />
           <div className={pl.heroNoise} aria-hidden="true" />

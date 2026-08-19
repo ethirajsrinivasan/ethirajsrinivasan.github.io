@@ -10,6 +10,7 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SEO from '@/components/SEO'
+import Head from 'next/head'
 import { trackCta } from '@/lib/analytics'
 import { Mail, Phone, Globe, Github, Linkedin, Download } from 'lucide-react'
 
@@ -266,6 +267,9 @@ function BulletList({ items }: { items: string[] }) {
 export default function ResumePage() {
   return (
     <>
+      <Head>
+        <link rel="stylesheet" href="/resume.css" />
+      </Head>
       <SEO
         title="Resume — Ethiraj Srinivasan"
         titleAsIs

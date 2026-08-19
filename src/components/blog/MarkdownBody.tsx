@@ -1,4 +1,5 @@
 import { Children, isValidElement, useMemo, type ReactElement, type ReactNode } from 'react'
+import dynamic from 'next/dynamic'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
@@ -27,9 +28,10 @@ import {
   unwrapParagraphBlockContent,
 } from './block-embed'
 import SiteEmbedFigure from './SiteEmbedFigure'
-import CodeBlock from './CodeBlock'
 import { useBlogArticle } from './context'
 import { bc, externalLink } from './classes'
+
+const CodeBlock = dynamic(() => import('./CodeBlock'))
 
 function fencedCodeText(children: ReactNode): string {
   return String(children).replace(/\n$/, '')
