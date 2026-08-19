@@ -1,15 +1,9 @@
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import FadeUp from '@/components/FadeUp'
 import { ArrowLeft, ArrowUpRight, Home } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SEO from '@/components/SEO'
-
-const fadeUp = {
-  initial: { opacity: 0, y: 24 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
-}
 
 export default function Custom404() {
   return (
@@ -34,7 +28,7 @@ export default function Custom404() {
           />
 
           <div className="container-wide relative">
-            <motion.div {...fadeUp} className="max-w-3xl">
+            <FadeUp className="max-w-3xl animate-fade-in-up">
               <h2 className="eyebrow mb-6">Lost in the stacks</h2>
 
               <p
@@ -91,7 +85,7 @@ export default function Custom404() {
                   <span className="link-underline">Go back</span>
                 </button>
               </div>
-            </motion.div>
+            </FadeUp>
           </div>
         </section>
       </main>

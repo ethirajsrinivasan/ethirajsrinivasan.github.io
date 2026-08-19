@@ -1,7 +1,7 @@
 import SEO from '@/components/SEO'
 import { trackCta } from '@/lib/analytics'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import FadeUp from '@/components/FadeUp'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Testimonials from '@/components/Testimonials'
@@ -17,13 +17,6 @@ import {
   XCircle,
   Mail,
 } from 'lucide-react'
-
-const fadeUp = {
-  initial: { opacity: 0, y: 24 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-80px' },
-  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
-}
 
 const services = [
   {
@@ -228,12 +221,7 @@ export default function WorkWithMe() {
           />
 
           <div className="container-wide relative">
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="max-w-4xl"
-            >
+            <div className="max-w-4xl animate-fade-in-up">
               <div className="mb-8">
                 <span className="status-pill">
                   <span className="status-dot" />
@@ -288,14 +276,14 @@ export default function WorkWithMe() {
                   />
                 </a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* ───────────── SERVICES ───────────── */}
         <section className="relative section-y-sm border-t border-ink-100">
           <div className="container-wide">
-            <motion.div {...fadeUp} className="grid md:grid-cols-12 gap-10 md:gap-16 mb-14">
+            <FadeUp className="grid md:grid-cols-12 gap-10 md:gap-16 mb-14">
               <div className="md:col-span-4 space-y-4">
                 <h2 className="eyebrow">What I take on</h2>
                 <h3 className="h-display text-4xl md:text-5xl leading-[1.05] text-balance">
@@ -309,14 +297,13 @@ export default function WorkWithMe() {
                   move the needle fastest and where I genuinely enjoy the problem.
                 </p>
               </div>
-            </motion.div>
+            </FadeUp>
 
             <div className="grid lg:grid-cols-3 gap-5 md:gap-6">
               {services.map((s, idx) => (
-                <motion.article
+                <FadeUp as="article"
                   key={s.title}
-                  {...fadeUp}
-                  transition={{ ...fadeUp.transition, delay: idx * 0.08 }}
+                  delay={idx * 80}
                   className="bento-card flex flex-col"
                 >
                   <div className="relative z-10 flex flex-col h-full">
@@ -339,7 +326,7 @@ export default function WorkWithMe() {
                       ))}
                     </ul>
                   </div>
-                </motion.article>
+                </FadeUp>
               ))}
             </div>
           </div>
@@ -348,7 +335,7 @@ export default function WorkWithMe() {
         {/* ───────────── PROCESS ───────────── */}
         <section className="relative section-y bg-paper-warm border-t border-ink-100">
           <div className="container-wide">
-            <motion.div {...fadeUp} className="grid md:grid-cols-12 gap-10 md:gap-16 mb-14">
+            <FadeUp className="grid md:grid-cols-12 gap-10 md:gap-16 mb-14">
               <div className="md:col-span-4 space-y-4">
                 <h2 className="eyebrow">How I work</h2>
                 <h3 className="h-display text-4xl md:text-5xl leading-[1.05] text-balance">
@@ -363,14 +350,13 @@ export default function WorkWithMe() {
                   meaningful changes in your code.
                 </p>
               </div>
-            </motion.div>
+            </FadeUp>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
               {process.map((p, idx) => (
-                <motion.div
+                <FadeUp
                   key={p.n}
-                  {...fadeUp}
-                  transition={{ ...fadeUp.transition, delay: idx * 0.08 }}
+                  delay={idx * 80}
                   className="card-soft p-6 sm:p-7 hover:!translate-y-0"
                 >
                   <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400 mb-3">
@@ -380,7 +366,7 @@ export default function WorkWithMe() {
                     {p.title}
                   </h4>
                   <p className="text-sm text-ink-600 leading-relaxed text-pretty">{p.body}</p>
-                </motion.div>
+                </FadeUp>
               ))}
             </div>
           </div>
@@ -389,7 +375,7 @@ export default function WorkWithMe() {
         {/* ───────────── FIT / NOT FIT ───────────── */}
         <section className="relative section-y border-t border-ink-100">
           <div className="container-wide">
-            <motion.div {...fadeUp} className="mb-14 max-w-2xl space-y-4">
+            <FadeUp className="mb-14 max-w-2xl space-y-4">
               <h2 className="eyebrow">Fit</h2>
               <h3 className="h-display text-4xl md:text-5xl leading-[1.05] text-balance">
                 A short list. <span className="italic">Both ways.</span>
@@ -398,10 +384,10 @@ export default function WorkWithMe() {
                 The honest filter — what tends to go well, and what I steer clear of. If you are
                 unsure which side you fall on, write to me anyway; I will tell you straight.
               </p>
-            </motion.div>
+            </FadeUp>
 
             <div className="grid md:grid-cols-2 gap-5 md:gap-6">
-              <motion.div {...fadeUp} className="card-soft p-7 sm:p-8 hover:!translate-y-0">
+              <FadeUp className="card-soft p-7 sm:p-8 hover:!translate-y-0">
                 <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-emerald-700 mb-4">
                   Good fit
                 </p>
@@ -417,11 +403,10 @@ export default function WorkWithMe() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </FadeUp>
 
-              <motion.div
-                {...fadeUp}
-                transition={{ ...fadeUp.transition, delay: 0.08 }}
+              <FadeUp
+                delay={80}
                 className="card-soft p-7 sm:p-8 hover:!translate-y-0"
               >
                 <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-500 mb-4">
@@ -435,7 +420,7 @@ export default function WorkWithMe() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </FadeUp>
             </div>
           </div>
         </section>
@@ -452,7 +437,7 @@ export default function WorkWithMe() {
           />
 
           <div className="container-wide relative">
-            <motion.div {...fadeUp} className="mb-14 max-w-2xl space-y-4">
+            <FadeUp className="mb-14 max-w-2xl space-y-4">
               <h2 className="eyebrow text-paper/60 before:bg-paper/30">Receipts</h2>
               <h3 className="h-display text-paper text-4xl md:text-5xl leading-[1.05] text-balance">
                 Outcomes from past <span className="italic">decade.</span>
@@ -464,14 +449,13 @@ export default function WorkWithMe() {
                 </Link>
                 .
               </p>
-            </motion.div>
+            </FadeUp>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
               {outcomes.map((o, idx) => (
-                <motion.div
+                <FadeUp
                   key={o.label}
-                  {...fadeUp}
-                  transition={{ ...fadeUp.transition, delay: idx * 0.08 }}
+                  delay={idx * 80}
                   className="relative rounded-2xl border border-paper/10 bg-paper/[0.03] p-7 backdrop-blur-sm"
                 >
                   <p className="font-display text-5xl md:text-6xl font-light tracking-tightest text-paper mb-2">
@@ -481,7 +465,7 @@ export default function WorkWithMe() {
                     {o.label}
                   </p>
                   <p className="text-sm text-paper/75 leading-relaxed text-pretty">{o.body}</p>
-                </motion.div>
+                </FadeUp>
               ))}
             </div>
           </div>
@@ -505,7 +489,7 @@ export default function WorkWithMe() {
         {/* ───────────── TOPMATE ───────────── */}
         <section className="relative section-y-sm border-t border-ink-100">
           <div className="container-wide">
-            <motion.div {...fadeUp} className="grid md:grid-cols-12 gap-10 md:gap-16">
+            <FadeUp className="grid md:grid-cols-12 gap-10 md:gap-16">
               <div className="md:col-span-4 space-y-4 md:sticky md:top-24 self-start">
                 <h2 className="eyebrow">Mentorship</h2>
                 <h3 className="h-display text-4xl md:text-5xl leading-[1.05] text-balance">
@@ -555,14 +539,14 @@ export default function WorkWithMe() {
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </FadeUp>
           </div>
         </section>
 
         {/* ───────────── FAQ ───────────── */}
         <section className="relative section-y bg-paper-warm border-t border-ink-100">
           <div className="container-wide">
-            <motion.div {...fadeUp} className="grid md:grid-cols-12 gap-10 md:gap-16">
+            <FadeUp className="grid md:grid-cols-12 gap-10 md:gap-16">
               <div className="md:col-span-4 space-y-4 md:sticky md:top-24 self-start">
                 <h2 className="eyebrow">FAQ</h2>
                 <h3 className="h-display text-4xl md:text-5xl leading-[1.05] text-balance">
@@ -590,7 +574,7 @@ export default function WorkWithMe() {
                   </details>
                 ))}
               </div>
-            </motion.div>
+            </FadeUp>
           </div>
         </section>
 
@@ -601,7 +585,7 @@ export default function WorkWithMe() {
             aria-hidden="true"
           />
           <div className="container-wide relative">
-            <motion.div {...fadeUp} className="max-w-4xl">
+            <FadeUp className="max-w-4xl">
               <h2 className="eyebrow mb-6">Start a conversation</h2>
               <p className="h-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.02] text-balance mb-10">
                 A short note is enough. <span className="italic">Tell me what you&apos;re building.</span>
@@ -641,7 +625,7 @@ export default function WorkWithMe() {
                   />
                 </Link>
               </div>
-            </motion.div>
+            </FadeUp>
           </div>
         </section>
       </main>

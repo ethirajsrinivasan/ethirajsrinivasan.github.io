@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import FadeUp from '@/components/FadeUp'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SEO from '@/components/SEO'
@@ -15,13 +15,6 @@ import { ArrowUpRight, Hammer, BookOpen, Brain, MapPin } from 'lucide-react'
  */
 
 const LAST_UPDATED = 'August 2026'
-
-const fadeUp = {
-  initial: { opacity: 0, y: 24 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-80px' },
-  transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
-}
 
 const sections = [
   {
@@ -98,12 +91,7 @@ export default function NowPage() {
           />
 
           <div className="container-wide relative">
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="max-w-3xl"
-            >
+            <div className="max-w-3xl animate-fade-in-up">
               <h2 className="eyebrow mb-6">Now</h2>
               <h1 className="h-display text-5xl sm:text-6xl md:text-7xl leading-[1.02] text-balance mb-6">
                 A <span className="italic">snapshot</span> of where my head&apos;s at.
@@ -130,7 +118,7 @@ export default function NowPage() {
                   <MapPin size={11} /> Chennai
                 </span>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -139,10 +127,9 @@ export default function NowPage() {
           <div className="container-wide">
             <div className="grid md:grid-cols-12 gap-10">
               {sections.map((section, sIdx) => (
-                <motion.div
+                <FadeUp
                   key={section.label}
-                  {...fadeUp}
-                  transition={{ ...fadeUp.transition, delay: sIdx * 0.08 }}
+                  delay={sIdx * 80}
                   className="md:col-span-12 grid md:grid-cols-12 gap-8 md:gap-10 pb-12 md:pb-16 border-b border-ink-100 last:border-b-0 last:pb-0"
                 >
                   <div className="md:col-span-4 md:sticky md:top-24 self-start space-y-3">
@@ -171,7 +158,7 @@ export default function NowPage() {
                       </article>
                     ))}
                   </div>
-                </motion.div>
+                </FadeUp>
               ))}
             </div>
           </div>
@@ -180,7 +167,7 @@ export default function NowPage() {
         {/* ─── CTA ─── */}
         <section className="relative section-y-sm border-t border-ink-100 bg-paper-warm">
           <div className="container-wide">
-            <motion.div {...fadeUp} className="max-w-3xl">
+            <FadeUp className="max-w-3xl">
               <h3 className="h-display text-3xl md:text-4xl leading-[1.05] text-balance mb-6">
                 Want the <span className="italic">longer view?</span>
               </h3>
@@ -206,7 +193,7 @@ export default function NowPage() {
                   />
                 </Link>
               </div>
-            </motion.div>
+            </FadeUp>
           </div>
         </section>
       </main>

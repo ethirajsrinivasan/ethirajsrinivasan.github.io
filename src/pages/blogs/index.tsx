@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import FadeUp from '@/components/FadeUp'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SEO from '@/components/SEO'
@@ -7,13 +7,6 @@ import { ArrowUpRight } from 'lucide-react'
 import { visibleBlogIndex } from '@/data/blogIndex'
 import { plainTextMarkdown } from '@/lib/plain-text-markdown'
 import { resolveImageSrc } from '@/lib/resolve-image-src'
-
-const fadeUp = {
-  initial: { opacity: 0, y: 24 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-60px' },
-  transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
-}
 
 export default function Blogs() {
   const [featured, ...rest] = visibleBlogIndex
@@ -59,12 +52,7 @@ export default function Blogs() {
             aria-hidden="true"
           />
           <div className="container-wide relative">
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="max-w-3xl"
-            >
+            <div className="max-w-3xl animate-fade-in-up">
               <h2 className="eyebrow mb-6">Writing</h2>
               <h1 className="h-display text-5xl sm:text-6xl md:text-7xl leading-[1.02] text-balance mb-6">
                 Articles from the <span className="italic">edges</span> of code, data &amp; travel.
@@ -73,7 +61,7 @@ export default function Blogs() {
                 Long-form thinking on software engineering, machine learning, and the occasional
                 postcard from the road.
               </p>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -81,7 +69,7 @@ export default function Blogs() {
         {featured && (
           <section className="relative pb-16 md:pb-20">
             <div className="container-wide">
-              <motion.div {...fadeUp}>
+              <FadeUp>
                 <Link href={`/blogs/${featured.slug}`} className="group block">
                   <div className="grid md:grid-cols-12 gap-8 md:gap-12 items-center">
                     <div className="md:col-span-7 relative aspect-[16/10] rounded-3xl overflow-hidden border border-ink-100 shadow-soft">
@@ -91,6 +79,7 @@ export default function Blogs() {
                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-smooth group-hover:scale-[1.04]"
                         loading="lazy"
                         decoding="async"
+                        sizes="(max-width: 768px) 100vw, 58vw"
                       />
                       <div className="absolute top-4 left-4">
                         <span className="status-pill bg-paper">
@@ -121,7 +110,7 @@ export default function Blogs() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </FadeUp>
             </div>
           </section>
         )}
@@ -138,11 +127,7 @@ export default function Blogs() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {rest.map((blog, index) => (
-                <motion.div
-                  key={blog.slug}
-                  {...fadeUp}
-                  transition={{ ...fadeUp.transition, delay: (index % 6) * 0.05 }}
-                >
+                <FadeUp key={blog.slug} delay={(index % 6) * 50}>
                   <Link href={`/blogs/${blog.slug}`} className="group block h-full">
                     <article className="card-soft h-full flex flex-col overflow-hidden">
                       <div className="relative aspect-[16/10] overflow-hidden">
@@ -152,6 +137,7 @@ export default function Blogs() {
                           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-smooth group-hover:scale-[1.06]"
                           loading="lazy"
                           decoding="async"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         />
                       </div>
                       <div className="p-6 flex-1 flex flex-col">
@@ -176,7 +162,7 @@ export default function Blogs() {
                       </div>
                     </article>
                   </Link>
-                </motion.div>
+                </FadeUp>
               ))}
             </div>
           </div>

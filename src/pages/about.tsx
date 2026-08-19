@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import FadeUp from '@/components/FadeUp'
 import SEO from '@/components/SEO'
 import { trackCta } from '@/lib/analytics'
 import Navbar from '@/components/Navbar'
@@ -219,13 +219,6 @@ const socials = [
   { icon: Twitter, platform: 'X / Twitter', username: 'iamethi', link: 'https://twitter.com/iamethi' },
 ]
 
-const fadeUp = {
-  initial: { opacity: 0, y: 24 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-80px' },
-  transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
-}
-
 export default function About() {
   return (
     <>
@@ -245,12 +238,7 @@ export default function About() {
         <section className="relative pt-28 md:pt-36 pb-16 md:pb-20">
           <div className="absolute inset-0 bg-mesh-warm opacity-80 pointer-events-none" aria-hidden="true" />
           <div className="container-wide relative">
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="grid md:grid-cols-12 gap-12 items-end"
-            >
+            <div className="grid md:grid-cols-12 gap-12 items-end animate-fade-in-up">
               <div className="md:col-span-7 space-y-6">
                 <div className="flex flex-wrap items-center gap-3">
                   <h2 className="eyebrow">About</h2>
@@ -324,14 +312,14 @@ export default function About() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* ───────────── Experience timeline ───────────── */}
         <section className="relative section-y border-t border-ink-100">
           <div className="container-wide">
-            <motion.div {...fadeUp} className="grid md:grid-cols-12 gap-10 mb-14">
+            <FadeUp className="grid md:grid-cols-12 gap-10 mb-14">
               <div className="md:col-span-4 md:sticky md:top-24 space-y-4 self-start">
                 <h2 className="eyebrow">Experience</h2>
                 <h3 className="h-display text-3xl md:text-4xl text-balance">
@@ -346,10 +334,9 @@ export default function About() {
 
               <ol className="md:col-span-8 relative border-l border-ink-200/70 pl-7 space-y-12">
                 {experience.map((job, i) => (
-                  <motion.li
+                  <FadeUp as="li"
                     key={`${job.company}-${job.period}`}
-                    {...fadeUp}
-                    transition={{ ...fadeUp.transition, delay: i * 0.05 }}
+                    delay={i * 50}
                     className="relative"
                   >
                     <span
@@ -385,10 +372,10 @@ export default function About() {
                         </li>
                       ))}
                     </ul>
-                  </motion.li>
+                  </FadeUp>
                 ))}
               </ol>
-            </motion.div>
+            </FadeUp>
           </div>
         </section>
 
@@ -396,7 +383,7 @@ export default function About() {
         <section className="relative section-y border-t border-ink-100 bg-paper-warm">
           <div className="container-wide">
             <div className="grid md:grid-cols-3 gap-8">
-              <motion.div {...fadeUp} className="bento-card">
+              <FadeUp className="bento-card">
                 <div className="relative z-10">
                   <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-ink-900 text-paper mb-5">
                     <GraduationCap size={18} strokeWidth={1.75} />
@@ -419,9 +406,9 @@ export default function About() {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
+              </FadeUp>
 
-              <motion.div {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.08 }} className="bento-card">
+              <FadeUp delay={80} className="bento-card">
                 <div className="relative z-10">
                   <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-ink-900 text-paper mb-5">
                     <Award size={18} strokeWidth={1.75} />
@@ -441,9 +428,9 @@ export default function About() {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
+              </FadeUp>
 
-              <motion.div {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.16 }} className="bento-card">
+              <FadeUp delay={160} className="bento-card">
                 <div className="relative z-10">
                   <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-ink-900 text-paper mb-5">
                     <Mic size={18} strokeWidth={1.75} />
@@ -463,7 +450,7 @@ export default function About() {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
+              </FadeUp>
             </div>
           </div>
         </section>
@@ -471,7 +458,7 @@ export default function About() {
         {/* ───────────── Social ───────────── */}
         <section className="relative section-y-sm border-t border-ink-100">
           <div className="container-wide">
-            <motion.div {...fadeUp} className="grid md:grid-cols-12 gap-10">
+            <FadeUp className="grid md:grid-cols-12 gap-10">
               <div className="md:col-span-4 space-y-3">
                 <h2 className="eyebrow">Social</h2>
                 <h3 className="h-display text-3xl md:text-4xl text-balance">
@@ -507,14 +494,14 @@ export default function About() {
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </FadeUp>
           </div>
         </section>
 
         {/* ───────────── Gadgets ───────────── */}
         <section className="relative section-y-sm border-t border-ink-100 bg-paper-warm">
           <div className="container-wide">
-            <motion.div {...fadeUp} className="grid md:grid-cols-12 gap-10 items-start">
+            <FadeUp className="grid md:grid-cols-12 gap-10 items-start">
               <div className="md:col-span-4 space-y-4">
                 <div className="space-y-3">
                   <h2 className="eyebrow">Daily Carry</h2>
@@ -547,14 +534,14 @@ export default function About() {
                   })}
                 </ul>
               </div>
-            </motion.div>
+            </FadeUp>
           </div>
         </section>
 
         {/* ───────────── Books ───────────── */}
         <section className="relative section-y-sm border-t border-ink-100">
           <div className="container-wide">
-            <motion.div {...fadeUp} className="grid md:grid-cols-12 gap-10">
+            <FadeUp className="grid md:grid-cols-12 gap-10">
               <div className="md:col-span-4 space-y-3">
                 <h2 className="eyebrow">Bookshelf</h2>
                 <h3 className="h-display text-3xl md:text-4xl text-balance">
@@ -573,7 +560,7 @@ export default function About() {
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </FadeUp>
           </div>
         </section>
 
@@ -581,7 +568,7 @@ export default function About() {
         <section className="relative section-y border-t border-ink-100 bg-paper-warm overflow-hidden">
           <div className="absolute inset-0 bg-mesh-warm opacity-80 pointer-events-none" aria-hidden="true" />
           <div className="container-wide relative">
-            <motion.div {...fadeUp} className="max-w-4xl">
+            <FadeUp className="max-w-4xl">
               <h2 className="eyebrow mb-6">Let's connect</h2>
               <p className="h-display text-4xl sm:text-5xl md:text-6xl leading-[1.02] text-balance mb-10">
                 Have something <span className="italic">interesting</span> to share?
@@ -624,7 +611,7 @@ export default function About() {
                   />
                 </Link>
               </div>
-            </motion.div>
+            </FadeUp>
           </div>
         </section>
       </main>
