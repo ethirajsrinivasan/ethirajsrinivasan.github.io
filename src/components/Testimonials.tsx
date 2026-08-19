@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import FadeUp from '@/components/FadeUp'
 import { Quote, Linkedin, ExternalLink } from 'lucide-react'
 import type { ReactNode } from 'react'
 import type { Testimonial } from '@/data/testimonials'
@@ -11,13 +11,6 @@ type TestimonialsProps = {
   eyebrow?: string
   title?: ReactNode
   description?: ReactNode
-}
-
-const fadeUp = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-60px' },
-  transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
 }
 
 const sourceLabel: Record<Testimonial['source'], string> = {
@@ -97,10 +90,7 @@ export default function Testimonials({
 
   return (
     <div className="container-wide">
-      <motion.div
-        {...fadeUp}
-        className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16"
-      >
+      <FadeUp className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
         <div className="max-w-2xl space-y-4">
           <h2 className="eyebrow">{eyebrow}</h2>
           {title && (
@@ -114,18 +104,13 @@ export default function Testimonials({
             </p>
           )}
         </div>
-      </motion.div>
+      </FadeUp>
 
       <div className={`grid auto-rows-fr gap-5 md:gap-6 ${gridCols}`}>
         {items.map((t, idx) => (
-          <motion.div
-            key={t.id}
-            {...fadeUp}
-            transition={{ ...fadeUp.transition, delay: idx * 0.08 }}
-            className="h-full"
-          >
+          <FadeUp key={t.id} delay={idx * 80} className="h-full">
             <TestimonialCard t={t} variant={variant} />
-          </motion.div>
+          </FadeUp>
         ))}
       </div>
     </div>

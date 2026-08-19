@@ -22,12 +22,17 @@ function decodeCamoUrl(src: string): string {
   return src
 }
 
+import { optimizeUnsplashUrl } from '@/lib/optimize-image-url'
+
 /** Normalize image paths for static export (local /assets/ and external URLs). */
 export function resolveImageSrc(src: string | undefined): string {
   if (!src) return ''
   let resolved = src
   if (resolved.includes('camo.githubusercontent.com')) {
     resolved = decodeCamoUrl(resolved)
+  }
+  if (resolved.includes('images.unsplash.com')) {
+    return optimizeUnsplashUrl(resolved)
   }
   if (resolved.startsWith('http://') || resolved.startsWith('https://')) return resolved
   if (resolved.startsWith('/')) return resolved

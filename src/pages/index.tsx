@@ -2,7 +2,7 @@ import SEO from '@/components/SEO'
 import { trackCta } from '@/lib/analytics'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import FadeUp from '@/components/FadeUp'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Testimonials from '@/components/Testimonials'
@@ -42,13 +42,6 @@ const stats: Stat[] = [
     external: true,
   },
 ]
-
-const fadeUp = {
-  initial: { opacity: 0, y: 24 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-80px' },
-  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
-}
 
 export default function Home() {
   const recentBlogs = visibleBlogIndex.slice(0, 4)
@@ -126,12 +119,7 @@ export default function Home() {
           />
 
           <div className="container-wide relative">
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="max-w-4xl"
-            >
+            <div className="max-w-4xl animate-fade-in-up">
               <div className="flex flex-wrap items-center gap-3 mb-8">
                 <Link
                   href="/work-with-me"
@@ -217,14 +205,10 @@ export default function Home() {
                   />
                 </Link>
               </div>
-            </motion.div>
+            </div>
 
             {/* Stats row */}
-            <motion.div
-              {...fadeUp}
-              transition={{ ...fadeUp.transition, delay: 0.15 }}
-              className="mt-20 md:mt-28 grid grid-cols-2 md:grid-cols-4 gap-px bg-ink-100 border border-ink-100 rounded-2xl overflow-hidden"
-            >
+            <FadeUp delay={150} className="mt-20 md:mt-28 grid grid-cols-2 md:grid-cols-4 gap-px bg-ink-100 border border-ink-100 rounded-2xl overflow-hidden">
               {stats.map((stat) => {
                 const inner = (
                   <>
@@ -260,14 +244,14 @@ export default function Home() {
                   </div>
                 )
               })}
-            </motion.div>
+            </FadeUp>
           </div>
         </section>
 
         {/* ───────────── ABOUT / INTRO ───────────── */}
         <section className="relative section-y-sm">
           <div className="container-wide">
-            <motion.div {...fadeUp} className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
+            <FadeUp className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
               <div className="md:col-span-4 md:sticky md:top-24 space-y-5">
                 <h2 className="eyebrow">About</h2>
                 <h3 className="h-display text-4xl md:text-5xl leading-[1.05] text-balance">
@@ -277,8 +261,11 @@ export default function Home() {
                   <Image
                     src="/assets/my_photo.jpeg"
                     alt="Ethiraj Srinivasan"
-                    fill
-                    className="object-cover"
+                    width={320}
+                    height={320}
+                    className="object-cover w-full h-full"
+                    sizes="160px"
+                    priority
                   />
                 </div>
               </div>
@@ -340,7 +327,7 @@ export default function Home() {
                   />
                 </Link>
               </div>
-            </motion.div>
+            </FadeUp>
           </div>
         </section>
 
@@ -356,7 +343,7 @@ export default function Home() {
           />
 
           <div className="container-wide relative">
-            <motion.div {...fadeUp} className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <FadeUp className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               <div className="lg:col-span-6 space-y-6">
                 <h2 className="eyebrow text-paper/60 before:bg-paper/30">Currently Building</h2>
 
@@ -423,7 +410,7 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </FadeUp>
           </div>
         </section>
 
@@ -450,10 +437,7 @@ export default function Home() {
         {/* ───────────── SELECTED WORK ───────────── */}
         <section id="work" className="relative section-y">
           <div className="container-wide">
-            <motion.div
-              {...fadeUp}
-              className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14"
-            >
+            <FadeUp className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
               <div className="max-w-xl space-y-4">
                 <h2 className="eyebrow">Projects</h2>
                 <h3 className="h-display text-4xl md:text-5xl leading-[1.05] text-balance">
@@ -464,14 +448,14 @@ export default function Home() {
                 A curated cross-section — from deep-learning systems and computer vision research
                 to widely-used Ruby gems. Click any card to read the full write-up.
               </p>
-            </motion.div>
+            </FadeUp>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 auto-rows-fr">
               {visiblePortfolioIndex.map((project, idx) => (
-                <motion.article
+                <FadeUp
                   key={project.slug}
-                  {...fadeUp}
-                  transition={{ ...fadeUp.transition, delay: (idx % 6) * 0.06 }}
+                  as="article"
+                  delay={(idx % 6) * 60}
                   className="group"
                 >
                   <Link
@@ -485,7 +469,7 @@ export default function Home() {
                       }`}
                     >
                       <img
-                        src={project.image}
+                        src={resolveImageSrc(project.image)}
                         alt={project.imageAlt || project.title}
                         className={`absolute inset-0 w-full h-full transition-transform duration-700 ease-smooth group-hover:scale-[1.04] ${
                           project.imageFit === 'contain'
@@ -494,6 +478,7 @@ export default function Home() {
                         }`}
                         loading="lazy"
                         decoding="async"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                       {/* Subtle gradient for legibility of meta row */}
                       <div
@@ -528,7 +513,7 @@ export default function Home() {
                       </div>
                     </div>
                   </Link>
-                </motion.article>
+                </FadeUp>
               ))}
             </div>
           </div>
@@ -537,10 +522,7 @@ export default function Home() {
         {/* ───────────── WORK WITH ME ───────────── */}
         <section className="relative section-y border-t border-ink-100 bg-paper-warm overflow-hidden">
           <div className="container-wide">
-            <motion.div
-              {...fadeUp}
-              className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14"
-            >
+            <FadeUp className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
               <div className="max-w-xl space-y-4">
                 <h2 className="eyebrow">Work with me</h2>
                 <h3 className="h-display text-4xl md:text-5xl leading-[1.05] text-balance">
@@ -552,7 +534,7 @@ export default function Home() {
                 Founder-led consulting. I take on a small number of part-time projects each year
                 where I can add the kind of leverage a senior team usually can't hire for.
               </p>
-            </motion.div>
+            </FadeUp>
 
             <div className="grid md:grid-cols-3 gap-5 md:gap-6">
               {[
@@ -578,12 +560,7 @@ export default function Home() {
                   tags: ['Strategy', 'Hiring', 'Architecture', 'Diligence'],
                 },
               ].map((s, idx) => (
-                <motion.div
-                  key={s.title}
-                  {...fadeUp}
-                  transition={{ ...fadeUp.transition, delay: idx * 0.08 }}
-                  className="bento-card flex flex-col"
-                >
+                <FadeUp key={s.title} delay={idx * 80} className="bento-card flex flex-col">
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-ink-900 text-paper mb-5">
                       <s.icon size={18} strokeWidth={1.75} />
@@ -602,16 +579,12 @@ export default function Home() {
                       ))}
                     </div>
                   </div>
-                </motion.div>
+                </FadeUp>
               ))}
             </div>
 
             {/* Mentorship + Topmate lane */}
-            <motion.div
-              {...fadeUp}
-              transition={{ ...fadeUp.transition, delay: 0.24 }}
-              className="mt-6 md:mt-7 card-soft p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:!translate-y-0"
-            >
+            <FadeUp delay={240} className="mt-6 md:mt-7 card-soft p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:!translate-y-0">
               <div className="flex items-start gap-4 max-w-2xl">
                 <div className="shrink-0 inline-flex items-center justify-center w-11 h-11 rounded-xl bg-paper-warm border border-ink-100 text-ink-700">
                   <MessageCircle size={18} strokeWidth={1.75} />
@@ -642,13 +615,9 @@ export default function Home() {
                   className="transition-all duration-300 ease-smooth group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 />
               </a>
-            </motion.div>
+            </FadeUp>
 
-            <motion.div
-              {...fadeUp}
-              transition={{ ...fadeUp.transition, delay: 0.32 }}
-              className="mt-10 flex flex-wrap items-center gap-3"
-            >
+            <FadeUp delay={320} className="mt-10 flex flex-wrap items-center gap-3">
               <Link
                 href="/work-with-me"
                 onClick={trackCta('cta_work_with_me', 'homepage_work_with_me_section')}
@@ -671,7 +640,7 @@ export default function Home() {
                   className="text-ink-400 transition-all duration-500 ease-smooth group-hover:text-ink-900 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 />
               </a>
-            </motion.div>
+            </FadeUp>
           </div>
         </section>
 
@@ -706,7 +675,7 @@ export default function Home() {
         {featuredBlog && (
           <section className="relative section-y bg-paper-warm border-t border-ink-100">
             <div className="container-wide">
-              <motion.div {...fadeUp} className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+              <FadeUp className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
                 <div className="max-w-xl space-y-4">
                   <h2 className="eyebrow">Writing</h2>
                   <h3 className="h-display text-4xl md:text-5xl leading-[1.05] text-balance">
@@ -723,10 +692,10 @@ export default function Home() {
                     className="text-ink-500 transition-all duration-500 ease-smooth group-hover:text-ink-900 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                   />
                 </Link>
-              </motion.div>
+              </FadeUp>
 
               <div className="grid md:grid-cols-12 gap-8">
-                <motion.div {...fadeUp} className="md:col-span-7">
+                <FadeUp className="md:col-span-7">
                   <Link href={`/blogs/${featuredBlog.slug}`} className="group block">
                     <div className="relative aspect-[16/10] rounded-3xl overflow-hidden border border-ink-100 shadow-soft mb-6">
                       <img
@@ -735,6 +704,7 @@ export default function Home() {
                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-smooth group-hover:scale-[1.04]"
                         loading="lazy"
                         decoding="async"
+                        sizes="(max-width: 768px) 100vw, 58vw"
                       />
                       <div className="absolute top-4 left-4">
                         <span className="status-pill bg-paper">
@@ -753,15 +723,11 @@ export default function Home() {
                       {plainTextMarkdown(featuredBlog.excerpt)}
                     </p>
                   </Link>
-                </motion.div>
+                </FadeUp>
 
                 <div className="md:col-span-5 space-y-6">
                   {sideBlogs.map((blog, i) => (
-                    <motion.div
-                      key={blog.slug}
-                      {...fadeUp}
-                      transition={{ ...fadeUp.transition, delay: 0.08 * (i + 1) }}
-                    >
+                    <FadeUp key={blog.slug} delay={80 * (i + 1)}>
                       <Link
                         href={`/blogs/${blog.slug}`}
                         className="group block py-5 border-b border-ink-100 last:border-b-0"
@@ -778,7 +744,7 @@ export default function Home() {
                           {plainTextMarkdown(blog.excerpt)}
                         </p>
                       </Link>
-                    </motion.div>
+                    </FadeUp>
                   ))}
                 </div>
               </div>
@@ -790,7 +756,7 @@ export default function Home() {
         <section className="relative section-y border-t border-ink-100 overflow-hidden">
           <div className="absolute inset-0 bg-mesh-warm opacity-80 pointer-events-none" aria-hidden="true" />
           <div className="container-wide relative">
-            <motion.div {...fadeUp} className="max-w-4xl">
+            <FadeUp className="max-w-4xl">
               <h2 className="eyebrow mb-6">Let's connect</h2>
               <p className="h-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.02] text-balance mb-10">
                 Got an idea worth building?{' '}
@@ -831,7 +797,7 @@ export default function Home() {
                   <span className="link-underline">LinkedIn</span>
                 </a>
               </div>
-            </motion.div>
+            </FadeUp>
           </div>
         </section>
       </main>
