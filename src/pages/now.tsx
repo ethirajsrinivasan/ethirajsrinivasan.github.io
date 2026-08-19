@@ -14,7 +14,7 @@ import { ArrowUpRight, Hammer, BookOpen, Brain, MapPin } from 'lucide-react'
  * "current, not curated" — so it's fine if this drifts behind by a few weeks.
  */
 
-const LAST_UPDATED = 'May 2026'
+const LAST_UPDATED = 'August 2026'
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
@@ -29,8 +29,8 @@ const sections = [
     label: 'Building',
     items: [
       {
-        title: 'InfiniTraq',
-        body: 'Co-Founder & CTO of Griffin AI Tech. Shipping InfiniPulse (privacy-first radar) and InfiniHub (Edge AI on existing CCTV) for senior living. The current focus: sub-5-second alerting on fall and inactivity events without ever sending video to the cloud.',
+        title: 'Griffin AI',
+        body: 'Co-Founder & CTO of Griffin AI Tech — ambient intelligence for the physical world. One edge-AI core, three products: InfiniPulse (privacy-first senior-care sensing), InfiniTraq (live retail intelligence from existing cameras), and InfiniDine (real-time dining-floor visibility). Current focus: sub-5-second alerting without ever sending video to the cloud, and expanding deployments across Asia and Europe.',
       },
       {
         title: 'Data platform at Zgrow Solutions',
@@ -38,7 +38,7 @@ const sections = [
       },
       {
         title: 'Select consulting engagements',
-        body: 'Taking on a small number of part-time projects alongside InfiniTraq — data platforms, applied AI, and fractional CTO work.',
+        body: 'Taking on a small number of part-time projects alongside Griffin AI — data platforms, applied AI, and fractional CTO work.',
       },
     ],
   },
@@ -52,7 +52,7 @@ const sections = [
       },
       {
         title: 'Founder-led consulting as a business model',
-        body: 'What does "premium independent" look like when the alternative is a full team and a six-month engagement? Where to draw lines so the side work compounds InfiniTraq instead of diluting it.',
+        body: 'What does "premium independent" look like when the alternative is a full team and a six-month engagement? Where to draw lines so the side work compounds Griffin AI instead of diluting it.',
       },
       {
         title: 'Writing more, in fewer words',

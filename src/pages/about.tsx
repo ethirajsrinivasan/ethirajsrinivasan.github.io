@@ -50,13 +50,13 @@ const experience: Experience[] = [
   {
     period: 'Nov 2025 — Present',
     role: 'Co-Founder & CTO',
-    company: 'InfiniTraq (Griffin AI Tech)',
+    company: 'Griffin AI Tech',
     location: 'Chennai, India',
     stack: ['Edge AI', 'NVIDIA Jetson', 'Computer Vision', 'Radar', 'Python', 'TypeScript', 'React Native'],
     highlights: [
-      'Co-founded Griffin AI Tech and lead product engineering for InfiniTraq — a 24/7 AI guardian for senior living that monitors falls, inactivity, and daily activities using non-visual sensors plus Edge AI on existing CCTV.',
-      'Designed a two-product system: InfiniPulse (privacy-first radar sensor for bedrooms and bathrooms — zero video, zero images) and InfiniHub (NVIDIA-powered Edge module that plugs into existing CCTV).',
-      'Architecting on-prem processing, sub-5-second alerting, and a family / facility dashboard for caregivers.',
+      'Co-founded Griffin AI Tech — ambient intelligence for the physical world. Lead product engineering across three products built on one edge-AI core: InfiniPulse (senior care), InfiniTraq (retail), and InfiniDine (hospitality).',
+      'InfiniPulse: a 24/7 senior-care companion using privacy-first RF sensing and on-device intelligence — no cameras, timely alerts, and voice check-ins for families and care teams.',
+      'InfiniTraq & InfiniDine: turn existing cameras into live operational intelligence — footfall, queue, and zone analytics for retail; table-level service timing and delay detection for restaurants.',
     ],
   },
   {
@@ -231,7 +231,7 @@ export default function About() {
     <>
       <SEO
         title="About"
-        description="Software engineer and data leader with a decade of experience — from Rails at TCS and Pramati to big data at Shopee, and now Co-Founder & CTO at InfiniTraq. Open for select freelance and advisory engagements."
+        description="Software engineer and data leader with a decade of experience — from Rails at TCS and Pramati to big data at Shopee, and now Co-Founder & CTO at Griffin AI. Open for select freelance and advisory engagements."
         path="/about/"
         image="/assets/my_photo.jpeg"
         imageAlt="Ethiraj Srinivasan"
@@ -280,9 +280,9 @@ export default function About() {
                     rel="noopener noreferrer"
                     className="link-underline text-ink-900 font-medium"
                   >
-                    InfiniTraq
-                  </a>{' '}
-                  (Griffin AI Tech), and Consultant, Head of Data Engineering at{' '}
+                    Griffin AI
+                  </a>
+                  , and Consultant, Head of Data Engineering at{' '}
                   <a
                     href="https://zgrow.solutions"
                     target="_blank"
@@ -304,8 +304,8 @@ export default function About() {
                 </p>
                 <p className="text-base md:text-lg text-ink-600 leading-relaxed max-w-2xl text-pretty">
                   A decade across software engineering, data platforms, and open-source Ruby gems
-                  — now building privacy-first senior care with InfiniTraq. Outside work, I'm an amateur
-                  cook, avid traveler, and bibliophile.
+                  — now building ambient intelligence for physical spaces with Griffin AI. Outside
+                  work, I'm an amateur cook, avid traveler, and bibliophile.
                 </p>
               </div>
 
@@ -339,7 +339,7 @@ export default function About() {
                 </h3>
                 <p className="text-sm text-ink-500 leading-relaxed max-w-sm">
                   From software engineering at TCS and Pramati (Rails) in India, through analytics
-                  and data roles in Singapore, to founding InfiniTraq and consulting at Zgrow in
+                  and data roles in Singapore, to founding Griffin AI and consulting at Zgrow in
                   Chennai.
                 </p>
               </div>

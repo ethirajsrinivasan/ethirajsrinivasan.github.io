@@ -103,7 +103,7 @@ const notFits = [
   'Full-time roles or anything resembling a long-tenure operator job',
   'Generic feature-factory dev work with no architectural problem to solve',
   'Equity-only or contingent-pay engagements',
-  'Anything that materially conflicts with my work at InfiniTraq',
+  'Anything that materially conflicts with my work at Griffin AI',
 ]
 
 const outcomes = [
@@ -123,7 +123,7 @@ const outcomes = [
     metric: '<5 s',
     label: 'Edge AI alerting',
     body:
-      'Designed the InfiniTraq Edge AI pipeline that detects falls and inactivity on-device with sub-5-second response.',
+      'Designed the InfiniPulse Edge AI pipeline that detects falls and inactivity on-device with sub-5-second response.',
   },
   {
     metric: '8',
@@ -174,8 +174,8 @@ const faqs = [
     a: 'Yes. I am happy to sign reasonable mutual NDAs before the scope brief, and DPAs as required by your jurisdiction.',
   },
   {
-    q: 'Will my work conflict with InfiniTraq?',
-    a: 'No. I only take engagements that are non-competing and that I can do well alongside InfiniTraq. If there is any conflict, I will name it on the intro call and walk away.',
+    q: 'Will my work conflict with Griffin AI?',
+    a: 'No. I only take engagements that are non-competing and that I can do well alongside Griffin AI. If there is any conflict, I will name it on the intro call and walk away.',
   },
   {
     q: 'What does a typical engagement look like?',
@@ -188,7 +188,7 @@ export default function WorkWithMe() {
     <>
       <SEO
         title="Work with me"
-        description="Founder-led consulting. I take on a small number of part-time engagements alongside InfiniTraq — data platforms, AI / computer vision systems, and fractional CTO / advisory work."
+        description="Founder-led consulting. I take on a small number of part-time engagements alongside Griffin AI — data platforms, AI / computer vision systems, and fractional CTO / advisory work."
         path="/work-with-me/"
         image="/og-default.png"
         imageAlt="Work with Ethiraj Srinivasan — Data platforms · Applied AI · Fractional CTO"
@@ -253,7 +253,7 @@ export default function WorkWithMe() {
                   rel="noopener noreferrer"
                   className="link-underline text-ink-900 font-medium"
                 >
-                  InfiniTraq
+                  Griffin AI
                 </a>{' '}
                 as Co-Founder &amp; CTO of Griffin AI Tech. Alongside, I take on a small number of
                 part-time engagements each year — the kind where a decade of data and AI systems

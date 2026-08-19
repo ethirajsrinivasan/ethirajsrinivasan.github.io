@@ -60,7 +60,7 @@ export default function Home() {
       <SEO
         title="Ethiraj Srinivasan — Co-Founder & CTO · Open for select engagements"
         titleAsIs
-        description="Software engineer and data leader. Co-Founder & CTO at InfiniTraq (Griffin AI). Open for select freelance and advisory engagements — data platforms, AI / computer vision, and fractional CTO work."
+        description="Software engineer and data leader. Co-Founder & CTO at Griffin AI. Open for select freelance and advisory engagements — data platforms, AI / computer vision, and fractional CTO work."
         path="/"
         image="/og-default.png"
         imageAlt="Ethiraj Srinivasan — Engineer by craft. Founder by choice."
@@ -76,7 +76,7 @@ export default function Home() {
           worksFor: [
             {
               '@type': 'Organization',
-              name: 'InfiniTraq (Griffin AI Tech)',
+              name: 'Griffin AI Tech',
               url: 'https://griffinai.sh',
             },
             {
@@ -167,7 +167,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="link-underline text-ink-900 font-medium"
                 >
-                  InfiniTraq
+                  Griffin AI
                 </a>
                 , and Consultant, Head of Data Engineering at{' '}
                 <a
@@ -179,7 +179,7 @@ export default function Home() {
                   Zgrow Solutions
                 </a>
                 . Over a decade building software, data platforms, and products — and taking on a
-                small number of engagements outside InfiniTraq.
+                small number of engagements outside Griffin AI.
               </p>
 
               <div className="mt-10 flex flex-wrap items-center gap-3">
@@ -200,7 +200,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 px-5 py-3 rounded-full border border-ink-200 bg-paper text-ink-900 text-sm font-medium transition-all duration-500 ease-smooth hover:border-ink-400 hover:-translate-y-0.5"
                 >
-                  See InfiniTraq
+                  See Griffin AI
                   <ArrowUpRight
                     size={16}
                     className="transition-all duration-500 ease-smooth group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -292,10 +292,11 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="link-underline text-ink-900 font-medium"
                   >
-                    InfiniTraq
+                    Griffin AI
                   </a>
-                  , a privacy-first AI guardian for senior care, as Co-Founder &amp; CTO of Griffin
-                  AI Tech, and Consultant, Head of Data Engineering at{' '}
+                  , ambient intelligence for the physical world — senior care, retail, and
+                  hospitality — as Co-Founder &amp; CTO of Griffin AI Tech, and Consultant, Head of
+                  Data Engineering at{' '}
                   <a
                     href="https://zgrow.solutions"
                     target="_blank"
@@ -343,7 +344,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ───────────── CURRENTLY BUILDING — INFINITRAQ ───────────── */}
+        {/* ───────────── CURRENTLY BUILDING — GRIFFIN AI ───────────── */}
         <section className="relative section-y border-t border-ink-100 bg-ink-900 text-paper overflow-hidden">
           <div
             className="absolute inset-0 bg-mesh-ink opacity-90 pointer-events-none"
@@ -360,21 +361,22 @@ export default function Home() {
                 <h2 className="eyebrow text-paper/60 before:bg-paper/30">Currently Building</h2>
 
                 <h3 className="h-display text-paper text-4xl sm:text-5xl md:text-6xl leading-[1.02] text-balance">
-                  <span className="italic">InfiniTraq</span> — a 24/7 caretaker that never sleeps.
+                  <span className="italic">Griffin AI</span> — ambient intelligence for the
+                  physical world.
                 </h3>
 
                 <p className="text-base md:text-lg text-paper/70 leading-relaxed max-w-xl text-pretty">
-                  An AI guardian for senior living. InfiniTraq continuously monitors for falls,
-                  inactivity, and daily activities using non-visual sensors and Edge AI — no
-                  cameras in private rooms, no cloud streaming, response in under 5 seconds.
+                  Griffin AI makes physical spaces as measurable, intelligent, and responsive as
+                  their digital counterparts — privacy-first sensing, on-device intelligence, and
+                  real-time alerts. Three products on one edge-AI core.
                 </p>
 
                 <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-3 pt-2">
                   {[
-                    { icon: ShieldCheck, text: 'Privacy-first by design' },
-                    { icon: Eye, text: 'No cameras in private rooms' },
-                    { icon: Activity, text: 'Sub-5-second alerts' },
-                    { icon: Cpu, text: 'NVIDIA-powered Edge AI' },
+                    { icon: Activity, text: 'InfiniPulse — 24/7 senior-care awareness' },
+                    { icon: Eye, text: 'InfiniTraq — live retail intelligence' },
+                    { icon: Sparkles, text: 'InfiniDine — real-time dining floor' },
+                    { icon: ShieldCheck, text: 'Privacy-first, on-device Edge AI' },
                   ].map((f) => (
                     <li key={f.text} className="flex items-center gap-2.5 text-sm text-paper/80">
                       <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-paper/10 text-accent-300 ring-1 ring-paper/10">
@@ -415,7 +417,7 @@ export default function Home() {
                   >
                     <img
                       src="/assets/images/infinitraq-dashboard.svg"
-                      alt="InfiniTraq dashboard — live status, vitals, and InfiniPulse / InfiniHub sensor modules"
+                      alt="Griffin AI dashboard — live awareness across InfiniPulse, InfiniTraq, and InfiniDine"
                       className="block w-full h-auto"
                     />
                   </a>
@@ -542,7 +544,7 @@ export default function Home() {
               <div className="max-w-xl space-y-4">
                 <h2 className="eyebrow">Work with me</h2>
                 <h3 className="h-display text-4xl md:text-5xl leading-[1.05] text-balance">
-                  Building <span className="italic">InfiniTraq.</span> Open to a few engagements
+                  Building <span className="italic">Griffin AI.</span> Open to a few engagements
                   alongside.
                 </h3>
               </div>
@@ -565,7 +567,7 @@ export default function Home() {
                   icon: Sparkles,
                   title: 'Applied AI & Automation',
                   desc:
-                    'Vision, language, and the glue between them. Edge AI for InfiniTraq, LangChain document intelligence, n8n + Supabase workflow automation.',
+                    'Vision, language, and the glue between them. Edge AI for Griffin AI products, LangChain document intelligence, n8n + Supabase workflow automation.',
                   tags: ['LangChain', 'n8n', 'OpenAI', 'NVIDIA Edge', 'PyTorch'],
                 },
                 {

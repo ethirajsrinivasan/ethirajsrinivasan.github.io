@@ -31,7 +31,7 @@ export const linkCardMeta: Record<string, LinkCardMeta> = {
   'ethirajsrinivasan.com': {
     title: 'Ethiraj Srinivasan',
     description:
-      'Software engineer and data leader. Co-Founder & CTO at InfiniTraq. Portfolio, writing, and open-source work.',
+      'Software engineer and data leader. Co-Founder & CTO at Griffin AI. Portfolio, writing, and open-source work.',
   },
   'youtube.com/watch?v=hchtg-IPiJY': {
     title: 'The Madakaripura Waterfall | East Java | Indonesia - YouTube',

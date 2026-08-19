@@ -48,7 +48,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="link-underline text-ink-900 font-medium"
               >
-                InfiniTraq
+                Griffin AI
               </a>
               , and Consultant, Head of Data Engineering at{' '}
               <span className="text-ink-900 font-medium">Zgrow Solutions, Chennai</span>.
