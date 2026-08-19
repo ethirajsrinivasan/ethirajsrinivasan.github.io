@@ -53,7 +53,7 @@ const services = [
   },
   {
     icon: Compass,
-    title: 'Fractional CTO & Advisory',
+    title: 'Technical Advisory & Diligence',
     summary: 'For seed and Series-A teams that need senior leverage.',
     details: [
       'Architecture review & technical due diligence',
@@ -96,7 +96,7 @@ const fits = [
   'Founders / CTOs needing a senior pair of eyes on data or AI architecture',
   'Teams scaling past their first PB or first real production ML system',
   'Companies inheriting a legacy data stack and weighing a rebuild',
-  'Seed / Series-A teams that want a fractional engineering partner, not a contractor',
+  'Seed / Series-A teams that want a senior technical advisor, not a contractor',
 ]
 
 const notFits = [
@@ -188,10 +188,10 @@ export default function WorkWithMe() {
     <>
       <SEO
         title="Work with me"
-        description="Founder-led consulting. I take on a small number of part-time engagements alongside Griffin AI — data platforms, AI / computer vision systems, and fractional CTO / advisory work."
+        description="Founder-led consulting. I take on a small number of part-time engagements alongside Griffin AI — data platforms, AI / computer vision systems, and technical advisory work."
         path="/work-with-me/"
         image="/og-default.png"
-        imageAlt="Work with Ethiraj Srinivasan — Data platforms · Applied AI · Fractional CTO"
+        imageAlt="Work with Ethiraj Srinivasan — Data platforms · Applied AI · Technical Advisory"
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'ProfessionalService',
@@ -203,11 +203,11 @@ export default function WorkWithMe() {
           },
           areaServed: 'Worldwide (remote)',
           description:
-            'Founder-led consulting in data platforms, applied AI, and fractional CTO / advisory work.',
+            'Founder-led consulting in data platforms, applied AI, and technical advisory work.',
           serviceType: [
             'Data Platform Engineering',
             'Applied AI & Automation',
-            'Fractional CTO Advisory',
+            'Technical Advisory',
           ],
           url: 'https://ethirajsrinivasan.com/work-with-me/',
         }}

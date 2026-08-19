@@ -60,7 +60,7 @@ export default function Home() {
       <SEO
         title="Ethiraj Srinivasan — Co-Founder & CTO · Open for select engagements"
         titleAsIs
-        description="Software engineer and data leader. Co-Founder & CTO at Griffin AI. Open for select freelance and advisory engagements — data platforms, AI / computer vision, and fractional CTO work."
+        description="Software engineer and data leader. Co-Founder & CTO at Griffin AI. Open for select freelance and advisory engagements — data platforms, AI / computer vision, and technical advisory."
         path="/"
         image="/og-default.png"
         imageAlt="Ethiraj Srinivasan — Engineer by craft. Founder by choice."
@@ -572,7 +572,7 @@ export default function Home() {
                 },
                 {
                   icon: Compass,
-                  title: 'Fractional CTO & Advisory',
+                  title: 'Technical Advisory & Diligence',
                   desc:
                     'Architecture review, hiring help, technical due diligence, and engineering coaching for seed and Series-A teams.',
                   tags: ['Strategy', 'Hiring', 'Architecture', 'Diligence'],

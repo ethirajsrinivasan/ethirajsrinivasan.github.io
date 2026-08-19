@@ -38,7 +38,7 @@ const sections = [
       },
       {
         title: 'Select consulting engagements',
-        body: 'Taking on a small number of part-time projects alongside Griffin AI — data platforms, applied AI, and fractional CTO work.',
+        body: 'Taking on a small number of part-time projects alongside Griffin AI — data platforms, applied AI, and technical advisory work.',
       },
     ],
   },

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" role="img" aria-label="InfiniTraq dashboard mockup">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" role="img" aria-label="Griffin AI dashboard mockup — InfiniPulse, InfiniTraq, and InfiniDine">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="800" y2="640" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#0c0a09"/>
@@ -32,86 +32,105 @@
   <ellipse cx="220" cy="160" rx="240" ry="180" fill="url(#glow)" filter="url(#soft)"/>
   <ellipse cx="600" cy="500" rx="200" ry="160" fill="url(#glow)" filter="url(#soft)" opacity="0.6"/>
 
+  <!-- Header -->
   <g transform="translate(48 44)">
     <circle cx="6" cy="6" r="6" fill="#22c55e"/>
     <circle cx="6" cy="6" r="6" fill="#22c55e" opacity="0.4">
       <animate attributeName="r" values="6;12;6" dur="2.4s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0.5;0;0.5" dur="2.4s" repeatCount="indefinite"/>
     </circle>
-    <text x="22" y="11" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="500" fill="#fafaf9">LIVE / Bedroom</text>
+    <text x="22" y="11" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="500" fill="#fafaf9">LIVE / Griffin AI</text>
     <text x="640" y="11" text-anchor="end" font-family="ui-monospace, monospace" font-size="11" fill="#a8a29e" letter-spacing="0.06em">09:41 IST</text>
   </g>
 
+  <!-- Hero status card -->
   <g transform="translate(48 84)">
-    <rect width="704" height="172" rx="22" fill="url(#card)" stroke="#292524" stroke-width="1"/>
-    <text x="28" y="42" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="500" fill="#78716c" letter-spacing="0.16em">STATUS</text>
-    <text x="28" y="92" font-family="'Fraunces', Georgia, serif" font-size="40" font-weight="300" fill="#fafaf9">Stable / calm breathing</text>
+    <rect width="704" height="150" rx="22" fill="url(#card)" stroke="#292524" stroke-width="1"/>
+    <text x="28" y="40" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="500" fill="#78716c" letter-spacing="0.16em">AMBIENT INTELLIGENCE</text>
+    <text x="28" y="84" font-family="'Fraunces', Georgia, serif" font-size="34" font-weight="300" fill="#fafaf9">One core. Every space aware.</text>
 
-    <g transform="translate(28 110)">
-      <rect width="648" height="44" rx="10" fill="#0c0a09" stroke="#1c1917"/>
+    <g transform="translate(28 100)">
+      <rect width="648" height="34" rx="9" fill="#0c0a09" stroke="#1c1917"/>
       <path
-        d="M 14 22 L 70 22 L 90 8 L 110 36 L 130 4 L 150 40 L 170 22 L 260 22 L 280 12 L 300 32 L 320 22 L 420 22 L 440 10 L 460 34 L 480 22 L 600 22 L 634 22"
+        d="M 14 17 L 70 17 L 90 7 L 110 27 L 130 4 L 150 30 L 170 17 L 260 17 L 280 9 L 300 25 L 320 17 L 420 17 L 440 8 L 460 26 L 480 17 L 600 17 L 634 17"
         fill="none" stroke="url(#pulse)" stroke-width="2" stroke-linecap="round"
       />
-      <circle cx="634" cy="22" r="3" fill="#2dd4bf">
+      <circle cx="634" cy="17" r="3" fill="#2dd4bf">
         <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
       </circle>
     </g>
   </g>
 
-  <g transform="translate(48 280)">
+  <!-- Product cards -->
+  <g transform="translate(48 258)">
+    <!-- InfiniPulse -->
     <g>
-      <rect width="220" height="120" rx="18" fill="url(#card)" stroke="#292524"/>
-      <text x="22" y="32" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" font-weight="500" fill="#78716c" letter-spacing="0.16em">HEART RATE</text>
-      <text x="22" y="84" font-family="'Fraunces', Georgia, serif" font-size="48" font-weight="300" fill="#fafaf9">68</text>
-      <text x="112" y="84" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" fill="#78716c">bpm</text>
-      <text x="22" y="106" font-family="ui-monospace, monospace" font-size="11" fill="#22c55e">within normal</text>
-    </g>
-
-    <g transform="translate(242 0)">
-      <rect width="220" height="120" rx="18" fill="url(#card)" stroke="#292524"/>
-      <text x="22" y="32" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" font-weight="500" fill="#78716c" letter-spacing="0.16em">RESPIRATION</text>
-      <text x="22" y="84" font-family="'Fraunces', Georgia, serif" font-size="48" font-weight="300" fill="#fafaf9">14</text>
-      <text x="92" y="84" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" fill="#78716c">/min</text>
-      <text x="22" y="106" font-family="ui-monospace, monospace" font-size="11" fill="#a8a29e">calm</text>
-    </g>
-
-    <g transform="translate(484 0)">
-      <rect width="220" height="120" rx="18" fill="url(#card)" stroke="#292524"/>
-      <text x="22" y="32" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" font-weight="500" fill="#78716c" letter-spacing="0.16em">ACTIVITY</text>
-      <text x="22" y="84" font-family="'Fraunces', Georgia, serif" font-size="48" font-weight="300" fill="#fafaf9">82</text>
-      <text x="100" y="84" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" fill="#78716c">%</text>
-      <text x="22" y="106" font-family="ui-monospace, monospace" font-size="11" fill="#22c55e">on track today</text>
-    </g>
-  </g>
-
-  <g transform="translate(48 424)">
-    <g>
-      <rect width="340" height="170" rx="20" fill="url(#cardLight)" stroke="#e7e5e4"/>
-      <g transform="translate(24 26)">
+      <rect width="224" height="250" rx="20" fill="url(#cardLight)" stroke="#e7e5e4"/>
+      <text x="200" y="34" text-anchor="end" font-family="ui-monospace, monospace" font-size="11" fill="#a8a29e" letter-spacing="0.1em">01</text>
+      <g transform="translate(20 22)">
         <circle cx="12" cy="12" r="12" fill="#0c0a09"/>
         <circle cx="12" cy="12" r="5" fill="#2dd4bf"/>
       </g>
-      <text x="56" y="44" font-family="'Fraunces', Georgia, serif" font-size="22" font-weight="400" fill="#0c0a09">InfiniPulse</text>
-      <text x="56" y="62" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" font-weight="500" fill="#78716c" letter-spacing="0.16em">PRIVATE GUARDIAN</text>
-      <line x1="24" y1="84" x2="316" y2="84" stroke="#e7e5e4"/>
-      <text x="24" y="108" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#44403c">Non-visual radar for private rooms</text>
-      <text x="24" y="130" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#44403c">Zero video. Zero images. Ever.</text>
-      <text x="24" y="152" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#44403c">Works in total darkness.</text>
+      <text x="20" y="86" font-family="'Fraunces', Georgia, serif" font-size="21" font-weight="400" fill="#0c0a09">InfiniPulse</text>
+      <text x="20" y="106" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" fill="#78716c" letter-spacing="0.16em">SENIOR CARE</text>
+      <line x1="20" y1="122" x2="204" y2="122" stroke="#e7e5e4"/>
+      <text x="20" y="148" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11.5" fill="#44403c">24/7 wellbeing awareness</text>
+      <text x="20" y="172" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11.5" fill="#44403c">No camera — RF sensing</text>
+      <text x="20" y="196" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11.5" fill="#44403c">Alerts &amp; voice check-ins</text>
+      <text x="20" y="228" font-family="ui-monospace, monospace" font-size="10" fill="#0d9488">care · awareness</text>
     </g>
 
-    <g transform="translate(364 0)">
-      <rect width="340" height="170" rx="20" fill="url(#cardLight)" stroke="#e7e5e4"/>
-      <g transform="translate(24 26)">
-        <rect width="22" height="22" rx="6" fill="#0c0a09"/>
-        <circle cx="11" cy="11" r="4" fill="#38bdf8"/>
+    <!-- InfiniTraq -->
+    <g transform="translate(240 0)">
+      <rect width="224" height="250" rx="20" fill="url(#cardLight)" stroke="#e7e5e4"/>
+      <text x="200" y="34" text-anchor="end" font-family="ui-monospace, monospace" font-size="11" fill="#a8a29e" letter-spacing="0.1em">02</text>
+      <g transform="translate(20 22)">
+        <rect width="24" height="24" rx="7" fill="#0c0a09"/>
+        <circle cx="12" cy="12" r="4.5" fill="#38bdf8"/>
       </g>
-      <text x="56" y="44" font-family="'Fraunces', Georgia, serif" font-size="22" font-weight="400" fill="#0c0a09">InfiniHub</text>
-      <text x="56" y="62" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" font-weight="500" fill="#78716c" letter-spacing="0.16em">INTELLIGENT EDGE</text>
-      <line x1="24" y1="84" x2="316" y2="84" stroke="#e7e5e4"/>
-      <text x="24" y="108" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#44403c">NVIDIA-powered Edge AI module</text>
-      <text x="24" y="130" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#44403c">Plugs into existing CCTV cameras</text>
-      <text x="24" y="152" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#44403c">Local processing, no cloud streaming</text>
+      <text x="20" y="86" font-family="'Fraunces', Georgia, serif" font-size="21" font-weight="400" fill="#0c0a09">InfiniTraq</text>
+      <text x="20" y="106" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" fill="#78716c" letter-spacing="0.16em">RETAIL</text>
+      <line x1="20" y1="122" x2="204" y2="122" stroke="#e7e5e4"/>
+      <text x="20" y="148" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11.5" fill="#44403c">Footfall &amp; queue waits</text>
+      <text x="20" y="172" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11.5" fill="#44403c">Zone heatmaps, live view</text>
+      <text x="20" y="196" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11.5" fill="#44403c">Narrative insights</text>
+      <text x="20" y="228" font-family="ui-monospace, monospace" font-size="10" fill="#0284c7">retail · analytics</text>
+    </g>
+
+    <!-- InfiniDine -->
+    <g transform="translate(480 0)">
+      <rect width="224" height="250" rx="20" fill="url(#cardLight)" stroke="#e7e5e4"/>
+      <text x="200" y="34" text-anchor="end" font-family="ui-monospace, monospace" font-size="11" fill="#a8a29e" letter-spacing="0.1em">03</text>
+      <g transform="translate(20 22)">
+        <rect width="24" height="24" rx="12" fill="#0c0a09"/>
+        <rect x="7.5" y="7.5" width="9" height="9" rx="2.5" fill="#fbbf24"/>
+      </g>
+      <text x="20" y="86" font-family="'Fraunces', Georgia, serif" font-size="21" font-weight="400" fill="#0c0a09">InfiniDine</text>
+      <text x="20" y="106" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" fill="#78716c" letter-spacing="0.16em">HOSPITALITY</text>
+      <line x1="20" y1="122" x2="204" y2="122" stroke="#e7e5e4"/>
+      <text x="20" y="148" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11.5" fill="#44403c">Live table floor plan</text>
+      <text x="20" y="172" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11.5" fill="#44403c">Service-delay detection</text>
+      <text x="20" y="196" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11.5" fill="#44403c">Walk-in patterns</text>
+      <text x="20" y="228" font-family="ui-monospace, monospace" font-size="10" fill="#b45309">service · timing</text>
+    </g>
+  </g>
+
+  <!-- Bottom metrics strip -->
+  <g transform="translate(48 532)">
+    <rect width="704" height="64" rx="18" fill="url(#card)" stroke="#292524"/>
+    <g transform="translate(28 0)">
+      <text y="28" font-family="'Fraunces', Georgia, serif" font-size="20" font-weight="300" fill="#fafaf9">24/7</text>
+      <text y="46" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" fill="#78716c" letter-spacing="0.16em">AWARENESS</text>
+    </g>
+    <line x1="234" y1="14" x2="234" y2="50" stroke="#292524"/>
+    <g transform="translate(262 0)">
+      <text y="28" font-family="'Fraunces', Georgia, serif" font-size="20" font-weight="300" fill="#fafaf9">On-device</text>
+      <text y="46" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" fill="#78716c" letter-spacing="0.16em">INTELLIGENCE</text>
+    </g>
+    <line x1="468" y1="14" x2="468" y2="50" stroke="#292524"/>
+    <g transform="translate(496 0)">
+      <text y="28" font-family="'Fraunces', Georgia, serif" font-size="20" font-weight="300" fill="#fafaf9">Built in</text>
+      <text y="46" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" fill="#78716c" letter-spacing="0.16em">PRIVACY</text>
     </g>
   </g>
 </svg>
